@@ -24,4 +24,12 @@ export class CompletedITService {
 
    return this.data; 
    }
+
+   
+  getData(){ 
+    this.data = localStorage.getItem("ITcourses") !== null ? JSON.parse(localStorage.getItem("ITcourses")) : ITcourses; 
+    console.log(this.data); 
+
+    return this.data; 
+  }
 }
