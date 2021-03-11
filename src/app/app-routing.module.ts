@@ -1,15 +1,10 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ITCourseSelectionComponent } from './pages/itcourse-selection/itcourse-selection.component';
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'informationtechnology',
-    loadChildren: () => import('./pages/itcourse-selection/itcourse-selection.component').then( m => m.ITCourseSelectionComponent),
   },
   {
     path: 'all-courses',
