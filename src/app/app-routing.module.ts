@@ -12,9 +12,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/itcourse-selection/itcourse-selection.component').then( m => m.ITCourseSelectionComponent),
   },
   {
+    path: 'all-courses',
+    loadChildren: () => import('./pages/all-courses/all-courses.module').then( m => m.AllCoursesPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
-  }
+  },
 ];
 @NgModule({
   imports: [
