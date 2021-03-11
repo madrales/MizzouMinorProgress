@@ -1,0 +1,16 @@
+{
+    "courses":[
+        {
+            "courseID": "INFOTC1040",
+            "name" : "Introduction to Problem Solving and Programming",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC2830",
+            "name" : "Web Application Development I",
+            "credits" : 3,
+            "department" : "Information Technology"
+        }
+    ]
+}
