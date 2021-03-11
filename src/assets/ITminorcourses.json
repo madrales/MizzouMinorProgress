@@ -1,5 +1,4 @@
-{
-    "courses":[
+[
         {
             "courseID": "INFOTC1040",
             "name" : "Introduction to Problem Solving and Programming",
@@ -13,4 +12,3 @@
             "department" : "Information Technology"
         }
     ]
-}

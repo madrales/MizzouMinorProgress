@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Course } from "src/app/interfaces/course";
-import ITcourses from 'src/assets/businessesData.json';
+import ITcourses from 'src/assets/ITminorcourses.json';  
 
 
 @Injectable({
