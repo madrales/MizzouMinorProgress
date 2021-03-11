@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ITCourseSelectionComponent } from './pages/itcourse-selection/itcourse-selection.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'not-found',
+    path: 'informationtechnology',
+    loadChildren: () => import('./pages/itcourse-selection/itcourse-selection.component').then( m => m.ITCourseSelectionComponent),
+  },
+  {
+    path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   }
 ];
