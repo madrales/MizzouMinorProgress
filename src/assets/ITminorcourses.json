@@ -10,5 +10,23 @@
             "name" : "Web Application Development I",
             "credits" : 3,
             "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC4830",
+            "name" : "Web Application Development II",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC1610",
+            "name" : "Introduction to Digital Media Design",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC2610",
+            "name" : "Digital Media Design I",
+            "credits" : 3,
+            "department" : "Information Technology"
         }
     ]
