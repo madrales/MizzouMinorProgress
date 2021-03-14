@@ -28,5 +28,66 @@
             "name" : "Digital Media Design I",
             "credits" : 3,
             "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3610",
+            "name" : "Digital Media Design II",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC4610",
+            "name" : "Advanced Multimedia Design and Technology",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC2910",
+            "name" : "Cyber Security",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3910",
+            "name" : "Advanced Cyber Security",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC4910",
+            "name" : "Digital Forensics",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3640",
+            "name" : "Motion Graphics and Visual Effects I",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC4640",
+            "name" : "Motion Graphics and Visual Effects II",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC4405",
+            "name" : "iOS App Development I",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC4405",
+            "name" : "iOS App Development I",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC4425",
+            "name" : "iOS App Development II",
+            "credits" : 3,
+            "department" : "Information Technology"
         }
+
     ]
