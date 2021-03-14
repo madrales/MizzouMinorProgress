@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 //importing course object interface
 import { Course } from 'src/app/interfaces/course';
 
@@ -6,20 +7,18 @@ import { Course } from 'src/app/interfaces/course';
 import { CompletedITService } from 'src/app/services/completed-it.service'; 
 
 @Component({
-  selector: 'app-itcourse-selection',
-  templateUrl: './itcourse-selection.component.html',
-  styleUrls: ['./itcourse-selection.component.scss'],
+  selector: 'app-all-courses',
+  templateUrl: './all-courses.page.html',
+  styleUrls: ['./all-courses.page.scss'],
 })
-export class ITCourseSelectionComponent implements OnInit {
+export class AllCoursesPage implements OnInit {
 
   data: Array<Course>; 
 
-  constructor(private model: CompletedITService) { 
+  constructor(private model: CompletedITService) {
     this.data = model.getData(); 
+   }
+
+  ngOnInit(): void {
   }
-
-  ngOnInit(): void {}
-
-
-
 }

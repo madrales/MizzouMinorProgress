@@ -1,0 +1,109 @@
+<ion-header id="header">
+  <ion-toolbar>
+    <div class = "test">
+      <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png"></ion-img>
+      <ion-title id="header">Mizzou Minor/Certificate Calculator</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="home">
+    <h3>This program is intended to allow students within the College of Engineering to track their progress towards minors or certificates in Information Technology, Computer Science, or Business.</h3>
+    <div class="navbar">
+      <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the homepage</button></a>
+    </div>
+    <br>
+    <h2>To begin, select which courses you have taken!</h2>
+    <h3>Note: Courses are sorted by the degree program they belong to</h3>
+    <h1 class="programTitle">INFORMATION TECHNOLOGY (INFOTC))</h1>
+    <div fxLayout="row wrap">
+        <ion-card *ngFor="let p of data">
+          <ion-card-title class="cardText">{{p.courseID}}</ion-card-title>
+          <ion-card-subtitle class="cardText">{{p.name}}</ion-card-subtitle>
+          <ion-card-content>
+            Credits: {{p.credits}}
+            <br>
+            Department: {{p.department}}
+          </ion-card-content>
+        </ion-card>
+        <!-- <ion-card>
+          <ion-card-title class="cardText">INFOTC 2040</ion-card-title>
+          <ion-card-subtitle class="cardText">Introduction to Programming Paradigms</ion-card-subtitle>
+          <ion-card-content>
+            Credits: 3
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-title class="cardText">INFOTC 2810</ion-card-title>
+          <ion-card-subtitle class="cardText">Introduction to Networking</ion-card-subtitle>
+          <ion-card-content>
+            Credits: 3
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-title class="cardText">INFOTC 1640</ion-card-title>
+          <ion-card-subtitle class="cardText">Introduction to Multimedia</ion-card-subtitle>
+          <ion-card-content>
+            Credits: 3
+          </ion-card-content>
+        </ion-card> -->
+    </div>
+    <h1 class="programTitle">BUSINESS (et.al)</h1>
+    <div fxLayout="row wrap">
+        <ion-card>
+          <ion-card-title class="cardText">STAT 2500</ion-card-title>
+          <ion-card-subtitle class="cardText">Introduction to Probibility/Statistics</ion-card-subtitle>
+          <ion-card-content>
+            Credits: 3
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-title class="cardText">MNGMNT 3000</ion-card-title>
+          <ion-card-subtitle class="cardText">Introduction to Management</ion-card-subtitle>
+          <ion-card-content>
+            Credits: 3
+          </ion-card-content>
+        </ion-card>
+    </div>
+    <h1 class="programTitle">COMPUTER SCIENCE (COMP_SCI)</h1>
+    <div fxLayout="row wrap">
+        <ion-card>
+          <ion-card-title class="cardText">CMP_SCI 1050</ion-card-title>
+          <ion-card-subtitle class="cardText">Introduction to Problem Solving/Programming</ion-card-subtitle>
+          <ion-card-content>
+            Credits: 3
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-title class="cardText">CMP_SCI 2050</ion-card-title>
+          <ion-card-subtitle class="cardText">Introduction to Programming Paradigms</ion-card-subtitle>
+          <ion-card-content>
+            Credits: 3
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-title class="cardText">CMP_SCI 2830</ion-card-title>
+          <ion-card-subtitle class="cardText">Introduction to Web Applications</ion-card-subtitle>
+          <ion-card-content>
+            Credits: 3
+          </ion-card-content>
+        </ion-card>
+    </div>
+      <ion-footer>
+        <ion-toolbar>
+          <div class = "footer">
+            <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png"></ion-img>
+            <ion-title>Mizzou Minor/Certificate Calculator </ion-title>
+            <ion-subtitle>An Ionic application developed by Team JustDoIT</ion-subtitle>
+            <div class="nameDiv">
+              <h4>Mason Adrales: Front End Developer</h4>
+              <h4>Andrew Brown: Back End Developer</h4>
+              <h4>Sarina Gaines: Back End Developer</h4>
+              <h4>Michael Smith: Front End Developer</h4>
+            </div>
+          </div>
+        </ion-toolbar>
+      </ion-footer>
+  </div>
+</ion-content>
