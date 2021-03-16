@@ -5,6 +5,8 @@ import { Minor } from 'src/app/interfaces/minor';
 import { CompletedITService } from 'src/app/services/completed-it.service';
 import { MinorService } from 'src/app/services/minor-service.service';
 
+import{ FormBuilder, Validators} from '@angular/forms';
+
 @Component({
   selector: 'app-minors',
   templateUrl: './minors.page.html',
@@ -13,9 +15,14 @@ import { MinorService } from 'src/app/services/minor-service.service';
 export class MinorsPage implements OnInit {
   data: Array<Minor>;
 
-  constructor(private model: MinorService) { 
+  form = this.fb.group({
+    multiSelect: ["", Validators.required]
+    });
+
+  constructor(private model: MinorService, private fb: FormBuilder) { 
     this.data = model.getData();
   }
+
 
   ngOnInit() {
   }

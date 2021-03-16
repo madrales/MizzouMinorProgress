@@ -8,6 +8,14 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-item>
+    <ion-label>IT Courses</ion-label>
+    <ion-select multiple="true" ok-text="Okay" cancel-text="Cancel">
+      <ion-select-option *ngFor="let p of data" value="{{p.courseID}}"> {{p.courseID}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
   <div class="home">
     <h3>This program is intended to allow students within the College of Engineering to track their progress towards minors or certificates in Information Technology, Computer Science, or Business.</h3>
     <div class="navbar">
@@ -90,7 +98,7 @@
           </ion-card-content>
         </ion-card>
     </div>
-      <!-- <ion-footer>
+      <ion-footer>
         <ion-toolbar>
           <div class = "footer">
             <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png"></ion-img>
@@ -104,6 +112,6 @@
             </div>
           </div>
         </ion-toolbar>
-      </ion-footer> -->
+      </ion-footer>
   </div>
 </ion-content>
