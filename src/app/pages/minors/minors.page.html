@@ -6,16 +6,22 @@
     </div>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-  <div class="home">
-    <h1>Welcome to the College of Engineering Minor and Certificate Tracker!</h1>
-    <h3>
-        This application allows Mizzou College of Engineering students to explore the many minors and certificates that are available upon graduation. Choose Minors or Certificates to get started!
-    </h3>
+  <ion-content>
+    <div class="home">
+      <ion-card *ngFor="let m of data">
+        <ion-title>
+          {{ m.name }}
+        </ion-title>
+        <ion-card-subtitle>
+          {{m.credits}}
+        </ion-card-subtitle>
+        <ion-card-content>
+          {{ m.description }}
+        </ion-card-content>
+      </ion-card>
+    </div>
     <div class="navbar">
-      <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right" >Minors</button></a>
-      <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right" >Certificates</button></a>
+      <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the homepage</button></a>
     </div>
     
     <!-- <ion-footer>
@@ -33,5 +39,4 @@
         </div>
       </ion-toolbar>
     </ion-footer> -->
-  </div>
 </ion-content>

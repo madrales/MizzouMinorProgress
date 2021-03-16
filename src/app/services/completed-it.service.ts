@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Course } from "src/app/interfaces/course";
-import ITcourses from 'src/assets/ITminorcourses.json';  
+import ITcourses from 'src/assets/ITminorcourses.json'; 
+import Minors from 'src/assets/COEminors.json'
+import { Minor } from 'src/app/interfaces/minor';
 
 
 @Injectable({
@@ -9,6 +11,7 @@ import ITcourses from 'src/assets/ITminorcourses.json';
 export class CompletedITService {
 
   data: Array<Course> = ITcourses;
+  minors: Array<Minor> = Minors;
   constructor() {
     this.data = localStorage.getItem("ITcourses") !== null
       ? JSON.parse(localStorage.getItem("ITcourses"))

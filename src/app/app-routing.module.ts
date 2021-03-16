@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/all-courses/all-courses.module').then( m => m.AllCoursesPageModule)
   },
   {
+    path: 'minors',
+    loadChildren: () => import('./pages/minors/minors.module').then( m => m.MinorsPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
