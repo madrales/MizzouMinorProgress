@@ -88,6 +88,77 @@
             "name" : "iOS App Development II",
             "credits" : 3,
             "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3330",
+            "name" : "Object Oriented Programming",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3380",
+            "name" : "Database Systems and Applications",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3530",
+            "name" : "UNIX Operating System",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3600",
+            "name" : " User Experience Design I",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3620",
+            "name" : "Computer Modeling and Animation II",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3630",
+            "name" : "Introduction to Virtual Reality",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3640",
+            "name" : "Motion Graphics and Visual Effects I",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3650",
+            "name" : "Project and Team Management",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3650W",
+            "name" : "Project and Team Management - Writing Intensive",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3660",
+            "name" : "Audio Engineering",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3810",
+            "name" : "Computer Network Security",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "INFOTC3850",
+            "name" : "Computer System Administration",
+            "credits" : 3,
+            "department" : "Information Technology"
         }
-
     ]
