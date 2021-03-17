@@ -3,9 +3,44 @@
     <div class = "test">
       <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png"></ion-img>
       <ion-title id="header">Mizzou Minor/Certificate Calculator</ion-title>
+      <ion-title>Add a Completed Course</ion-title>
     </div>
   </ion-toolbar>
 </ion-header>
+
+
+<ion-content>
+  <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
+    <ion-item>
+      <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input>
+      <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <!-- <ion-button expand="full" (click)="addTodo(todoForm.value.todo)" [disabled]="!todoForm.valid">Add</ion-button> -->
+
+    <ion-item>{{ completedArray.length }} Courses Completed</ion-item>
+
+    <ion-list *ngFor="let myCompleted of completedArray">
+      <ion-item>
+        {{myCompleted.completedCourse}}
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
+
+
+
+<!-- <form [formGroup]="reviewsForm" (ngSubmit)="addCompletedIT()">
+  <ion-item>
+    <ion-input type="text" formControlName="completedITID" name="formCompletedID" placeholder="CourseID"></ion-input>
+    <ion-input type="text" formControlName="completedName" name="formCompletedName" placeholder="Name"></ion-input>
+    <ion-input type="text" formControlName="completedCredits" name="formCompletedCredits" placeholder="Credits"></ion-input>
+    <ion-input type="text" formControlName="completedDepartment" name="formCompletedDepartment" placeholder="Department"></ion-input>
+  </ion-item>
+  <button ion-button type="submit" [disabled]="!reviewsForm.valid">Add course</button>
+</form>
 
 <ion-content>
 
@@ -35,27 +70,7 @@
             Department: {{p.department}}
           </ion-card-content>
         </ion-card>
-        <!-- <ion-card>
-          <ion-card-title class="cardText">INFOTC 2040</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Programming Paradigms</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-title class="cardText">INFOTC 2810</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Networking</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-title class="cardText">INFOTC 1640</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Multimedia</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card> -->
+
     </div>
     <h1 class="programTitle">BUSINESS (et.al)</h1>
     <div fxLayout="row wrap">
@@ -114,4 +129,4 @@
         </ion-toolbar>
       </ion-footer>
   </div>
-</ion-content>
+</ion-content> --> 

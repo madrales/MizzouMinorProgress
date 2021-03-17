@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Course } from "src/app/interfaces/course";
+import { Completed } from "src/app/interfaces/completed";
 import ITcourses from 'src/assets/ITminorcourses.json'; 
 import Minors from 'src/assets/COEminors.json'
 import { Minor } from 'src/app/interfaces/minor';
+import { Storage } from '@ionic/storage'
 
 
 @Injectable({
@@ -11,28 +13,55 @@ import { Minor } from 'src/app/interfaces/minor';
 export class CompletedITService {
 
   data: Array<Course> = ITcourses;
-  minors: Array<Minor> = Minors;
-  constructor() {
+  completedArray: Completed[] = [];
+  completedDataName: string = "completed"; 
+
+  constructor(private storage: Storage) {
+
+    this.getData(this.completedDataName).then((completed)  => {
+      if(completed){
+        this.completedArray = completed; 
+      }
+    }); 
+
     this.data = localStorage.getItem("ITcourses") !== null
       ? JSON.parse(localStorage.getItem("ITcourses"))
       :ITcourses;
    }
 
-   addData(formObject: Course){
-   this.data = localStorage.getItem("ITcourses") != null ? JSON.parse(localStorage.getItem("ITcourses")) : ITcourses; 
-
-   this.data.push(formObject); 
-   console.log(this.data); 
-   localStorage.setItem('ITcourses', JSON.stringify(this.data));
-
-   return this.data; 
-   }
-
-   
-  getData(){ 
-    this.data = localStorage.getItem("ITcourses") !== null ? JSON.parse(localStorage.getItem("ITcourses")) : ITcourses; 
-    console.log(this.data); 
-
-    return this.data; 
+   getData(name: string){
+    return this.storage.get(name); 
   }
+
+  setData(name: string, data: Completed[]){
+    this.storage.set(name, data); 
+  }
+
+  getCompleted(){
+    return(this.completedArray); 
+  }
+
+  addCompleted(completedObject: Completed) {
+    if (completedObject != null) {
+
+
+      this.completedArray.push(completedObject);
+      this.setData(this.completedDataName, this.completedArray); 
+
+      return this.completedArray; 
+    }
+  }
+
+
+   //Array to get JSON file of all IT courses 
+  //  getData2(){ 
+  //   this.data = localStorage.getItem("ITcourses") !== null ? JSON.parse(localStorage.getItem("ITcourses")) : ITcourses; 
+  //   console.log(this.data); 
+
+  //   return this.data; 
+  // }
+
+  //function to add a completed course 
+
+
 }
