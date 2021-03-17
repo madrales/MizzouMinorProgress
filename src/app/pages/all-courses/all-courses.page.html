@@ -7,13 +7,10 @@
 </ion-header>
 
 <ion-content>
-
-  <ion-item>
     <ion-label>IT Courses</ion-label>
     <ion-select multiple="true" ok-text="Okay" cancel-text="Cancel">
       <ion-select-option *ngFor="let p of data" value="{{p.courseID}}"> {{p.courseID}}</ion-select-option>
     </ion-select>
-  </ion-item>
   
   <div class="home">
     <h3>This program is intended to allow students within the College of Engineering to track their progress towards minors or certificates in Information Technology, Computer Science, or Business.</h3>
@@ -34,27 +31,6 @@
             Department: {{p.department}}
           </ion-card-content>
         </ion-card>
-        <!-- <ion-card>
-          <ion-card-title class="cardText">INFOTC 2040</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Programming Paradigms</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-title class="cardText">INFOTC 2810</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Networking</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-title class="cardText">INFOTC 1640</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Multimedia</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card> -->
     </div>
     <h1 class="programTitle">BUSINESS (et.al)</h1>
     <div fxLayout="row wrap">
