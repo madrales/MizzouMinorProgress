@@ -1,22 +1,85 @@
 .home {
+    // text-align: center;
+    width: 85%;
+    padding-left: 15vw;
+    margin-top: 25px;
+}
+h1 {
     margin: auto;
     text-align: center;
+}
+.left {
+    text-align: left;
+    float: left;
+    margin-right: 25px;
+}
+.right {
+    text-align: left;
+    float: right;
+}
+.spacer {
+    width: 100%;
+    display: flex;
 }
 #muStacked {
     width: 25vw;
+    margin: 0;
 }
-#header {
+.spacerItem {
+    margin: 1vw;
     background-color: #F1B82D;
-    margin: auto;
-    text-align: center;
     color: black;
     padding: 15px;
-    font-size: x-large;
 }
-.test {
+.custon-nav{
+    height: 48px;
+    width: 20px;
+    cursor: pointer;
+  
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .prev-icon-custom{
+    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll 0px 0px;
+  }
+  .prev-icon-custom.disabled{
+    opacity: 0.4;
+    cursor: default;
+  }
+  #swiper {
+      width: 85%;
+      margin: auto;
+  }
+  ion-slide {
+      background-color: #F1B82D;
+  }
+  .next-icon-custom{
+    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll -32px 0px;
+  }
+  .next-icon-custom.disabled{
+    opacity: 0.4;
+    cursor: default;
+  }
+  .slider-nav{
+    ion-icon{
+        height: 100%;
+    }
+  }
+  
+  .slide-text{
+    position: absolute;
+    color: white;
+    bottom: 30px;
+  }
+#header {
     background-color: #F1B82D;
-    margin: auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
+    color: black;
+    padding: 15px;
+    border: 0;
 }
 ion-img {
     margin: auto;
@@ -33,16 +96,15 @@ ion-card:hover {
     background-color: #F1B82D;
     color:black;
 }
-// .cardText:hover {
-//     color:black;
-// }
+ion-content {
+    margin-top: 500px;
+}
 .programTitle {
     color: #F1B82D;
 }
 .navbar {
     margin: auto;
     text-align: center;
-    margin-top: 20px;
     padding: 10px;
     width: 100%;
     display: block;
@@ -57,6 +119,10 @@ ion-card:hover {
     background-color: #F1B82D;
     color: black;
 }
+.navbarWrapper {
+    margin: auto;
+    text-align: center;
+}
 .footer{
     background-color: #8F8884;
     margin: auto;
@@ -64,4 +130,10 @@ ion-card:hover {
     color: black;
     padding: 15px;
     font-size: x-large;
+}
+.sliderImg {
+    width: 75%;
+}
+ion-slide {
+    display: inline;
 }

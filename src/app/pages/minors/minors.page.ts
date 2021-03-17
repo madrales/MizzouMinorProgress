@@ -15,11 +15,11 @@ import{ FormBuilder, Validators} from '@angular/forms';
 export class MinorsPage implements OnInit {
   data: Array<Minor>;
 
-  form = this.fb.group({
-    multiSelect: ["", Validators.required]
-    });
+  // form = this.fb.group({
+  //   multiSelect: ["", Validators.required]
+  //   });
 
-  constructor(private model: MinorService, private fb: FormBuilder) { 
+  constructor(private model: MinorService) { 
     this.data = model.getData();
   }
 
