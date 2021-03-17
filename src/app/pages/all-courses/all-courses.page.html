@@ -7,10 +7,28 @@
 </ion-header>
 
 <ion-content>
-    <ion-label>IT Courses</ion-label>
+  <form>
+    <!-- Checkboxes -->
+    <ion-list lines="full">
+      <ion-list-header>
+        <ion-label>IT Courses</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let p of data">
+        <ion-label>{{ p.courseID}}: {{p.name}}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+    <!-- <ion-label>IT Courses</ion-label>
     <ion-select multiple="true" ok-text="Okay" cancel-text="Cancel">
       <ion-select-option *ngFor="let p of data" value="{{p.courseID}}"> {{p.courseID}}</ion-select-option>
-    </ion-select>
+    </ion-select> -->
   
   <div class="home">
     <h3>This program is intended to allow students within the College of Engineering to track their progress towards minors or certificates in Information Technology, Computer Science, or Business.</h3>
