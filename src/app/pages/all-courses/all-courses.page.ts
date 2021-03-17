@@ -27,7 +27,7 @@ export class AllCoursesPage implements OnInit {
   constructor(private model: CompletedITService, private formBuilder: FormBuilder) {
 
     this.completedCoursesForm = this.formBuilder.group({
-      completedCourse: ["", Validators.required],
+      completedCourse: ["", [Validators.required, Validators.pattern("^[0-9]*\.?[0-9]*$"),Validators.maxLength(4)]],
       done: false
     });
 
