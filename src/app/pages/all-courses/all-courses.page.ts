@@ -43,14 +43,15 @@ export class AllCoursesPage implements OnInit {
 
   addCourse() {
 
-    this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value); 
+    this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse); 
     this.completedCoursesForm.reset(); 
-    console.log(this.completedCoursesForm.value);
-    console.log(this.completedArray[1]);
 
-    console.log(String(this.completedArray[1].courseID));
+    
+    console.log(this.completedArray[0]);
+
 
     const random = this.model.getCompletedIndex();
+    console.log("random");
     console.log(random);
 
   }
