@@ -31,21 +31,10 @@ export class AllCoursesPage implements OnInit {
       done: false
     });
 
-    // this.data = model.getData(); 
+    //this.data = model.getData(); 
     
     this.completedArray = this.model.getCompleted();
    }
-
- 
-
-  // checkReaining(){
-
-  //   if(this.data[0].courseID == this.completedArray[0].courseID){
-  //     console.log("hi");
-  //   }
-  //   else{
-  //     console.log("failed");
-  //   }
 
 
   ngOnInit() {}
@@ -54,10 +43,27 @@ export class AllCoursesPage implements OnInit {
 
     this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value); 
     this.completedCoursesForm.reset(); 
+    console.log(this.completedCoursesForm.value);
     console.log(this.completedArray[0]);
-    console.log(this.completedArray[0].courseID);
+
+    console.log(String(this.completedArray[0].courseID));
+
+    const random = this.model.getCompletedIndex();
+    console.log(random);
 
   }
+
+  
+  check(){
+
+    if(String(this.data[0].courseID) === String(this.completedArray[0].courseID)){
+      console.log("hi");
+    }
+    else{
+      console.log("failed");
+    }
+  }
+
 
   ionViewWillEnter(){
     this.model.getData("completed").then((completed) => {
@@ -72,6 +78,7 @@ export class AllCoursesPage implements OnInit {
       }
     }); 
   }
+
 
 
 }
