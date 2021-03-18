@@ -49,6 +49,9 @@ export class AllCoursesPage implements OnInit {
     
     console.log(this.completedArray[0]);
 
+    //https://www.tutorialspoint.com/typescript/typescript_string_localecompare.htm
+    //link above is for comparing strings
+
 
     const random = this.model.getCompletedIndex();
     console.log("random");
