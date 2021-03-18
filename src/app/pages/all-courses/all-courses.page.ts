@@ -27,8 +27,10 @@ export class AllCoursesPage implements OnInit {
   constructor(private model: CompletedITService, private formBuilder: FormBuilder) {
 
     this.completedCoursesForm = this.formBuilder.group({
-      completedCourse: ["", [Validators.required, Validators.pattern("^[0-9]*\.?[0-9]*$"),Validators.maxLength(4)]],
-      done: false
+      completedCourse: ["", [Validators.required,
+        Validators.pattern("^[0-9]*\.?[0-9]*$"),
+        Validators.maxLength(4), 
+        Validators.minLength(4)]],
     });
 
     //this.data = model.getData(); 
@@ -44,9 +46,9 @@ export class AllCoursesPage implements OnInit {
     this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value); 
     this.completedCoursesForm.reset(); 
     console.log(this.completedCoursesForm.value);
-    console.log(this.completedArray[0]);
+    console.log(this.completedArray[1]);
 
-    console.log(String(this.completedArray[0].courseID));
+    console.log(String(this.completedArray[1].courseID));
 
     const random = this.model.getCompletedIndex();
     console.log(random);
