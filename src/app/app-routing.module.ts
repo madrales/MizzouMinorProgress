@@ -18,6 +18,10 @@ const routes: Routes = [
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
+  {
+    path: 'certificates',
+    loadChildren: () => import('./pages/certificates/certificates.module').then( m => m.CertificatesPageModule)
+  },
 
 ];
 @NgModule({
