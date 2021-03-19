@@ -27,37 +27,49 @@ export class AllCoursesPage implements OnInit {
   constructor(private model: CompletedITService, private formBuilder: FormBuilder) {
 
     this.completedCoursesForm = this.formBuilder.group({
-      completedCourse: ["", [Validators.required, Validators.pattern("^[0-9]*\.?[0-9]*$"),Validators.maxLength(4)]],
-      done: false
+      completedCourse: ["", [Validators.required,
+        Validators.pattern("^[0-9]*\.?[0-9]*$"),
+        Validators.maxLength(4), 
+        Validators.minLength(4)]],
     });
 
-    // this.data = model.getData(); 
+    //this.data = model.getData(); 
     
     this.completedArray = this.model.getCompleted();
    }
-
- 
-
-  // checkReaining(){
-
-  //   if(this.data[0].courseID == this.completedArray[0].courseID){
-  //     console.log("hi");
-  //   }
-  //   else{
-  //     console.log("failed");
-  //   }
 
 
   ngOnInit() {}
 
   addCourse() {
 
-    this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value); 
+    this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse); 
     this.completedCoursesForm.reset(); 
+
+    
     console.log(this.completedArray[0]);
-    console.log(this.completedArray[0].courseID);
+
+    //https://www.tutorialspoint.com/typescript/typescript_string_localecompare.htm
+    //link above is for comparing strings
+
+
+    const random = this.model.getCompletedIndex();
+    console.log("random");
+    console.log(random);
 
   }
+
+  
+  check(){
+
+    if(String(this.data[0].courseID) === String(this.completedArray[0].courseID)){
+      console.log("hi");
+    }
+    else{
+      console.log("failed");
+    }
+  }
+
 
   ionViewWillEnter(){
     this.model.getData("completed").then((completed) => {
@@ -72,6 +84,7 @@ export class AllCoursesPage implements OnInit {
       }
     }); 
   }
+
 
 
 }

@@ -41,6 +41,11 @@ export class CompletedITService {
     return(this.completedArray); 
   }
 
+  getCompletedIndex(){
+    let test: String = this.completedArray[0].courseID;
+    return(test);
+  }
+
   addCompleted(completedObject: Completed) {
     if (completedObject != null) {
 
