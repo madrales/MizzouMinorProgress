@@ -12,9 +12,14 @@ import { Storage } from '@ionic/storage'
 })
 export class CompletedITService {
 
-  data: Array<Course> = ITcourses;
-  completedArray: Completed[] = [];
+  ITMinorArray: Course[] = [];
+  ITMinorDataName: string = "ITMinor";
+
+  completedArray: String[] = [];
   completedDataName: string = "completed"; 
+
+  incompletedArray: Course[] = [];
+  incompletedDataName: string = "incompleted"; 
 
   constructor(private storage: Storage) {
 
@@ -24,7 +29,19 @@ export class CompletedITService {
       }
     }); 
 
-    this.data = localStorage.getItem("ITcourses") !== null
+    this.getData(this.ITMinorDataName).then((ITMinor)  => {
+      if(ITMinor){
+        this.ITMinorArray = ITMinor; 
+      }
+    });
+
+    this.getData(this.incompletedDataName).then((incompleted)  => {
+      if(incompleted){
+        this.incompletedArray = incompleted; 
+      }
+    });
+
+    this.ITMinorArray = localStorage.getItem("ITcourses") !== null
       ? JSON.parse(localStorage.getItem("ITcourses"))
       :ITcourses;
    }
@@ -37,23 +54,43 @@ export class CompletedITService {
     this.storage.set(name, data); 
   }
 
+  setData2(name: string, data: String[]){
+    this.storage.set(name, data); 
+  }
+
   getCompleted(){
     return(this.completedArray); 
   }
 
-  getCompletedIndex(){
-    let test: String = this.completedArray[0].courseID;
-    return(test);
+  getITMinor(){
+    return(this.ITMinorArray);
   }
 
-  addCompleted(completedObject: Completed) {
+  getIncompleted(){
+    return(this.incompletedArray);
+  }
+
+
+
+  addCompleted(completedObject: String) {
     if (completedObject != null) {
 
 
       this.completedArray.push(completedObject);
-      this.setData(this.completedDataName, this.completedArray); 
+      this.setData2(this.completedDataName, this.completedArray); 
 
       return this.completedArray; 
+    }
+  }
+
+  addIncompleted(incompletedObject: Course) {
+    if (incompletedObject != null) {
+
+
+      this.incompletedArray.push(incompletedObject);
+      this.setData(this.incompletedDataName, this.incompletedArray); 
+
+      return this.incompletedArray; 
     }
   }
 

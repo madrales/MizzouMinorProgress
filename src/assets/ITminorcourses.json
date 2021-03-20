@@ -1,164 +1,21 @@
 [
         {
-            "courseID": "INFOTC1040",
+            "courseID": "1040",
             "name" : "Introduction to Problem Solving and Programming",
             "credits" : 3,
             "department" : "Information Technology"
         },
         {
-            "courseID": "INFOTC2830",
+            "courseID": "2830",
             "name" : "Web Application Development I",
             "credits" : 3,
             "department" : "Information Technology"
         },
         {
-            "courseID": "INFOTC4830",
+            "courseID": "4830",
             "name" : "Web Application Development II",
             "credits" : 3,
             "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC1610",
-            "name" : "Introduction to Digital Media Design",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC2610",
-            "name" : "Digital Media Design I",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3610",
-            "name" : "Digital Media Design II",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC4610",
-            "name" : "Advanced Multimedia Design and Technology",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC2910",
-            "name" : "Cyber Security",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3910",
-            "name" : "Advanced Cyber Security",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC4910",
-            "name" : "Digital Forensics",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3640",
-            "name" : "Motion Graphics and Visual Effects I",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC4640",
-            "name" : "Motion Graphics and Visual Effects II",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC4405",
-            "name" : "iOS App Development I",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC4405",
-            "name" : "iOS App Development I",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC4425",
-            "name" : "iOS App Development II",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3330",
-            "name" : "Object Oriented Programming",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3380",
-            "name" : "Database Systems and Applications",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3530",
-            "name" : "UNIX Operating System",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3600",
-            "name" : " User Experience Design I",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3620",
-            "name" : "Computer Modeling and Animation II",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3630",
-            "name" : "Introduction to Virtual Reality",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3640",
-            "name" : "Motion Graphics and Visual Effects I",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3650",
-            "name" : "Project and Team Management",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3650W",
-            "name" : "Project and Team Management - Writing Intensive",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3660",
-            "name" : "Audio Engineering",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3810",
-            "name" : "Computer Network Security",
-            "credits" : 3,
-            "department" : "Information Technology"
-        },
-        {
-            "courseID": "INFOTC3850",
-            "name" : "Computer System Administration",
-            "credits" : 3,
-            "department" : "Information Technology"
         }
+       
     ]
