@@ -15,12 +15,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/all-courses/all-courses.module').then( m => m.AllCoursesPageModule)
   },
   {
-    path: '**',
-    loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
-  },
-  {
     path: 'certificates',
     loadChildren: () => import('./pages/certificates/certificates.module').then( m => m.CertificatesPageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
 
 ];

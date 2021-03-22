@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 //importing course object interface
 import { Course } from 'src/app/interfaces/course';
-import { Completed } from 'src/app/interfaces/completed';
+// import { Completed } from 'src/app/interfaces/completed';
 
 //importing service for completed IT courses
 import { CompletedITService } from 'src/app/services/completed-it.service'; 
