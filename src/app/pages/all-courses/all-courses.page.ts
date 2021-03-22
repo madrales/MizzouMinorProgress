@@ -137,6 +137,12 @@ export class AllCoursesPage implements OnInit {
 
   }
 
+  clear(){
+    this.completedArray  = this.model.clearCompleted();
+    this.incompletedArray = this.model.clearIncomplete();
+    this.status = " ";
+  }
+
 
   ionViewWillEnter(){
     this.model.getData("completed").then((completed) => {

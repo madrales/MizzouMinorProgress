@@ -94,6 +94,21 @@ export class CompletedITService {
     }
   }
 
+  clearIncomplete() {
+        this.incompletedArray.splice(0, this.incompletedDataName.length);
+      
+    this.setData(this.incompletedDataName, this.incompletedArray); 
+
+    return this.incompletedArray; 
+  }
+
+  clearCompleted() {
+    this.completedArray.splice(0,this.completedArray.length);
+  
+    this.setData2(this.completedDataName, this.completedArray); 
+
+    return this.completedArray;
+  }
 
    //Array to get JSON file of all IT courses 
   //  getData2(){ 
