@@ -7,12 +7,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'all-courses',
-    loadChildren: () => import('./pages/all-courses/all-courses.module').then( m => m.AllCoursesPageModule)
-  },
-  {
     path: 'minors',
     loadChildren: () => import('./pages/minors/minors.module').then( m => m.MinorsPageModule)
+  },
+  {
+    path: 'all-courses',
+    loadChildren: () => import('./pages/all-courses/all-courses.module').then( m => m.AllCoursesPageModule)
   },
   {
     path: '**',

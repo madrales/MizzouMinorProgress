@@ -45,13 +45,10 @@
 </form>
 
 <ion-content>
-
-  <ion-item>
     <ion-label>IT Courses</ion-label>
     <ion-select multiple="true" ok-text="Okay" cancel-text="Cancel">
       <ion-select-option *ngFor="let p of data" value="{{p.courseID}}"> {{p.courseID}}</ion-select-option>
     </ion-select>
-  </ion-item>
   
   <div class="home">
     <h3>This program is intended to allow students within the College of Engineering to track their progress towards minors or certificates in Information Technology, Computer Science, or Business.</h3>
@@ -61,7 +58,7 @@
     <br>
     <h2>To begin, select which courses you have taken!</h2>
     <h3>Note: Courses are sorted by the degree program they belong to</h3>
-    <h1 class="programTitle">INFORMATION TECHNOLOGY (INFOTC))</h1>
+    <h1 class="programTitle">INFORMATION TECHNOLOGY (INFOTC)</h1>
     <div fxLayout="row wrap">
         <ion-card *ngFor="let p of data">
           <ion-card-title class="cardText">{{p.courseID}}</ion-card-title>
@@ -72,7 +69,10 @@
             Department: {{p.department}}
           </ion-card-content>
         </ion-card>
+<<<<<<< HEAD
 
+=======
+>>>>>>> UIsandbox
     </div>
     <h1 class="programTitle">BUSINESS (et.al)</h1>
     <div fxLayout="row wrap">
@@ -115,20 +115,5 @@
           </ion-card-content>
         </ion-card>
     </div>
-      <ion-footer>
-        <ion-toolbar>
-          <div class = "footer">
-            <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png"></ion-img>
-            <ion-title>Mizzou Minor/Certificate Calculator </ion-title>
-            <ion-subtitle>An Ionic application developed by Team JustDoIT</ion-subtitle>
-            <div class="nameDiv">
-              <h4>Mason Adrales: Front End Developer</h4>
-              <h4>Andrew Brown: Back End Developer</h4>
-              <h4>Sarina Gaines: Back End Developer</h4>
-              <h4>Michael Smith: Front End Developer</h4>
-            </div>
-          </div>
-        </ion-toolbar>
-      </ion-footer>
   </div>
 </ion-content> --> 

@@ -1,22 +1,116 @@
 .home {
+    width: 85%;
+    padding-left: 15vw;
+    margin-top: 25px;
+    margin-bottom: 200px;
+}
+.footerImg {
     margin: auto;
     text-align: center;
+    opacity: 25%;
 }
-#muStacked {
-    width: 25vw;
+.introCardsWrapper {
+    display: flex;
 }
-#header {
-    background-color: #F1B82D;
+.footer{
+    background-color: #8F8884;
     margin: auto;
     text-align: center;
     color: black;
     padding: 15px;
     font-size: x-large;
+    position: relative;
+    background-image: url(../../../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png);
+    min-height: 700px;
+    background-position: center;
+    background-size: cover;
 }
-.test {
-    background-color: #F1B82D;
+h1 {
     margin: auto;
     text-align: center;
+}
+.left {
+    text-align: left;
+    float: left;
+    margin-right: 25px;
+}
+.right {
+    text-align: left;
+    float: right;
+}
+.spacer {
+    width: 100%;
+    display: flex;
+}
+#muStacked {
+    width: 25vw;
+    margin: 0;
+}
+.spacerItem {
+    margin: 1vw;
+    background-color: #F1B82D;
+    color: black;
+    padding: 15px;
+}
+.custon-nav{
+    height: 48px;
+    width: 20px;
+    cursor: pointer;
+  
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .prev-icon-custom{
+    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll 0px 0px;
+  }
+  .prev-icon-custom.disabled{
+    opacity: 0.4;
+    cursor: default;
+  }
+  #swiper {
+      width: 85%;
+      margin: auto;
+  }
+  ion-slide {
+      background-color: #F1B82D;
+  }
+  .next-icon-custom{
+    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll -32px 0px;
+  }
+  .next-icon-custom.disabled{
+    opacity: 0.4;
+    cursor: default;
+  }
+  #styledHeader{
+    font-family: 'IMPACT', sans-serif;
+    font-size: xx-large;
+  }
+  .notoSerif {
+    font-family: 'GRAPHIK', serif;
+  }
+  .column {
+      width: 33%;
+  }
+  .slider-nav{
+    ion-icon{
+        height: 100%;
+    }
+  }
+  
+  .slide-text{
+    position: absolute;
+    color: white;
+    bottom: 30px;
+  }
+#header {
+    background-color: #F1B82D;
+    margin: 0;
+    text-align: left;
+    color: black;
+    padding: 15px;
+    border: 0;
 }
 ion-img {
     margin: auto;
@@ -28,21 +122,22 @@ ion-card {
     text-align: center;
     margin-bottom: 15px;
     padding: 15px;
+    z-index: 17;
+    font-family: 'GRAPHIK', serif;
 }
 ion-card:hover {
     background-color: #F1B82D;
     color:black;
 }
-// .cardText:hover {
-//     color:black;
-// }
+ion-content {
+    margin-top: 500px;
+}
 .programTitle {
     color: #F1B82D;
 }
 .navbar {
     margin: auto;
     text-align: center;
-    margin-top: 20px;
     padding: 10px;
     width: 100%;
     display: block;
@@ -57,11 +152,13 @@ ion-card:hover {
     background-color: #F1B82D;
     color: black;
 }
-.footer{
-    background-color: #8F8884;
+.navbarWrapper {
     margin: auto;
     text-align: center;
-    color: black;
-    padding: 15px;
-    font-size: x-large;
+}
+.sliderImg {
+    width: 75%;
+}
+ion-slide {
+    display: inline;
 }
