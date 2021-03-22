@@ -18,7 +18,8 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 })
 export class AllCoursesPage implements OnInit {
   private completedCoursesForm: FormGroup;
-
+  public test: String;
+  public status: String;
 
   completedArray: Array<String>;
 
@@ -105,17 +106,27 @@ export class AllCoursesPage implements OnInit {
       }
 
       if(count >= 3){
-        console.log("User has completed 9 hours of 3000+ courses");
+        this.test = "You have completed 9 hours of 3000+ courses.";
+
+        console.log("You have completed 9 hours of 3000+ courses");
       }
       if(count === 2){
-        console.log("User needs 1 more 3000+ course");
+        this.test = "You need to complete 1 more 3000+ courses";
+        console.log("You need 1 more 3000+ course");
 
       }
       if(count === 1){
-        console.log("user needs to complete 2 more 3000+ courses");
+        this.test = "You need to complete 2 more 3000+ courses";
+        console.log("You need to complete 2 more 3000+ courses");
       }
       if(count === 0){
-        console.log("User needs to complete 3 more 3000+ courses");
+        this.test = "You need to complete 3 more 3000+ courses";
+        console.log("You need to complete 3 more 3000+ courses");
+      }
+      if(this.incompletedArray.length == 0){
+        this.status = "You have completed the IT minor!"
+      }else {
+        this.status = "You have not completed the IT minor."
       }
 
 

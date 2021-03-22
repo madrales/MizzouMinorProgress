@@ -1,9 +1,7 @@
 <ion-header id="header">
   <ion-toolbar>
     <div class = "test">
-      <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png"></ion-img>
-      <ion-title id="header">Mizzou Minor/Certificate Calculator</ion-title>
-      <ion-title>Add a Completed Course</ion-title>
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_horiz.png"></ion-img>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -24,15 +22,30 @@
 
     <ion-item>{{ completedArray.length }} Courses Completed</ion-item>
 
-    <ion-list *ngFor="let myCompleted of completedArray">
+    <!-- <ion-list *ngFor="let myCompleted of completedArray">
       <ion-item>
         {{myCompleted.completedCourse}}
       </ion-item>
-    </ion-list>
+    </ion-list> -->
 
   </form>
   <ion-button expand="full" (click)="check()">Check Progress</ion-button>
- 
+  <div class="resultsWrapper">
+    <h1 class="notoSerif">Your Results</h1>
+    <ion-card-title class="notoSerif">
+      {{ this.test }}
+    </ion-card-title>
+    <ion-title>
+      {{ this.status }}
+    </ion-title>
+    <div class="resultCourseWrapper" fxLayout="row">
+      <ion-card class="courseCard" *ngFor='let course of incompletedArray'>
+        <ion-card-title>
+          {{ course.courseID }}
+        </ion-card-title>
+      </ion-card>
+    </div>
+  </div>
 </ion-content>
 
 
