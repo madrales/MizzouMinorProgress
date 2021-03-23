@@ -8,6 +8,7 @@
 .title {
     margin: auto;
     text-align: center;
+    font-size: large;
 }
 #muStacked {
     width: 25vw;
@@ -24,6 +25,14 @@
     background-color: #F1B82D;
     margin: auto;
     text-align: center;
+}
+ion-title {
+    font-family: 'IMPACT', sans-serif;
+    font-size: xx-large;
+}
+ion-card-content {
+    font-family: 'GRAPHIK', sans-serif;
+    font-size: medium;
 }
 ion-img {
     margin: auto;
