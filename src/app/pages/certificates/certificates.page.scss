@@ -3,6 +3,7 @@
     text-align: center;
     display: flex;
     width: 100%;
+    font-family: 'GRAPHIK', serif;
 }
 #muStacked {
     width: 25vw;
@@ -11,6 +12,9 @@
     margin: auto;
     text-align: center;
 }
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+  }
 #header {
     background-color: #F1B82D;
     margin: auto;
@@ -70,4 +74,12 @@ ion-card:hover {
     color: black;
     padding: 15px;
     font-size: x-large;
+}
+ion-card-content {
+    font-family: 'GRAPHIK', sans-serif;
+    font-size: medium;
+}
+ion-title {
+    font-family: 'IMPACT', sans-serif;
+    font-size: xx-large;
 }

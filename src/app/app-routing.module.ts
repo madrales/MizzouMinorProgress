@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/certificates/certificates.module').then( m => m.CertificatesPageModule)
   },
   {
+    path: 'cybersec-certifcate',
+    loadChildren: () => import('./pages/cybersec-certifcate/cybersec-certifcate.module').then( m => m.CybersecCertifcatePageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
