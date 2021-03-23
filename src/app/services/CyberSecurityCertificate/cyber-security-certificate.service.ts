@@ -152,9 +152,9 @@ export class CyberSecurityCertificateService {
   clearIncompleteElectives() {
     this.incompletedElectivesArray.splice(0, this.incompletedElectivesDataName.length);
   
-this.setData(this.incompletedElectivesDataName, this.incompletedElectivesArray); 
+  this.setData(this.incompletedElectivesDataName, this.incompletedElectivesArray); 
 
-return this.incompletedElectivesArray; 
+  return this.incompletedElectivesArray; 
 }
 
   clearCompleted() {
