@@ -83,7 +83,6 @@ export class AllCoursesPage implements OnInit {
 
     for (let i = 0; i < minorLength; i++) {
 
-      // const found = this.completedArray.find( ({ courseID }) => courseID === String(this.completedArray[i]));
 
       var found = this.completedArray.includes(this.ITMinorArray[i].courseID);
 

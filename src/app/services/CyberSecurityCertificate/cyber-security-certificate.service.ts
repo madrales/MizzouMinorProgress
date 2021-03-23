@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Course } from "src/app/interfaces/course";
 import { Completed } from "src/app/interfaces/completed";
-import  CyberSecurityCore  from "src/assets/CyberSecurityCertificate.json";
+import  CyberSecurityCoreCourses  from "src/assets/CyberSecurityCertificate.json";
 import CyberSecurityElective from "src/assets/CyberSecurityCertificate3000.json"; 
 import { Storage } from '@ionic/storage';
 
@@ -23,6 +23,9 @@ export class CyberSecurityCertificateService {
   incompletedArray: Course[] = [];
   incompletedDataName: string = "incompleted"; 
 
+  incompletedElectivesArray: Course[] = [];
+  incompletedElectivesDataName: string = "incompletedElectives"; 
+
 
   constructor(private storage: Storage) { 
 
@@ -35,6 +38,12 @@ export class CyberSecurityCertificateService {
     this.getData(this.incompletedDataName).then((incompleted)  => {
       if(incompleted){
         this.incompletedArray = incompleted; 
+      }
+    });
+
+    this.getData(this.incompletedElectivesDataName).then((incompletedElectives)  => {
+      if(incompletedElectives){
+        this.incompletedElectivesArray = incompletedElectives; 
       }
     });
 
@@ -53,9 +62,9 @@ export class CyberSecurityCertificateService {
 
     
   //import CyberSec core json file courses 
-    this.CybSecCoreArray = localStorage.getItem("CyberSecurityCore") !== null
-      ? JSON.parse(localStorage.getItem("CyberSecurityCore"))
-      :CyberSecurityCore;
+    this.CybSecCoreArray = localStorage.getItem("CyberSecurityCoreCourses") !== null
+      ? JSON.parse(localStorage.getItem("CyberSecurityCoreCourses"))
+      :CyberSecurityCoreCourses;
 
       
   //import CyberSec elective json file courses 
@@ -63,8 +72,6 @@ export class CyberSecurityCertificateService {
    ? JSON.parse(localStorage.getItem("CyberSecurityElective"))
    :CyberSecurityElective;
   }
-
-
 
 
   getData(name: string){
@@ -85,6 +92,11 @@ export class CyberSecurityCertificateService {
 
   getIncompleted(){
     return(this.incompletedArray);
+  }
+
+  
+  getIncompletedElectives(){
+    return(this.incompletedElectivesArray);
   }
 
   getCyberSecCore(){
@@ -118,6 +130,17 @@ export class CyberSecurityCertificateService {
     }
   }
 
+  addIncompletedElective(incompletedObject: Course) {
+    if (incompletedObject != null) {
+
+
+      this.incompletedElectivesArray.push(incompletedObject);
+      this.setData(this.incompletedElectivesDataName, this.incompletedElectivesArray); 
+
+      return this.incompletedElectivesArray; 
+    }
+  }
+
   clearIncomplete() {
         this.incompletedArray.splice(0, this.incompletedDataName.length);
       
@@ -125,6 +148,14 @@ export class CyberSecurityCertificateService {
 
     return this.incompletedArray; 
   }
+
+  clearIncompleteElectives() {
+    this.incompletedElectivesArray.splice(0, this.incompletedElectivesDataName.length);
+  
+this.setData(this.incompletedElectivesDataName, this.incompletedElectivesArray); 
+
+return this.incompletedElectivesArray; 
+}
 
   clearCompleted() {
     this.completedArray.splice(0,this.completedArray.length);

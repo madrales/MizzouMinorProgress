@@ -8,12 +8,15 @@ import { CybersecCertifcatePageRoutingModule } from './cybersec-certifcate-routi
 
 import { CybersecCertifcatePage } from './cybersec-certifcate.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CybersecCertifcatePageRoutingModule
+    CybersecCertifcatePageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [CybersecCertifcatePage]
 })
