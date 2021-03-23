@@ -11,126 +11,39 @@
   <div class="navbar">
     <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the homepage</button></a>
   </div>
-  <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
-    <ion-item>
-      <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input>
-      <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
-        <ion-icon name="add"></ion-icon>
-      </ion-button>
-    </ion-item>
-
-
-    <ion-item>{{ completedArray.length }} Courses Completed</ion-item>
-
-    <!-- <ion-list *ngFor="let myCompleted of completedArray">
-      <ion-item>
-        {{myCompleted.completedCourse}}
-      </ion-item>
-    </ion-list> -->
-
-  </form>
-  <ion-button expand="full" (click)="check()">Check Progress</ion-button>
-  <ion-button expand="full" (click)="clear()">Clear All</ion-button>
-  <div class="resultsWrapper">
-    <h1 class="notoSerif">Your Results</h1>
-    <ion-card-title class="notoSerif">
-      {{ this.test }}
-    </ion-card-title>
-    <ion-title>
-      {{ this.status }}
-    </ion-title>
-    <div class="resultCourseWrapper" fxLayout="row">
-      <ion-card class="courseCard" *ngFor='let course of incompletedArray'>
-        <ion-card-title>
-          {{ course.courseID }}
-        </ion-card-title>
-      </ion-card>
+  <div class="mainWrapper">
+    <h1 class="notoSerif">MIZZOU MINOR/CERTIFICATE CALCULATOR</h1>
+    <h3 class="notoSerif">To get started, enter the 4 digit course number of the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>
+    <div class="formWrapper">
+      <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
+        <ion-item>
+          <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input>
+          <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
+            <ion-icon name="add"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </form>
+    </div>
+    <div class="formButtonWrapper">
+      <ion-button expand="full" color="success" (click)="check()">Check Progress</ion-button>
+      <ion-button color="danger" expand="full" (click)="clear()">Clear All</ion-button>
+    </div>
+    <div class="resultsWrapper">
+      <h1 class="notoSerif">Your Results</h1>
+      <ion-card-title class="courseCount notoSerif">{{ completedArray.length }} Courses Completed</ion-card-title>
+      <ion-card-title class="notoSerif">
+        {{ this.test }}
+      </ion-card-title>
+      <ion-title>
+        {{ this.status }}
+      </ion-title>
+      <div class="resultCourseWrapper" fxLayout="row">
+        <ion-card class="courseCard" *ngFor='let course of incompletedArray'>
+          <ion-card-title>
+            {{ course.courseID }}
+          </ion-card-title>
+        </ion-card>
+      </div>
     </div>
   </div>
 </ion-content>
-
-
-
-<!-- <form [formGroup]="reviewsForm" (ngSubmit)="addCompletedIT()">
-  <ion-item>
-    <ion-input type="text" formControlName="completedITID" name="formCompletedID" placeholder="CourseID"></ion-input>
-    <ion-input type="text" formControlName="completedName" name="formCompletedName" placeholder="Name"></ion-input>
-    <ion-input type="text" formControlName="completedCredits" name="formCompletedCredits" placeholder="Credits"></ion-input>
-    <ion-input type="text" formControlName="completedDepartment" name="formCompletedDepartment" placeholder="Department"></ion-input>
-  </ion-item>
-  <button ion-button type="submit" [disabled]="!reviewsForm.valid">Add course</button>
-</form>
-
-<ion-content>
-    <ion-label>IT Courses</ion-label>
-    <ion-select multiple="true" ok-text="Okay" cancel-text="Cancel">
-      <ion-select-option *ngFor="let p of data" value="{{p.courseID}}"> {{p.courseID}}</ion-select-option>
-    </ion-select>
-  
-  <div class="home">
-    <h3>This program is intended to allow students within the College of Engineering to track their progress towards minors or certificates in Information Technology, Computer Science, or Business.</h3>
-    <div class="navbar">
-      <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the homepage</button></a>
-    </div>
-    <br>
-    <h2>To begin, select which courses you have taken!</h2>
-    <h3>Note: Courses are sorted by the degree program they belong to</h3>
-    <h1 class="programTitle">INFORMATION TECHNOLOGY (INFOTC)</h1>
-    <div fxLayout="row wrap">
-        <ion-card *ngFor="let p of data">
-          <ion-card-title class="cardText">{{p.courseID}}</ion-card-title>
-          <ion-card-subtitle class="cardText">{{p.name}}</ion-card-subtitle>
-          <ion-card-content>
-            Credits: {{p.credits}}
-            <br>
-            Department: {{p.department}}
-          </ion-card-content>
-        </ion-card>
-<<<<<<< HEAD
-
-=======
->>>>>>> UIsandbox
-    </div>
-    <h1 class="programTitle">BUSINESS (et.al)</h1>
-    <div fxLayout="row wrap">
-        <ion-card>
-          <ion-card-title class="cardText">STAT 2500</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Probibility/Statistics</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-title class="cardText">MNGMNT 3000</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Management</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card>
-    </div>
-    <h1 class="programTitle">COMPUTER SCIENCE (COMP_SCI)</h1>
-    <div fxLayout="row wrap">
-        <ion-card>
-          <ion-card-title class="cardText">CMP_SCI 1050</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Problem Solving/Programming</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-title class="cardText">CMP_SCI 2050</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Programming Paradigms</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-title class="cardText">CMP_SCI 2830</ion-card-title>
-          <ion-card-subtitle class="cardText">Introduction to Web Applications</ion-card-subtitle>
-          <ion-card-content>
-            Credits: 3
-          </ion-card-content>
-        </ion-card>
-    </div>
-  </div>
-</ion-content> --> 

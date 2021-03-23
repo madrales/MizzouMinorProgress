@@ -123,7 +123,7 @@ export class AllCoursesPage implements OnInit {
         this.test = "You need to complete 3 more 3000+ courses";
         console.log("You need to complete 3 more 3000+ courses");
       }
-      if(this.incompletedArray.length == 0){
+      if(this.incompletedArray.length == 0 && count == 3){
         this.status = "You have completed the IT minor!"
       }else {
         this.status = "You have not completed the IT minor."
@@ -140,7 +140,7 @@ export class AllCoursesPage implements OnInit {
   clear(){
     this.completedArray  = this.model.clearCompleted();
     this.incompletedArray = this.model.clearIncomplete();
-    this.status = " ";
+    this.status = "";
   }
 
 
