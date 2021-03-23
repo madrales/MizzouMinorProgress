@@ -3,6 +3,7 @@
     text-align: center;
     display: flex;
     width: 100%;
+    font-family: 'GRAPHIK', serif;
 }
 #muStacked {
     width: 25vw;
@@ -11,6 +12,9 @@
     margin: auto;
     text-align: center;
 }
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+  }
 #header {
     background-color: #F1B82D;
     margin: auto;
