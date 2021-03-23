@@ -1,23 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Course } from "src/app/interfaces/course";
 import { Completed } from "src/app/interfaces/completed";
-import ITcourses from 'src/assets/ITminorcourses.json'; 
-import ITcourses1 from 'src/assets/ITminorcourses1.json';
-import Minors from 'src/assets/COEminors.json'
-import { Minor } from 'src/app/interfaces/minor';
-import { Storage } from '@ionic/storage'
+import  CyberSecurityCore  from "src/assets/CyberSecurityCertificate.json";
+import CyberSecurityElective from "src/assets/CyberSecurityCertificate3000.json"; 
+import { Storage } from '@ionic/storage';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class CompletedITService {
+export class CyberSecurityCertificateService {
 
-  ITMinorArray: Course[] = [];
-  ITMinorDataName: string = "ITMinor";
+  CybSecCoreArray: Course[] = [];
+  CybSecCoreDataName: string = "CybSecCore";
 
-  ITminorArray2: Course[] = [];
-  ITMinorDataName2: string = "ITMinor2";
+  CybSecElectiveArray: Course[] = [];
+  CybSecElectiveDataName: string = "CybSecElective";
 
   completedArray: String[] = [];
   completedDataName: string = "completed"; 
@@ -25,45 +23,51 @@ export class CompletedITService {
   incompletedArray: Course[] = [];
   incompletedDataName: string = "incompleted"; 
 
-  constructor(private storage: Storage) {
+
+  constructor(private storage: Storage) { 
 
     this.getData(this.completedDataName).then((completed)  => {
       if(completed){
         this.completedArray = completed; 
       }
     }); 
-
-    this.getData(this.ITMinorDataName).then((ITMinor)  => {
-      if(ITMinor){
-        this.ITMinorArray = ITMinor; 
-      }
-    });
-
-    this.getData(this.ITMinorDataName2).then((ITMinor2)  => {
-      if(ITMinor2){
-        this.ITminorArray2 = ITMinor2; 
-      }
-    });
-
+    
     this.getData(this.incompletedDataName).then((incompleted)  => {
       if(incompleted){
         this.incompletedArray = incompleted; 
       }
     });
 
+    this.getData(this.CybSecCoreDataName).then((CybSecCore)  => {
+      if(CybSecCore){
+        this.CybSecCoreArray = CybSecCore; 
+      }
+    });
+
+    this.getData(this.CybSecElectiveDataName).then((CybSecElective)  => {
+      if(CybSecElective){
+        this.CybSecElectiveArray = CybSecElective; 
+      }
+    });
     
-  //import IT sequence 1 json file courses 
-    this.ITMinorArray = localStorage.getItem("ITcourses") !== null
-      ? JSON.parse(localStorage.getItem("ITcourses"))
-      :ITcourses;
 
-  //import IT sequence 2 json file courses 
-   this.ITminorArray2 = localStorage.getItem("ITcourses1") !== null
-   ? JSON.parse(localStorage.getItem("ITcourses1"))
-   :ITcourses1;
-   }
+    
+  //import CyberSec core json file courses 
+    this.CybSecCoreArray = localStorage.getItem("CyberSecurityCore") !== null
+      ? JSON.parse(localStorage.getItem("CyberSecurityCore"))
+      :CyberSecurityCore;
 
-   getData(name: string){
+      
+  //import CyberSec elective json file courses 
+   this.CybSecElectiveArray = localStorage.getItem("CyberSecurityElective") !== null
+   ? JSON.parse(localStorage.getItem("CyberSecurityElective"))
+   :CyberSecurityElective;
+  }
+
+
+
+
+  getData(name: string){
     return this.storage.get(name); 
   }
 
@@ -79,18 +83,17 @@ export class CompletedITService {
     return(this.completedArray); 
   }
 
-  getITMinor(){
-    return(this.ITMinorArray);
-  }
-
-  getITMinor2(){
-    return(this.ITminorArray2);
-  }
-
   getIncompleted(){
     return(this.incompletedArray);
   }
 
+  getCyberSecCore(){
+    return(this.CybSecCoreArray);
+  }
+
+  getCyberSecElective(){
+    return(this.CybSecElectiveArray);
+  }
 
 
   addCompleted(completedObject: String) {
@@ -131,15 +134,8 @@ export class CompletedITService {
     return this.completedArray;
   }
 
-   //Array to get JSON file of all IT courses 
-  //  getData2(){ 
-  //   this.data = localStorage.getItem("ITcourses") !== null ? JSON.parse(localStorage.getItem("ITcourses")) : ITcourses; 
-  //   console.log(this.data); 
-
-  //   return this.data; 
-  // }
-
-  //function to add a completed course 
-
 
 }
+
+
+

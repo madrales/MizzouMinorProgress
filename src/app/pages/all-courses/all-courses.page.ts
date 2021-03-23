@@ -24,7 +24,8 @@ export class AllCoursesPage implements OnInit {
   completedArray: Array<String>;
 
   incompletedArray: Array<Course>;
-  ITMinorArray: Array<Course>; 
+  ITMinorArray: Array<Course>;
+  ITMinorArray2: Array<Course>;
 
   constructor(private model: CompletedITService, private formBuilder: FormBuilder) {
 
@@ -35,11 +36,18 @@ export class AllCoursesPage implements OnInit {
         Validators.minLength(4)]],
     });
 
+    //Sequnece 1
     this.ITMinorArray = this.model.getITMinor(); 
-    console.log(this.ITMinorArray);
+    console.log("Sequence 1" + this.ITMinorArray);
+
+    //Sequence 2
+    this.ITMinorArray2 = this.model.getITMinor2();
+    console.log("Sequence 2" + this.ITMinorArray2);
     
+    //Courses compeleted by User
     this.completedArray = this.model.getCompleted();
   
+    //Courses remaining to be completed
     this.incompletedArray = this.model.getIncompleted(); 
    }
 
@@ -53,9 +61,6 @@ export class AllCoursesPage implements OnInit {
 
     
     console.log(this.completedArray);
-
-    //https://www.tutorialspoint.com/typescript/typescript_string_localecompare.htm
-    //link above is for comparing strings
   
   }
 
@@ -67,6 +72,8 @@ export class AllCoursesPage implements OnInit {
 
   
   check(){
+
+    this.incompletedArray = this.model.clearIncomplete();
 
     var completedLength = this.completedArray.length;
     var minorLength = this.ITMinorArray.length;
