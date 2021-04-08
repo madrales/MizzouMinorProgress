@@ -109,6 +109,9 @@ h1 {
   .notoSerif {
     font-family: 'GRAPHIK', serif;
   }
+  .subtext {
+    font-family: 'IMPACT', sans-serif;
+  }
   .column {
       width: 33%;
   }
@@ -183,4 +186,7 @@ ion-content {
 }
 ion-slide {
     display: inline;
+}
+.footer{
+    color: white;
 }
