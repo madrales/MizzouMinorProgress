@@ -15,6 +15,16 @@
     padding: 15px;
     font-size: x-large;
 }
+.mainWrapper {
+    background-color: #F1B82D;
+    padding: 25px;
+    width: 50%;
+    border-radius: 25px;
+    box-shadow: 15px;
+    margin: auto;
+    text-align: center;
+    min-height: 500px;
+}
 .navbar {
     margin: auto;
     text-align: center;
@@ -106,6 +116,9 @@ ion-card {
 .programTitle {
     color: #F1B82D;
 }
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+}
 .buttoon {
     margin: auto;
     text-align: center;
@@ -116,6 +129,11 @@ ion-card {
 .buttoon:hover {
     background-color: #F1B82D;
     color: black;
+}
+.formWrapper {
+    margin: auto;
+    text-align: center;
+    width: 25%;
 }
 h1 {
     color: black;
