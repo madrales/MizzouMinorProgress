@@ -55,8 +55,15 @@ export class CybersecCertifcatePage implements OnInit {
 
   addCourse() {
 
-    this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse); 
-    this.completedCoursesForm.reset(); 
+    var submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+
+    for (let i =0; i < submittedLenght; i++){
+      this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
+
+    }
+
+    // this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse); 
+    // this.completedCoursesForm.reset(); 
     console.log("initial submitted courses: " + this.completedArray);
     console.log("initial submitted number courses: " + this.completedArray.length);
     console.log (typeof this.completedArray);
@@ -86,8 +93,6 @@ export class CybersecCertifcatePage implements OnInit {
     for (let i =0; i< completedLength; i++){
       this.completedArray[i] = String(this.completedArray[i]);
     }
-    console.log("finished transfer"); 
-    console.log(typeof String(this.completedArray[0]));
 
 
    

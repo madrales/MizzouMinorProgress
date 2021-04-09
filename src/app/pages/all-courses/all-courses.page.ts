@@ -30,10 +30,7 @@ export class AllCoursesPage implements OnInit {
   constructor(private model: CompletedITService, private formBuilder: FormBuilder) {
 
     this.completedCoursesForm = this.formBuilder.group({
-      completedCourse: ["", [Validators.required,
-        Validators.pattern("^[0-9]*\.?[0-9]*$"),
-        Validators.maxLength(4), 
-        Validators.minLength(4)]],
+      completedCourse: ["", [Validators.required,]],
     });
 
     //Sequnece 1
@@ -56,8 +53,17 @@ export class AllCoursesPage implements OnInit {
 
   addCourse() {
 
-    this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse); 
-    this.completedCoursesForm.reset(); 
+    
+    var submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+
+    for (let i =0; i < submittedLenght; i++){
+      this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
+
+    }
+
+
+    // this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse); 
+    // this.completedCoursesForm.reset(); 
 
     
     console.log(this.completedArray);

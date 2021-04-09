@@ -16,7 +16,7 @@
     <div class="formWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
-          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Nah" okText="Okay!">
+          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
             <ion-select-option value="1040">INFOTC 1040</ion-select-option>
             <ion-select-option value="2810">INFOTC 2810</ion-select-option>
             <ion-select-option value="2830">INFOTC 2830</ion-select-option>
