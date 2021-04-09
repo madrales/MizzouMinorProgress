@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'mobilecert',
     loadChildren: () => import('./mobilecert/mobilecert.module').then( m => m.MobilecertPageModule)
+  },
+  {
+    path: 'infosystems',
+    loadChildren: () => import('./infosystems/infosystems.module').then( m => m.InfosystemsPageModule)
   }
 ];
 
