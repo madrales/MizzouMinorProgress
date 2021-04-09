@@ -29,10 +29,11 @@ export class CybersecCertifcatePage implements OnInit {
   constructor(private model: CyberSecurityCertificateService, private formBuilder: FormBuilder) { 
 
     this.completedCoursesForm = this.formBuilder.group({
-      completedCourse: ["", [Validators.required,
-        Validators.pattern("^[0-9]*\.?[0-9]*$"),
-        Validators.maxLength(4), 
-        Validators.minLength(4)]],
+      completedCourse:["", [Validators.required],]
+      // completedCourse: ["", [Validators.required,
+      //   Validators.pattern("^[0-9]*\.?[0-9]*$"),
+      //   Validators.maxLength(4), 
+      //   Validators.minLength(4)]],
     });
 
     this.CyberSecCoreArray = this.model.getCyberSecCore(); 
@@ -56,7 +57,10 @@ export class CybersecCertifcatePage implements OnInit {
 
     this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse); 
     this.completedCoursesForm.reset(); 
-    console.log(this.completedArray);
+    console.log("initial submitted courses: " + this.completedArray);
+    console.log("initial submitted number courses: " + this.completedArray.length);
+    console.log (typeof this.completedArray);
+    console.log(typeof String(this.completedArray[0]));
   }
 
   addIncompeltedCourse(incompletedObject: Course ) {
@@ -78,13 +82,19 @@ export class CybersecCertifcatePage implements OnInit {
     var electivesLength = this.CyberSecElectiveArray.length; 
 
     console.log("Number of user completed courses: " + completedLength);
+
+    for (let i =0; i< completedLength; i++){
+      this.completedArray[i] = String(this.completedArray[i]);
+    }
+    console.log("finished transfer"); 
+    console.log(typeof String(this.completedArray[0]));
+
+
    
 
     for (let i = 0; i < certificateLength; i++) {
      
-      
-
-      var found = this.completedArray.includes(this.CyberSecCoreArray[i].courseID);
+      var found = this.completedArray.includes( this.CyberSecCoreArray[i].courseID);
 
       console.log("found " + this.CyberSecCoreArray[i].courseID+ " :" + found);
 

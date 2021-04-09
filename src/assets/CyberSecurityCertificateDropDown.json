@@ -1,0 +1,60 @@
+[
+    {
+        "courseID": "1040",
+        "name" : "Introduction to Problem Solving and Programming",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "2810",
+        "name" : "Fundamentals of Network Technology",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "2910",
+        "name" : "Cyber Security",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "3910",
+        "name": "Advanced Cyber Security",
+        "credits": 3,
+        "department" :"Information Technology"
+    },
+    [
+        {
+            "courseID": "2830",
+            "name" : "Web Application Development I",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "3530",
+            "name" : "UNIX Operating System",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "3810",
+            "name" : "Computer Network Security",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "3850",
+            "name": "Computer System Administration",
+            "credits": 3,
+            "department" :"Information Technology"
+        },
+        {
+            "courseID": "4910",
+            "name": "Digital Forensics",
+            "credits": 3,
+            "department" :"Information Technology"
+        }
+       
+    ]
+   
+]
