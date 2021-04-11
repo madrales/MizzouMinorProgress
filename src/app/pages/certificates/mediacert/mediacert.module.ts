@@ -8,12 +8,15 @@ import { MediacertPageRoutingModule } from './mediacert-routing.module';
 
 import { MediacertPage } from './mediacert.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MediacertPageRoutingModule
+    MediacertPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [MediacertPage]
 })
