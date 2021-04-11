@@ -64,15 +64,18 @@ export class MediacertPage implements OnInit {
 
     console.log("initial submitted courses: " + this.completedArray);
     console.log("initial submitted number courses: " + this.completedArray.length);
-    console.log (typeof this.completedArray);
-    console.log(typeof String(this.completedArray[0]));
   }
 
     addIncompeltedCourse(incompletedObject: Course ) {
     this.incompletedArray =  this.model.addIncompleted(incompletedObject);   
   }
 
+  addIncompeltedElectiveCourse(incompletedObject: Course ) {
+    this.incompletedElectiveArray =  this.model.addIncompletedElective(incompletedObject);   
+  }
     clear(){
+
+      console.log("Cleared!"); 
     this.completedArray  = this.model.clearCompleted();
     this.incompletedArray = this.model.clearIncomplete();
     this.incompletedElectiveArray = this.model.clearIncompleteElectives();
@@ -130,7 +133,7 @@ export class MediacertPage implements OnInit {
 
       }
 
-      var count = electivesLength;
+      var count = 0;
       for (let i = 0; i < electivesLength; i++) {
         
         console.log( "total electives " + electivesLength);
@@ -140,27 +143,39 @@ export class MediacertPage implements OnInit {
         console.log("found " + this.MediaTechElectiveArray[i].courseID+ " :" + found);
   
         if(found){
-          break;
+          count++;
+          continue;
+
         
   
         }
 
         if(!found){
-          count--; 
+          this.addIncompeltedElectiveCourse(this.MediaTechElectiveArray[i]);
+          console.log("added to incomplete electives : " + this.MediaTechElectiveArray[i]);
+         continue; 
         }
      }
      if(count == 0 ){
       this.showElectives = true;
-       console.log("user still needs to complete an elective course");
+       console.log("user still needs to complete elective courses");
        console.log(this.showElectives);
      }
-     if(count >0){
-       console.log("user has completed the elective requiremnt"); 
-      
+     if(count == 1){
+      this.showElectives = true;
+       console.log("user has completed 1 elective requiremnt"); 
      }
+     if(count == 2){
+      this.showElectives = true;
+      console.log("user has completed 2 elective requiremnt"); 
+    }
+    if(count == 3){
+      console.log("user has completed 3 elective requiremnt"); 
+    }
 
   console.log("final list of incompleted core courses:");
   console.log(this.incompletedArray);
+  console.log(this.incompletedElectiveArray);
   }
 }
 }

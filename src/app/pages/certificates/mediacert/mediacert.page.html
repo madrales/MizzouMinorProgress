@@ -50,7 +50,7 @@
 
     <div class="notoSerif" *ngIf = 'showElectives == true'>
       <ion-title>Complete ONE of the following Courses</ion-title> 
-      <ion-card  *ngFor='let a of  MediaTechElectiveArray' >
+      <ion-card  *ngFor='let a of  incompletedElectiveArray' >
         <ion-card-title>
         {{ a.courseID }} {{a.name}}
         </ion-card-title>

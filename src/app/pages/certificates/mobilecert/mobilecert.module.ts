@@ -8,12 +8,15 @@ import { MobilecertPageRoutingModule } from './mobilecert-routing.module';
 
 import { MobilecertPage } from './mobilecert.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MobilecertPageRoutingModule
+    MobilecertPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [MobilecertPage]
 })
