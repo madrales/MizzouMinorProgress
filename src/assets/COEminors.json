@@ -12,16 +12,10 @@
         "description": "A minor in computer science is offered through the College of Engineering. To obtain a minor, a student must complete 18 hours of courses approved by the Department of Electrical Engineering and Computer Science. The student must earn a grade of C- or better in each course counting toward the minor and have a 2.0 GPA in all courses counting toward the minor. At least 9 hours must be taken in residence."
     },
     {
-        "minorID": "BUSINESS",
-        "name": "Business",
+        "minorID": "ECE",
+        "name": "Electrical and Computer Engineering",
         "credits": 18,
-        "description": "The business minor is available to undergraduate students from any other college at Mizzou. Students earning a Trulaske College of Business degree cannot be awarded a business minor. Students must complete the 18-hour set of required courses. At least 15 of the 18 total hours must be taken in residence at the University of Missouri. To earn the business minor, students must have at least a 2.00 business minor GPA in the required courses. If a student has taken more than 18 business hours, all business courses taken - Accountancy (ACCTCY), Business Administration (BUS_AD), Economics (ECONOM), Finance (FINANC), Management (MANGMT) and Marketing (MRKTNG) - will be included when calculating the business minor GPA." 
-    },
-    {
-        "minorID": "AERO_ENG",
-        "name" : "Aerospace Engineering",
-        "credits": 18,
-        "description": "The purpose of the Minor in Aerospace engineering is to provide a fundamental grounding in aerospace engineering and to prepare students to be competitive for positions in aerospace-oriented industries. Students will take courses from the four fundamental areas of aerospace engineering: aerodynamics, aerospace structures, flight mechanics and propulsion."
+        "description": "The minor in engineering is designed for students majoring in disciplines such as physics, math, chemistry and computer science, but it is available to students in all disciplines. It consists of 18 or 20 hours of engineering courses as listed below." 
     }
 
 ]

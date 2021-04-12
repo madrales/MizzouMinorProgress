@@ -23,7 +23,7 @@
       <h3 class="notoSerif">On this page, you will find a comprehensive list of the academic minors offered by the College of Engineering at Mizzou.</h3>
       <h5>Information provided by <a href="https://engineering.missouri.edu/academics/engineering-minors/">Mizzou College of Engineering</a></h5>
     </div>
-    <div class="home">
+    <!-- <div class="home">
       <div class="card">
         <ion-card *ngFor="let m of data">
           <ion-title>
@@ -37,5 +37,19 @@
           </ion-card-content>
         </ion-card>
       </div>
+    </div> -->
+    <div class=”home”>
+      <ion-card>
+        <ion-title class=”notoSerif”>
+          COMPUTER SCIENCE MINOR
+        </ion-title>
+        <ion-card-subtitle class=”notoSerif”>
+          15
+        </ion-card-subtitle>
+      <ion-card-content class=”subtext”>
+        This stand-alone certificate is offered online and is highly focused on real-world use cases through multiple hands-on laboratories and up-to-date training.
+      </ion-card-content>
+      <a routerLink="../minors/compsci"><button mat-raised-button class="btn buttoon btn-success pull-right">Click here to view the Computer Science Minor</button></a>
+      </ion-card>
     </div>
 </ion-content>

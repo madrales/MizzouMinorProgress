@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: 'infosystems',
     loadChildren: () => import('./infosystems/infosystems.module').then( m => m.InfosystemsPageModule)
-  }
+  },
 ];
 
 @NgModule({
