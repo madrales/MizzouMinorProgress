@@ -2,31 +2,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Noto+Serif&display=swap" rel="stylesheet">
 <ion-header id="header">
   <ion-toolbar>
-    <div class = "test">
-        <!-- <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_horiz.png"></ion-img> -->
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_horiz.png"></ion-img>
+      </ion-col>
+      <ion-col size="11">
         <div class="navbar">
-          <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_horiz.png"></ion-img>
           <div class="navbarWrapper">
+            <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right" >Home</button></a>
             <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right" >IT Minor Calculator</button></a>
             <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Certificates</button></a>
             <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right" >Minors</button></a>
           </div>
         </div>
-    </div>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 <ion-content>
     <div class="home">
       <h1 id="styledHeader">MIZZOU COLLEGE OF ENGINEERING MINOR AND CERTIFICATE TRACKER</h1>
-    <div class="navbarWrapper">
-      <!-- <div class="navbar">
-        <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right" >All Courses</button></a>
-        <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Certificates</button></a>
-        <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right" >Minors</button></a>
-      </div> -->
-    </div>
-    <!-- <div class="spacerItem" id="swiper">
-      <ion-grid>
+    <!-- <div class="spacerItem" id="swiper"> -->
+      <!-- <ion-grid>
         <ion-row>
           <ion-col size="12">
           <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
@@ -57,6 +54,7 @@
     </div> -->
     <div class="spacer">
       <div class="spacerItem column">
+        <ion-img src="../../assets/student1.jpg" class="leftRight"></ion-img>
         <h1 class="notoSerif">Looking for Academic Minor Programs?</h1>
         <h5 class="subtext">
           The College of Engineering at Mizzou provides multiple options when it comes to pursuing an academic minor. From Electric Engineering to Information Technology, you will work hands on with state-of-the-art equipment while gaining valuable experience, all without distrupting your undergraduate degree progress!
@@ -67,8 +65,10 @@
         <h5 class="subtext">
           From Application Development to CyberSecurity, the College of Engineering offers a plethora of undergrad certificate options. Certificates provide students with valuable documentation of their learning as well as increased felxbility when compared to major and minor programs.
         </h5>
+        <ion-img src="../../assets/cert.jpg" class="centerImg"></ion-img>
       </div>
       <div class="spacerItem column">
+        <ion-img src="../../assets/student2.jpg" class="leftRight"></ion-img>
         <h1 class="notoSerif">Which option is best for me? Minor or Certificate?</h1>
         <h5 class="subtext">
           Minor programs allow students to incorporate optional coursework into their academic program in order to graduate with the official minor attached to their degree. Certificates on the other hand, are less prominent versions of a minor that can still show the student's coursework.

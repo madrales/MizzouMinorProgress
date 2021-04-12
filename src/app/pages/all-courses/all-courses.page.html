@@ -1,8 +1,20 @@
 <ion-header id="header">
   <ion-toolbar>
-    <div class = "test">
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
         <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_horiz.png"></ion-img>
-    </div>
+      </ion-col>
+      <ion-col size="11">
+        <div class="navbar">
+          <div class="navbarWrapper">
+            <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right" >Home</button></a>
+            <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right" >IT Minor Calculator</button></a>
+            <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Certificates</button></a>
+            <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right" >Minors</button></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
