@@ -4,15 +4,15 @@
   <ion-toolbar>
     <ion-row class="ion-align-items-center">
       <ion-col size="1">
-        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_horiz.png"></ion-img>
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_horiz.png"></ion-img>
       </ion-col>
       <ion-col size="11">
         <div class="navbar">
           <div class="navbarWrapper">
-            <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right" >Home</button></a>
-            <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right" >IT Minor Calculator</button></a>
-            <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Certificates</button></a>
-            <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right" >Minors</button></a>
+            <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Home</button></a>
+            <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >IT Minor Calculator</button></a>
+            <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Certificates</button></a>
+            <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Minors</button></a>
           </div>
         </div>
       </ion-col>
@@ -22,36 +22,6 @@
 <ion-content>
     <div class="home">
       <h1 id="styledHeader">MIZZOU COLLEGE OF ENGINEERING MINOR AND CERTIFICATE TRACKER</h1>
-    <!-- <div class="spacerItem" id="swiper"> -->
-      <!-- <ion-grid>
-        <ion-row>
-          <ion-col size="12">
-          <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
-            <ion-slide>
-              <img class ="sliderImg" src="../../../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png">
-              <h3 class="notoSerif">Information Technology</h3>
-              <h5 class="notoSerif">Course Include: INFOTC 1040, INFOTC 2040, INFOTC 2830</h5>
-            </ion-slide>
-            <ion-slide>
-              <img class ="sliderImg" src="../../../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_vert.png">
-              <h3 class="notoSerif">Computer Science</h3>
-              <h5 class="notoSerif">Course Include: COMP_SCI 1050, COMP_SCI 2050, COMP_SCI 3330</h5>
-            </ion-slide>
-            <ion-slide>
-              <img class ="sliderImg" src="../../../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png">
-              <h3 class="notoSerif">Aerospace Engineering</h3>
-              <h5 class="notoSerif">Course Include: MAE 3400, MAE 3600, MAE 4210</h5>
-            </ion-slide>
-            <ion-slide>
-              <img class ="sliderImg" src="../../../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_vert.png">
-              <h3 class="notoSerif">Engineering</h3>
-              <h5 class="notoSerif">Course Include: ENGINR 1000, ENGINR 2000, ENGINR 3000</h5>
-            </ion-slide>
-          </ion-slides>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div> -->
     <div class="spacer">
       <div class="spacerItem column">
         <ion-img src="../../assets/student1.jpg" class="leftRight"></ion-img>
@@ -132,8 +102,15 @@
         </ion-card-content>
       </ion-card>
     </div> -->
-    <div class="contactInfo">
+    <!-- <div class="contactInfo">
       <h1 class="notoSerif footer">This project was created by Team JustDoIT for the Information Technology Capstone course at the University of Missouri. This application is not intended to be commercialized without the consent of the Mizzou College of Engineering.</h1>
-    </div>
+    </div> -->
   <!-- </div> -->
+  <ion-footer>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12">
+        <h1 class="notoSerif footer">This project was created by Team JustDoIT for the Information Technology Capstone course at the University of Missouri. This application is not intended to be commercialized without the consent of the Mizzou College of Engineering.</h1>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
 </ion-content>

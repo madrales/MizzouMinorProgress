@@ -24,23 +24,25 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-body {
+.buttoon {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
     color: white;
+    font-size: x-large;
+    margin-top: 0px;
 }
-#muStacked {
-    width: 25vw;
-    margin: 0;
-}
-#header {
-    background-color: #F1B82D;
-    margin: 0;
-    text-align: left;
+.buttoon:hover {
+    background-color: white;
     color: black;
-    padding: 15px;
+    border-bottom: 5px solid #F1B82D;
 }
-.test {
-    background-color: #F1B82D;
-    margin: 0;
-    text-align: left;
-    border: 0;
+ion-row {
+    background-color: #000000;
+}
+.navbarWrapper {
+    margin: auto;
+    text-align: center;
+    padding: 15px;
 }
