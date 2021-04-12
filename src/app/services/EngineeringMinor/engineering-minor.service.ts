@@ -57,13 +57,13 @@ export class EngineeringMinorService {
       }
     });
 
-    //import MediaTech core json file courses 
+    //import Engineering Minor core json file courses 
     this.EngineeringCoreArray = localStorage.getItem("EngineeringMinorCore") !== null
     ? JSON.parse(localStorage.getItem("EngineeringMinorCore"))
     :EngineeringMinorCore;
 
       
-  //import MediaTech elective json file courses 
+  //import Engineering Minor elective json file courses 
    this.EngineeringElectiveArray = localStorage.getItem("EngineeringMinorElective") !== null
    ? JSON.parse(localStorage.getItem("EngineeringMinorElective"))
    :EngineeringMinorElective;
