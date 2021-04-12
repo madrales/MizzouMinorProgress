@@ -19,6 +19,8 @@ export class MobilecertPage implements OnInit {
   public test: String;
   public status: String; 
   public showElectives: Boolean = false; 
+  public count = 0;
+
 
   completedArray: Array<String>; 
   incompletedArray: Array<Course>;
@@ -122,22 +124,47 @@ export class MobilecertPage implements OnInit {
       this.completedArray[i] = String(this.completedArray[i]);
     }
 
+    var found = this.completedArray.includes( this.WebDevCoreArray[0].courseID);
+    console.log("found " + this.WebDevCoreArray[0].courseID+ " :" + found);
 
-    for (let i = 0; i < certificateLength; i++) {
-     
-      var found = this.completedArray.includes( this.WebDevCoreArray[i].courseID);
 
-      console.log("found " + this.WebDevCoreArray[i].courseID+ " :" + found);
-
-      if(!found){
-
-        console.log("Course not completed: " + this.WebDevCoreArray[i].courseID);
-        this.addIncompeltedCourse(this.WebDevCoreArray[i]);
-
+        if(!found){
+        console.log("Course not completed: " + this.WebDevCoreArray[0].courseID);
+        this.addIncompeltedCourse(this.WebDevCoreArray[0]);
       }
 
-      var count = 0;
+      var found1 = this.completedArray.includes( this.WebDevCoreArray[1].courseID);
+      var found2 = this.completedArray.includes(this.WebDevCoreArray[2].courseID); 
+      console.log("found " + this.WebDevCoreArray[1].courseID+ " :" + found);
+      console.log("found " + this.WebDevCoreArray[2].courseID+ " :" + found);
+
+        if(!found1 && !found2){
+
+          console.log("Courses not completed: " + this.WebDevCoreArray[1].courseID);
+          console.log(" and "  + this.WebDevCoreArray[2].courseID);
+          this.addIncompeltedCourse(this.WebDevCoreArray[1]);
+          this.addIncompeltedCourse(this.WebDevCoreArray[2]);
+
+          
+        }
+
+
+    // for (let i = 0; i < certificateLength; i++) {
+     
+    //   var found = this.completedArray.includes( this.WebDevCoreArray[i].courseID);
+
+    //   console.log("found " + this.WebDevCoreArray[i].courseID+ " :" + found);
+
+    //   if(!found){
+
+    //     console.log("Course not completed: " + this.WebDevCoreArray[i].courseID);
+    //     this.addIncompeltedCourse(this.WebDevCoreArray[i]);
+
+    //   }
+
+      this.count = 0;
       console.log("Electives lenght: " + electivesLength);
+      console.log("count :" + this.count);
       for (let i = 0; i < electivesLength; i++) {
         
 
@@ -146,7 +173,7 @@ export class MobilecertPage implements OnInit {
         console.log("found " + this.WebDevElectiveArray[i].courseID+ " :" + found);
   
         if(found){
-          count++;
+          this.count++;
           continue;
         }
 
@@ -156,17 +183,18 @@ export class MobilecertPage implements OnInit {
          continue; 
         }
      }
-     if(count == 0 ){
+
+     if(this.count == 0 ){
       this.showElectives = true;
        console.log("user still needs to complete elective courses");
        console.log(this.showElectives);
      }
-     if(count == 1){
+     if(this.count == 1){
       this.showElectives = true;
        console.log("user has completed 1 elective requiremnt"); 
        console.log(this.incompletedElectiveArray);
      }
-     if(count == 2){
+     if(this.count == 2){
       console.log("user has completed elective requiremnt"); 
       
     }
@@ -177,7 +205,7 @@ export class MobilecertPage implements OnInit {
   }
 }
 
-}
+
 
 
 

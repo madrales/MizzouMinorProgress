@@ -18,6 +18,7 @@ export class MediacertPage implements OnInit {
   public test: String;
   public status: String; 
   public showElectives: Boolean = false; 
+  public count = 3; 
 
   completedArray: Array<String>; 
   incompletedArray: Array<Course>;
@@ -134,6 +135,7 @@ export class MediacertPage implements OnInit {
       }
 
       var count = 0;
+      this.count = 3; 
       for (let i = 0; i < electivesLength; i++) {
         
         console.log( "total electives " + electivesLength);
@@ -158,18 +160,21 @@ export class MediacertPage implements OnInit {
      }
      if(count == 0 ){
       this.showElectives = true;
+      this.count = 3; 
        console.log("user still needs to complete elective courses");
-       console.log(this.showElectives);
      }
      if(count == 1){
       this.showElectives = true;
+      this.count = 2; 
        console.log("user has completed 1 elective requiremnt"); 
      }
      if(count == 2){
       this.showElectives = true;
+      this.count = 1; 
       console.log("user has completed 2 elective requiremnt"); 
     }
     if(count == 3){
+      this.count = 0; 
       console.log("user has completed 3 elective requiremnt"); 
     }
 
