@@ -24,25 +24,3 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-.buttoon {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    background-color: #000000;
-    color: white;
-    font-size: x-large;
-    margin-top: 0px;
-}
-.buttoon:hover {
-    background-color: white;
-    color: black;
-    border-bottom: 5px solid #F1B82D;
-}
-ion-row {
-    background-color: #000000;
-}
-.navbarWrapper {
-    margin: auto;
-    text-align: center;
-    padding: 15px;
-}

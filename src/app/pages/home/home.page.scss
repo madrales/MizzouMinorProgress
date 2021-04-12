@@ -113,13 +113,6 @@ ion-content {
     display: block;
     // border: 2px solid red;
 }
-#muStacked {
-    display: inline-block;
-    width: 25vw;
-    margin: 0;
-    // border: 2px solid red;
-    text-align: left;
-}
 
 //Styling for Header
 .buttoon {
@@ -130,6 +123,16 @@ ion-content {
     color: white;
     font-size: x-large;
     margin-top: 0px;
+}
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+}
+#muStacked {
+    display: inline-block;
+    width: 25vw;
+    margin: 0;
+    // border: 2px solid red;
+    text-align: left;
 }
 .buttoon:hover {
     background-color: white;

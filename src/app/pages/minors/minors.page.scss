@@ -10,17 +10,6 @@
     text-align: center;
     font-size: large;
 }
-#muStacked {
-    width: 25vw;
-}
-#header {
-    background-color: #F1B82D;
-    margin: 0;
-    text-align: left;
-    color: black;
-    padding: 15px;
-    border: 0;
-}
 .test {
     background-color: #F1B82D;
     margin: auto;
@@ -30,9 +19,12 @@ ion-title {
     font-family: 'IMPACT', sans-serif;
     font-size: xx-large;
 }
+ion-card-subtitle {
+    color: black;
+}
 ion-card-content {
-    font-family: 'GRAPHIK', sans-serif;
-    font-size: medium;
+    font-family: 'gotham', sans-serif;
+    font-size: x-large;
 }
 ion-img {
     margin: auto;
@@ -44,34 +36,11 @@ ion-card {
     text-align: center;
     margin-bottom: 15px;
     padding: 15px;
+    background-color: #8F8884;
+    color: black;
 }
-ion-card:hover {
-    background-color: #F1B82D;
-    color:black;
-}
-// .cardText:hover {
-//     color:black;
-// }
 .programTitle {
     color: #F1B82D;
-}
-.navbar {
-    margin: auto;
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    width: 100%;
-    display: block;
-}
-.buttoon {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-.buttoon:hover {
-    background-color: #F1B82D;
-    color: black;
 }
 .footer{
     background-color: #8F8884;
@@ -80,4 +49,38 @@ ion-card:hover {
     color: black;
     padding: 15px;
     font-size: x-large;
+}
+
+
+//Styling for Header
+.buttoon {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    font-size: x-large;
+    margin-top: 0px;
+}
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+}
+#muStacked {
+    display: inline-block;
+    width: 25vw;
+    margin: 0;
+    // border: 2px solid red;
+    text-align: left;
+}
+.buttoon:hover {
+    background-color: white;
+    color: black;
+}
+ion-row {
+    background-color: #000000;
+}
+.navbarWrapper {
+    margin: auto;
+    text-align: center;
+    padding: 15px;
 }
