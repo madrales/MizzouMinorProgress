@@ -10,6 +10,36 @@
         "name" : "Engineering Graphics Fundamentals",
         "credits" : 2,
         "department" : "ENGINR"
+    }, 
+    {
+        "courseID": "1200", 
+        "name": "Statics and Elementary Strength of Materials", 
+        "credits" : 3, 
+        "department" : "ENGINR"
+    }, 
+    {
+        "courseID": "2100", 
+        "name": "Circuit Theory for Engineers", 
+        "credits": 3, 
+        "department" : "ENGINR" 
+    },
+    {
+        "courseID": "2300",
+        "name": "Engineering Thermodynamics", 
+        "credits": 3, 
+        "department": "ENGINR"
+    }, 
+    {
+        "courseID" : "1040",
+        "name": "Introduction to Problem Solving and Programming", 
+        "credits": 3, 
+        "department": "INFOTC"
+    }, 
+    {
+        "courseID": "1050", 
+        "name" : "Algorithm Design and Programming I", 
+        "credits": 4, 
+        "department": "CMP SC"
     }
    
 ]

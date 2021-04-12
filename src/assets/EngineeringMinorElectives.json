@@ -1,0 +1,87 @@
+[
+    {
+        "courseID": "2180",
+        "name" : "Engineering Analysis of Bioprocesses",
+        "credits" : 2,
+        "department" : "BIOL EN"
+    },
+    {
+        "courseID": "2225",
+        "name" : "Mass and Energy Balance",
+        "credits" : 3,
+        "department" : "CH ENG"
+    }, 
+    {
+        "courseID": "3100", 
+        "name": "Fundamentals of Transportation Engineering", 
+        "credits" : 3, 
+        "department" : "CV ENG"
+    }, 
+    {
+        "courseID": "3200", 
+        "name": "Fundamentals of Environmental Engineering", 
+        "credits": 3, 
+        "department" : "CV ENG" 
+    },
+    {
+        "courseID": "3700",
+        "name": "Fluid Mechanics", 
+        "credits": 3, 
+        "department": "CV ENG"
+    }, 
+    {
+        "courseID" : "4250",
+        "name": "Environmental Regulatory Compliance", 
+        "credits": 3, 
+        "department": "CV ENG"
+    }, 
+    {
+        "courseID": "4500", 
+        "name" : "Introduction to Construction Management", 
+        "credits": 3, 
+        "department": "CV ENG"
+    },
+    {
+        "courseID": "2200", 
+        "name" : "Intermediate Strength of Materials", 
+        "credits": 3, 
+        "department": "ENGINR"
+    }, 
+    {
+        "courseID": "2210", 
+        "name" : "Introduction to Logic Systems", 
+        "credits": 3, 
+        "department": "ECE"
+    },
+    {
+        "courseID": "2030", 
+        "name" : "Fundamentals of Systems Design and Analysis", 
+        "credits": 3, 
+        "department": "IMSE"
+    },
+    {
+        "courseID": "2110", 
+        "name" : "Probability and Statistics for Engineers", 
+        "credits": 3, 
+        "department": "ISME"
+    },
+    {
+        "courseID": "2210", 
+        "name" : "Linear Algebra for Engineers", 
+        "credits": 3, 
+        "department": "ISME"
+    },
+    {
+        "courseID": "2710", 
+        "name" : "Engineering Economic Analysis", 
+        "credits": 3, 
+        "department": "ISME"
+    },
+    {
+        "courseID": "2600", 
+        "name" : "Dynamics", 
+        "credits": 3, 
+        "department": "MAE"
+    }
+   
+]
