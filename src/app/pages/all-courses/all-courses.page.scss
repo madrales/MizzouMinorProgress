@@ -1,3 +1,35 @@
+//Styling for Header
+.buttoon {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    font-size: x-large;
+    margin-top: 0px;
+}
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+}
+#muStacked {
+    display: inline-block;
+    width: 25vw;
+    margin: 0;
+    // border: 2px solid red;
+    text-align: left;
+}
+.buttoon:hover {
+    background-color: white;
+    color: black;
+}
+ion-row {
+    background-color: #000000;
+}
+.navbarWrapper {
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
 .home {
     margin: auto;
     text-align: center;
@@ -14,21 +46,6 @@
     color: black;
     padding: 15px;
     font-size: x-large;
-}
-.navbar {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    display: block;
-}
-.notoSerif {
-    font-family: 'GRAPHIK', serif;
-    color: black;
-}
-  #muStacked {
-    width: 25vw;
-    margin: 0;
 }
 .formButtonWrapper {
     width: 25%;
@@ -79,14 +96,6 @@
 .resultsWrapper h1 {
     color: black;
 }
-#header {
-    background-color: #F1B82D;
-    margin: auto;
-    text-align: center;
-    color: black;
-    padding: 15px;
-    font-size: x-large;
-}
 .test {
     background-color: #F1B82D;
     margin: auto;
@@ -105,17 +114,6 @@ ion-card {
 }
 .programTitle {
     color: #F1B82D;
-}
-.buttoon {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    // display: block;
-  }
-.buttoon:hover {
-    background-color: #F1B82D;
-    color: black;
 }
 h1 {
     color: black;

@@ -2,7 +2,7 @@
     width: 85%;
     padding-left: 15vw;
     margin-top: 25px;
-    margin-bottom: 200px;
+    // margin-bottom: 200px;
 }
 .footerImg {
     margin: auto;
@@ -20,30 +20,31 @@
     width: 25%;
     margin: 15px;
 }
-.footer{
+// .footer{
 
-// Taken from https://codepen.io/thecodercoder/pen/xxGOyPe
-    background-color: #8F8884;
-    margin: auto;
-    text-align: center;
-    color: black;
-    padding: 15px;
-    font-size: x-large;
-    position: relative;
-    min-height: 700px;
-    &::before{
-        content: "";
-        background-image: url(../../../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png);
-        background-size: cover;
-        position: absolute;
-        background-position: center;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        opacity: 0.25;
-    }
-}
+// // Taken from https://codepen.io/thecodercoder/pen/xxGOyPe
+//     background-color: #8F8884;
+//     margin: auto;
+//     text-align: center;
+//     color: black;
+//     padding: 15px;
+//     font-size: x-large;
+//     position: relative;
+//     min-height: 700px;
+//     &::before{
+//         content: "";
+//         background-image: url(../../../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png);
+//         background-size: cover;
+//         max-height: 150px;
+//         position: absolute;
+//         background-position: center;
+//         top: 0px;
+//         right: 0px;
+//         bottom: 0px;
+//         left: 0px;
+//         opacity: 0.25;
+//     }
+// }
 h1 {
     margin: auto;
     text-align: center;
@@ -61,82 +62,29 @@ h1 {
     width: 100%;
     display: flex;
 }
-#muStacked {
-    width: 25vw;
-    margin: 0;
-}
 .spacerItem {
     margin: 1vw;
-    background-color: #F1B82D;
+    background-color: #7D7D7D;
     color: black;
     padding: 15px;
 }
-.custon-nav{
-    height: 48px;
-    width: 20px;
-    cursor: pointer;
-  
-    vertical-align: middle;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .prev-icon-custom{
-    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll 0px 0px;
-  }
-  .prev-icon-custom.disabled{
-    opacity: 0.4;
-    cursor: default;
-  }
-  #swiper {
-      width: 85%;
-      margin: auto;
-  }
-  ion-slide {
-      background-color: #F1B82D;
-  }
-  .next-icon-custom{
-    background: url(https://freakyjolly.com/demo/jquery/OwlCarousel2/nav-icon.png) no-repeat scroll -32px 0px;
-  }
-  .next-icon-custom.disabled{
-    opacity: 0.4;
-    cursor: default;
-  }
-  #styledHeader{
+#styledHeader{
     font-family: 'IMPACT', sans-serif;
     font-size: xx-large;
-  }
-  .notoSerif {
+}
+.notoSerif {
     font-family: 'GRAPHIK', serif;
-  }
-  .subtext {
-    font-family: 'IMPACT', sans-serif;
-  }
-  .column {
+}
+.subtext {
+    font-family: 'gotham', sans-serif;
+}
+.column {
       width: 33%;
-  }
-  .slider-nav{
-    ion-icon{
-        height: 100%;
-    }
-  }
-  
-  .slide-text{
-    position: absolute;
-    color: white;
-    bottom: 30px;
-  }
-#header {
-    background-color: #F1B82D;
-    margin: 0;
-    text-align: left;
-    color: black;
-    padding: 15px;
-    border: 0;
 }
 ion-img {
     margin: auto;
     text-align: center;
+    border: 5px solid black;
 }
 ion-card {
     width: 50%;
@@ -159,27 +107,54 @@ ion-content {
 }
 .navbar {
     margin: auto;
-    text-align: center;
+    text-align: left;
     padding: 10px;
     width: 100%;
     display: block;
-    // background-color: white;
+    // border: 2px solid red;
 }
+
+//Styling for Header
 .buttoon {
     margin: auto;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
+    background-color: #000000;
+    color: white;
+    font-size: x-large;
+    margin-top: 0px;
+}
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+}
+#muStacked {
+    display: inline-block;
+    width: 25vw;
+    margin: 0;
+    // border: 2px solid red;
+    text-align: left;
+}
+.buttoon:hover {
     background-color: white;
     color: black;
 }
-.buttoon:hover {
-    background-color: #F1B82D;
-    color: black;
+ion-row {
+    background-color: #000000;
 }
 .navbarWrapper {
     margin: auto;
     text-align: center;
+    padding: 15px;
+}
+
+
+
+
+.leftRight{
+    margin-bottom: 25px;
+}
+.centerImg {
+    margin-top: 50px;
 }
 .sliderImg {
     width: 75%;
@@ -189,4 +164,10 @@ ion-slide {
 }
 .footer{
     color: white;
+    padding: 15px;
+}
+.contactInfo {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    color: black;
 }

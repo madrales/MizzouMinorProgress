@@ -1,16 +1,23 @@
 <ion-header id="header">
   <ion-toolbar>
-    <div class = "test">
-        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_horiz.png"></ion-img>
-    </div>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_horiz.png"></ion-img>
+      </ion-col>
+      <ion-col size="11">
+        <div class="navbar">
+          <div class="navbarWrapper">
+            <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Home</button></a>
+            <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >IT Minor Calculator</button></a>
+            <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Certificates</button></a>
+            <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Minors</button></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
-
-
 <ion-content>
-  <div class="navbar">
-    <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the homepage</button></a>
-  </div>
   <div class="mainWrapper">
     <h1 class="notoSerif">MIZZOU MINOR/CERTIFICATE CALCULATOR</h1>
     <h3 class="notoSerif">To get started, enter the 4 digit course number of the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>

@@ -10,6 +10,7 @@ import { AllCoursesPage } from './all-courses.page';
 
 
 import { ReactiveFormsModule } from "@angular/forms"; 
+import { ComponentModule } from 'src/app/components/component/component.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     FormsModule,
     IonicModule,
     AllCoursesPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentModule
   ],
   declarations: [AllCoursesPage]
 })

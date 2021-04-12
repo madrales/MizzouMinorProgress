@@ -2,55 +2,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Noto+Serif&display=swap" rel="stylesheet">
 <ion-header id="header">
   <ion-toolbar>
-    <div class = "test">
-        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_horiz.png"></ion-img>
-    </div>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_horiz.png"></ion-img>
+      </ion-col>
+      <ion-col size="11">
+        <div class="navbar">
+          <div class="navbarWrapper">
+            <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Home</button></a>
+            <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >IT Minor Calculator</button></a>
+            <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Certificates</button></a>
+            <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Minors</button></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 <ion-content>
     <div class="home">
-      <h1 id="styledHeader">MIZZOU COLLEGE OF ENGINEERING MINOR AND CERTIFICATE TRACKER!</h1>
-    <div class="navbarWrapper">
-      <h2 class="notoSerif">Want to track your progress toward an academic minor or certificate?</h2>
-      <h5 class="notoSerif">Select Minor or Certificate below to get started!</h5>
-      <div class="navbar">
-        <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right" >All Courses</button></a>
-        <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Certificates</button></a>
-        <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right" >Minors</button></a>
-      </div>
-    </div>
-    <div class="spacerItem" id="swiper">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12">
-          <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
-            <ion-slide>
-              <img class ="sliderImg" src="../../../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png">
-              <h3 class="notoSerif">Information Technology</h3>
-              <h5 class="notoSerif">Course Include: INFOTC 1040, INFOTC 2040, INFOTC 2830</h5>
-            </ion-slide>
-            <ion-slide>
-              <img class ="sliderImg" src="../../../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_vert.png">
-              <h3 class="notoSerif">Computer Science</h3>
-              <h5 class="notoSerif">Course Include: COMP_SCI 1050, COMP_SCI 2050, COMP_SCI 3330</h5>
-            </ion-slide>
-            <ion-slide>
-              <img class ="sliderImg" src="../../../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png">
-              <h3 class="notoSerif">Aerospace Engineering</h3>
-              <h5 class="notoSerif">Course Include: MAE 3400, MAE 3600, MAE 4210</h5>
-            </ion-slide>
-            <ion-slide>
-              <img class ="sliderImg" src="../../../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_vert.png">
-              <h3 class="notoSerif">Engineering</h3>
-              <h5 class="notoSerif">Course Include: ENGINR 1000, ENGINR 2000, ENGINR 3000</h5>
-            </ion-slide>
-          </ion-slides>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div>
+      <h1 id="styledHeader">MIZZOU COLLEGE OF ENGINEERING MINOR AND CERTIFICATE TRACKER</h1>
     <div class="spacer">
       <div class="spacerItem column">
+        <ion-img src="../../assets/student1.jpg" class="leftRight"></ion-img>
         <h1 class="notoSerif">Looking for Academic Minor Programs?</h1>
         <h5 class="subtext">
           The College of Engineering at Mizzou provides multiple options when it comes to pursuing an academic minor. From Electric Engineering to Information Technology, you will work hands on with state-of-the-art equipment while gaining valuable experience, all without distrupting your undergraduate degree progress!
@@ -61,8 +35,10 @@
         <h5 class="subtext">
           From Application Development to CyberSecurity, the College of Engineering offers a plethora of undergrad certificate options. Certificates provide students with valuable documentation of their learning as well as increased felxbility when compared to major and minor programs.
         </h5>
+        <ion-img src="../../assets/cert.jpg" class="centerImg"></ion-img>
       </div>
       <div class="spacerItem column">
+        <ion-img src="../../assets/student2.jpg" class="leftRight"></ion-img>
         <h1 class="notoSerif">Which option is best for me? Minor or Certificate?</h1>
         <h5 class="subtext">
           Minor programs allow students to incorporate optional coursework into their academic program in order to graduate with the official minor attached to their degree. Certificates on the other hand, are less prominent versions of a minor that can still show the student's coursework.
@@ -76,7 +52,7 @@
       </h5>
     </div>
   </div>
-  <div class="footer">
+  <!-- <div class="footer">
     <ion-title id="styledHeader">
       Mizzou College of Engineering Minor and Certificate Calculator
     </ion-title>
@@ -125,9 +101,16 @@
           Michael worked as our only full stack developer for this project. Michael was able to assist in creating pages and views for the application on the front end while pitching in ideas for the backend logic. Michael also worked to setup meetings between the team and mentors to ensure our project was completed to the best of our abilities.
         </ion-card-content>
       </ion-card>
-    </div>
-    <div class="contactInfo">
+    </div> -->
+    <!-- <div class="contactInfo">
       <h1 class="notoSerif footer">This project was created by Team JustDoIT for the Information Technology Capstone course at the University of Missouri. This application is not intended to be commercialized without the consent of the Mizzou College of Engineering.</h1>
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
+  <ion-footer>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12">
+        <h1 class="notoSerif footer">This project was created by Team JustDoIT for the Information Technology Capstone course at the University of Missouri. This application is not intended to be commercialized without the consent of the Mizzou College of Engineering.</h1>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
 </ion-content>

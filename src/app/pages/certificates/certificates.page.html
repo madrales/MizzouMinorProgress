@@ -1,8 +1,20 @@
 <ion-header id="header">
   <ion-toolbar>
-    <div class = "test">
-        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_std_horiz.png"></ion-img>
-    </div>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_horiz.png"></ion-img>
+      </ion-col>
+      <ion-col size="11">
+        <div class="navbar">
+          <div class="navbarWrapper">
+            <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Home</button></a>
+            <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >IT Minor Calculator</button></a>
+            <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Certificates</button></a>
+            <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Minors</button></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
   <ion-content>
@@ -11,18 +23,15 @@
       <h3 class="notoSerif">On this page, you will find a comprehensive list of the undergraduate certificates offered by the College of Engineering at Mizzou.</h3>
       <h5 class="notoSerif">Information provided by <a href="https://engineering.missouri.edu/academics/engineering-certificates/">Mizzou College of Engineering</a></h5>
     </div>
-    <div class="navbar">
-      <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the homepage</button></a>
-    </div>
     	<div class=”home”>
         <ion-card>
           <ion-title class=”notoSerif”>
-          Cybersecurity Certificate
+          CYBERSECURITY CERTIFICATE
           </ion-title>
           <ion-card-subtitle class=”notoSerif”>
             15
           </ion-card-subtitle>
-        <ion-card-content class=”notoSerif”>
+        <ion-card-content class=”subtext”>
           This stand-alone certificate is offered online and is highly focused on real-world use cases through multiple hands-on laboratories and up-to-date training.
         </ion-card-content>
         <a routerLink="../cybersec-certifcate"><button mat-raised-button class="btn buttoon btn-success pull-right">Click here to view the CyberSecurity Certificate!</button></a>
@@ -32,12 +41,12 @@
     <div class=”home”>
       <ion-card>
         <ion-title class=”notoSerif”>
-          Information Systems Certificate
+          INFORMATION SYSTEMS CERTIFICATE
         </ion-title>
         <ion-card-subtitle class=”notoSerif”>
           12
         </ion-card-subtitle>
-        <ion-card-content class=”notoSerif”>
+        <ion-card-content class=”subtext””>
           This 12-credit hour stand-alone certificate is focused on technology used in most business workplaces. You’ll get a survey-level introduction to practices, design, programming and web application development.
         </ion-card-content>
         <a routerLink="../certificates/infosystems"><button mat-raised-button class="btn buttoon btn-success pull-right">Click here to view the Information Systems Certificate!</button></a>
@@ -47,12 +56,12 @@
     <div class=”home”>
       <ion-card>
         <ion-title class=”notoSerif”>
-          Web & Mobile App Developement Certificate
+          WEB & MEDIA APP DEVELOPMENT CERTIFICATE
         </ion-title>
         <ion-card-subtitle class=”notoSerif”>
           12
         </ion-card-subtitle>
-        <ion-card-content class=”notoSerif”>
+        <ion-card-content class=”subtext”>
           This stand-alone certificate is focused on web application and mobile application development. You will learn various programming languages, front- and back-end design and database management for both iOS and Android.
         </ion-card-content>
         <a routerLink="../certificates/mobilecert"><button mat-raised-button class="btn buttoon btn-success pull-right">Click here to view the Web & Mobile App Development Certificate!</button></a>
@@ -62,12 +71,12 @@
     <div class=”home”>
       <ion-card>
         <ion-title class=”notoSerif”>
-          Media Technology & Design Certificate
+          MEDIA TECHNOLOGY & DESIGN CERTIFICATE
         </ion-title>
         <ion-card-subtitle class=”notoSerif”>
           12
         </ion-card-subtitle>
-        <ion-card-content class=”notoSerif”>
+        <ion-card-content class=”subtext”>
           This stand-alone certificate focuses on post-production, editorial, animation and media technology skills. Learn non-linear editing, 2D and 3D animation, motion graphics, visual effects, audio post-production, basic game design principles and production system designs.
         </ion-card-content>
         <a routerLink="../certificates/mediacert"><button mat-raised-button class="btn buttoon btn-success pull-right">Click here to view the Media Technology & Design Certificate!</button></a>

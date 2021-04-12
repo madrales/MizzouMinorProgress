@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 //importing course object interface
 import { Course } from 'src/app/interfaces/course';
 // import { Completed } from 'src/app/interfaces/completed';
@@ -8,8 +8,18 @@ import { Course } from 'src/app/interfaces/course';
 import { CompletedITService } from 'src/app/services/completed-it.service'; 
 
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { ComponentModule } from '../../components/component/component.module';
 
-
+@NgModule({
+  declarations: [
+  ],
+  imports: [
+    ComponentModule
+  ],
+  exports: [
+  ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+})
 @Component({
   selector: 'app-all-courses',
   templateUrl: './all-courses.page.html',
