@@ -1,0 +1,15 @@
+[
+    {
+        "courseID": "1000",
+        "name" : "Introduction to Engineering",
+        "credits" : 1,
+        "department" : "ENGINR"
+    },
+    {
+        "courseID": "1100",
+        "name" : "Engineering Graphics Fundamentals",
+        "credits" : 2,
+        "department" : "ENGINR"
+    }
+   
+]
