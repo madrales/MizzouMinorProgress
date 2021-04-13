@@ -22,25 +22,34 @@
 <ion-content>
   <div class="navbar">
     <div class="mainWrapper">
-      <h1 class="notoSerif">WEB AND MOBILE APPLICATIONS DEVELOPMENT CERTIFICATE CALCULATOR</h1>
+      <h1 class="notoSerif">ENGINEERING MINOR CALCULATOR</h1>
       <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a>
     <h3 class="notoSerif">To get started, enter the 4 digit course number of the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>
     <div class="formWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
           <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
-            <ion-select-option value="2830">INFOTC 2830</ion-select-option>
-            <ion-select-option value="4405">INFOTC 4405</ion-select-option>
-            <ion-select-option value="4410">INFOTC 4410</ion-select-option>
-            <ion-select-option value="4420">INFOTC 4420</ion-select-option>
-            <ion-select-option value="4440">INFOTC 4440</ion-select-option>
-            <ion-select-option value ='4425'>INFOTC 4425</ion-select-option>
-            <ion-select-option value= "4445">INFOTC 4445</ion-select-option>
-            <ion-select-option value="4830">INFOTC 4830</ion-select-option> 
-            <ion-select-option value="4320">INFOTC 4320</ion-select-option>
-            <ion-select-option value="3380">INFOTC 3380</ion-select-option>
-            <ion-select-option value="4400">INFOTC 4400</ion-select-option>
-            <ion-select-option value="3330">INFOTC 3330</ion-select-option>
+            <ion-select-option value="1000">ENGINR 1000</ion-select-option>
+            <ion-select-option value="1100">ENGINR 1100</ion-select-option>
+            <ion-select-option value="1200">ENGINR 1200</ion-select-option>
+            <ion-select-option value="2100">ENGINR 2100</ion-select-option>
+            <ion-select-option value="1040">ENGINR 2300</ion-select-option>
+            <ion-select-option value ='4425'>INFOTC 1040</ion-select-option>
+            <ion-select-option value= "1050">CMP SC 1050</ion-select-option>
+            <ion-select-option value="2180">BIOL EN 2180</ion-select-option> 
+            <ion-select-option value="2225">CH ENG 2225</ion-select-option>
+            <ion-select-option value="3100">CV ENG 3100</ion-select-option>
+            <ion-select-option value="3200">CV ENG 3200</ion-select-option>
+            <ion-select-option value="3700">CV ENG 3700</ion-select-option>
+            <ion-select-option value="4250">CV ENG 4250</ion-select-option>
+            <ion-select-option value="4500">CV ENG 4500</ion-select-option>
+            <ion-select-option value="2200">ENGINR 2200</ion-select-option>
+            <ion-select-option value="2210">ECE 2210</ion-select-option>
+            <ion-select-option value="2030">IMSE 2030</ion-select-option>
+            <ion-select-option value="2110">IMSE 2110</ion-select-option>
+            <ion-select-option value="2210">IMSE 2210</ion-select-option>
+            <ion-select-option value="2710">IMSE 2710</ion-select-option>
+            <ion-select-option value="2600">MAE 2600</ion-select-option>
             <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
           </ion-select>
       <!-- <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input> -->

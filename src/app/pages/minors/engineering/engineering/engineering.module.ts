@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CompsciPageRoutingModule } from './compsci-routing.module';
+import { EngineeringPageRoutingModule } from './engineering-routing.module';
 
-import { CompsciPage } from './compsci.page';
-
+import { EngineeringPage } from './engineering.page';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -17,9 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     IonicModule,
-    CompsciPageRoutingModule,
+    EngineeringPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [CompsciPage]
+  declarations: [EngineeringPage]
 })
-export class CompsciPageModule {}
+export class EngineeringPageModule {}

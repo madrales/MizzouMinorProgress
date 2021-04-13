@@ -20,6 +20,7 @@ export class MobilecertPage implements OnInit {
   public status: String; 
   public showElectives: Boolean = false; 
   public count = 0;
+  public left = 2; 
 
 
   completedArray: Array<String>; 
@@ -110,6 +111,7 @@ export class MobilecertPage implements OnInit {
 
   check(){
 
+    this.left = 2; 
     this.incompletedArray = this.model.clearIncomplete();
     this.incompletedElectiveArray = this.model.clearIncompleteElectives();
     this.showElectives = false;
@@ -185,16 +187,19 @@ export class MobilecertPage implements OnInit {
      }
 
      if(this.count == 0 ){
+       this.left =2; 
       this.showElectives = true;
        console.log("user still needs to complete elective courses");
        console.log(this.showElectives);
      }
      if(this.count == 1){
       this.showElectives = true;
+      this.left = 1;
        console.log("user has completed 1 elective requiremnt"); 
        console.log(this.incompletedElectiveArray);
      }
      if(this.count == 2){
+       this.left = 0; 
       console.log("user has completed elective requiremnt"); 
       
     }
