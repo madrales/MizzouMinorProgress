@@ -1,9 +1,89 @@
-//Styling for Header
+.home {
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+}
+.title {
+    margin: auto;
+    text-align: center;
+    font-size: large;
+}
+.test {
+    background-color: #F1B82D;
+    margin: auto;
+    text-align: center;
+}
+ion-title {
+    font-family: 'IMPACT', sans-serif;
+    font-size: xx-large;
+    border-bottom: solid 2px #F1B82D;
+}
+ion-card-subtitle {
+    color: black;
+}
+ion-card-content {
+    font-family: 'gotham', sans-serif;
+    font-size: x-large;
+}
+ion-img {
+    margin: auto;
+    text-align: center;
+}
+ion-card {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    border: 5px solid black;
+    // display: inline-flex;
+    box-shadow: 15px;
+    margin-bottom: 20px;
+}
+.firstCard {
+    margin-top: 15px;
+}
+.cardWrapper {
+    background-color: #8F8884;
+    width: 97%;
+    margin: auto;
+    padding: 15px;
+}
+.programTitle {
+    color: #F1B82D;
+}
+.footer{
+    background-color: #8F8884;
+    margin: auto;
+    text-align: center;
+    color: black;
+    padding: 15px;
+    font-size: x-large;
+}
 .buttoon {
     margin: auto;
     text-align: center;
     padding: 10px;
-    background-color: #000000;
+    background-color: white;
+    color: black;
+    font-size: x-large;
+    margin-top: 0px;
+}
+.buttoon:hover {
+    color: #F1B82D;
+}
+
+
+//Styling for Header
+.navButton {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
     color: white;
     font-size: x-large;
     margin-top: 0px;
@@ -18,7 +98,18 @@
     // border: 2px solid red;
     text-align: left;
 }
-.buttoon:hover {
+.mizzouLink{
+    color: black;
+    text-decoration: none;
+    font-size: large;
+}
+h5 {
+    font-family: 'gotham', sans-serif;
+}
+.mizzouLink:hover{
+    color: #F1B82D;
+}
+.navButton:hover {
     background-color: white;
     color: black;
 }
@@ -29,55 +120,4 @@ ion-row {
     margin: auto;
     text-align: center;
     padding: 15px;
-}
-
-.home {
-    margin: auto;
-    text-align: center;
-    display: flex;
-    width: 100%;
-}
-.title {
-    margin: auto;
-    text-align: center;
-}
-.test {
-    background-color: #F1B82D;
-    margin: auto;
-    text-align: center;
-}
-ion-img {
-    margin: auto;
-    text-align: center;
-}
-ion-card {
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 15px;
-    padding: 15px;
-    background-color: #8F8884;
-    color: black;
-}
-.programTitle {
-    color: #F1B82D;
-}
-.footer{
-    background-color: #8F8884;
-    margin: auto;
-    text-align: center;
-    color: black;
-    padding: 15px;
-    font-size: x-large;
-}
-.subtext {
-    font-family: "gotham", sans-serif;
-}
-ion-card-content {
-    font-family: 'gotham', sans-serif;
-    font-size: x-large;
-}
-ion-title {
-    font-family: 'IMPACT', sans-serif;
-    font-size: xx-large;
 }

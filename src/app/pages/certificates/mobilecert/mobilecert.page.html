@@ -7,10 +7,10 @@
       <ion-col size="11">
         <div class="navbar">
           <div class="navbarWrapper">
-            <a routerLink="../"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Home</button></a>
-            <a routerLink="../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >IT Minor Calculator</button></a>
-            <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Certificates</button></a>
-            <a routerLink="../minors"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Minors</button></a>
+            <a routerLink="../../"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Home</button></a>
+            <a routerLink="../../all-courses"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >IT Minor Calculator</button></a>
+            <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Certificates</button></a>
+            <a routerLink="../../minors"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Minors</button></a>
           </div>
         </div>
       </ion-col>
@@ -23,7 +23,7 @@
   <div class="navbar">
     <div class="mainWrapper">
       <h1 class="notoSerif">WEB AND MOBILE APPLICATIONS DEVELOPMENT CERTIFICATE CALCULATOR</h1>
-      <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a>
+      <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a>
     <h3 class="notoSerif">To get started, enter the 4 digit course number of the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>
     <div class="formWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">

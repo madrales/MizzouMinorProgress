@@ -1,7 +1,6 @@
 .home {
     margin: auto;
     text-align: center;
-    // margin-bottom: 25vw;
 }
 .resultsWrapper {
     margin: auto;
@@ -15,29 +14,14 @@
     padding: 15px;
     font-size: x-large;
 }
-.mainWrapper {
-    background-color: #F1B82D;
-    padding: 25px;
-    width: 50%;
-    border-radius: 25px;
-    box-shadow: 15px;
-    margin: auto;
-    text-align: center;
-    min-height: 500px;
-}
 .formButtonWrapper {
     width: 25%;
     margin: auto;
     text-align: center;
     display: inline-block;
 }
-.courseCount {
-    background-color: #F1B82D;
-    margin: auto;
-    text-align: center;
-}
 .mainWrapper {
-    background-color: #F1B82D;
+    background-color: #8F8884;
     padding: 25px;
     width: 50%;
     border-radius: 25px;
@@ -45,6 +29,7 @@
     margin: auto;
     text-align: center;
     min-height: 500px;
+    margin-top: 50px;
 }
 .clearButton {
     background-color: red;
@@ -57,27 +42,12 @@
     text-align: center;
     width: 25%;
 }
-.resultsWrapper {
-    background-color: #F1B82D;
-    color: black;
-    padding: 15px;
-    width: 75%;
-    border-radius: 15px;
-}
-.resultCourseWrapper {
-    display: flex;
-}
 .courseCard {
     width: 50%;
     margin: 15px;
 }
 .resultsWrapper h1 {
     color: black;
-}
-.test {
-    background-color: #F1B82D;
-    margin: auto;
-    text-align: center;
 }
 ion-img {
     margin: auto;
@@ -98,12 +68,7 @@ ion-card {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
-    // display: block;
   }
-.buttoon:hover {
-    background-color: #F1B82D;
-    color: black;
-}
 .formWrapper {
     margin: auto;
     text-align: center;

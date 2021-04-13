@@ -30,6 +30,7 @@ ion-row {
     text-align: center;
     padding: 15px;
 }
+
 .home {
     margin: auto;
     text-align: center;
@@ -54,12 +55,12 @@ ion-row {
     display: inline-block;
 }
 .courseCount {
-    background-color: #F1B82D;
+    background-color: #8F8884;
     margin: auto;
     text-align: center;
 }
 .mainWrapper {
-    background-color: #7D7D7D;
+    background-color: #8F8884;
     padding: 25px;
     width: 75%;
     border-radius: 25px;
@@ -67,6 +68,9 @@ ion-row {
     margin: auto;
     text-align: center;
     min-height: 500px;
+    margin-top: 50px;
+    border: 5px solid black;
+    box-shadow: 15px #8F8884;
 }
 .clearButton {
     background-color: red;
@@ -80,7 +84,7 @@ ion-row {
     width: 25%;
 }
 .resultsWrapper {
-    background-color: #F1B82D;
+    background-color: #8F8884;
     color: black;
     padding: 15px;
     width: 75%;
@@ -95,11 +99,6 @@ ion-row {
 }
 .resultsWrapper h1 {
     color: black;
-}
-.test {
-    background-color: #F1B82D;
-    margin: auto;
-    text-align: center;
 }
 ion-img {
     margin: auto;
