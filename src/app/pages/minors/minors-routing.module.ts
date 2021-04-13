@@ -14,6 +14,10 @@ const routes: Routes = [
   },  {
     path: 'engineering',
     loadChildren: () => import('./engineering/engineering/engineering.module').then( m => m.EngineeringPageModule)
+  },
+  {
+    path: 'infotech',
+    loadChildren: () => import('./infotech/infotech.module').then( m => m.InfotechPageModule)
   }
 
 ];
