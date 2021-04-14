@@ -8,12 +8,15 @@ import { AllCertsPageRoutingModule } from './all-certs-routing.module';
 
 import { AllCertsPage } from './all-certs.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AllCertsPageRoutingModule
+    AllCertsPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [AllCertsPage]
 })

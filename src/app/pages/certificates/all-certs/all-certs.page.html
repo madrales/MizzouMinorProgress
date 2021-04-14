@@ -20,5 +20,80 @@
 
 
 <ion-content>
-  <h1>This is the all certificates page</h1>
+  <div class="navbar">
+    <div class="mainWrapper">
+      <h1 class="notoSerif">WEB AND MOBILE APPLICATIONS DEVELOPMENT CERTIFICATE CALCULATOR</h1>
+      <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a>
+    <h3 class="notoSerif">To get started, enter the 4 digit course number of the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>
+    <div class="formWrapper">
+      <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
+        <ion-item>
+          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+            
+            <ion-select-option value="INFOTC2830">INFOTC 2830</ion-select-option>
+            <ion-select-option value="INFOTC4405">INFOTC 4405</ion-select-option>
+            <ion-select-option value="INFOTC4410">INFOTC 4410</ion-select-option>
+            <ion-select-option value="INFOTC4420">INFOTC 4420</ion-select-option>
+            <ion-select-option value="INFOTC4440">INFOTC 4440</ion-select-option>
+            <ion-select-option value ='INFOTC4425'>INFOTC 4425</ion-select-option>
+            <ion-select-option value= "INFOTC4445">INFOTC 4445</ion-select-option>
+            <ion-select-option value="INFOTC4830">INFOTC 4830</ion-select-option> 
+            <ion-select-option value="INFOTC4320">INFOTC 4320</ion-select-option>
+            <ion-select-option value="INFOTC3380">INFOTC 3380</ion-select-option>
+            <ion-select-option value="INFOTC4400">INFOTC 4400</ion-select-option>
+            <ion-select-option value="INFOTC3330">INFOTC 3330</ion-select-option>
+            <!--media coureses-->
+            <ion-select-option value="INFOTC1610">INFOTC 1610</ion-select-option>
+            <ion-select-option value="INFOTC2610">INFOTC 2610</ion-select-option>
+            <ion-select-option value="INFOTC2615">INFOTC 2615</ion-select-option>
+            <ion-select-option value="INFOTC2620">INFOTC 2620</ion-select-option>
+            <ion-select-option value="INFOTC2630">INFOTC 2630</ion-select-option>
+            <ion-select-option value ='INFOTC3610'>INFOTC 3610</ion-select-option>
+            <ion-select-option value= "INFOTC3630">INFOTC 3630</ion-select-option>
+            <ion-select-option value="INFOTC3650">INFOTC 3650</ion-select-option> 
+            <ion-select-option value="INFOTC3660">INFOTC 3660</ion-select-option>
+            <ion-select-option value="INFOTC4610">INFOTC 4610</ion-select-option>
+            <ion-select-option value="INFOTC4640">INFOTC 4640</ion-select-option>
+            <!-- cyber sec courses -->
+            <ion-select-option value="INFOTC1040">INFOTC 1040</ion-select-option>
+            <ion-select-option value="INFOTC2810">INFOTC 2810</ion-select-option>
+            <!-- <ion-select-option value="INFOTC2830">INFOTC 2830</ion-select-option> -->
+            <ion-select-option value="INFOTC2910">INFOTC 2910</ion-select-option>
+            <ion-select-option value="INFOTC3530">INFOTC 3530</ion-select-option>
+            <ion-select-option value ='INFOTC3810'>INFOTC 3810</ion-select-option>
+            <ion-select-option value= "INFOTC3850">INFOTC 3850</ion-select-option>
+            <ion-select-option value="INFOTC3910">INFOTC 3910</ion-select-option> 
+            <ion-select-option value="INFOTC4910">INFOTC 4910</ion-select-option>
+            <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
+          </ion-select>
+      <!-- <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input> -->
+          <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
+            <ion-icon name="add"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </form>
+    </div>
+    <div class="formWrapper">
+      <ion-button expand="full" color="success"(click)="webDevCheck()">Check Progress</ion-button>
+      <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button>
+    </div>
+    <ion-title>Core Courses Left to Complete</ion-title> 
+    <ion-card *ngFor='let course of webDevIncompletedArray'>
+      <ion-card-title>
+        {{ course.courseID }} {{course.name}}
+      </ion-card-title>
+    </ion-card>
+
+    <div class="notoSerif" *ngIf = 'webDevShowElectives == true'>
+      <ion-title>Complete {{ webDevLeft }} of the following Courses</ion-title> 
+      <ion-card  *ngFor='let a of  webDevIncompletedElectiveArray' >
+        <ion-card-title>
+        {{ a.courseID }} {{a.name}}
+        </ion-card-title>
+      </ion-card>
+    </div>
+    </div>
+    
+  </div>
 </ion-content>
+
