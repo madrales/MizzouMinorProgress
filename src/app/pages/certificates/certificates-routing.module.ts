@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'infosystems',
     loadChildren: () => import('./infosystems/infosystems.module').then( m => m.InfosystemsPageModule)
   },
+  {
+    path: 'all-certs',
+    loadChildren: () => import('./all-certs/all-certs.module').then( m => m.AllCertsPageModule)
+  },
 ];
 
 @NgModule({
