@@ -1,18 +1,18 @@
 [
     {
-        "courseID": "2830",
+        "courseID": "INFOTC2830",
         "name" : "Web Application Development",
         "credits" : 3,
         "department" : "Information Technology"
     },
     {
-        "courseID": "4405",
+        "courseID": "INFOTC4405",
         "name" : "iOS App Development I",
         "credits" : 3,
         "department" : "Information Technology"
     },
     {
-        "courseID": "4410",
+        "courseID": "INFOTC4410",
         "name" : "Android App Development I",
         "credits" : 3,
         "department" : "Information Technology"

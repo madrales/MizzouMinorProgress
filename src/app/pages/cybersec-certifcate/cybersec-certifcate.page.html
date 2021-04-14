@@ -29,15 +29,15 @@
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
           <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
-            <ion-select-option value="1040">INFOTC 1040</ion-select-option>
-            <ion-select-option value="2810">INFOTC 2810</ion-select-option>
-            <ion-select-option value="2830">INFOTC 2830</ion-select-option>
-            <ion-select-option value="2910">INFOTC 2910</ion-select-option>
-            <ion-select-option value="3530">INFOTC 3530</ion-select-option>
-            <ion-select-option value ='3810'>INFOTC 3810</ion-select-option>
-            <ion-select-option value= "3850">INFOTC 3850</ion-select-option>
-            <ion-select-option value="3910">INFOTC 3910</ion-select-option> 
-            <ion-select-option value="4910">INFOTC 4910</ion-select-option>
+            <ion-select-option value="INFOTC1040">INFOTC 1040</ion-select-option>
+            <ion-select-option value="INFOTC2810">INFOTC 2810</ion-select-option>
+            <ion-select-option value="INFOTC2830">INFOTC 2830</ion-select-option>
+            <ion-select-option value="INFOTC2910">INFOTC 2910</ion-select-option>
+            <ion-select-option value="INFOTC3530">INFOTC 3530</ion-select-option>
+            <ion-select-option value ='INFOTC3810'>INFOTC 3810</ion-select-option>
+            <ion-select-option value= "INFOTC3850">INFOTC 3850</ion-select-option>
+            <ion-select-option value="INFOTC3910">INFOTC 3910</ion-select-option> 
+            <ion-select-option value="INFOTC4910">INFOTC 4910</ion-select-option>
             <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
           </ion-select>
       <!-- <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input> -->

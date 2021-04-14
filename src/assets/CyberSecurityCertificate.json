@@ -1,24 +1,24 @@
 [
     {
-        "courseID": "1040",
+        "courseID": "INFOTC1040",
         "name" : "Introduction to Problem Solving and Programming",
         "credits" : 3,
         "department" : "Information Technology"
     },
     {
-        "courseID": "2810",
+        "courseID": "INFOTC2810",
         "name" : "Fundamentals of Network Technology",
         "credits" : 3,
         "department" : "Information Technology"
     },
     {
-        "courseID": "2910",
+        "courseID": "INFOTC2910",
         "name" : "Cyber Security",
         "credits" : 3,
         "department" : "Information Technology"
     },
     {
-        "courseID": "3910",
+        "courseID": "INFOTC3910",
         "name": "Advanced Cyber Security",
         "credits": 3,
         "department" :"Information Technology"
