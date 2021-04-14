@@ -1,0 +1,75 @@
+[
+    {
+        "courseID": "CMPSC2010",
+        "name" : " Intellectual Property for Engineers",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSC2830",
+        "name" : "Web Application Development I",
+        "credits" : 3,
+        "department" : "CMPSC"
+    }, 
+    {
+        "courseID": "CMPSC3050", 
+        "name": "Advanced Algorithm Design", 
+        "credits" : 3, 
+        "department" : "CMPSC"
+    }, 
+    {
+        "courseID": "CMPSC3280", 
+        "name": "Computer Organization and Assembly Language", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMPSC3330", 
+        "name": "Object Oriented Programming", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMPSC3380", 
+        "name": "Database Applications and Information Systems", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMPSC3530", 
+        "name": "UNIX Operating System", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMPSC4050", 
+        "name": "Design and Analysis of Algorithms I", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMPSC4060", 
+        "name": "String Algorithms", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMPSC4070", 
+        "name": "Numerical Methods for Science and Engineering", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMPSC4080", 
+        "name": " Parallel Programming for High Performance Computing", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMPSC4270", 
+        "name": "Computer Architecture", 
+        "credits": 4, 
+        "department" : "CMPSC" 
+    }
+   
+]

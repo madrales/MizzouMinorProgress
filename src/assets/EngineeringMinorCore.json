@@ -1,42 +1,42 @@
 [
     {
-        "courseID": "1000",
+        "courseID": "ENGINR1000",
         "name" : "Introduction to Engineering",
         "credits" : 1,
         "department" : "ENGINR"
     },
     {
-        "courseID": "1100",
+        "courseID": "ENGINR1100",
         "name" : "Engineering Graphics Fundamentals",
         "credits" : 2,
         "department" : "ENGINR"
     }, 
     {
-        "courseID": "1200", 
+        "courseID": "ENGINR1200", 
         "name": "Statics and Elementary Strength of Materials", 
         "credits" : 3, 
         "department" : "ENGINR"
     }, 
     {
-        "courseID": "2100", 
+        "courseID": "ENGINR2100", 
         "name": "Circuit Theory for Engineers", 
         "credits": 3, 
         "department" : "ENGINR" 
     },
     {
-        "courseID": "2300",
+        "courseID": "ENGINR2300",
         "name": "Engineering Thermodynamics", 
         "credits": 3, 
         "department": "ENGINR"
     }, 
     {
-        "courseID" : "1040",
+        "courseID" : "INFOTC 1040",
         "name": "Introduction to Problem Solving and Programming", 
         "credits": 3, 
         "department": "INFOTC"
     }, 
     {
-        "courseID": "1050", 
+        "courseID": "CMPSC1050", 
         "name" : "Algorithm Design and Programming I", 
         "credits": 4, 
         "department": "CMP SC"

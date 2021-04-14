@@ -1,54 +1,54 @@
 [
     {
-        "courseID": "4420",
+        "courseID": "INFOTC4420",
         "name" : "Android App Development II",
         "credits" : 3,
         "department" : "Information Technology"
     },
     {
-        "courseID": "4440",
+        "courseID": "INFOTC4440",
         "name" : "Android App Development III",
         "credits" : 3,
         "department" : "Information Technology"
     },
     {
-        "courseID": "4425",
+        "courseID": "INFOTC4425",
         "name" : "iOS App Development II",
         "credits" : 3,
         "department" : "Information Technology"
     },
     {
-        "courseID": "4445", 
+        "courseID": "INFOTC4445", 
         "name": "iOS App Development III" , 
         "credits": 3, 
         "department": "Information Technology"
     },
     {
-        "courseID": "4830", 
+        "courseID": "INFOTC4830", 
         "name": "Web Application Development II", 
         "credits": 3, 
         "department": "Information Technology"
     },
     {
-        "courseID": "4320", 
+        "courseID": "INFOTC4320", 
         "name": "Software Engineering", 
         "credits": 3, 
         "department": "Information Technology"
     },
     {
-        "courseID": "3380", 
+        "courseID": "INFOTC3380", 
         "name": "Database Systems & Applications" , 
         "credits": 3, 
         "department": "Information Technology"
     },
     {
-        "courseID": "4400", 
+        "courseID": "INFOTC4400", 
         "name": "C#/.NET Development", 
         "credits": 3, 
         "department": "Information Technology"
     },
     {
-        "courseID": "3330" , 
+        "courseID": "INFOTC3330" , 
         "name": "Object Oriented Programming", 
         "credits": 3, 
         "department": "Information Technology"
