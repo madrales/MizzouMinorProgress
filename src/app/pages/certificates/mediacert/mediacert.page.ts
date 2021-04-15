@@ -15,20 +15,19 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 export class MediacertPage implements OnInit {
 
   private completedCoursesForm: FormGroup;
-  public test: String;
-  public status: String; 
-  public showElectives: Boolean = false; 
-  public count = 3; 
-
   completedArray: Array<String>; 
-  incompletedArray: Array<Course>;
-  incompletedElectiveArray: Array<Course>;
+ 
+  public mediaShowElectives: Boolean = false; 
+  public mediaLeft = 3; 
+
+  mediaIncompletedArray: Array<Course>;
+  mediaIncompletedElectiveArray: Array<Course>;
 
   MediaTechCoreArray: Array<Course>; 
   MediaTechElectiveArray: Array<Course>; 
 
   constructor(
-    private model: MediaTechDesignCertificateService, 
+    private mediaModel: MediaTechDesignCertificateService, 
     private formBuilder: FormBuilder) {
 
       
@@ -36,19 +35,19 @@ export class MediacertPage implements OnInit {
       completedCourse:["", [Validators.required],]
     });
 
-    this.MediaTechCoreArray = this.model.getMediaTechCore(); 
+    this.MediaTechCoreArray = this.mediaModel.getMediaTechCore(); 
     console.log("Core courses" + this.MediaTechCoreArray);
 
-    this.MediaTechElectiveArray = this.model.getMediaTechElective(); 
+    this.MediaTechElectiveArray = this.mediaModel.getMediaTechElective(); 
     console.log("Elective courses" + this.MediaTechElectiveArray);
     
-    this.completedArray = this.model.getCompleted();
+    this.completedArray = this.mediaModel.getCompleted();
   
-    this.incompletedArray = this.model.getIncompleted(); 
-    console.log("incompleted core" + this.incompletedArray);
+    this.mediaIncompletedArray = this.mediaModel.getIncompleted(); 
+    console.log("incompleted core" + this.mediaIncompletedArray);
 
-    this.incompletedElectiveArray = this.model.getIncompletedElectives();
-    console.log("incompleted elective" + this.incompletedElectiveArray);
+    this.mediaIncompletedElectiveArray = this.mediaModel.getIncompletedElectives();
+    console.log("incompleted elective" + this.mediaIncompletedElectiveArray);
 
     }
 
@@ -59,7 +58,7 @@ export class MediacertPage implements OnInit {
     var submittedLenght = this.completedCoursesForm.value.completedCourse.length;
 
     for (let i =0; i < submittedLenght; i++){
-      this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
+      this.completedArray =  this.mediaModel.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
 
     }
 
@@ -67,54 +66,53 @@ export class MediacertPage implements OnInit {
     console.log("initial submitted number courses: " + this.completedArray.length);
   }
 
-    addIncompeltedCourse(incompletedObject: Course ) {
-    this.incompletedArray =  this.model.addIncompleted(incompletedObject);   
+    medaiAddIncompeltedCourse(incompletedObject: Course ) {
+    this.mediaIncompletedArray =  this.mediaModel.addIncompleted(incompletedObject);   
   }
 
-  addIncompeltedElectiveCourse(incompletedObject: Course ) {
-    this.incompletedElectiveArray =  this.model.addIncompletedElective(incompletedObject);   
+  mediaAddIncompeltedElectiveCourse(incompletedObject: Course ) {
+    this.mediaIncompletedElectiveArray =  this.mediaModel.addIncompletedElective(incompletedObject);   
   }
     clear(){
-
-      console.log("Cleared!"); 
-    this.completedArray  = this.model.clearCompleted();
-    this.incompletedArray = this.model.clearIncomplete();
-    this.incompletedElectiveArray = this.model.clearIncompleteElectives();
-    this.showElectives = false;
-    this.status = "";
+    this.completedArray  = this.mediaModel.clearCompleted();
+    this.mediaIncompletedArray = this.mediaModel.clearIncomplete();
+    this.mediaIncompletedElectiveArray = this.mediaModel.clearIncompleteElectives();
+    this.mediaShowElectives = false;
+    console.log("Cleared!"); 
   }
 
   ionViewWillEnter(){
-    this.model.getData("completed").then((completed) => {
+    this.mediaModel.getData("completed").then((completed) => {
       if(completed){
         this.completedArray= completed; 
       }
     }); 
 
-    this.model.getData("MediaTechCore").then((MediaTechCore)  => {
+    this.mediaModel.getData("MediaTechCore").then((MediaTechCore)  => {
       if(MediaTechCore){
         this.MediaTechCoreArray = MediaTechCore; 
       }
     }); 
 
-    this.model.getData("MediaTechElective").then((MediaTechElective)  => {
+    this.mediaModel.getData("MediaTechElective").then((MediaTechElective)  => {
       if(MediaTechElective){
         this.MediaTechElectiveArray = MediaTechElective; 
       }
     }); 
   }
 
-    check(){
+    mediaCheck(){
 
-    this.incompletedArray = this.model.clearIncomplete();
-    this.incompletedElectiveArray = this.model.clearIncompleteElectives();
-    this.showElectives = false;
+    this.mediaLeft = 3; 
+    this.mediaIncompletedArray = this.mediaModel.clearIncomplete();
+    this.mediaIncompletedElectiveArray = this.mediaModel.clearIncompleteElectives();
+    this.mediaShowElectives = false;
 
     var completedLength = this.completedArray.length;
     var certificateLength = this.MediaTechCoreArray.length;
     var electivesLength = this.MediaTechElectiveArray.length; 
 
-    console.log("Number of user completed courses: " + completedLength);
+    console.log("Media: Number of user completed courses: " + completedLength);
 
     for (let i =0; i< completedLength; i++){
       this.completedArray[i] = String(this.completedArray[i]);
@@ -130,12 +128,11 @@ export class MediacertPage implements OnInit {
       if(!found){
 
         console.log("Course not completed: " + this.MediaTechCoreArray[i].courseID);
-        this.addIncompeltedCourse(this.MediaTechCoreArray[i]);
+        this.medaiAddIncompeltedCourse(this.MediaTechCoreArray[i]);
 
       }
 
       var count = 0;
-      this.count = 3; 
       for (let i = 0; i < electivesLength; i++) {
         
         console.log( "total electives " + electivesLength);
@@ -153,34 +150,34 @@ export class MediacertPage implements OnInit {
         }
 
         if(!found){
-          this.addIncompeltedElectiveCourse(this.MediaTechElectiveArray[i]);
+          this.mediaAddIncompeltedElectiveCourse(this.MediaTechElectiveArray[i]);
           console.log("added to incomplete electives : " + this.MediaTechElectiveArray[i]);
          continue; 
         }
      }
      if(count == 0 ){
-      this.showElectives = true;
-      this.count = 3; 
+      this.mediaShowElectives = true;
+      this.mediaLeft = 3; 
        console.log("user still needs to complete elective courses");
      }
      if(count == 1){
-      this.showElectives = true;
-      this.count = 2; 
+      this.mediaShowElectives = true;
+      this.mediaLeft = 2; 
        console.log("user has completed 1 elective requiremnt"); 
      }
      if(count == 2){
-      this.showElectives = true;
-      this.count = 1; 
+      this.mediaShowElectives = true;
+      this.mediaLeft = 1; 
       console.log("user has completed 2 elective requiremnt"); 
     }
     if(count == 3){
-      this.count = 0; 
+      this.mediaLeft = 0; 
       console.log("user has completed 3 elective requiremnt"); 
     }
 
   console.log("final list of incompleted core courses:");
-  console.log(this.incompletedArray);
-  console.log(this.incompletedElectiveArray);
+  console.log(this.mediaIncompletedArray);
+  console.log(this.mediaIncompletedElectiveArray);
   }
 }
 }

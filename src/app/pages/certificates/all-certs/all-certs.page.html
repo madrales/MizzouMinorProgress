@@ -22,7 +22,7 @@
 <ion-content>
   <div class="navbar">
     <div class="mainWrapper">
-      <h1 class="notoSerif">WEB AND MOBILE APPLICATIONS DEVELOPMENT CERTIFICATE CALCULATOR</h1>
+      <h1 class="notoSerif"> ALL CERTIFICATES CALCULATOR</h1>
       <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a>
     <h3 class="notoSerif">To get started, enter the 4 digit course number of the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>
     <div class="formWrapper">
@@ -73,11 +73,13 @@
         </ion-item>
       </form>
     </div>
+
     <div class="formWrapper">
-      <ion-button expand="full" color="success"(click)="webDevCheck()">Check Progress</ion-button>
+      <ion-button expand="full" color="success"(click)="webDevCheck(); mediaCheck()">Check Progress</ion-button>
       <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button>
     </div>
-    <ion-title>Core Courses Left to Complete</ion-title> 
+    
+    <ion-title>WEB DEV Core Courses Left to Complete</ion-title> 
     <ion-card *ngFor='let course of webDevIncompletedArray'>
       <ion-card-title>
         {{ course.courseID }} {{course.name}}
@@ -85,13 +87,31 @@
     </ion-card>
 
     <div class="notoSerif" *ngIf = 'webDevShowElectives == true'>
-      <ion-title>Complete {{ webDevLeft }} of the following Courses</ion-title> 
+      <ion-title>WEB DEV Complete {{ webDevLeft }} of the following Courses</ion-title> 
       <ion-card  *ngFor='let a of  webDevIncompletedElectiveArray' >
         <ion-card-title>
         {{ a.courseID }} {{a.name}}
         </ion-card-title>
       </ion-card>
     </div>
+
+    <ion-title>MEDIA Core Courses Left to Complete</ion-title> 
+    <ion-card *ngFor='let course of mediaIncompletedArray'>
+      <ion-card-title>
+        {{ course.courseID }} {{course.name}}
+      </ion-card-title>
+    </ion-card>
+
+    
+    <div class="notoSerif" *ngIf = 'mediaShowElectives == true'>
+      <ion-title>Complete {{ mediaLeft }} of the following Courses</ion-title> 
+      <ion-card  *ngFor='let a of  mediaIncompletedElectiveArray' >
+        <ion-card-title>
+        {{ a.courseID }} {{a.name}}
+        </ion-card-title>
+      </ion-card>
+    </div>
+
     </div>
     
   </div>
