@@ -75,11 +75,13 @@
     </div>
 
     <div class="formWrapper">
-      <ion-button expand="full" color="success"(click)="webDevCheck(); mediaCheck()">Check Progress</ion-button>
+      <ion-button expand="full" color="success"(click)="webDevCheck(); mediaCheck(); cyberSecCheck();">Check Progress</ion-button>
       <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button>
     </div>
     
-    <ion-title>WEB DEV Core Courses Left to Complete</ion-title> 
+    <ion-title *ngIf = 'webDevRan == true'>WEB AND APP DEVELOPMENT CERTIFICATE</ion-title>
+    <ion-title *ngIf = 'webDevCore == true'>WEB DEV Core Courses Left to Complete</ion-title> 
+    <ion-title *ngIf = 'webDevCompleted == true'>You completed the Web Dev certificate!</ion-title> 
     <ion-card *ngFor='let course of webDevIncompletedArray'>
       <ion-card-title>
         {{ course.courseID }} {{course.name}}
@@ -95,7 +97,9 @@
       </ion-card>
     </div>
 
-    <ion-title>MEDIA Core Courses Left to Complete</ion-title> 
+    <ion-title *ngIf = 'mediaRan == true'> MEDIA TECH CERTIFICATE</ion-title>
+    <ion-title *ngIf = 'mediaCore == true'>MEDIA Core Courses Left to Complete</ion-title> 
+    <ion-title *ngIf = 'mediaCompleted == true'> You have completed the Media Tech certificate! </ion-title>
     <ion-card *ngFor='let course of mediaIncompletedArray'>
       <ion-card-title>
         {{ course.courseID }} {{course.name}}
@@ -106,6 +110,24 @@
     <div class="notoSerif" *ngIf = 'mediaShowElectives == true'>
       <ion-title>Complete {{ mediaLeft }} of the following Courses</ion-title> 
       <ion-card  *ngFor='let a of  mediaIncompletedElectiveArray' >
+        <ion-card-title>
+        {{ a.courseID }} {{a.name}}
+        </ion-card-title>
+      </ion-card>
+    </div>
+
+    <ion-title *ngIf = "cyberSecRan == true" > CYBERSECURITY CERTIFICATE</ion-title>
+    <ion-title *ngIf = 'cyberSecCore == true'>CYBER SECURITY Core Courses Left to Complete</ion-title> 
+    <ion-title *ngIf = 'cyberSecCompleted == true'>You have completed the cybersecurity certificate!</ion-title>
+    <ion-card *ngFor='let course of cyberSecIncompletedArray'>
+      <ion-card-title>
+        {{ course.courseID }} {{course.name}}
+      </ion-card-title>
+    </ion-card>
+
+    <div class="notoSerif" *ngIf = 'cyberSecShowElectives == true'>
+      <ion-title>Complete ONE of the following Courses</ion-title> 
+      <ion-card  *ngFor='let a of  CyberSecElectiveArray' >
         <ion-card-title>
         {{ a.courseID }} {{a.name}}
         </ion-card-title>
