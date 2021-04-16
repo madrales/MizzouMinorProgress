@@ -18,6 +18,10 @@ export class CybersecCertifcatePage implements OnInit {
   completedArray: Array<String>; 
 
   public cyberSecShowElectives: Boolean = false; 
+  public cyberSecCompleted: Boolean = false; 
+  public cyberSecCore: Boolean = false; 
+  public cyberSecCount;
+
 
   cyberSecIncompletedArray: Array<Course>;
   cyberSecIncompletedElectiveArray: Array<Course>;
@@ -73,9 +77,14 @@ export class CybersecCertifcatePage implements OnInit {
 
   clear(){
     this.completedArray  = this.cyberSecModel.clearCompleted();
+    this.completedCoursesForm.reset();
+    
     this.cyberSecIncompletedArray = this.cyberSecModel.clearIncomplete();
     this.cyberSecIncompletedElectiveArray = this.cyberSecModel.clearIncompleteElectives();
     this.cyberSecShowElectives = false;
+    this.cyberSecCompleted = false; 
+    this.cyberSecCore = false;  
+    this.cyberSecCount == 0;
     console.log("Cleared!"); 
   }
 
@@ -108,7 +117,7 @@ export class CybersecCertifcatePage implements OnInit {
 
       }
 
-      var count = electivesLength;
+      this.cyberSecCount = electivesLength;
       for (let i = 0; i < electivesLength; i++) {
         
         console.log( "total electives " + electivesLength);
@@ -122,19 +131,30 @@ export class CybersecCertifcatePage implements OnInit {
         }
 
         if(!found){
-          count--; 
+          this.cyberSecCount--; 
         }
      }
-     if(count == 0 ){
+     if(this.cyberSecCount == 0 ){
       this.cyberSecShowElectives = true;
        console.log("user still needs to complete an elective course");
      }
-     if(count >0){
+     if(this.cyberSecCount >0){
        console.log("user has completed the elective requiremnt"); 
      }
 
   console.log("final list of incompleted core courses:");
   console.log(this.cyberSecIncompletedArray);
+  }
+
+  if(this.cyberSecIncompletedArray.length != 0){
+    this.cyberSecCore = true; 
+  }
+  if(this.cyberSecIncompletedArray.length == 0){
+    this.cyberSecCore = false; 
+  }
+  
+  if(this.cyberSecIncompletedArray.length == 0 && this.cyberSecCount > 0){
+    this.cyberSecCompleted = true;
   }
 }
 

@@ -19,6 +19,9 @@ export class MediacertPage implements OnInit {
  
   public mediaShowElectives: Boolean = false; 
   public mediaLeft = 3; 
+  public mediaCompleted: Boolean = false; 
+  public mediaCore: Boolean = false; 
+  public percent = 0; 
 
   mediaIncompletedArray: Array<Course>;
   mediaIncompletedElectiveArray: Array<Course>;
@@ -75,9 +78,14 @@ export class MediacertPage implements OnInit {
   }
     clear(){
     this.completedArray  = this.mediaModel.clearCompleted();
+    this.completedCoursesForm.reset();
+
     this.mediaIncompletedArray = this.mediaModel.clearIncomplete();
     this.mediaIncompletedElectiveArray = this.mediaModel.clearIncompleteElectives();
     this.mediaShowElectives = false;
+    this.mediaCompleted = false;
+    this.mediaCore = false; 
+    this.percent = 0; 
     console.log("Cleared!"); 
   }
 
@@ -159,7 +167,8 @@ export class MediacertPage implements OnInit {
      if(count == 1){
       this.mediaShowElectives = true;
       this.mediaLeft = 2; 
-       console.log("user has completed 1 elective requiremnt"); 
+       console.log("user has completed 1 elective requiremnt");
+
      }
      if(count == 2){
       this.mediaShowElectives = true;
@@ -168,12 +177,28 @@ export class MediacertPage implements OnInit {
     }
     if(count == 3){
       this.mediaLeft = 0; 
+      this.mediaCompleted = true;
       console.log("user has completed 3 elective requiremnt"); 
     }
 
   console.log("final list of incompleted core courses:");
   console.log(this.mediaIncompletedArray);
   console.log(this.mediaIncompletedElectiveArray);
+  
+  if(this.mediaIncompletedArray != null){
+    var a = 1 - this.mediaIncompletedArray.length + count;
+    console.log(a);
+     this.percent = (a/4)*100; 
+    console.log("PERCENT DONE"+  this.percent);
+
+  }
+  }
+
+  if(this.mediaIncompletedArray.length != 0){
+    this.mediaCore = true; 
+  }
+  if(this.mediaIncompletedArray.length == 0){
+    this.mediaCore = false; 
   }
 }
 }

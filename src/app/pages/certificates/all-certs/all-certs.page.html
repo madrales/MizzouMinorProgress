@@ -67,15 +67,16 @@
             <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
           </ion-select>
       <!-- <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input> -->
-          <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
+          <!-- <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
             <ion-icon name="add"></ion-icon>
-          </ion-button>
+          </ion-button> -->
         </ion-item>
       </form>
+      <ion-button expand="full" color="success"(click)="addCourse(); webDevCheck(); mediaCheck(); cyberSecCheck();">Check Progress</ion-button>
     </div>
 
     <div class="formWrapper">
-      <ion-button expand="full" color="success"(click)="webDevCheck(); mediaCheck(); cyberSecCheck();">Check Progress</ion-button>
+      <!-- <ion-button expand="full" color="success"(click)="webDevCheck(); mediaCheck(); cyberSecCheck();">Check Progress</ion-button> -->
       <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button>
     </div>
     

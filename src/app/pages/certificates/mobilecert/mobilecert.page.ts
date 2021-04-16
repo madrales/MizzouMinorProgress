@@ -16,11 +16,13 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 export class MobilecertPage implements OnInit {
 
   private completedCoursesForm: FormGroup;
-  public test: String;
-  public status: String; 
+
   public showElectives: Boolean = false; 
   public count = 0;
   public left = 2; 
+  public webDevCompleted: Boolean = false; 
+  public webDevCore: Boolean = false; 
+
 
 
   completedArray: Array<String>; 
@@ -82,10 +84,13 @@ export class MobilecertPage implements OnInit {
   clear(){
 
     this.completedArray  = this.model.clearCompleted();
+    this.completedCoursesForm.reset();
+    
     this.incompletedArray = this.model.clearIncomplete();
     this.incompletedElectiveArray = this.model.clearIncompleteElectives();
     this.showElectives = false;
-    this.status = "";
+    this.webDevCompleted = false; 
+    this.webDevCore = false; 
     console.log("Cleared!"); 
   }
 
@@ -150,20 +155,6 @@ export class MobilecertPage implements OnInit {
           
         }
 
-
-    // for (let i = 0; i < certificateLength; i++) {
-     
-    //   var found = this.completedArray.includes( this.WebDevCoreArray[i].courseID);
-
-    //   console.log("found " + this.WebDevCoreArray[i].courseID+ " :" + found);
-
-    //   if(!found){
-
-    //     console.log("Course not completed: " + this.WebDevCoreArray[i].courseID);
-    //     this.addIncompeltedCourse(this.WebDevCoreArray[i]);
-
-    //   }
-
       this.count = 0;
       console.log("Electives lenght: " + electivesLength);
       console.log("count :" + this.count);
@@ -201,7 +192,18 @@ export class MobilecertPage implements OnInit {
      if(this.count == 2){
        this.left = 0; 
       console.log("user has completed elective requiremnt"); 
+
+      if(this.incompletedArray.length == 0){
+        this.webDevCompleted = true; 
+      }
       
+    }
+
+    if(this.incompletedArray.length != 0){
+      this.webDevCore = true; 
+    }
+    if(this.incompletedArray.length == 0){
+      this.webDevCore = false; 
     }
 
   console.log("final list of incompleted core courses:");

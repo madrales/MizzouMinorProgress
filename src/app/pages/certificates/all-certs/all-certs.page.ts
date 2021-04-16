@@ -172,6 +172,7 @@ export class AllCertsPage implements OnInit {
   clear(){
 
     this.completedArray  = this.webDevModel.clearCompleted();
+    this.completedCoursesForm.reset();
 
     //CLEAR WEBDEV VARS
     this.webDevIncompletedArray = this.webDevModel.clearIncomplete();
