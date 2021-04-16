@@ -207,6 +207,7 @@ export class MobilecertPage implements OnInit {
 
       if(this.incompletedArray.length == 0){
         this.webDevCompleted = true; 
+        this.webRan = false;
       }
 
       

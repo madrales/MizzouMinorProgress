@@ -181,6 +181,7 @@ export class MediacertPage implements OnInit {
     if(count == 3){
       this.mediaLeft = 0; 
       this.mediaCompleted = true;
+      this.mediaRan= false; 
       console.log("user has completed 3 elective requiremnt"); 
     }
 
