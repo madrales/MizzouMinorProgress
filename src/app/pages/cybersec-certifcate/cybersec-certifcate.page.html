@@ -48,17 +48,17 @@
       </form>
     </div>
     <div class="formWrapper">
-      <ion-button expand="full" color="success"(click)="check()">Check Progress</ion-button>
+      <ion-button expand="full" color="success"(click)="cyberSecCheck()">Check Progress</ion-button>
       <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button>
     </div>
     <ion-title>Core Courses Left to Complete</ion-title> 
-    <ion-card *ngFor='let course of incompletedArray'>
+    <ion-card *ngFor='let course of cyberSecIncompletedArray'>
       <ion-card-title>
         {{ course.courseID }} {{course.name}}
       </ion-card-title>
     </ion-card>
 
-    <div class="notoSerif" *ngIf = 'showElectives == true'>
+    <div class="notoSerif" *ngIf = 'cyberSecShowElectives == true'>
       <ion-title>Complete ONE of the following Courses</ion-title> 
       <ion-card  *ngFor='let a of  CyberSecElectiveArray' >
         <ion-card-title>

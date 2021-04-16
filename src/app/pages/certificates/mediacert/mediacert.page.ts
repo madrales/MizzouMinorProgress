@@ -66,7 +66,7 @@ export class MediacertPage implements OnInit {
     console.log("initial submitted number courses: " + this.completedArray.length);
   }
 
-    medaiAddIncompeltedCourse(incompletedObject: Course ) {
+    mediaAddIncompeltedCourse(incompletedObject: Course ) {
     this.mediaIncompletedArray =  this.mediaModel.addIncompleted(incompletedObject);   
   }
 
@@ -118,7 +118,6 @@ export class MediacertPage implements OnInit {
       this.completedArray[i] = String(this.completedArray[i]);
     }
 
-
     for (let i = 0; i < certificateLength; i++) {
      
       var found = this.completedArray.includes( this.MediaTechCoreArray[i].courseID);
@@ -128,7 +127,7 @@ export class MediacertPage implements OnInit {
       if(!found){
 
         console.log("Course not completed: " + this.MediaTechCoreArray[i].courseID);
-        this.medaiAddIncompeltedCourse(this.MediaTechCoreArray[i]);
+        this.mediaAddIncompeltedCourse(this.MediaTechCoreArray[i]);
 
       }
 
@@ -144,9 +143,6 @@ export class MediacertPage implements OnInit {
         if(found){
           count++;
           continue;
-
-        
-  
         }
 
         if(!found){

@@ -15,40 +15,37 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 export class CybersecCertifcatePage implements OnInit {
 
   private completedCoursesForm: FormGroup;
-  public test: String;
-  public status: String; 
-  public showElectives: Boolean = false; 
-
   completedArray: Array<String>; 
-  incompletedArray: Array<Course>;
-  incompletedElectiveArray: Array<Course>;
+
+  public cyberSecShowElectives: Boolean = false; 
+
+  cyberSecIncompletedArray: Array<Course>;
+  cyberSecIncompletedElectiveArray: Array<Course>;
 
   CyberSecCoreArray: Array<Course>;
   CyberSecElectiveArray: Array<Course>; 
 
-  constructor(private model: CyberSecurityCertificateService, private formBuilder: FormBuilder) { 
+  constructor(
+    private cyberSecModel: CyberSecurityCertificateService, 
+    private formBuilder: FormBuilder) { 
 
     this.completedCoursesForm = this.formBuilder.group({
       completedCourse:["", [Validators.required],]
-      // completedCourse: ["", [Validators.required,
-      //   Validators.pattern("^[0-9]*\.?[0-9]*$"),
-      //   Validators.maxLength(4), 
-      //   Validators.minLength(4)]],
     });
 
-    this.CyberSecCoreArray = this.model.getCyberSecCore(); 
+    this.CyberSecCoreArray = this.cyberSecModel.getCyberSecCore(); 
     console.log("Core courses" + this.CyberSecCoreArray);
 
-    this.CyberSecElectiveArray = this.model.getCyberSecElective(); 
+    this.CyberSecElectiveArray = this.cyberSecModel.getCyberSecElective(); 
     console.log("Elective courses" + this.CyberSecElectiveArray);
     
-    this.completedArray = this.model.getCompleted();
+    this.completedArray = this.cyberSecModel.getCompleted();
   
-    this.incompletedArray = this.model.getIncompleted(); 
-    console.log("incompleted core" + this.incompletedArray);
+    this.cyberSecIncompletedArray = this.cyberSecModel.getIncompleted(); 
+    console.log("incompleted core" + this.cyberSecIncompletedArray);
 
-    this.incompletedElectiveArray = this.model.getIncompletedElectives();
-    console.log("incompleted elective" + this.incompletedElectiveArray);
+    this.cyberSecIncompletedElectiveArray = this.cyberSecModel.getIncompletedElectives();
+    console.log("incompleted elective" + this.cyberSecIncompletedElectiveArray);
   }
 
   ngOnInit() {}
@@ -58,44 +55,45 @@ export class CybersecCertifcatePage implements OnInit {
     var submittedLenght = this.completedCoursesForm.value.completedCourse.length;
 
     for (let i =0; i < submittedLenght; i++){
-      this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
+      this.completedArray =  this.cyberSecModel.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
 
     }
 
-    // this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse); 
-    // this.completedCoursesForm.reset(); 
     console.log("initial submitted courses: " + this.completedArray);
     console.log("initial submitted number courses: " + this.completedArray.length);
-    console.log (typeof this.completedArray);
-    console.log(typeof String(this.completedArray[0]));
   }
 
-  addIncompeltedCourse(incompletedObject: Course ) {
-    this.incompletedArray =  this.model.addIncompleted(incompletedObject);   
+  cyberSecAddIncompeltedCourse(incompletedObject: Course ) {
+    this.cyberSecIncompletedArray =  this.cyberSecModel.addIncompleted(incompletedObject);   
   }
 
-  addIncompeltedElectiveCourse(incompletedObject: Course ) {
-    this.incompletedElectiveArray =  this.model.addIncompletedElective(incompletedObject);   
+  cyberSecAddIncompeltedElectiveCourse(incompletedObject: Course ) {
+    this.cyberSecIncompletedElectiveArray =  this.cyberSecModel.addIncompletedElective(incompletedObject);   
   }
 
-  check(){
+  clear(){
+    this.completedArray  = this.cyberSecModel.clearCompleted();
+    this.cyberSecIncompletedArray = this.cyberSecModel.clearIncomplete();
+    this.cyberSecIncompletedElectiveArray = this.cyberSecModel.clearIncompleteElectives();
+    this.cyberSecShowElectives = false;
+    console.log("Cleared!"); 
+  }
 
-    this.incompletedArray = this.model.clearIncomplete();
-    this.incompletedElectiveArray = this.model.clearIncompleteElectives();
-    this.showElectives = false;
+  cyberSecCheck(){
+
+    this.cyberSecIncompletedArray = this.cyberSecModel.clearIncomplete();
+    this.cyberSecIncompletedElectiveArray = this.cyberSecModel.clearIncompleteElectives();
+    this.cyberSecShowElectives = false;
 
     var completedLength = this.completedArray.length;
     var certificateLength = this.CyberSecCoreArray.length;
     var electivesLength = this.CyberSecElectiveArray.length; 
 
-    console.log("Number of user completed courses: " + completedLength);
+    console.log("CYBER: Number of user completed courses: " + completedLength);
 
     for (let i =0; i< completedLength; i++){
       this.completedArray[i] = String(this.completedArray[i]);
     }
-
-
-   
 
     for (let i = 0; i < certificateLength; i++) {
      
@@ -106,7 +104,7 @@ export class CybersecCertifcatePage implements OnInit {
       if(!found){
 
         console.log("Course not completed: " + this.CyberSecCoreArray[i].courseID);
-        this.addIncompeltedCourse(this.CyberSecCoreArray[i]);
+        this.cyberSecAddIncompeltedCourse(this.CyberSecCoreArray[i]);
 
       }
 
@@ -121,8 +119,6 @@ export class CybersecCertifcatePage implements OnInit {
   
         if(found){
           break;
-        
-  
         }
 
         if(!found){
@@ -130,50 +126,35 @@ export class CybersecCertifcatePage implements OnInit {
         }
      }
      if(count == 0 ){
-      this.showElectives = true;
+      this.cyberSecShowElectives = true;
        console.log("user still needs to complete an elective course");
-       console.log(this.showElectives);
      }
      if(count >0){
        console.log("user has completed the elective requiremnt"); 
-      
      }
 
   console.log("final list of incompleted core courses:");
-  console.log(this.incompletedArray);
+  console.log(this.cyberSecIncompletedArray);
   }
 }
 
-  clear(){
-    this.completedArray  = this.model.clearCompleted();
-    this.incompletedArray = this.model.clearIncomplete();
-    this.incompletedElectiveArray = this.model.clearIncompleteElectives();
-    this.showElectives = false;
-    this.status = "";
-  }
 
 
   ionViewWillEnter(){
-    this.model.getData("completed").then((completed) => {
+    this.cyberSecModel.getData("completed").then((completed) => {
       if(completed){
         this.completedArray= completed; 
       }
     }); 
 
-    // this.model.getData("incompletedElectives").then((incompletedElectives) => {
-    //   if(incompletedElectives){
-    //     this.incompletedElectiveArray = incompletedElectives;
-    //   }
-    // });
 
-
-    this.model.getData("CybSecCore").then((CybSecCore)  => {
+    this.cyberSecModel.getData("CybSecCore").then((CybSecCore)  => {
       if(CybSecCore){
         this.CyberSecCoreArray = CybSecCore; 
       }
     }); 
 
-    this.model.getData("CybSecElective").then((CybSecElective)  => {
+    this.cyberSecModel.getData("CybSecElective").then((CybSecElective)  => {
       if(CybSecElective){
         this.CyberSecElectiveArray = CybSecElective; 
       }
