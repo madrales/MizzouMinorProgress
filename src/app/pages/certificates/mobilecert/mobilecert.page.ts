@@ -22,6 +22,7 @@ export class MobilecertPage implements OnInit {
   public left = 2; 
   public webDevCompleted: Boolean = false; 
   public webDevCore: Boolean = false; 
+  public percent = 0; 
 
 
 
@@ -91,6 +92,7 @@ export class MobilecertPage implements OnInit {
     this.showElectives = false;
     this.webDevCompleted = false; 
     this.webDevCore = false; 
+    this.percent = 0; 
     console.log("Cleared!"); 
   }
 
@@ -183,12 +185,14 @@ export class MobilecertPage implements OnInit {
        console.log("user still needs to complete elective courses");
        console.log(this.showElectives);
      }
+
      if(this.count == 1){
       this.showElectives = true;
       this.left = 1;
        console.log("user has completed 1 elective requiremnt"); 
        console.log(this.incompletedElectiveArray);
      }
+
      if(this.count == 2){
        this.left = 0; 
       console.log("user has completed elective requiremnt"); 
@@ -196,8 +200,37 @@ export class MobilecertPage implements OnInit {
       if(this.incompletedArray.length == 0){
         this.webDevCompleted = true; 
       }
+
       
     }
+    // var found1 = this.incompletedArray.includes( this.WebDevCoreArray[1]);
+    // var found2 = this.incompletedArray.includes(this.WebDevCoreArray[2]); 
+    // var found3 = this.incompletedArray.includes(this.WebDevCoreArray[0]); 
+
+    // if(this.incompletedArray.length != null ){
+
+    //   if(found3 && !found1 && !found2){
+    //     var a = 2 - 1 + this.count;
+    //     console.log(a);
+    //      this.percent = (a/4)*100; 
+    //     console.log("1 PERCENT DONE"+  this.percent);
+
+    //   }
+    //   if(found1 || found2 && !found3){
+    //     var a = 2 - 1 + this.count;
+    //      this.percent = (1/4)*100; 
+    //     console.log("2 PERCENT DONE"+  this.percent);
+    //   }
+
+    //   if((found1 || found2) && found3)
+    //   {
+    //     var a = 2 + this.count;
+    //     this.percent = (a/4)*100;
+    //     console.log("3 PERCENT DONE:" + this.percent);
+    //   }
+
+  
+    // }
 
     if(this.incompletedArray.length != 0){
       this.webDevCore = true; 
@@ -205,6 +238,7 @@ export class MobilecertPage implements OnInit {
     if(this.incompletedArray.length == 0){
       this.webDevCore = false; 
     }
+
 
   console.log("final list of incompleted core courses:");
   console.log(this.incompletedArray);
