@@ -22,6 +22,7 @@ export class MobilecertPage implements OnInit {
   public left = 2; 
   public webDevCompleted: Boolean = false; 
   public webDevCore: Boolean = false; 
+  public webRan: Boolean= false;
   public percent = 0; 
 
 
@@ -61,7 +62,12 @@ export class MobilecertPage implements OnInit {
 
   addCourse() {
 
-    var submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+    var submittedLenght = 0;
+
+    if(this.completedCoursesForm.value.completedCourse != null ){
+     submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+    }
+
 
     for (let i =0; i < submittedLenght; i++){
       this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
@@ -85,12 +91,13 @@ export class MobilecertPage implements OnInit {
   clear(){
 
     this.completedArray  = this.model.clearCompleted();
-    this.completedCoursesForm.reset();
+    // this.completedCoursesForm.reset();
     
     this.incompletedArray = this.model.clearIncomplete();
     this.incompletedElectiveArray = this.model.clearIncompleteElectives();
     this.showElectives = false;
-    this.webDevCompleted = false; 
+    this.webDevCompleted = false;
+    this.webRan = false; 
     this.webDevCore = false; 
     this.percent = 0; 
     console.log("Cleared!"); 
@@ -118,6 +125,7 @@ export class MobilecertPage implements OnInit {
 
   check(){
 
+    this.webRan= true;
     this.left = 2; 
     this.incompletedArray = this.model.clearIncomplete();
     this.incompletedElectiveArray = this.model.clearIncompleteElectives();
@@ -203,34 +211,36 @@ export class MobilecertPage implements OnInit {
 
       
     }
-    // var found1 = this.incompletedArray.includes( this.WebDevCoreArray[1]);
-    // var found2 = this.incompletedArray.includes(this.WebDevCoreArray[2]); 
-    // var found3 = this.incompletedArray.includes(this.WebDevCoreArray[0]); 
 
-    // if(this.incompletedArray.length != null ){
+    if(this.incompletedArray.length != null ){
 
-    //   if(found3 && !found1 && !found2){
-    //     var a = 2 - 1 + this.count;
-    //     console.log(a);
-    //      this.percent = (a/4)*100; 
-    //     console.log("1 PERCENT DONE"+  this.percent);
+      var ios = this.incompletedArray.includes( this.WebDevCoreArray[1]);
+    var android = this.incompletedArray.includes(this.WebDevCoreArray[2]); 
+    var web = this.incompletedArray.includes(this.WebDevCoreArray[0]); 
 
-    //   }
-    //   if(found1 || found2 && !found3){
-    //     var a = 2 - 1 + this.count;
-    //      this.percent = (1/4)*100; 
-    //     console.log("2 PERCENT DONE"+  this.percent);
-    //   }
 
-    //   if((found1 || found2) && found3)
-    //   {
-    //     var a = 2 + this.count;
-    //     this.percent = (a/4)*100;
-    //     console.log("3 PERCENT DONE:" + this.percent);
-    //   }
+    if((ios || android) && web){
+      var a = this.count;
+       console.log(a);
+      this.percent = (a/4)*100;
+      console.log("3 PERCENT DONE:" + this.percent);
+    }
+    else if((web && !ios && !android) || (ios || android && !web)){
+        var a = 1 + this.count;
+        console.log(a);
+        this.percent = (a/4)*100; 
+        console.log("1 PERCENT DONE"+  this.percent);
+    }
+    else if((!ios || !android) && !web){
+        var a = 2 + this.count;
+         console.log(a);
+        this.percent = (a/4)*100;
+        console.log("2 PERCENT DONE:" + this.percent);
+      }
 
+    
   
-    // }
+    }
 
     if(this.incompletedArray.length != 0){
       this.webDevCore = true; 
