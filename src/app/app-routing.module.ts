@@ -23,9 +23,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/cybersec-certifcate/cybersec-certifcate.module').then( m => m.CybersecCertifcatePageModule)
   },
   {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
-  }
+  },
 
 ];
 @NgModule({

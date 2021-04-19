@@ -14,7 +14,6 @@ h1 {
 .spacerItem {
     margin: 1vw;
     background-color: white;
-    border: 5px solid black;
     color: black;
     padding: 15px;
 }
@@ -106,22 +105,22 @@ ion-slide {
     color: black;
 }
 
-// .footerImg {
-//     margin: auto;
-//     text-align: center;
-//     opacity: 25%;
-// }
-// .developer {
-//     width: 25%;
-//     margin: 15px;
-// }
-// .introCardsWrapper {
-    //     display: flex;
-    //     padding: 20px;
-    //     width: 75%;
-    //     margin: auto;
-    //     text-align: center;
-    // }
+.footerImg {
+    margin: auto;
+    text-align: center;
+    opacity: 25%;
+}
+.developer {
+    width: 25%;
+    margin: 15px;
+}
+.introCardsWrapper {
+        display: flex;
+        padding: 20px;
+        width: 75%;
+        margin: auto;
+        text-align: center;
+    }
 // .footer{
 
 // // Taken from https://codepen.io/thecodercoder/pen/xxGOyPe
