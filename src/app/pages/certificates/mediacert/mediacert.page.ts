@@ -22,6 +22,7 @@ export class MediacertPage implements OnInit {
   public mediaCompleted: Boolean = false; 
   public mediaCore: Boolean = false; 
   public percent = 0; 
+  public mediaRan: Boolean = false; 
 
   mediaIncompletedArray: Array<Course>;
   mediaIncompletedElectiveArray: Array<Course>;
@@ -78,13 +79,13 @@ export class MediacertPage implements OnInit {
   }
     clear(){
     this.completedArray  = this.mediaModel.clearCompleted();
-    this.completedCoursesForm.reset();
 
     this.mediaIncompletedArray = this.mediaModel.clearIncomplete();
     this.mediaIncompletedElectiveArray = this.mediaModel.clearIncompleteElectives();
     this.mediaShowElectives = false;
     this.mediaCompleted = false;
     this.mediaCore = false; 
+    this.mediaRan = false; 
     this.percent = 0; 
     console.log("Cleared!"); 
   }
@@ -110,6 +111,8 @@ export class MediacertPage implements OnInit {
   }
 
     mediaCheck(){
+
+      this.mediaRan= true;
 
     this.mediaLeft = 3; 
     this.mediaIncompletedArray = this.mediaModel.clearIncomplete();
@@ -178,6 +181,7 @@ export class MediacertPage implements OnInit {
     if(count == 3){
       this.mediaLeft = 0; 
       this.mediaCompleted = true;
+      this.mediaRan= false; 
       console.log("user has completed 3 elective requiremnt"); 
     }
 

@@ -21,7 +21,8 @@ export class CybersecCertifcatePage implements OnInit {
   public cyberSecCompleted: Boolean = false; 
   public cyberSecCore: Boolean = false; 
   public cyberSecCount;
-
+  public cyberSecRan: Boolean = false;
+  public percent = 0; 
 
   cyberSecIncompletedArray: Array<Course>;
   cyberSecIncompletedElectiveArray: Array<Course>;
@@ -56,7 +57,13 @@ export class CybersecCertifcatePage implements OnInit {
 
   addCourse() {
 
-    var submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+    var submittedLenght = 0;
+
+    if(this.completedCoursesForm.value.completedCourse != null){
+       submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+    }
+
+
 
     for (let i =0; i < submittedLenght; i++){
       this.completedArray =  this.cyberSecModel.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
@@ -77,18 +84,21 @@ export class CybersecCertifcatePage implements OnInit {
 
   clear(){
     this.completedArray  = this.cyberSecModel.clearCompleted();
-    this.completedCoursesForm.reset();
     
     this.cyberSecIncompletedArray = this.cyberSecModel.clearIncomplete();
     this.cyberSecIncompletedElectiveArray = this.cyberSecModel.clearIncompleteElectives();
     this.cyberSecShowElectives = false;
     this.cyberSecCompleted = false; 
     this.cyberSecCore = false;  
+    this.cyberSecRan = false; 
     this.cyberSecCount == 0;
+    this.percent = 0; 
     console.log("Cleared!"); 
   }
 
   cyberSecCheck(){
+
+    this.cyberSecRan = true;
 
     this.cyberSecIncompletedArray = this.cyberSecModel.clearIncomplete();
     this.cyberSecIncompletedElectiveArray = this.cyberSecModel.clearIncompleteElectives();
@@ -155,6 +165,24 @@ export class CybersecCertifcatePage implements OnInit {
   
   if(this.cyberSecIncompletedArray.length == 0 && this.cyberSecCount > 0){
     this.cyberSecCompleted = true;
+    this.cyberSecRan = false;
+  }
+
+  if(this.cyberSecIncompletedArray != null){
+
+    if(this.cyberSecCount >0){
+      var a = 4 - this.cyberSecIncompletedArray.length + 1;
+      console.log(a);
+       this.percent = (a/5)*100; 
+      console.log("PERCENT DONE"+  this.percent);
+    }
+
+    if(this.cyberSecCount == 0){
+      var a = 4 - this.cyberSecIncompletedArray.length;
+      console.log(a);
+       this.percent = (a/5)*100; 
+      console.log("PERCENT DONE"+  this.percent);
+    }
   }
 }
 

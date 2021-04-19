@@ -19,5 +19,52 @@
 </ion-header>
 
 <ion-content>
-
+  <div class="mainWrapper">
+    <h1 class="notoSerif">INFORMATION TECHNOLOGY MINOR PROGRESS CALCULATOR</h1>
+    <h3 class="notoSerif">To get started, select the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>
+    <div class="formWrapper">
+      <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
+        <ion-item>
+          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+            <ion-select-option value="1040">INFOTC 1040: Intro to Problem Solving and Programming</ion-select-option>
+            <ion-select-option value="2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
+            <ion-select-option value="2830">INFOTC 2830: Web Application Developement I</ion-select-option>
+            <ion-select-option value="2910">INFOTC 2910: Cyber Security</ion-select-option>
+            <ion-select-option value="3530">INFOTC 3530: UNIX Operating Systems</ion-select-option>
+            <ion-select-option value ='3810'>INFOTC 3810: Computer Network Security</ion-select-option>
+            <ion-select-option value= "3850">INFOTC 3850: Computer System Administration</ion-select-option>
+            <ion-select-option value="3910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
+            <ion-select-option value="4830">INFOTC 4830: Web Application Developement II</ion-select-option>
+            <ion-select-option value="4910">INFOTC 4910: Digital Forensics</ion-select-option>
+            <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
+          </ion-select>
+          <!-- <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
+            <ion-icon name="add"></ion-icon>
+          </ion-button> -->
+        </ion-item>
+      </form>
+      <ion-button expand="full" color="success" (click)="clear(); addCourse(); check();">Check Progress</ion-button>
+    </div>
+    <div class="formButtonWrapper">
+      <ion-button color="danger" expand="full" (click)="clear()">Clear All</ion-button>
+    </div>
+    <div class="resultsWrapper">
+      <h1 class="notoSerif">Your Results</h1>
+      <ion-card-title class="courseCount notoSerif">{{ completedArray.length }} Courses Completed</ion-card-title>
+      <ion-card-title class="notoSerif">
+        {{ this.test }}
+      </ion-card-title>
+      <ion-title>
+        {{ this.status }}
+      </ion-title>
+      <div class="resultCourseWrapper" fxLayout="row">
+        <ion-card class="courseCard" *ngFor='let course of incompletedArray'>
+          <ion-card-title>
+            {{ course.courseID }}
+          </ion-card-title>
+        </ion-card>
+      </div>
+    </div>
+  </div>
 </ion-content>
+

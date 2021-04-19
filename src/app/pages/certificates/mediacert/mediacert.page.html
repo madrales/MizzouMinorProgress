@@ -49,13 +49,13 @@
           </ion-button> -->
         </ion-item>
       </form>
-      <ion-button expand="full" color="success"(click)="addCourse(); mediaCheck()">Check Progress</ion-button>
+      <ion-button expand="full" color="success"(click)="clear(); addCourse(); mediaCheck()">Check Progress</ion-button>
     </div>
     <div class="formWrapper">
       <!-- <ion-button expand="full" color="success"(click)="mediaCheck()">Check Progress</ion-button> -->
       <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button>
     </div>
-    <ion-title>You have completed {{ percent }}% of the requirements!</ion-title>
+    <ion-title *ngIf = 'mediaRan == true'>You have completed {{ percent }}% of the requirements!</ion-title>
     <ion-title *ngIf = 'mediaCore == true'>Core Courses Left to Complete</ion-title> 
     <ion-title *ngIf = 'mediaCompleted == true'> You have completed the Media Tech certificate! </ion-title>
     <ion-card *ngFor='let course of mediaIncompletedArray'>

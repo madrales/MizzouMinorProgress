@@ -29,6 +29,9 @@ export class AllCertsPage implements OnInit {
   public webDevCompleted: Boolean = false; 
   public webDevCore: Boolean = false; 
   public webDevRan: Boolean = false; 
+  public webShowPercent: Boolean = false; 
+  public webDevPercent = 0; 
+  public webCount = 0; 
 
 
   webDevIncompletedArray: Array<Course>;
@@ -44,6 +47,8 @@ export class AllCertsPage implements OnInit {
   public mediaCompleted: Boolean = false; 
   public mediaCore: Boolean = false; 
   public mediaRan: Boolean = false; 
+  public showMediaPercent: Boolean = false; 
+  public mediaPercent = 0; 
 
   
   mediaIncompletedArray: Array<Course>;
@@ -58,6 +63,8 @@ export class AllCertsPage implements OnInit {
   public cyberSecCompleted: Boolean = false; 
   public cyberSecCore: Boolean = false; 
   public cyberSecRan: Boolean = false; 
+  public cyberPercent =0;
+  public cyberShowPercent: Boolean = false; 
   public cyberSecCount;
 
   cyberSecIncompletedArray: Array<Course>;
@@ -127,7 +134,15 @@ export class AllCertsPage implements OnInit {
 
   addCourse() {
     //NOTE: WE ARE USING WEBDEVMODEL TO KEEP TRACK OF COMPELTED COURSES 
-    var submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+
+    
+    var submittedLenght 
+    
+    if(this.completedCoursesForm.value.completedCourse != null){
+
+    
+    submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+    }
 
     for (let i =0; i < submittedLenght; i++){
       this.completedArray =  this.webDevModel.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
@@ -172,7 +187,6 @@ export class AllCertsPage implements OnInit {
   clear(){
 
     this.completedArray  = this.webDevModel.clearCompleted();
-    this.completedCoursesForm.reset();
 
     //CLEAR WEBDEV VARS
     this.webDevIncompletedArray = this.webDevModel.clearIncomplete();
@@ -180,7 +194,10 @@ export class AllCertsPage implements OnInit {
     this.webDevShowElectives = false;
     this.webDevCompleted = false; 
     this.webDevCore = false; 
+    this.webShowPercent = false; 
     this.webDevRan = false;
+    this.webCount = 0;
+    this.webDevPercent = 0; 
 
     //CLEAR MEDIA VARS
     this.mediaIncompletedArray = this.mediaModel.clearIncomplete();
@@ -189,6 +206,8 @@ export class AllCertsPage implements OnInit {
     this.mediaCompleted = false;
     this.mediaCore = false; 
     this.mediaRan = false; 
+    this.showMediaPercent = false; 
+    this.mediaPercent = 0; 
 
     //CLEAR CYBERSECURITY VARS
     this.cyberSecIncompletedArray = this.cyberSecModel.clearIncomplete();
@@ -197,7 +216,9 @@ export class AllCertsPage implements OnInit {
     this.cyberSecCompleted = false; 
     this.cyberSecCore = false; 
     this.cyberSecRan = false; 
-    this.cyberSecCount == 0;
+    this.cyberShowPercent =false; 
+    this.cyberSecCount = 0; //was ==0
+    this.cyberPercent =0; 
 
     console.log("Cleared!"); 
   }
@@ -256,6 +277,7 @@ export class AllCertsPage implements OnInit {
   webDevCheck(){
 
     this.webDevRan = true; 
+    this.webShowPercent = true; 
 
     this.webDevLeft = 2; 
     this.webDevIncompletedArray = this.webDevModel.clearIncomplete();
@@ -297,9 +319,9 @@ export class AllCertsPage implements OnInit {
         }
 
 
-       var count = 0;
+      this.webCount = 0;
       console.log("Electives lenght: " + electivesLength);
-      console.log("count :" + count);
+      console.log("count :" + this.webCount);
       for (let i = 0; i < electivesLength; i++) {
         
 
@@ -308,7 +330,7 @@ export class AllCertsPage implements OnInit {
         console.log("found " + this.WebDevElectiveArray[i].courseID+ " :" + found);
   
         if(found){
-          count++;
+          this.webCount++;
           continue;
         }
 
@@ -319,26 +341,57 @@ export class AllCertsPage implements OnInit {
         }
      }
 
-     if(count == 0 ){
+     if(this.webCount == 0 ){
        this.webDevLeft =2; 
       this.webDevShowElectives = true;
        console.log("user still needs to complete elective courses");
        console.log(this.webDevShowElectives);
      }
-     if(count == 1){
+     if(this.webCount == 1){
       this.webDevShowElectives = true;
       this.webDevLeft = 1;
        console.log("user has completed 1 elective requiremnt"); 
        console.log(this.webDevIncompletedElectiveArray);
      }
-     if(count == 2){
+     if(this.webCount == 2){
        this.webDevLeft = 0; 
       console.log("user has completed elective requiremnt"); 
 
       if(this.webDevIncompletedArray.length == 0){
         this.webDevCompleted = true; 
+        this.webShowPercent = false;
       }
       
+    }
+    
+    if(this.webDevIncompletedArray.length != null ){
+
+      var ios = this.webDevIncompletedArray.includes( this.WebDevCoreArray[1]);
+    var android = this.webDevIncompletedArray.includes(this.WebDevCoreArray[2]); 
+    var web = this.webDevIncompletedArray.includes(this.WebDevCoreArray[0]); 
+
+
+    if((ios || android) && web){
+      var a = this.webCount;
+       console.log(a);
+      this.webDevPercent = (a/4)*100;
+      console.log("3 PERCENT DONE:" + this.webDevPercent);
+    }
+    else if((web && !ios && !android) || (ios || android && !web)){
+        var a = 1 + this.webCount;
+        console.log(a);
+        this.webDevPercent = (a/4)*100; 
+        console.log("1 PERCENT DONE"+  this.webDevPercent);
+    }
+    else if((!ios || !android) && !web){
+        var a = 2 + this.webCount;
+         console.log(a);
+        this.webDevPercent = (a/4)*100;
+        console.log("2 PERCENT DONE:" + this.webDevPercent);
+      }
+
+    
+  
     }
 
     if(this.webDevIncompletedArray.length != 0){
@@ -357,6 +410,7 @@ export class AllCertsPage implements OnInit {
   mediaCheck(){
 
     this.mediaRan= true;
+    this.showMediaPercent = true; 
 
     this.mediaLeft = 3; 
     this.mediaIncompletedArray = this.mediaModel.clearIncomplete();
@@ -428,13 +482,24 @@ export class AllCertsPage implements OnInit {
     if(count == 3){
       this.mediaLeft = 0; 
       this.mediaCompleted = true;
+      this.showMediaPercent = false; 
       console.log("user has completed 3 elective requiremnt"); 
     }
 
   console.log("final list of incompleted core courses:");
   console.log(this.mediaIncompletedArray);
   console.log(this.mediaIncompletedElectiveArray);
+
+  if(this.mediaIncompletedArray != null){
+    var a = 1 - this.mediaIncompletedArray.length + count;
+    console.log(a);
+     this.mediaPercent = (a/4)*100; 
+    console.log("PERCENT DONE"+  this.mediaPercent);
+
   }
+  }
+
+
 
   if(this.mediaIncompletedArray.length != 0){
     this.mediaCore = true; 
@@ -447,6 +512,7 @@ export class AllCertsPage implements OnInit {
 cyberSecCheck(){
 
   this.cyberSecRan = true; 
+  this.cyberShowPercent = true;
 
   this.cyberSecIncompletedArray = this.cyberSecModel.clearIncomplete();
   this.cyberSecIncompletedElectiveArray = this.cyberSecModel.clearIncompleteElectives();
@@ -504,6 +570,22 @@ cyberSecCheck(){
 console.log("final list of incompleted core courses:");
 console.log(this.cyberSecIncompletedArray);
 }
+if(this.cyberSecIncompletedArray != null){
+
+  if(this.cyberSecCount >0){
+    var a = 4 - this.cyberSecIncompletedArray.length + 1;
+    console.log(a);
+     this.cyberPercent = (a/5)*100; 
+    console.log("PERCENT DONE"+  this.cyberPercent);
+  }
+
+  if(this.cyberSecCount == 0){
+    var a = 4 - this.cyberSecIncompletedArray.length;
+    console.log(a);
+     this.cyberPercent = (a/5)*100; 
+    console.log("PERCENT DONE"+  this.cyberPercent);
+  }
+}
 
 if(this.cyberSecIncompletedArray.length != 0){
   this.cyberSecCore = true; 
@@ -514,6 +596,7 @@ if(this.cyberSecIncompletedArray.length == 0){
 
 if(this.cyberSecIncompletedArray.length == 0 && this.cyberSecCount > 0){
   this.cyberSecCompleted = true;
+  this.cyberShowPercent = false; 
 }
 
 }
