@@ -32,7 +32,7 @@ ion-img {
     text-align: center;
 }
 ion-card {
-    width: 40%;
+    width: 80%;
     margin: auto;
     text-align: center;
     padding: 15px;
@@ -41,6 +41,9 @@ ion-card {
     border: 5px solid black;
     box-shadow: 15px;
     margin-bottom: 20px;
+}
+ion-grid{
+    display: flex;
 }
 .firstCard {
     margin-top: 15px;
@@ -116,7 +119,7 @@ h5 {
     background-color: white;
     color: black;
 }
-ion-row {
+ion-toolbar > ion-row {
     background-color: #000000;
 }
 .navbarWrapper {
