@@ -30,9 +30,10 @@ ion-card-content {
 ion-img {
     margin: auto;
     text-align: center;
+    width: 25%;
 }
 ion-card {
-    width: 80%;
+    width: 90%;
     margin: auto;
     text-align: center;
     padding: 15px;
@@ -42,8 +43,13 @@ ion-card {
     box-shadow: 15px;
     margin-bottom: 20px;
 }
+ion-column {
+    width: 50%;
+    border: 2px solid blue;
+}
 ion-grid{
     display: flex;
+    border: 2px solid red;
 }
 .firstCard {
     margin-top: 15px;
