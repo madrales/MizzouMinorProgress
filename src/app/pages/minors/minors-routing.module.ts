@@ -13,13 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./compsci/compsci.module').then( m => m.CompsciPageModule)
   },
   {
-    path: 'engineering/engineering',
-    loadChildren: () => import('./engineering/engineering/engineering.module').then( m => m.EngineeringPageModule)
-  },
-  {
     path: 'infotech',
     loadChildren: () => import('./infotech/infotech.module').then( m => m.InfotechPageModule)
-  },  {
+  },
+  {
     path: 'general-eng',
     loadChildren: () => import('./general-eng/general-eng.module').then( m => m.GeneralEngPageModule)
   },

@@ -20,7 +20,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 })
 export class AllCertsPage implements OnInit {
 
-  private completedCoursesForm: FormGroup;
+  public completedCoursesForm: FormGroup;
   completedArray: Array<String>;
 
 //Web Dev Certificate Vars

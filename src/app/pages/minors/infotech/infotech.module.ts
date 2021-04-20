@@ -16,6 +16,6 @@ import { InfotechPage } from './infotech.page';
     InfotechPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: []
+  declarations: [InfotechPage]
 })
 export class InfotechPageModule {}

@@ -9,7 +9,7 @@ import { EngineeringMinorService } from 'src/app/services/EngineeringMinor/engin
   styleUrls: ['./general-eng.page.scss'],
 })
 export class GeneralEngPage implements OnInit {
-  private completedCoursesForm: FormGroup;
+  public completedCoursesForm: FormGroup;
   public test: String;
   public status: String; 
   public showElectives: Boolean = false; 

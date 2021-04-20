@@ -14,7 +14,7 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 })
 export class MediacertPage implements OnInit {
 
-  private completedCoursesForm: FormGroup;
+  public completedCoursesForm: FormGroup;
   completedArray: Array<String>; 
  
   public mediaShowElectives: Boolean = false; 

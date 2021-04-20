@@ -15,7 +15,7 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 })
 export class MobilecertPage implements OnInit {
 
-  private completedCoursesForm: FormGroup;
+  public completedCoursesForm: FormGroup;
 
   public showElectives: Boolean = false; 
   public count = 0;

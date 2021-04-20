@@ -14,7 +14,7 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 })
 export class CybersecCertifcatePage implements OnInit {
 
-  private completedCoursesForm: FormGroup;
+  public completedCoursesForm: FormGroup;
   completedArray: Array<String>; 
 
   public cyberSecShowElectives: Boolean = false; 

@@ -1,29 +1,25 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { NgModule } from '@angular/core';
+// import { NgModule } from '@angular/core';
 
 import { Course } from 'src/app/interfaces/course';
 
 import { CompletedITService } from 'src/app/services/completed-it.service'; 
 
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { ComponentModule } from '../../../components/component/component.module';
-@NgModule({
-  declarations: [
-  ],
-  imports: [
-    ComponentModule
-  ],
-  exports: [
-  ],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
-})
+
+// @NgModule({
+//   declarations: [],
+//   imports: [],
+//   exports: [],
+//   schemas:[CUSTOM_ELEMENTS_SCHEMA]
+// })
 @Component({
   selector: 'app-infotech',
   templateUrl: './infotech.page.html',
   styleUrls: ['./infotech.page.scss'],
 })
 export class InfotechPage implements OnInit {
-  private completedCoursesForm: FormGroup;
+  public completedCoursesForm: FormGroup;
   public test: String;
   public status: String;
 
@@ -173,9 +169,5 @@ export class InfotechPage implements OnInit {
         this.ITMinorArray = ITMinor; 
       }
     }); 
-
-
   }
-
-
 }
