@@ -33,9 +33,9 @@
             <ion-select-option value="ENGINR1100">ENGINR 1100</ion-select-option>
             <ion-select-option value="ENGINR1200">ENGINR 1200</ion-select-option>
             <ion-select-option value="ENGINR2100">ENGINR 2100</ion-select-option>
-            <ion-select-option value="ENGINR1040">ENGINR 2300</ion-select-option>
-            <ion-select-option value ='INFOTC1040'>INFOTC 1040</ion-select-option>
-            <ion-select-option value= "CMPSC1050">CMP SC 1050</ion-select-option>
+            <ion-select-option value="ENGINR2300">ENGINR 2300</ion-select-option>
+            <ion-select-option value ='INFOTC1040 OR CMPSC1050'>INFOTC 1040</ion-select-option>
+            <ion-select-option value= "INFOTC1040 OR CMPSC1050">CMP SC 1050</ion-select-option>
             <ion-select-option value="BIOLEN2180">BIOL EN 2180</ion-select-option> 
             <ion-select-option value="CHENG2225">CH ENG 2225</ion-select-option>
             <ion-select-option value="CVENG3100">CV ENG 3100</ion-select-option>
@@ -62,9 +62,11 @@
     </div>
     <div class="formWrapper">
 
-      <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button>
+      <ion-button expand="full" color="danger"(click)="clearAll()"> Clear All</ion-button>
     </div>
-    <ion-title>Core Courses Left to Complete</ion-title> 
+    <ion-title *ngIf = 'ran == true'>You have completed {{ percent }}% of the requirements!</ion-title>
+    <ion-title *ngIf = 'coreLeft == true'> Core Courses Left to Complete</ion-title> 
+    <ion-title *ngIf = 'completed == true'>You completed the Web Dev certificate!</ion-title> 
     <ion-card *ngFor='let course of incompletedArray'>
       <ion-card-title>
         {{ course.courseID }} {{course.name}}

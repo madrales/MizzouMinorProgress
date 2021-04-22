@@ -34,8 +34,8 @@
             <ion-select-option value="INFOTC3380">INFOTC 3380: Database Systems and Applications</ion-select-option>
             <ion-select-option value="INFOTC4320">INFOTC 4320: Software Engineering</ion-select-option>
             <ion-select-option value="INFOTC4400">INFOTC 4400: C#/.NET Development</ion-select-option>
-            <ion-select-option value="INFOTC4405">INFOTC 4405: IOS App Development I</ion-select-option>
-            <ion-select-option value="INFOTC4410">INFOTC 4410: Android App Development I</ion-select-option>
+            <ion-select-option value="INFOTC4405 OR INFOTC4410">INFOTC 4405: IOS App Development I</ion-select-option>
+            <ion-select-option value="INFOTC4405 OR INFOTC4410">INFOTC 4410: Android App Development I</ion-select-option>
             <ion-select-option value="INFOTC4420">INFOTC 4420: Android App Development II</ion-select-option>
             <ion-select-option value ="INFOTC4425">INFOTC 4425: IOS App Development II</ion-select-option>
             <ion-select-option value="INFOTC4440">INFOTC 4440: Android App Development III</ion-select-option>
@@ -53,7 +53,7 @@
     </div>
     <div class="formWrapper">
       <!-- <ion-button expand="full" color="success"(click)="check()">Check Progress</ion-button> -->
-      <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button>
+      <ion-button expand="full" color="danger"(click)="clearAll()">Clear All</ion-button>
     </div>
     <ion-title *ngIf = 'webRan == true'>You have completed {{ percent }}% of the requirements!</ion-title>
     <ion-title *ngIf = 'webDevCore == true'>WEB DEV Core Courses Left to Complete</ion-title> 

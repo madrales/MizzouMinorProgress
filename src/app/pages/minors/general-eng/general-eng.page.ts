@@ -14,7 +14,13 @@ export class GeneralEngPage implements OnInit {
   public status: String; 
   public showElectives: Boolean = false; 
   public count = 0;
-  public left = 1; 
+  public left = 1;
+  
+  public percent = 0; 
+
+  public ran = false; 
+  public coreLeft = false; 
+  public completed = false; 
 
 
   completedArray: Array<String>; 
@@ -51,7 +57,11 @@ export class GeneralEngPage implements OnInit {
 
   addCourse() {
 
-    var submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+    var submittedLenght; 
+
+    if(this.completedCoursesForm.value.completedCourse != null){
+      submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+    }
 
     for (let i =0; i < submittedLenght; i++){
       this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
@@ -78,8 +88,17 @@ export class GeneralEngPage implements OnInit {
     this.incompletedArray = this.model.clearIncomplete();
     this.incompletedElectiveArray = this.model.clearIncompleteElectives();
     this.showElectives = false;
+    this.ran = false; 
+    this.coreLeft = false; 
+    this.completed = false; 
     this.status = "";
+    this.percent = 0; 
     console.log("Cleared!"); 
+  }
+
+  clearAll(){
+    this.clear(); 
+    this.completedCoursesForm.reset(); 
   }
 
   ionViewWillEnter(){
@@ -103,6 +122,9 @@ export class GeneralEngPage implements OnInit {
   }
 
   check(){
+
+    this.ran = true; 
+    this.coreLeft = true; 
 
     this.left = 1; 
     this.incompletedArray = this.model.clearIncomplete();
@@ -134,19 +156,27 @@ export class GeneralEngPage implements OnInit {
     
  
       var found1 = this.completedArray.includes( this.EngineeringCoreArray[5].courseID);
-      var found2 = this.completedArray.includes(this.EngineeringCoreArray[6].courseID); 
+      // var found2 = this.completedArray.includes(this.EngineeringCoreArray[6].courseID); 
       console.log("found " + this.EngineeringCoreArray[5].courseID+ " :" + found);
-      console.log("found " + this.EngineeringCoreArray[6].courseID+ " :" + found);
+      // console.log("found " + this.EngineeringCoreArray[6].courseID+ " :" + found);
 
-        if(!found1 && !found2){
+        if(!found1){
 
           console.log("Courses not completed: " + this.EngineeringCoreArray[5].courseID);
-          console.log(" and "  + this.EngineeringCoreArray[6].courseID);
+          // console.log(" and "  + this.EngineeringCoreArray[6].courseID);
           this.addIncompeltedCourse(this.EngineeringCoreArray[5]);
-          this.addIncompeltedCourse(this.EngineeringCoreArray[6]);
+          // this.addIncompeltedCourse(this.EngineeringCoreArray[6]);
 
           
         }
+
+
+        
+      if(this.incompletedArray.length == 0){
+               
+        this.coreLeft = false; 
+
+      }
 
       this.count = 0;
       console.log("Electives lenght: " + electivesLength);
@@ -181,8 +211,26 @@ export class GeneralEngPage implements OnInit {
       this.left = 0;
 	console.log("user has completed elective requiremnt"); 	
  console.log(this.showElectives);
+
+      if(this.incompletedArray.length == 0){
+        this.completed = true; 
+        this.coreLeft = false; 
+        this.ran = false; 
+
+      }
      }
 
+     var x = this.EngineeringCoreArray.length - this.incompletedArray.length; 
+     var y = this.EngineeringElectiveArray.length - this.incompletedElectiveArray.length;
+     console.log("x: " + x + ", y: " + y); 
+     console.log(x+y); 
+
+     this.percent = Math.round(((x+y)/7)*100); 
+     console.log(this.percent); 
+
+     if(this.percent >= 100){
+       this.percent = 100; 
+     }
 
   console.log("final list of incompleted core courses:");
   console.log(this.incompletedArray);

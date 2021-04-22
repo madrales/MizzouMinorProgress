@@ -156,6 +156,11 @@ export class InfotechPage implements OnInit {
     this.status = "";
   }
 
+  clearAll(){
+    this.clear(); 
+    this.completedCoursesForm.reset(); 
+  }
+
 
   ionViewWillEnter(){
     this.model.getData("completed").then((completed) => {

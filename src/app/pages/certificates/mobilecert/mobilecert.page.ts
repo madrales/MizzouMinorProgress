@@ -88,6 +88,11 @@ export class MobilecertPage implements OnInit {
     this.incompletedElectiveArray =  this.model.addIncompletedElective(incompletedObject);   
   }
 
+  clearAll(){
+    this.clear(); 
+    this.completedCoursesForm.reset(); 
+  }
+
   clear(){
 
     this.completedArray  = this.model.clearCompleted();
@@ -151,16 +156,16 @@ export class MobilecertPage implements OnInit {
       }
 
       var found1 = this.completedArray.includes( this.WebDevCoreArray[1].courseID);
-      var found2 = this.completedArray.includes(this.WebDevCoreArray[2].courseID); 
+      // var found2 = this.completedArray.includes(this.WebDevCoreArray[2].courseID); 
       console.log("found " + this.WebDevCoreArray[1].courseID+ " :" + found);
-      console.log("found " + this.WebDevCoreArray[2].courseID+ " :" + found);
+      // console.log("found " + this.WebDevCoreArray[2].courseID+ " :" + found);
 
-        if(!found1 && !found2){
+        if(!found1){
 
           console.log("Courses not completed: " + this.WebDevCoreArray[1].courseID);
-          console.log(" and "  + this.WebDevCoreArray[2].courseID);
+          // console.log(" and "  + this.WebDevCoreArray[2].courseID);
           this.addIncompeltedCourse(this.WebDevCoreArray[1]);
-          this.addIncompeltedCourse(this.WebDevCoreArray[2]);
+          // this.addIncompeltedCourse(this.WebDevCoreArray[2]);
 
           
         }
@@ -241,6 +246,10 @@ export class MobilecertPage implements OnInit {
 
     
   
+    }
+
+    if(this.percent >= 100){
+      this.percent == 100; 
     }
 
     if(this.incompletedArray.length != 0){

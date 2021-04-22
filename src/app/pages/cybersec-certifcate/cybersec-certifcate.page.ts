@@ -82,6 +82,11 @@ export class CybersecCertifcatePage implements OnInit {
     this.cyberSecIncompletedElectiveArray =  this.cyberSecModel.addIncompletedElective(incompletedObject);   
   }
 
+  clearAll(){
+    this.clear(); 
+    this.completedCoursesForm.reset(); 
+  }
+
   clear(){
     this.completedArray  = this.cyberSecModel.clearCompleted();
     
@@ -183,6 +188,10 @@ export class CybersecCertifcatePage implements OnInit {
        this.percent = (a/5)*100; 
       console.log("PERCENT DONE"+  this.percent);
     }
+  }
+
+  if(this.percent >= 100){
+    this.percent == 100; 
   }
 }
 

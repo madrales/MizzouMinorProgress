@@ -30,16 +30,11 @@
         "department": "ENGINR"
     }, 
     {
-        "courseID" : "INFOTC 1040",
-        "name": "Introduction to Problem Solving and Programming", 
+        "courseID" : "INFOTC1040 OR CMPSC1050",
+        "name": "Introduction to Problem Solving/Programming OR Algorithm Design and Programming I", 
         "credits": 3, 
-        "department": "INFOTC"
-    }, 
-    {
-        "courseID": "CMPSC1050", 
-        "name" : "Algorithm Design and Programming I", 
-        "credits": 4, 
-        "department": "CMP SC"
+        "department": "INFOTC OR CMPSC"
     }
+
    
 ]

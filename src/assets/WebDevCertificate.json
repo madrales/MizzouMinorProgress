@@ -6,14 +6,8 @@
         "department" : "Information Technology"
     },
     {
-        "courseID": "INFOTC4405",
-        "name" : "iOS App Development I",
-        "credits" : 3,
-        "department" : "Information Technology"
-    },
-    {
-        "courseID": "INFOTC4410",
-        "name" : "Android App Development I",
+        "courseID": "INFOTC4405 OR INFOTC4410",
+        "name" : "iOS App Development I/Android App Development I",
         "credits" : 3,
         "department" : "Information Technology"
     }

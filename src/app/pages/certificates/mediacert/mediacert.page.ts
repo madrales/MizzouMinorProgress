@@ -77,6 +77,12 @@ export class MediacertPage implements OnInit {
   mediaAddIncompeltedElectiveCourse(incompletedObject: Course ) {
     this.mediaIncompletedElectiveArray =  this.mediaModel.addIncompletedElective(incompletedObject);   
   }
+
+  clearAll(){
+    this.clear(); 
+    this.completedCoursesForm.reset(); 
+  }
+  
     clear(){
     this.completedArray  = this.mediaModel.clearCompleted();
 
@@ -196,6 +202,10 @@ export class MediacertPage implements OnInit {
     console.log("PERCENT DONE"+  this.percent);
 
   }
+  }
+
+  if(this.percent >= 100){
+    this.percent = 100; 
   }
 
   if(this.mediaIncompletedArray.length != 0){

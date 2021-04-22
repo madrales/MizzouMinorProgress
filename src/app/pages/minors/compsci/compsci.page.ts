@@ -98,6 +98,10 @@ export class CompsciPage implements OnInit {
     this.incompletedElectiveArray =  this.model.addIncompletedElective(incompletedObject);   
   }
 
+  clearAll(){
+    this.clear(); 
+    this.completedCoursesForm.reset(); 
+  }
 
   clear(){
 

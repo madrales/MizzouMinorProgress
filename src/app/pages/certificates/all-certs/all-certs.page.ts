@@ -274,6 +274,11 @@ export class AllCertsPage implements OnInit {
 
   }
 
+  clearAll(){
+    this.clear(); 
+    this.completedCoursesForm.reset(); 
+  }
+
   webDevCheck(){
 
     this.webDevRan = true; 
@@ -390,6 +395,9 @@ export class AllCertsPage implements OnInit {
         console.log("2 PERCENT DONE:" + this.webDevPercent);
       }
 
+      if(this.webDevPercent >= 100){
+        this.webDevPercent = 100; 
+      }
     
   
     }
@@ -499,6 +507,9 @@ export class AllCertsPage implements OnInit {
   }
   }
 
+  if(this.mediaPercent >= 100){
+    this.mediaPercent = 100; 
+  }
 
 
   if(this.mediaIncompletedArray.length != 0){
@@ -585,6 +596,10 @@ if(this.cyberSecIncompletedArray != null){
      this.cyberPercent = (a/5)*100; 
     console.log("PERCENT DONE"+  this.cyberPercent);
   }
+}
+
+if(this.cyberPercent >= 100){
+  this.cyberPercent = 100; 
 }
 
 if(this.cyberSecIncompletedArray.length != 0){
