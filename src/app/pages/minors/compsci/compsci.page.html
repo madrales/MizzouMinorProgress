@@ -67,7 +67,7 @@
       <ion-button expand="full" color="danger"(click)="clearInput()"> Clear Input</ion-button>
     </div>
     <div class="notoSerif" >
-    <ion-title *ngIf = 'webRan == true'>You have completed {{ percent }}% of the requirements!</ion-title>
+    <ion-title *ngIf = 'ran == true'>You have completed {{ percent }}% of the requirements!</ion-title>
     <ion-title *ngIf = 'CSCoreLeft == true'> Core Courses Left to Complete</ion-title> 
     <ion-title *ngIf = 'CSCompleted == true'>You completed the Web Dev certificate!</ion-title> 
     <ion-card *ngFor='let course of incompletedArray'>

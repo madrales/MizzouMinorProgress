@@ -15,6 +15,8 @@ export class CompsciPage implements OnInit {
   public showElectives: Boolean = false; 
   public count = 0;
   public left = 1; 
+  public ran = false; 
+  public percent; 
 
   public CSCoreLeft = false; 
   public CSCompleted = false; 
@@ -106,6 +108,7 @@ export class CompsciPage implements OnInit {
     this.showElectives = false;
     this.status = "";
 
+    this.ran = false; 
     this.CSCoreLeft = false; 
     this.CSCompleted = false; 
     this.option1 = false; 
@@ -151,6 +154,7 @@ export class CompsciPage implements OnInit {
   check(){
 
     this.CSCoreLeft = true; 
+    this.ran = true; 
     
 
     this.left = 3; 
@@ -302,6 +306,16 @@ export class CompsciPage implements OnInit {
         }
       }
 
+     }
+
+   
+     var a = 3 - this.incompletedArray.length; 
+     var b = this.completedElectivesArray.length; 
+
+     this.percent = Math.round(((a+ b)/6)*100); 
+     console.log("percent completed: " + this.percent); 
+     if(this.percent >= 100){
+       this.percent = 100; 
      }
 
 
