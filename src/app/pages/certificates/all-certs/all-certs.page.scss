@@ -14,22 +14,35 @@
     padding: 15px;
     font-size: x-large;
 }
+.subtext {
+    font-family: 'gotham', sans-serif;
+}
+.certificateDiv {
+    background-color: #F1B82D;
+    padding: 15px;
+    width: 34%;
+    border: 5px solid black;
+    margin-bottom: 15px;
+    // display: flex;
+}
+.mainerWrapper{
+    display: flex;
+}
 .formButtonWrapper {
-    width: 25%;
+    width: 15%;
     margin: auto;
     text-align: center;
     display: inline-block;
 }
 .mainWrapper {
     background-color: #8F8884;
+    // background-color: white;
     padding: 25px;
     width: 98%;
-    // border-radius: 25px;
     box-shadow: 15px;
     margin: auto;
     text-align: center;
-    // min-height: 500px;
-    margin-top: 25px;
+    min-height: 1000px;
 }
 .clearButton {
     background-color: red;
@@ -59,6 +72,11 @@ ion-card {
     text-align: center;
     margin-bottom: 15px;
     padding: 15px;
+    font-family: 'gotham', sans-serif;
+    border: 5px solid black;
+}
+ion-title {
+    font-family: 'gotham', sans-serif;
 }
 .programTitle {
     color: #F1B82D;

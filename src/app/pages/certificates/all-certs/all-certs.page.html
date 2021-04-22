@@ -23,8 +23,8 @@
   <div class="cardWrapper">
     <div class="mainWrapper">
       <h1 class="notoSerif"> ALL CERTIFICATES CALCULATOR</h1>
-      <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a>
-    <h3 class="notoSerif">To get started, enter the 4 digit course number of the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>
+      <!-- <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a> -->
+    <h3 class="subtext">Select your IT courses to check your status towards all three certificates</h3>
     <div class="formWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
@@ -61,82 +61,100 @@
             <ion-select-option value="INFOTC4640">INFOTC 4640: Motion Graphics and Visual Design II</ion-select-option>
             <ion-select-option value="INFOTC4830">INFOTC 4830: Web Application Development II</ion-select-option> 
             <ion-select-option value="INFOTC4910">INFOTC 4910: Digital Forensics</ion-select-option>
-            <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
           </ion-select>
-      <!-- <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input> -->
-          <!-- <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
-            <ion-icon name="add"></ion-icon>
-          </ion-button> -->
         </ion-item>
       </form>
-      <ion-button expand="full" color="success"(click)="clear(); addCourse(); webDevCheck(); mediaCheck(); cyberSecCheck();">Check Progress</ion-button>
     </div>
-
-    <div class="formWrapper">
-      <!-- <ion-button expand="full" color="success"(click)="webDevCheck(); mediaCheck(); cyberSecCheck();">Check Progress</ion-button> -->
+    <div class="formButtonWrapper">
+      <ion-button expand="full" color="success"(click)="clear(); addCourse(); webDevCheck(); mediaCheck(); cyberSecCheck();">Check Progress</ion-button>
       <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button>
     </div>
+    <div class="mainerWrapper">
+      <div class="certificateDiv">
+        <ion-title class="notoSerif">WEB AND APP DEVELOPMENT CERTIFICATE</ion-title>
+        <ion-title *ngIf = 'webShowPercent == true'>You have completed {{ webDevPercent }}% of the requirements!</ion-title>
+        <ion-title *ngIf = 'webDevCore == true'>WEB DEV Core Courses Left to Complete</ion-title> 
+        <ion-title *ngIf = 'webDevCompleted == true'>You completed the Web Dev certificate!</ion-title> 
+        <div class="mainerWrapper">
+          <ion-card *ngFor='let course of webDevIncompletedArray'>
+            <ion-card-title class="notoSerif">
+              {{ course.courseID }}
+            </ion-card-title>
+            <ion-card-subtitle>
+                {{course.name}}
+            </ion-card-subtitle>
+            </ion-card>
+        </div>
+        <div class="notoSerif" *ngIf = 'webDevShowElectives == true'>
+          <ion-title class="notoSerif">Complete {{ webDevLeft }} of the following Courses</ion-title> 
+            <ion-card  *ngFor='let a of  webDevIncompletedElectiveArray' >
+              <ion-card-title class="notoSerif">
+                {{ a.courseID }}
+                </ion-card-title>
+                <ion-card-subtitle>
+                  {{a.name}}
+                </ion-card-subtitle>
+            </ion-card>
+        </div>
+      </div>
+      <div class="certificateDiv">
+        <ion-title class="notoSerif"> MEDIA TECH CERTIFICATE</ion-title>
+        <ion-title *ngIf = 'showMediaPercent == true'>You have completed {{ mediaPercent }}% of the requirements!</ion-title>
+        <ion-title *ngIf = 'mediaCore == true'>MEDIA Core Courses Left to Complete</ion-title> 
+        <ion-title *ngIf = 'mediaCompleted == true'> You have completed the Media Tech certificate! </ion-title>
+        <ion-card *ngFor='let course of mediaIncompletedArray'>
+          <ion-card-title class="notoSerif">
+            {{ course.courseID }}
+          </ion-card-title>
+          <ion-card-subtitle>
+              {{course.name}}
+          </ion-card-subtitle>
+        </ion-card>
+      
+        <div class="notoSerif" *ngIf = 'mediaShowElectives == true'>
+          <ion-title class="notoSerif">Complete {{ mediaLeft }} of the following Courses</ion-title> 
+          <ion-card  *ngFor='let a of  mediaIncompletedElectiveArray' >
+            <ion-card-title class="notoSerif">
+              {{ a.courseID }}
+              </ion-card-title>
+              <ion-card-subtitle>
+                {{a.name}}
+              </ion-card-subtitle>
+          </ion-card>
+        </div>
+      </div>
+      
+      <div class="certificateDiv">
+        <ion-title class="notoSerif"> CYBERSECURITY CERTIFICATE</ion-title>
+        <ion-title class="subtext" *ngIf = 'cyberShowPercent == true'>You have completed {{ cyberPercent }}% of the requirements!</ion-title>
+        <ion-title class="subtext" *ngIf = 'cyberSecCore == true'>CYBER SECURITY Core Courses Left to Complete</ion-title> 
+        <ion-title class="subtext" *ngIf = 'cyberSecCompleted == true'>You have completed the certificate!</ion-title>
+        <ion-title class="notoSerif" *ngIf = 'cyberSecCompleted == true'>Visit http://www.google.com to apply for your certificate!</ion-title>
+        <ion-card *ngFor='let course of cyberSecIncompletedArray'>
+          <ion-card-title class="notoSerif">
+            {{ course.courseID }}
+          </ion-card-title>
+          <ion-card-subtitle>
+              {{course.name}}
+          </ion-card-subtitle>
+        </ion-card>
     
-    <ion-title *ngIf = 'webDevRan == true'>WEB AND APP DEVELOPMENT CERTIFICATE</ion-title>
-    <ion-title *ngIf = 'webShowPercent == true'>You have completed {{ webDevPercent }}% of the requirements!</ion-title>
-    <ion-title *ngIf = 'webDevCore == true'>WEB DEV Core Courses Left to Complete</ion-title> 
-    <ion-title *ngIf = 'webDevCompleted == true'>You completed the Web Dev certificate!</ion-title> 
-    <ion-card *ngFor='let course of webDevIncompletedArray'>
-      <ion-card-title>
-        {{ course.courseID }} {{course.name}}
-      </ion-card-title>
-    </ion-card>
-
-    <div class="notoSerif" *ngIf = 'webDevShowElectives == true'>
-      <ion-title>WEB DEV Complete {{ webDevLeft }} of the following Courses</ion-title> 
-      <ion-card  *ngFor='let a of  webDevIncompletedElectiveArray' >
-        <ion-card-title>
-        {{ a.courseID }} {{a.name}}
-        </ion-card-title>
-      </ion-card>
-    </div>
-
-    <ion-title *ngIf = 'mediaRan == true'> MEDIA TECH CERTIFICATE</ion-title>
-    <ion-title *ngIf = 'showMediaPercent == true'>You have completed {{ mediaPercent }}% of the requirements!</ion-title>
-    <ion-title *ngIf = 'mediaCore == true'>MEDIA Core Courses Left to Complete</ion-title> 
-    <ion-title *ngIf = 'mediaCompleted == true'> You have completed the Media Tech certificate! </ion-title>
-    <ion-card *ngFor='let course of mediaIncompletedArray'>
-      <ion-card-title>
-        {{ course.courseID }} {{course.name}}
-      </ion-card-title>
-    </ion-card>
-
+        <div class="notoSerif" *ngIf = 'cyberSecShowElectives == true'>
+          <ion-title class="notoSerif">Complete ONE of the following Courses</ion-title> 
+          <ion-card  *ngFor='let a of  CyberSecElectiveArray' >
+            <ion-card-title class="notoSerif">
+            {{ a.courseID }}
+            </ion-card-title>
+            <ion-card-subtitle>
+              {{a.name}}
+            </ion-card-subtitle>
+          </ion-card>
+        </div>
     
-    <div class="notoSerif" *ngIf = 'mediaShowElectives == true'>
-      <ion-title>Complete {{ mediaLeft }} of the following Courses</ion-title> 
-      <ion-card  *ngFor='let a of  mediaIncompletedElectiveArray' >
-        <ion-card-title>
-        {{ a.courseID }} {{a.name}}
-        </ion-card-title>
-      </ion-card>
+        </div>
+      </div>
+      
     </div>
-
-    <ion-title *ngIf = "cyberSecRan == true" > CYBERSECURITY CERTIFICATE</ion-title>
-    <ion-title *ngIf = 'cyberShowPercent == true'>You have completed {{ cyberPercent }}% of the requirements!</ion-title>
-    <ion-title *ngIf = 'cyberSecCore == true'>CYBER SECURITY Core Courses Left to Complete</ion-title> 
-    <ion-title *ngIf = 'cyberSecCompleted == true'>You have completed the cybersecurity certificate!</ion-title>
-    <ion-card *ngFor='let course of cyberSecIncompletedArray'>
-      <ion-card-title>
-        {{ course.courseID }} {{course.name}}
-      </ion-card-title>
-    </ion-card>
-
-    <div class="notoSerif" *ngIf = 'cyberSecShowElectives == true'>
-      <ion-title>Complete ONE of the following Courses</ion-title> 
-      <ion-card  *ngFor='let a of  CyberSecElectiveArray' >
-        <ion-card-title>
-        {{ a.courseID }} {{a.name}}
-        </ion-card-title>
-      </ion-card>
     </div>
-
-    </div>
-    
-  </div>
 </ion-content>
 
