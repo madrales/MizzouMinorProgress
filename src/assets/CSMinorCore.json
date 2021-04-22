@@ -12,16 +12,10 @@
         "department" : "CMPSC"
     }, 
     {
-        "courseID": "CMPSC2270", 
+        "courseID": "CMPSC2270 OR ECE2210", 
         "name": "Introduction to Logic Systems", 
         "credits" : 3, 
-        "department" : "CMPSC"
-    }, 
-    {
-        "courseID": "ECE2210", 
-        "name": "Introduction to Logic Systems", 
-        "credits": 3, 
-        "department" : "ECE" 
+        "department" : "CMPSC OR ECE"
     }
    
 ]
