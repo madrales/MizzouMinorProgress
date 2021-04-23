@@ -65,6 +65,22 @@
         {{ this.status }}
       </ion-title>
       <div class="resultCourseWrapper" fxLayout="row"> 
+        <div *ngIf = "show1610Seqs == true">
+
+          <ion-title>Choose one of the folowing sequences to complete:</ion-title>
+          <ion-title>Sequence 1</ion-title>
+          <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq4'>
+            <ion-card-title>
+              {{ course }}
+            </ion-card-title>
+          </ion-card> 
+          <ion-title>Sequence 2</ion-title>
+          <ion-card class="courseCard"  *ngFor='let course of ItMinorSeq5'>
+            <ion-card-title>
+              {{ course }}
+            </ion-card-title>
+          </ion-card> 
+        </div>
         <div *ngIf = "show1040Seqs == true">
 
         <ion-title>Choose one of the folowing sequences to complete:</ion-title>
@@ -93,10 +109,57 @@
           <ion-card-title>
             {{ course }}
           </ion-card-title>
-        </ion-card> 
-
-
+        </ion-card>
       </div>
+      <div *ngIf = "show1610Seq1 == true">
+        <ion-title>Complete your sequence with:</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of incompletedArray'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+      </div>
+      <div *ngIf = "showAllSeqs == true">
+        <ion-title>You need to complete a sequnce, some sequences include as follows:</ion-title>
+        <ion-title>Sequence 1</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq1a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+        <ion-title>Sequence 2</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq2a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+        <ion-title>Sequence 3</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq3a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+        <ion-title>Sequence 4</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq4a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+        <ion-title>Sequence 5</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ItMinorSeq5a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+      </div>
+      <ion-title *ngIf = "completedMinor == true">You have compeleted the IT minor.</ion-title> 
+      <ion-title *ngIf = "completedSequence == true">You have completed the sequence requirement.</ion-title>
+    
+      <ion-title *ngIf = "completed3000 == true">You have compeleted the 3 3000+ course requirments.</ion-title>
+      <ion-title *ngIf = "count == 1">You must also complete 2 more 3000+ courses.</ion-title>
+      <ion-title *ngIf = "count == 2">You must also complete 1 more 3000+ courses.</ion-title>
+      <ion-title *ngIf = "count == 0"> You must also complete 3 more 3000+ courses.</ion-title>
+      
       </div>
     </div>
   </div>

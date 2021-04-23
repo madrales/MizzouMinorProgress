@@ -24,7 +24,14 @@ export class InfotechPage implements OnInit {
   public status: String;
   public show1040Seqs = false; 
   public show1040Seq1 = false; 
-  public showSeq3 = false; 
+  public count = 0; 
+  public completedSequence = false; 
+  public showAllSeqs = false; 
+  public completedMinor = false; 
+  public completed3000 = false; 
+
+  public show1610Seqs = false; 
+  public show1610Seq1 = false;  
 
   completedArray: Array<String>;
 
@@ -32,11 +39,23 @@ export class InfotechPage implements OnInit {
   ITMinorArray: Array<Course>;
   ITMinorArray2: Array<Course>;
 
+  //1040
   ITMinorSeq1: Array<String> = [ "2830", "4830"];
   ITMinorSeq2: Array<String> = ["2910", "3910 OR 4910"]; 
   ITMinorSeq3: Array<String> = ["4405", "4410"]
-  ITMinorSeq4: Array<String> = ["1610", "2610", "3610 OR 4610"]; 
-  ItMinorSeq5: Array<String> = ["1610","3640", "4640"]; 
+
+  //1610
+  ITMinorSeq4: Array<String> = ["2610", "3610 OR 4610"]; 
+  ItMinorSeq5: Array<String> = ["3640", "4640"]; 
+
+  //1040 full
+  ITMinorSeq1a: Array<String> = [ "1040", "2830", "4830"];
+  ITMinorSeq2a: Array<String> = [ "1040","2910", "3910 OR 4910"]; 
+  ITMinorSeq3a: Array<String> = ["1040","4405", "4410"]
+
+  //1610 full
+  ITMinorSeq4a: Array<String> = ["1610","2610", "3610 OR 4610"]; 
+  ItMinorSeq5a: Array<String> = ["1610","3640", "4640"]; 
 
 
   constructor(private model: CompletedITService, private formBuilder: FormBuilder) {
@@ -64,27 +83,20 @@ export class InfotechPage implements OnInit {
 
   addCourse() {
 
+    var submittedLenght;
     
-    var submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+    if(this.completedCoursesForm.value.completedCourse != null){
+       submittedLenght = this.completedCoursesForm.value.completedCourse.length;
+    }
 
     for (let i =0; i < submittedLenght; i++){
       this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse[i]);
-
     }
-
-
-    // this.completedArray =  this.model.addCompleted(this.completedCoursesForm.value.completedCourse); 
-    // this.completedCoursesForm.reset(); 
-
-    
     console.log(this.completedArray);
-  
   }
 
   addIncompeltedCourse(incompletedObject: String ) {
-
     this.incompletedArray =  this.model.addIncompleted(incompletedObject);
-    
   }
 
   check2(){
@@ -95,6 +107,10 @@ export class InfotechPage implements OnInit {
     var foundSeq1 = this.completedArray.includes("2830"); 
     var foundSeq2 = this.completedArray.includes("2910"); 
     var foundSeq3 = this.completedArray.includes("4405"); 
+
+    var foundSeq4 = this.completedArray.includes("2610"); 
+    var foundSeq5 = this.completedArray.includes("3640"); 
+    // var foundSeq6 = this.completedArray.includes("4405"); 
 
     if(foundSeq1or2or3 && (foundSeq1 || foundSeq2 || !foundSeq3)){ //if 1040 is found
 
@@ -107,6 +123,7 @@ export class InfotechPage implements OnInit {
         }
         else{
           console.log("user completed the first sequence"); 
+          this.completedSequence = true; 
         }
       }
 
@@ -120,6 +137,7 @@ export class InfotechPage implements OnInit {
         }
         else{
           console.log("user completed the second sequence"); 
+          this.completedSequence = true; 
         }
       }
 
@@ -133,105 +151,110 @@ export class InfotechPage implements OnInit {
         }
         else{
           console.log("user completed the third sequence"); 
+          this.completedSequence = true;
         }
       }
-
       else{
         console.log("present user with sequnces 1 2 or 3"); 
         this.show1040Seqs = true; 
       }
     }
-    else if (foundSeq4or5){
-
+    else if( foundSeq4or5 && !foundSeq4 && !foundSeq5){
+        console.log("present user with sequnces 4 and 5"); 
+        this.show1610Seqs = true; 
+      
     }
-    else if (!foundSeq1or2or3 && !foundSeq4or5){
+    else if (foundSeq4or5  && (foundSeq4 || foundSeq5)){
+      if(foundSeq4){ //check for 2610
+        var found = this.completedArray.includes("3610 OR 4610"); 
 
-    }
-
-    console.log(this.incompletedArray); 
-
-  }
-
-  
-  check(){
-
-    this.incompletedArray = this.model.clearIncomplete();
-
-    var completedLength = this.completedArray.length;
-    var minorLength = this.ITMinorArray.length;
-
-    console.log("Number of user completed courses: " + completedLength);
-   
-
-    for (let i = 0; i < minorLength; i++) {
-
-
-      var found = this.completedArray.includes(this.ITMinorArray[i].courseID);
-
-      console.log("found " + this.ITMinorArray[i].courseID+ " :" + found);
-
-      if(!found){
-
-        console.log("Course not completed: " + this.ITMinorArray[i].courseID);
-       // this.addIncompeltedCourse(this.ITMinorArray[i]);
-
-      }
-
-      var count = 0; 
-
-      for (let i = 0; i < completedLength; i++) {
-
-        var temp = this.completedArray[i];
-
-        var firstVal = temp.charAt(0);
-
-       
-
-        if(firstVal === '3' || firstVal === '4'){
-          console.log(temp);
-          count++;
+        if(!found){ //move on to 3610/4610
+          this.addIncompeltedCourse("INFOTC3610 OR INFOTC4610"); 
+          this.show1610Seq1 = true; 
+        }
+        else{
+          console.log("user completed the 4th sequence"); 
+          this.completedSequence = true; 
         }
       }
+      else if(foundSeq5){ //check for 3640
 
-      if(count >= 3){
-        this.test = "You have completed 9 hours of 3000+ courses.";
+        var found = this.completedArray.includes("4640");
 
-        console.log("You have completed 9 hours of 3000+ courses");
+        if(!found){ //move on to 4640
+          this.addIncompeltedCourse("INFTOC4640"); 
+          this.show1040Seq1 = true; 
+        }
+        else{
+          console.log("user completed the 5th sequence"); 
+          this.completedSequence = true; 
+        }
       }
-      if(count === 2){
-        this.test = "You need to complete 1 more 3000+ courses";
-        console.log("You need 1 more 3000+ course");
+    }
+    else if (!foundSeq1or2or3 && !foundSeq4or5){
+      console.log("user hasn't completed any sequences"); 
+      this.showAllSeqs = true; 
+    }
 
-      }
-      if(count === 1){
-        this.test = "You need to complete 2 more 3000+ courses";
-        console.log("You need to complete 2 more 3000+ courses");
-      }
-      if(count === 0){
-        this.test = "You need to complete 3 more 3000+ courses";
-        console.log("You need to complete 3 more 3000+ courses");
-      }
-      if(this.incompletedArray.length == 0 && count == 3){
-        this.status = "You have completed the IT minor!"
-      }else {
-        this.status = "You have not completed the IT minor."
+    console.log("completed courses: " + this.completedArray); 
+
+    //checking for 3 3000 + courses now
+     this.count = 0; 
+
+    for( var i = 0; i < this.completedArray.length; i++){
+
+      var x = this.completedArray[i].charAt(0); 
+
+      if(x == '3' || x == '4'){
+        console.log("Found a 3000+ course!"); 
+        this.count++; 
       }
 
+      if( this.count == 3){
+        break;
+      }
 
-  }
+    }
 
-  console.log("final list of incompleted courses:");
-  console.log(this.incompletedArray);
+    if(this.count == 3){
+      console.log("User has compelted the 3 3000+ courses."); 
+      this.completed3000 = true; 
+    }
+    else if(this.count == 2){
+      console.log("User needs to complete 1")
+    }
+    else if(this.count == 1){
+      console.log("User needs to complete 1 3000+ course."); 
+    }
+    else{
+      console.log("User still needs to complete 3 3000+ courses."); 
+    }
+
+    if(this.completedSequence == true && this.count == 3 && this.completedArray.length >= 5){
+      this.completedMinor = true; 
+      console.log("user has completed the IT minor."); 
+      this.completedSequence = false; 
+      this.completed3000 = false; 
+      
+    }
+
 
   }
 
   clear(){
     this.completedArray  = this.model.clearCompleted();
     this.incompletedArray = this.model.clearIncomplete();
+    this.completedSequence = false; 
     this.status = "";
     this.show1040Seqs = false; 
     this.show1040Seq1 = false; 
-    this.showSeq3 = false; 
+    this.completedMinor = false; 
+    this.count = 0; 
+    this.completed3000 = false; 
+    this.showAllSeqs = false; 
+    
+    this.show1610Seqs = false; 
+    this.show1610Seq1 = false; 
   }
 
   clearAll(){
