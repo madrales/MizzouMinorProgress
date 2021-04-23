@@ -22,7 +22,7 @@ export class CompletedITService {
   completedArray: String[] = [];
   completedDataName: string = "completed"; 
 
-  incompletedArray: Course[] = [];
+  incompletedArray: String[] = [];
   incompletedDataName: string = "incompleted"; 
 
   constructor(private storage: Storage) {
@@ -104,12 +104,12 @@ export class CompletedITService {
     }
   }
 
-  addIncompleted(incompletedObject: Course) {
+  addIncompleted(incompletedObject: String) {
     if (incompletedObject != null) {
 
 
       this.incompletedArray.push(incompletedObject);
-      this.setData(this.incompletedDataName, this.incompletedArray); 
+      this.setData2(this.incompletedDataName, this.incompletedArray); 
 
       return this.incompletedArray; 
     }
@@ -118,7 +118,7 @@ export class CompletedITService {
   clearIncomplete() {
         this.incompletedArray.splice(0, this.incompletedDataName.length);
       
-    this.setData(this.incompletedDataName, this.incompletedArray); 
+    this.setData2(this.incompletedDataName, this.incompletedArray); 
 
     return this.incompletedArray; 
   }

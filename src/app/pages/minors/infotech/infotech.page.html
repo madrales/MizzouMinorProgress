@@ -27,15 +27,22 @@
         <ion-item>
           <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
             <ion-select-option value="1040">INFOTC 1040: Intro to Problem Solving and Programming</ion-select-option>
+            <ion-select-option value="1610">INFOTC 1610: Introduction to Digital Media Design</ion-select-option>
+            <ion-select-option value="2610">INFOTC 2610:  Digital Media Design I</ion-select-option>
             <ion-select-option value="2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
             <ion-select-option value="2830">INFOTC 2830: Web Application Developement I</ion-select-option>
             <ion-select-option value="2910">INFOTC 2910: Cyber Security</ion-select-option>
             <ion-select-option value="3530">INFOTC 3530: UNIX Operating Systems</ion-select-option>
+            <ion-select-option value="3610 OR 4610">INFOTC 3610:  Digital Media Design II</ion-select-option>
+            <ion-select-option value="3640">INFOTC 3640: Motion Graphics and Visual Effects I</ion-select-option>
             <ion-select-option value ='3810'>INFOTC 3810: Computer Network Security</ion-select-option>
             <ion-select-option value= "3850">INFOTC 3850: Computer System Administration</ion-select-option>
-            <ion-select-option value="3910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
+            <ion-select-option value="3910 OR 4910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
+            <ion-select-option value="3610 OR 4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
+            <ion-select-option value="4640">INFOTC 4640: Motion Graphics and Visual Effects II</ion-select-option>
             <ion-select-option value="4830">INFOTC 4830: Web Application Developement II</ion-select-option>
-            <ion-select-option value="4910">INFOTC 4910: Digital Forensics</ion-select-option>
+            <ion-select-option value="3910 OR 4910">INFOTC 4910: Digital Forensics</ion-select-option>
+            
             <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
           </ion-select>
           <!-- <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
@@ -43,7 +50,7 @@
           </ion-button> -->
         </ion-item>
       </form>
-      <ion-button expand="full" color="success" (click)="clear(); addCourse(); check();">Check Progress</ion-button>
+      <ion-button expand="full" color="success" (click)="clear(); addCourse(); check2();">Check Progress</ion-button>
     </div>
     <div class="formButtonWrapper">
       <ion-button color="danger" expand="full" (click)="clearAll()">Clear All</ion-button>
@@ -57,12 +64,39 @@
       <ion-title>
         {{ this.status }}
       </ion-title>
-      <div class="resultCourseWrapper" fxLayout="row">
-        <ion-card class="courseCard" *ngFor='let course of incompletedArray'>
+      <div class="resultCourseWrapper" fxLayout="row"> 
+        <div *ngIf = "show1040Seqs == true">
+
+        <ion-title>Choose one of the folowing sequences to complete:</ion-title>
+        <ion-title>Sequence 1</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq1'>
           <ion-card-title>
-            {{ course.courseID }}
+            {{ course }}
           </ion-card-title>
-        </ion-card>
+        </ion-card> 
+        <ion-title>Sequence 2</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq2'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card> 
+        <ion-title>Sequence 3</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq3'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card> 
+      </div>
+      <div *ngIf = "show1040Seq1 == true">
+        <ion-title>Complete your sequence with:</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of incompletedArray'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card> 
+
+
+      </div>
       </div>
     </div>
   </div>
