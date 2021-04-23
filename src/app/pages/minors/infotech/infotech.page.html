@@ -38,6 +38,8 @@
             <ion-select-option value ='3810'>INFOTC 3810: Computer Network Security</ion-select-option>
             <ion-select-option value= "3850">INFOTC 3850: Computer System Administration</ion-select-option>
             <ion-select-option value="3910 OR 4910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
+            <ion-select-option value="4405">INFOTC 4405: iOS App Development I</ion-select-option>
+            <ion-select-option value="4425">INFOTC 4425: iOS App Development II</ion-select-option>
             <ion-select-option value="3610 OR 4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
             <ion-select-option value="4640">INFOTC 4640: Motion Graphics and Visual Effects II</ion-select-option>
             <ion-select-option value="4830">INFOTC 4830: Web Application Developement II</ion-select-option>
@@ -159,6 +161,8 @@
       <ion-title *ngIf = "count == 1">You must also complete 2 more 3000+ courses.</ion-title>
       <ion-title *ngIf = "count == 2">You must also complete 1 more 3000+ courses.</ion-title>
       <ion-title *ngIf = "count == 0"> You must also complete 3 more 3000+ courses.</ion-title>
+
+      <ion-title *ngIf = "remaining == true">You must complete {{ left }} more course of any level.</ion-title>
       
       </div>
     </div>

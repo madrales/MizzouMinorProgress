@@ -28,7 +28,9 @@ export class InfotechPage implements OnInit {
   public completedSequence = false; 
   public showAllSeqs = false; 
   public completedMinor = false; 
-  public completed3000 = false; 
+  public completed3000 = false;
+  public left = 0; 
+  public remaining = false; 
 
   public show1610Seqs = false; 
   public show1610Seq1 = false;  
@@ -42,7 +44,7 @@ export class InfotechPage implements OnInit {
   //1040
   ITMinorSeq1: Array<String> = [ "2830", "4830"];
   ITMinorSeq2: Array<String> = ["2910", "3910 OR 4910"]; 
-  ITMinorSeq3: Array<String> = ["4405", "4410"]
+  ITMinorSeq3: Array<String> = ["4405", "4425"]
 
   //1610
   ITMinorSeq4: Array<String> = ["2610", "3610 OR 4610"]; 
@@ -51,7 +53,7 @@ export class InfotechPage implements OnInit {
   //1040 full
   ITMinorSeq1a: Array<String> = [ "1040", "2830", "4830"];
   ITMinorSeq2a: Array<String> = [ "1040","2910", "3910 OR 4910"]; 
-  ITMinorSeq3a: Array<String> = ["1040","4405", "4410"]
+  ITMinorSeq3a: Array<String> = ["1040","4405", "4425"]
 
   //1610 full
   ITMinorSeq4a: Array<String> = ["1610","2610", "3610 OR 4610"]; 
@@ -112,7 +114,7 @@ export class InfotechPage implements OnInit {
     var foundSeq5 = this.completedArray.includes("3640"); 
     // var foundSeq6 = this.completedArray.includes("4405"); 
 
-    if(foundSeq1or2or3 && (foundSeq1 || foundSeq2 || !foundSeq3)){ //if 1040 is found
+    if(foundSeq1or2or3 && (foundSeq1 || foundSeq2 || foundSeq3) ){ //if 1040 is found
 
       if(foundSeq1){ //check for 2830
         var found = this.completedArray.includes("4830"); 
@@ -124,10 +126,13 @@ export class InfotechPage implements OnInit {
         else{
           console.log("user completed the first sequence"); 
           this.completedSequence = true; 
+          this.show1610Seq1 = false; 
+          this.show1040Seq1 = false; 
+          
         }
       }
 
-      else if(foundSeq2){ //check for 2910
+      if(foundSeq2){ //check for 2910
 
         var found = this.completedArray.includes("3910 OR 4910");
 
@@ -138,20 +143,24 @@ export class InfotechPage implements OnInit {
         else{
           console.log("user completed the second sequence"); 
           this.completedSequence = true; 
+          this.show1610Seq1 = false; 
+          this.show1040Seq1 = false;
         }
       }
 
-      else if(foundSeq3){ //check for 4405
+       if(foundSeq3){ //check for 4405
 
-        var found = this.completedArray.includes("INFOTC4410"); 
+        var found = this.completedArray.includes("4425"); 
 
         if(!found){
-          this.addIncompeltedCourse("INFOTC4410"); 
+          this.addIncompeltedCourse("INFOTC4425"); 
           this.show1040Seq1 = true; 
         }
         else{
           console.log("user completed the third sequence"); 
           this.completedSequence = true;
+          this.show1610Seq1 = false; 
+          this.show1040Seq1 = false;
         }
       }
       else{
@@ -175,6 +184,8 @@ export class InfotechPage implements OnInit {
         else{
           console.log("user completed the 4th sequence"); 
           this.completedSequence = true; 
+          this.show1610Seq1 = false; 
+          this.show1040Seq1 = false;
         }
       }
       else if(foundSeq5){ //check for 3640
@@ -188,6 +199,8 @@ export class InfotechPage implements OnInit {
         else{
           console.log("user completed the 5th sequence"); 
           this.completedSequence = true; 
+          this.show1610Seq1 = false; 
+          this.show1040Seq1 = false;
         }
       }
     }
@@ -230,11 +243,26 @@ export class InfotechPage implements OnInit {
       console.log("User still needs to complete 3 3000+ courses."); 
     }
 
+    if(this.completedSequence == true){
+      this.show1040Seq1 = false; 
+      this.show1610Seq1 = false; 
+    }
+
     if(this.completedSequence == true && this.count == 3 && this.completedArray.length >= 5){
       this.completedMinor = true; 
       console.log("user has completed the IT minor."); 
       this.completedSequence = false; 
+      this.show1610Seq1 = false; 
+      this.show1040Seq1 = false;
       this.completed3000 = false; 
+      
+    }
+    if(this.completedSequence == true && this.count == 3 && this.completedArray.length <= 5){
+      console.log("user has some courses left to complete."); 
+      this.left = 5 - this.completedArray.length; 
+      this.remaining = true;
+      this.show1610Seq1 = false; 
+      this.show1040Seq1 = false;
       
     }
 
@@ -252,6 +280,8 @@ export class InfotechPage implements OnInit {
     this.count = 0; 
     this.completed3000 = false; 
     this.showAllSeqs = false; 
+    this.left = 0; 
+    this.remaining = false; 
     
     this.show1610Seqs = false; 
     this.show1610Seq1 = false; 
