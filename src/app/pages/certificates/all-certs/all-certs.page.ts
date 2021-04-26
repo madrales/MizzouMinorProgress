@@ -309,16 +309,14 @@ export class AllCertsPage implements OnInit {
       }
 
       var found1 = this.completedArray.includes( this.WebDevCoreArray[1].courseID);
-      // var found2 = this.completedArray.includes(this.WebDevCoreArray[2].courseID); 
+    
       console.log("found " + this.WebDevCoreArray[1].courseID+ " :" + found1);
-      // console.log("found " + this.WebDevCoreArray[2].courseID+ " :" + found);
 
         if(!found1){
 
           console.log("Courses not completed: " + this.WebDevCoreArray[1].courseID);
-          // console.log(" and "  + this.WebDevCoreArray[2].courseID);
+      
           this.webDevAddIncompeltedCourse(this.WebDevCoreArray[1]);
-          // this.addIncompeltedCourse(this.WebDevCoreArray[2]);
 
           
         }
