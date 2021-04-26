@@ -158,6 +158,61 @@
         "name": "Game Development",
         "credits" : 3,
         "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSCI4650",
+        "name": "Digital Image Processing",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSCI4670",
+        "name": "Digital Image Compression",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSCI4720",
+        "name": "Introduction to Machine Learning and Pattern Recognition",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSCI4730",
+        "name": "Building Intelligent Robots",
+        "credits" : 4,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSCI4740",
+        "name": "Interdisciplinary Introduction to NLP",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSCI4750",
+        "name": "Artificial Intelligence I",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSCI4770",
+        "name": "Introduction to Computational Intelligence",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSCI4830",
+        "name": "Web Application Development II",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMPSCI4910",
+        "name": "Digital Forensics",
+        "credits" : 3,
+        "department" : "CMPSC"
     }
+
 
 ]
