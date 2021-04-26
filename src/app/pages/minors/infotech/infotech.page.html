@@ -66,6 +66,7 @@
       <ion-title>
         {{ this.status }}
       </ion-title>
+      <ion-title >You have compeleted {{ percent }}% of the IT minor.</ion-title> 
       <div class="resultCourseWrapper" fxLayout="row"> 
         <div *ngIf = "show1610Seqs == true">
 
@@ -84,7 +85,6 @@
           </ion-card> 
         </div>
         <div *ngIf = "show1040Seqs == true">
-
         <ion-title>Choose one of the folowing sequences to complete:</ion-title>
         <ion-title>Sequence 1</ion-title>
         <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq1'>
@@ -154,6 +154,7 @@
           </ion-card-title>
         </ion-card>
       </div>
+      
       <ion-title *ngIf = "completedMinor == true">You have compeleted the IT minor.</ion-title> 
       <ion-title *ngIf = "completedSequence == true">You have completed the sequence requirement.</ion-title>
     

@@ -6,6 +6,7 @@ import { Course } from 'src/app/interfaces/course';
 import { CompletedITService } from 'src/app/services/completed-it.service'; 
 
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { tick } from '@angular/core/testing';
 
 // @NgModule({
 //   declarations: [],
@@ -31,6 +32,9 @@ export class InfotechPage implements OnInit {
   public completed3000 = false;
   public left = 0; 
   public remaining = false; 
+  public showPercent = false; 
+  public percent = 0; 
+  public numSeq = 0; 
 
   public show1610Seqs = false; 
   public show1610Seq1 = false;  
@@ -103,6 +107,9 @@ export class InfotechPage implements OnInit {
 
   check2(){
 
+    this.showPercent = true; 
+    console.log(this.showPercent); 
+
     var foundSeq1or2or3 = this.completedArray.includes("1040"); 
     var foundSeq4or5 = this.completedArray.includes("1610"); 
 
@@ -122,12 +129,17 @@ export class InfotechPage implements OnInit {
         if(!found){ //move on to 4830
           this.addIncompeltedCourse("INFOTC4830"); 
           this.show1040Seq1 = true; 
+          this.show1040Seqs = false; 
+          console.log("hi"); 
+          this.numSeq = 2;
+          
         }
         else{
           console.log("user completed the first sequence"); 
           this.completedSequence = true; 
           this.show1610Seq1 = false; 
           this.show1040Seq1 = false; 
+          this.numSeq = 2; 
           
         }
       }
@@ -139,12 +151,14 @@ export class InfotechPage implements OnInit {
         if(!found){ //move on to 3910/4910
           this.addIncompeltedCourse("INFTOC3910 OR INFOTC4910"); 
           this.show1040Seq1 = true; 
+          this.numSeq = 2;
         }
         else{
           console.log("user completed the second sequence"); 
           this.completedSequence = true; 
           this.show1610Seq1 = false; 
           this.show1040Seq1 = false;
+          this.numSeq = 2; 
         }
       }
 
@@ -155,24 +169,29 @@ export class InfotechPage implements OnInit {
         if(!found){
           this.addIncompeltedCourse("INFOTC4425"); 
           this.show1040Seq1 = true; 
+          this.numSeq = 2; 
         }
         else{
           console.log("user completed the third sequence"); 
           this.completedSequence = true;
           this.show1610Seq1 = false; 
           this.show1040Seq1 = false;
+          this.numSeq = 2; 
         }
-      }
-      else{
-        console.log("present user with sequnces 1 2 or 3"); 
-        this.show1040Seqs = true; 
       }
     }
     else if( foundSeq4or5 && !foundSeq4 && !foundSeq5){
         console.log("present user with sequnces 4 and 5"); 
         this.show1610Seqs = true; 
+        this.numSeq = 1; 
       
     }
+    else if( foundSeq1or2or3 && !foundSeq1 && !foundSeq2 && !foundSeq3){
+      console.log("present user with sequnces 1, 2 and 3"); 
+      this.show1040Seqs = true; 
+      this.numSeq = 1; 
+    
+  }
     else if (foundSeq4or5  && (foundSeq4 || foundSeq5)){
       if(foundSeq4){ //check for 2610
         var found = this.completedArray.includes("3610 OR 4610"); 
@@ -180,12 +199,14 @@ export class InfotechPage implements OnInit {
         if(!found){ //move on to 3610/4610
           this.addIncompeltedCourse("INFOTC3610 OR INFOTC4610"); 
           this.show1610Seq1 = true; 
+          this.numSeq = 2;
         }
         else{
           console.log("user completed the 4th sequence"); 
           this.completedSequence = true; 
           this.show1610Seq1 = false; 
           this.show1040Seq1 = false;
+          this.numSeq = 2;
         }
       }
       else if(foundSeq5){ //check for 3640
@@ -195,18 +216,21 @@ export class InfotechPage implements OnInit {
         if(!found){ //move on to 4640
           this.addIncompeltedCourse("INFTOC4640"); 
           this.show1040Seq1 = true; 
+          this.numSeq = 2;
         }
         else{
           console.log("user completed the 5th sequence"); 
           this.completedSequence = true; 
           this.show1610Seq1 = false; 
           this.show1040Seq1 = false;
+          this.numSeq = 2;
         }
       }
     }
     else if (!foundSeq1or2or3 && !foundSeq4or5){
       console.log("user hasn't completed any sequences"); 
       this.showAllSeqs = true; 
+      this.numSeq = 0;
     }
 
     console.log("completed courses: " + this.completedArray); 
@@ -251,6 +275,7 @@ export class InfotechPage implements OnInit {
     if(this.completedSequence == true && this.count == 3 && this.completedArray.length >= 5){
       this.completedMinor = true; 
       console.log("user has completed the IT minor."); 
+      // this.showPercent = false; 
       this.completedSequence = false; 
       this.show1610Seq1 = false; 
       this.show1040Seq1 = false;
@@ -265,6 +290,15 @@ export class InfotechPage implements OnInit {
       this.show1040Seq1 = false;
       
     }
+
+  
+    console.log("num seq: " + this.numSeq); 
+    console.log("count : " + this.count); 
+
+
+      this.percent = (((this.numSeq+(this.count)))/5) *100;
+      console.log("percent completed: " + this.percent); 
+  
 
 
   }
@@ -282,6 +316,8 @@ export class InfotechPage implements OnInit {
     this.showAllSeqs = false; 
     this.left = 0; 
     this.remaining = false; 
+    this.percent = 0; 
+    // this.showPercent = false; 
     
     this.show1610Seqs = false; 
     this.show1610Seq1 = false; 
