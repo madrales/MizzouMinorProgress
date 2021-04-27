@@ -95,7 +95,21 @@ ion-title {
 h1 {
     color: black;
 }
-
+ion-select {
+    max-width: unset !important;
+    width: 100% !important;
+}
+ion-overlay-wrapper{
+    max-width: unset !important;
+    width: 100% !important;
+}
+.alert-wrapper{
+    max-width: unset !important;
+    width: 100% !important;
+}
+ion-item {
+    width: 100%;
+}
 .buttoon {
     margin: auto;
     text-align: center;
