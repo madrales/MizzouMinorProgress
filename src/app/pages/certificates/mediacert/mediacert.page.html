@@ -1,0 +1,80 @@
+<ion-header id="header">
+  <ion-toolbar>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_horiz.png"></ion-img>
+      </ion-col>
+      <ion-col size="11">
+        <div class="navbar">
+          <div class="navbarWrapper">
+            <a routerLink="../../"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Home</button></a>
+            <a routerLink="../../about"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >About Us</button></a>
+            <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Certificates</button></a>
+            <a routerLink="../../minors"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Minors</button></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="navbar">
+    <div class="mainWrapper">
+      <h1 class="notoSerif">MEDIA TECHNOLOGY AND DESIGN CERTIFICATE CALCULATOR</h1>
+      <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a>
+    <h3 class="notoSerif">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results.  </h3>
+    <div class="formWrapper">
+      <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
+        <ion-item>
+          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+            <ion-select-option value="INFOTC1610">INFOTC 1610: Intro to Digital Media Design</ion-select-option>
+            <ion-select-option value="INFOTC2610">INFOTC 2610: Digital Media Design I</ion-select-option>
+            <ion-select-option value="INFOTC2615">INFOTC 2615: Color Processing and Design I</ion-select-option>
+            <ion-select-option value="INFOTC2620">INFOTC 2620: Computer Modeling and Animation I</ion-select-option>
+            <ion-select-option value="INFOTC2630">INFOTC 2630: Intro to Game Theory and Design</ion-select-option>
+            <ion-select-option value ='INFOTC3610'>INFOTC 3610: Digital Media Design II</ion-select-option>
+            <ion-select-option value= "INFOTC3630">INFOTC 3630: Intro to Virtual Reality</ion-select-option>
+            <ion-select-option value="INFOTC3650">INFOTC 3650: Project and Team Management</ion-select-option> 
+            <ion-select-option value="INFOTC3660">INFOTC 3660: Audio Engineering</ion-select-option>
+            <ion-select-option value="INFOTC4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
+            <ion-select-option value="INFOTC4640">INFOTC 4640: Motion Graphics and Visual Effects II</ion-select-option>
+            <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
+          </ion-select>
+      <!-- <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input> -->
+
+          <!-- <ion-button expand="full" (click)="addCourse(); " [disabled]="!completedCoursesForm.valid"> -->
+            <!-- <ion-icon name="add"></ion-icon>
+          </ion-button> -->
+        </ion-item>
+      </form>
+      <ion-button expand="full" color="success"(click)="clear(); addCourse(); mediaCheck()">Check Progress</ion-button>
+    </div>
+    <div class="formWrapper">
+      <!-- <ion-button expand="full" color="success"(click)="mediaCheck()">Check Progress</ion-button> -->
+      <!-- <ion-button expand="full" color="danger"(click)="clear()"> Clear Data</ion-button> -->
+      <ion-button expand="full" color="danger"(click)="clearAll()">Clear All</ion-button>
+    </div>
+    <ion-title *ngIf = 'mediaRan == true'>You have completed {{ percent }}% of the requirements!</ion-title>
+    <ion-title *ngIf = 'mediaCore == true'>Core Courses Left to Complete</ion-title> 
+    <ion-title *ngIf = 'mediaCompleted == true'> You have completed the Media Tech certificate! </ion-title>
+    <ion-card *ngFor='let course of mediaIncompletedArray'>
+      <ion-card-title>
+        {{ course.courseID }} {{course.name}}
+      </ion-card-title>
+    </ion-card>
+
+    <div class="notoSerif" *ngIf = 'mediaShowElectives == true'>
+      <ion-title>Complete {{ mediaLeft }} of the following Courses</ion-title> 
+      <ion-card  *ngFor='let a of  mediaIncompletedElectiveArray' >
+        <ion-card-title>
+        {{ a.courseID }} {{a.name}}
+        </ion-card-title>
+      </ion-card>
+    </div>
+    </div>
+    
+  </div>
+</ion-content>
+

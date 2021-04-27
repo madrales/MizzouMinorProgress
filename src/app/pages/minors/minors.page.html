@@ -1,0 +1,70 @@
+<ion-header id="header">
+  <ion-toolbar>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_horiz.png"></ion-img>
+      </ion-col>
+      <ion-col size="11">
+        <div class="navbar">
+          <div class="navbarWrapper">
+            <a routerLink="../"><button mat-raised-button class="btn navButton btn-success pull-right notoSerif" >Home</button></a>
+            <a routerLink="../about"><button mat-raised-button class="btn navButton btn-success pull-right notoSerif" >About Us</button></a>
+            <a routerLink="../certificates"><button mat-raised-button class="btn navButton btn-success pull-right notoSerif" >Certificates</button></a>
+            <a routerLink="../minors"><button mat-raised-button class="btn navButton btn-success pull-right notoSerif" >Minors</button></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+  <ion-content>
+    <div class="cardWrapper">
+      <div class="title">
+        <h1 class="notoSerif">MIZZOU COLLEGE OF ENGINEERING ACADEMIC MINORS</h1>
+        <!-- <h3 class="notoSerif">On this page, you will find a comprehensive list of the academic minors offered by the College of Engineering at Mizzou.</h3> -->
+        <h5>Information provided by <a  class="mizzouLink" href="https://engineering.missouri.edu/academics/engineering-minors/">Mizzou College of Engineering</a></h5>
+      </div>
+      <div class="home firstCard">
+        <ion-card>
+          <ion-title class="notoSerif titleText">
+            COMPUTER SCIENCE MINOR
+          </ion-title>
+          <ion-card-subtitle class=”notoSerif”>
+            15
+          </ion-card-subtitle>
+        <ion-card-content class=”subtext”>
+          A minor in computer science is offered through the College of Engineering. To obtain a minor, a student must complete 18 hours of courses approved by the Department of Electrical Engineering and Computer Science. The student must earn a grade of C- or better in each course counting toward the minor and have a 2.0 GPA in all courses counting toward the minor. At least 9 hours must be taken in residence.
+        </ion-card-content>
+        <a routerLink="../minors/compsci"><button mat-raised-button class="btn buttoon btn-success pull-right">Click here to view the Computer Science Minor</button></a>
+        </ion-card>
+      </div>
+      <div class=”home”>
+        <ion-card>
+          <ion-title class="notoSerif titleText">
+            INFORMATION TECHNOLOGY MINOR
+          </ion-title>
+          <ion-card-subtitle class=”notoSerif”>
+            15
+          </ion-card-subtitle>
+        <ion-card-content class=”subtext”>
+          A minor in Information Technology is offered through the College of Engineering. To obtain a minor, a student must complete courses in a sequence approved by the Department of Computer Science. The student must earn a 2.0 GPA in all courses counting toward the minor. At least 9 hours must be taken in residence at MU. A total of 15 credit hours are required.
+        </ion-card-content>
+        <a routerLink="../minors/infotech"><button mat-raised-button class="btn buttoon btn-success pull-right">Click here to view the Information Technology Minor</button></a>
+        </ion-card>
+      </div>
+      <div class=”home”>
+        <ion-card>
+          <ion-title class="notoSerif titleText">
+            ENGINEERING MINOR
+          </ion-title>
+          <ion-card-subtitle class=”notoSerif”>
+            15
+          </ion-card-subtitle>
+        <ion-card-content class=”subtext”>
+          The minor in engineering is designed for students majoring in disciplines such as physics, math, chemistry and computer science, but it is available to students in all disciplines. It consists of 18 or 19 hours of engineering courses as listed below.
+        </ion-card-content>
+        <a routerLink="../minors/general-eng"><button mat-raised-button class="btn buttoon btn-success pull-right">Click here to view the Engineering Minor</button></a>
+        </ion-card>
+      </div>
+    </div>
+</ion-content>

@@ -1,0 +1,143 @@
+.home {
+    margin: auto;
+    text-align: center;
+}
+.resultsWrapper {
+    margin: auto;
+    text-align: center;
+}
+.footer{
+    background-color: #8F8884;
+    margin: auto;
+    text-align: center;
+    color: black;
+    padding: 15px;
+    font-size: x-large;
+}
+.subtext {
+    font-family: 'gotham', sans-serif;
+}
+.certificateDiv {
+    background-color: #F1B82D;
+    padding: 15px;
+    width: 34%;
+    border: 5px solid black;
+    margin-bottom: 15px;
+    // display: flex;
+}
+.mainerWrapper{
+    display: flex;
+}
+.formButtonWrapper {
+    width: 15%;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+}
+.mainWrapper {
+    background-color: #8F8884;
+    // background-color: white;
+    padding: 25px;
+    width: 98%;
+    box-shadow: 15px;
+    margin: auto;
+    text-align: center;
+    min-height: 1000px;
+}
+.clearButton {
+    background-color: red;
+}
+.submitButton {
+    background-color: green;
+}
+.formWrapper {
+    margin: auto;
+    text-align: center;
+    width: 25%;
+}
+.courseCard {
+    width: 50%;
+    margin: 15px;
+}
+.resultsWrapper h1 {
+    color: black;
+}
+ion-img {
+    margin: auto;
+    text-align: center;
+}
+ion-card {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-family: 'gotham', sans-serif;
+    border: 5px solid black;
+}
+ion-title {
+    font-family: 'gotham', sans-serif;
+}
+.programTitle {
+    color: #F1B82D;
+}
+.buttoon {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+.formWrapper {
+    margin: auto;
+    text-align: center;
+    width: 75%;
+}
+h1 {
+    color: black;
+}
+ion-select {
+    max-width: unset !important;
+    width: 100% !important;
+}
+ion-overlay-wrapper{
+    max-width: unset !important;
+    width: 100% !important;
+}
+.alert-wrapper{
+    max-width: unset !important;
+    width: 100% !important;
+}
+ion-item {
+    width: 100%;
+}
+.buttoon {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    font-size: x-large;
+    margin-top: 0px;
+}
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+}
+#muStacked {
+    display: inline-block;
+    width: 25vw;
+    margin: 0;
+    // border: 2px solid red;
+    text-align: left;
+}
+.buttoon:hover {
+    background-color: white;
+    color: black;
+}
+ion-row {
+    background-color: #000000;
+}
+.navbarWrapper {
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}

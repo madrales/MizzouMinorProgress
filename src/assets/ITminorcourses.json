@@ -1,0 +1,21 @@
+[
+        {
+            "courseID": "1040",
+            "name" : "Introduction to Problem Solving and Programming",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "2830",
+            "name" : "Web Application Development I",
+            "credits" : 3,
+            "department" : "Information Technology"
+        },
+        {
+            "courseID": "4830",
+            "name" : "Web Application Development II",
+            "credits" : 3,
+            "department" : "Information Technology"
+        }
+       
+    ]

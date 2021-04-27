@@ -1,0 +1,218 @@
+[
+    {
+        "courseID": "CMP_SC 2010",
+        "name" : "Intellectual Property for Engineers",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 2830",
+        "name" : "Web Application Development I",
+        "credits" : 3,
+        "department" : "CMPSC"
+    }, 
+    {
+        "courseID": "CMP_SC 3050", 
+        "name": "Advanced Algorithm Design", 
+        "credits" : 3, 
+        "department" : "CMPSC"
+    }, 
+    {
+        "courseID": "CMP_SC 3280", 
+        "name": "Computer Organization and Assembly Language", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMP_SC 3330", 
+        "name": "Object Oriented Programming", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMP_SC 3380", 
+        "name": "Database Applications and Information Systems", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMP_SC 3530", 
+        "name": "UNIX Operating System", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMP_SC 4050", 
+        "name": "Design and Analysis of Algorithms I", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMP_SC 4060", 
+        "name": "String Algorithms", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMP_SC 4070", 
+        "name": "Numerical Methods for Science and Engineering", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMP_SC 4080", 
+        "name": "Parallel Programming for High Performance Computing", 
+        "credits": 3, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMP_SC 4270", 
+        "name": "Computer Architecture", 
+        "credits": 4, 
+        "department" : "CMPSC" 
+    },
+    {
+        "courseID": "CMP_SC 4280",
+        "name": "Network Systems Architecture",
+        "credits" : 4,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4330",
+        "name": "Object Oriented Design I",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4350",
+        "name": "Big Data Analytics",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4380",
+        "name": "Database Mangement Systems",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4405",
+        "name": "iOS App Development I",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },{
+        "courseID": "CMP_SC 4410",
+        "name": "Theroy of Computation I",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },{
+        "courseID": "CMP_SC 4430",
+        "name": "Compilers I",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4440",
+        "name": "Malware Analysis and Defense",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4450",
+        "name": "Principles of Programming Languages",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4460",
+        "name": "Introduction to Cryptography",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4530",
+        "name": "Cloud Computing",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4530",
+        "name": "Neural Models and Machine Learning",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4610",
+        "name": "Computer Graphics I",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4620",
+        "name": "Physically Based Modeling and Animation",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4630",
+        "name": "Game Development",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4650",
+        "name": "Digital Image Processing",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4670",
+        "name": "Digital Image Compression",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4720",
+        "name": "Introduction to Machine Learning and Pattern Recognition",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4730",
+        "name": "Building Intelligent Robots",
+        "credits" : 4,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4740",
+        "name": "Interdisciplinary Introduction to NLP",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4750",
+        "name": "Artificial Intelligence I",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4770",
+        "name": "Introduction to Computational Intelligence",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4830",
+        "name": "Web Application Development II",
+        "credits" : 3,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 4910",
+        "name": "Digital Forensics",
+        "credits" : 3,
+        "department" : "CMPSC"
+    }
+
+
+]

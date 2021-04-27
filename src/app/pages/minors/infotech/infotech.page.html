@@ -1,0 +1,172 @@
+<ion-header id="header">
+  <ion-toolbar>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_horiz.png"></ion-img>
+      </ion-col>
+      <ion-col size="11">
+        <div class="navbar">
+          <div class="navbarWrapper">
+            <a routerLink="../../"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Home</button></a>
+            <a routerLink="../../about"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >About Us</button></a>
+            <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Certificates</button></a>
+            <a routerLink="../../minors"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Minors</button></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="mainWrapper">
+    <h1 class="notoSerif">INFORMATION TECHNOLOGY MINOR PROGRESS CALCULATOR</h1>
+    <h3 class="notoSerif">To get started, select the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>
+    <div class="formWrapper">
+      <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
+        <ion-item>
+          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+            <ion-select-option value="1040">INFOTC 1040: Intro to Problem Solving and Programming</ion-select-option>
+            <ion-select-option value="1610">INFOTC 1610: Introduction to Digital Media Design</ion-select-option>
+            <ion-select-option value="2610">INFOTC 2610:  Digital Media Design I</ion-select-option>
+            <ion-select-option value="2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
+            <ion-select-option value="2830">INFOTC 2830: Web Application Developement I</ion-select-option>
+            <ion-select-option value="2910">INFOTC 2910: Cyber Security</ion-select-option>
+            <ion-select-option value="3530">INFOTC 3530: UNIX Operating Systems</ion-select-option>
+            <ion-select-option value="3610 OR 4610">INFOTC 3610:  Digital Media Design II</ion-select-option>
+            <ion-select-option value="3640">INFOTC 3640: Motion Graphics and Visual Effects I</ion-select-option>
+            <ion-select-option value ='3810'>INFOTC 3810: Computer Network Security</ion-select-option>
+            <ion-select-option value= "3850">INFOTC 3850: Computer System Administration</ion-select-option>
+            <ion-select-option value="3910 OR 4910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
+            <ion-select-option value="4405">INFOTC 4405: iOS App Development I</ion-select-option>
+            <ion-select-option value="4425">INFOTC 4425: iOS App Development II</ion-select-option>
+            <ion-select-option value="3610 OR 4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
+            <ion-select-option value="4640">INFOTC 4640: Motion Graphics and Visual Effects II</ion-select-option>
+            <ion-select-option value="4830">INFOTC 4830: Web Application Developement II</ion-select-option>
+            <ion-select-option value="3910 OR 4910">INFOTC 4910: Digital Forensics</ion-select-option>
+            
+            <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
+          </ion-select>
+          <!-- <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
+            <ion-icon name="add"></ion-icon>
+          </ion-button> -->
+        </ion-item>
+      </form>
+      <ion-button expand="full" color="success" (click)="clear(); addCourse(); check2();">Check Progress</ion-button>
+    </div>
+    <div class="formButtonWrapper">
+      <ion-button color="danger" expand="full" (click)="clearAll()">Clear All</ion-button>
+    </div>
+    <div class="resultsWrapper">
+      <h1 class="notoSerif">Your Results</h1>
+      <ion-card-title class="courseCount notoSerif">{{ completedArray.length }} Courses Completed</ion-card-title>
+      <ion-card-title class="notoSerif">
+        {{ this.test }}
+      </ion-card-title>
+      <ion-title>
+        {{ this.status }}
+      </ion-title>
+      <ion-title >You have compeleted {{ percent }}% of the IT minor.</ion-title> 
+      <div class="resultCourseWrapper" fxLayout="row"> 
+        <div *ngIf = "show1610Seqs == true">
+
+          <ion-title>Choose one of the folowing sequences to complete:</ion-title>
+          <ion-title>Sequence 1</ion-title>
+          <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq4'>
+            <ion-card-title>
+              {{ course }}
+            </ion-card-title>
+          </ion-card> 
+          <ion-title>Sequence 2</ion-title>
+          <ion-card class="courseCard"  *ngFor='let course of ItMinorSeq5'>
+            <ion-card-title>
+              {{ course }}
+            </ion-card-title>
+          </ion-card> 
+        </div>
+        <div *ngIf = "show1040Seqs == true">
+        <ion-title>Choose one of the folowing sequences to complete:</ion-title>
+        <ion-title>Sequence 1</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq1'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card> 
+        <ion-title>Sequence 2</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq2'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card> 
+        <ion-title>Sequence 3</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq3'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card> 
+      </div>
+      <div *ngIf = "show1040Seq1 == true">
+        <ion-title>Complete your sequence with:</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of incompletedArray'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+      </div>
+      <div *ngIf = "show1610Seq1 == true">
+        <ion-title>Complete your sequence with:</ion-title>
+        <ion-card class="courseCard"  *ngFor='let course of incompletedArray'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+      </div>
+      <div *ngIf = "showAllSeqs == true">
+        <ion-title>You need to complete a sequnce, some sequences include as follows:</ion-title>
+        <ion-title>Sequence 1</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq1a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+        <ion-title>Sequence 2</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq2a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+        <ion-title>Sequence 3</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq3a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+        <ion-title>Sequence 4</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ITMinorSeq4a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+        <ion-title>Sequence 5</ion-title> 
+        <ion-card class="courseCard"  *ngFor='let course of ItMinorSeq5a'>
+          <ion-card-title>
+            {{ course }}
+          </ion-card-title>
+        </ion-card>
+      </div>
+      
+      <ion-title *ngIf = "completedMinor == true">You have compeleted the IT minor.</ion-title> 
+      <ion-title *ngIf = "completedSequence == true">You have completed the sequence requirement.</ion-title>
+    
+      <ion-title *ngIf = "completed3000 == true">You have compeleted the 3 3000+ course requirments.</ion-title>
+      <ion-title *ngIf = "count == 1">You must also complete 2 more 3000+ courses.</ion-title>
+      <ion-title *ngIf = "count == 2">You must also complete 1 more 3000+ courses.</ion-title>
+      <ion-title *ngIf = "count == 0"> You must also complete 3 more 3000+ courses.</ion-title>
+
+      <ion-title *ngIf = "remaining == true">You must complete {{ left }} more course of any level.</ion-title>
+      
+      </div>
+    </div>
+  </div>
+</ion-content>
+

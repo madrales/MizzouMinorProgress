@@ -1,0 +1,21 @@
+[
+    {
+        "courseID": "CMP_SC 1050",
+        "name" : "Algorithm Design and Programming I",
+        "credits" : 4,
+        "department" : "CMPSC"
+    },
+    {
+        "courseID": "CMP_SC 2050",
+        "name" : "Algorithm Design and Programming II",
+        "credits" : 4,
+        "department" : "CMPSC"
+    }, 
+    {
+        "courseID": "CMP_SC 2270 OR ECE 2210", 
+        "name": "Introduction to Logic Systems", 
+        "credits" : 3, 
+        "department" : "CMPSC OR ECE"
+    }
+   
+]

@@ -1,0 +1,69 @@
+[
+    {
+        "courseID": "INFOTC2610",
+        "name" : "Digital Media Design",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "INFOTC2615",
+        "name" : "Color Engineering and Processing",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "INFOTC2620",
+        "name" : "Computer Modeling and Animation",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "INFOTC2630", 
+        "name": " Introduction to Game Theory" , 
+        "credits": 3, 
+        "department": "Information Technology"
+    },
+    {
+        "courseID": "INFOTC3610", 
+        "name": "Digital Media Design 2", 
+        "credits": 3, 
+        "department": "Information Technology"
+    },
+    {
+        "courseID": "INFOTC3630", 
+        "name": "Introduction to Virtual Reality", 
+        "credits": 3, 
+        "department": "Information Technology"
+    },
+    {
+        "courseID": "INFOTC3640", 
+        "name": "Motion Graphics and Visual Effects 1" , 
+        "credits": 3, 
+        "department": "Information Technology"
+    },
+    {
+        "courseID": "INFOTC3650", 
+        "name": "Project and Team Management", 
+        "credits": 3, 
+        "department": "Information Technology"
+    },
+    {
+        "courseID": "INFOTC3660" , 
+        "name": "Audio Engineering", 
+        "credits": 3, 
+        "department": "Information Technology"
+    },
+    {
+        "courseID" : "INFOTC4610",
+        "name": "Media Production Practicum", 
+        "credits" : 3, 
+        "department" : "Information Technology"
+    },
+    {
+        "courseID" : "INFOTC4640",
+        "name": " Motion Graphics and Visual Effects 2", 
+        "credits" : 3, 
+        "department" : "Information Technology"
+    }
+   
+]

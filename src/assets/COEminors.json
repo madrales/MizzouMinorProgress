@@ -1,0 +1,21 @@
+[
+    {
+        "minorID": "INFOTC",
+        "name" : "Information Technology",
+        "credits" : 15,
+        "description" : "A minor in Information Technology is offered through the College of Engineering. To obtain a minor, a student must complete courses in a sequence approved by the Department of Computer Science. The student must earn a 2.0 GPA in all courses counting toward the minor. At least 9 hours must be taken in residence at MU. A total of 15 credit hours are required."
+    },
+    {
+        "minorID": "COMP_SCI",
+        "name" : "Computer Science",
+        "credits": 18,
+        "description": "A minor in computer science is offered through the College of Engineering. To obtain a minor, a student must complete 18 hours of courses approved by the Department of Electrical Engineering and Computer Science. The student must earn a grade of C- or better in each course counting toward the minor and have a 2.0 GPA in all courses counting toward the minor. At least 9 hours must be taken in residence."
+    },
+    {
+        "minorID": "ECE",
+        "name": "Electrical and Computer Engineering",
+        "credits": 18,
+        "description": "The minor in engineering is designed for students majoring in disciplines such as physics, math, chemistry and computer science, but it is available to students in all disciplines. It consists of 18 or 20 hours of engineering courses as listed below." 
+    }
+
+]

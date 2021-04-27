@@ -1,0 +1,124 @@
+.home {
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+}
+.title {
+    margin: auto;
+    text-align: center;
+    font-size: large;
+}
+.test {
+    background-color: #F1B82D;
+    margin: auto;
+    text-align: center;
+}
+ion-title {
+    font-family: 'IMPACT', sans-serif;
+    font-size: xx-large;
+    border-bottom: 2px solid #F1B82D;
+}
+ion-card-subtitle {
+    color: black;
+}
+ion-card-content {
+    font-family: 'gotham', sans-serif;
+    font-size: x-large;
+}
+ion-img {
+    margin: auto;
+    text-align: center;
+}
+ion-card {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    border: 5px solid black;
+    // display: inline-flex;
+    box-shadow: 15px;
+    margin-bottom: 20px;
+}
+.firstCard {
+    margin-top: 15px;
+}
+.cardWrapper {
+    background-color: #8F8884;
+    width: 97%;
+    margin: auto;
+    padding: 15px;
+}
+.titleText {
+    border-bottom: 2px solid #F1B82D;
+}
+.programTitle {
+    color: #F1B82D;
+}
+.footer{
+    background-color: #8F8884;
+    margin: auto;
+    text-align: center;
+    color: black;
+    padding: 15px;
+    font-size: x-large;
+}
+.buttoon {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: x-large;
+    margin-top: 0px;
+}
+.buttoon:hover {
+    color: #F1B82D;
+}
+.mizzouLink{
+    color: black;
+    text-decoration: none;
+    font-size: large;
+}
+.mizzouLink:hover{
+    color: #F1B82D;
+}
+h5 {
+    font-family: 'gotham', sans-serif;
+}
+//Styling for Header
+.navButton {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    font-size: x-large;
+    margin-top: 0px;
+}
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+}
+#muStacked {
+    display: inline-block;
+    width: 25vw;
+    margin: 0;
+    // border: 2px solid red;
+    text-align: left;
+}
+.navButton:hover {
+    background-color: white;
+    color: black;
+}
+ion-row {
+    background-color: #000000;
+}
+.navbarWrapper {
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}

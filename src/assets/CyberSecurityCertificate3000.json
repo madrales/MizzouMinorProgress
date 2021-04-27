@@ -1,0 +1,33 @@
+[
+    {
+        "courseID": "INFOTC2830",
+        "name" : "Web Application Development I",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "INFOTC3530",
+        "name" : "UNIX Operating System",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "INFOTC3810",
+        "name" : "Computer Network Security",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "INFOTC3850",
+        "name": "Computer System Administration",
+        "credits": 3,
+        "department" :"Information Technology"
+    },
+    {
+        "courseID": "INFOTC4910",
+        "name": "Digital Forensics",
+        "credits": 3,
+        "department" :"Information Technology"
+    }
+   
+]

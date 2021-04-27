@@ -1,0 +1,27 @@
+[
+    {
+        "courseID": "1610",
+        "name" : "Introduction to Digital Media Design",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "2610",
+        "name" : "Digital Media Design I",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "3610",
+        "name" : "Digital Media Design II",
+        "credits" : 3,
+        "department" : "Information Technology"
+    },
+    {
+        "courseID": "4610",
+        "name" : "Advanced MultiMedia Design and Technology",
+        "credits" : 3,
+        "department" : "Information Technology"
+    }
+   
+]

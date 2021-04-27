@@ -1,0 +1,118 @@
+<ion-header id="header">
+  <ion-toolbar>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="1">
+        <ion-img id="muStacked" src= "../assets/MU_UnitSig_CollegeofEngineering_rgb_rev_horiz.png"></ion-img>
+      </ion-col>
+      <ion-col size="11">
+        <div class="navbar">
+          <div class="navbarWrapper">
+            <a routerLink="../../"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Home</button></a>
+            <a routerLink="../../about"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >About Us</button></a>
+            <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Certificates</button></a>
+            <a routerLink="../../minors"><button mat-raised-button class="btn buttoon btn-success pull-right notoSerif" >Minors</button></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="navbar">
+    <div class="mainWrapper">
+      <div class="titleWrapper">
+        <h1 class="notoSerif">COMPUTER SCIENCE CALCULATOR</h1>
+        <h3>Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
+        <h4>An asterisk (*) indicates you must've earned a C or better in the course</h4>
+      </div>
+      <div class="selectWrapper">
+        <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
+          <ion-item>
+            <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+              <ion-select-option value="CMPSC1050">*CMPSC 1050: Algorithm Design and Programming I</ion-select-option>
+              <ion-select-option value="CMPSC2050">*CMPSC 2050: Algorithm Design and Programming II</ion-select-option>
+              <ion-select-option value="CMPSC2270 OR ECE2210">*CMPSC 2270: Introduction to Logic Systems</ion-select-option>
+              <ion-select-option value="CMPSC2270 OR ECE2210">*ECE 2210: Introduction to Logic Systems</ion-select-option>
+              <ion-select-option value="CMPSC2010">CMPSC 2010: Intellectual Property for Engineers</ion-select-option>
+              <ion-select-option value='CMPSC2830'>CMPSC 2830: Web Application Development I</ion-select-option>
+              <ion-select-option value="CMPSC3050">CMPSC 3050: Advanced Algorithm Design</ion-select-option>
+              <ion-select-option value="CMPSC3280">CMPSC 3280: Computer Organization and Assembly Language</ion-select-option> 
+              <ion-select-option value="CMPSC3330">CMPSC 3330: Object Oriented Programming</ion-select-option>
+              <ion-select-option value="CMPSC3380">CMPSC 3380: Database Applications and Information Systems</ion-select-option>
+              <ion-select-option value="CMPSC3530">CMPSC 3530: UNIX Operating System</ion-select-option>
+              <ion-select-option value="CMPSC4050">CMPSC 4050: Design and Analysis of Algorithms I</ion-select-option>
+              <ion-select-option value="CMPSC4060">CMPSC 4060: String Algorithms</ion-select-option>
+              <ion-select-option value="CMPSC4070">CMPSC 4070: Numerical Methods for Science and Engineering</ion-select-option>
+              <ion-select-option value="CMPSC4080">CMPSC 4080: Parallel Programming for High Performance Computing</ion-select-option>
+              <ion-select-option value="CMPSC4270">CMPSC 4270: Computer Architecture</ion-select-option>
+              <ion-select-option value="CMPSCI4280">CMPSC 4280: Network Systems Architecture</ion-select-option>
+              <ion-select-option value="CMPSCI4330">CMPSC 4330: Object Oriented Design I</ion-select-option>
+              <ion-select-option value="CMPSCI4350">CMPSC 4350: Big Data Analytics</ion-select-option>
+              <ion-select-option value="CMPSCI4380">CMPSC 4380: Database Management Systems</ion-select-option>
+              <ion-select-option value="CMPSCI4405">CMPSC 4405: IOS App Developement I</ion-select-option>
+              <ion-select-option value="CMPSCI4410">CMPSC 4410: Theory of Computation I</ion-select-option>
+              <ion-select-option value="CMPSCI4430">CMPSC 4430: Compilers I</ion-select-option>
+              <ion-select-option value="CMPSCI4440">CMPSC 4440: Malware Analysis and Defense</ion-select-option>
+              <ion-select-option value="CMPSCI4450">CMPSC 4450: Principles of Programming Languages</ion-select-option>
+              <ion-select-option value="CMPSCI4460">CMPSC 4460: Introduction to Cryptography</ion-select-option>
+              <ion-select-option value="CMPSCI4530">CMPSC 4530: Cloud Computing</ion-select-option>
+              <ion-select-option value="CMPSCI4530">CMPSC 4530: Neural Models and Machine Learning</ion-select-option>
+              <ion-select-option value="CMPSCI4610">CMPSC 4610: Computer Graphics I</ion-select-option>
+              <ion-select-option value="CMPSCI4620">CMPSC 4620: Physically Based Modeling and Animation</ion-select-option>
+              <ion-select-option value="CMPSCI4630">CMPSC 4630: Game Developement</ion-select-option>
+              <ion-select-option value="CHENG2225">CH ENG 2225: Mass and Energy Balance</ion-select-option>
+              <ion-select-option value="CVENG3100">CV ENG 3100: Fundamentals of Transportation Engineering</ion-select-option>
+              <ion-select-option value="CVENG3200">CV ENG 3200: Fundamentals of Environmental Engineering</ion-select-option>
+              <ion-select-option value="CVENG3700">CV ENG 3700: Fluid Mechanics</ion-select-option>
+              <ion-select-option value="CVENG4250">CV ENG 4250: Environmental Regulatory Compliance</ion-select-option>
+              <ion-select-option value="CVENG4500">CV ENG 4500: Introduction to Construction Management</ion-select-option>
+              <ion-select-option value="ENGINR2200">ENGINR 2200: Intermediate Strength of Materials</ion-select-option>
+              <ion-select-option value="ECE2210">ECE 2210: Introduction to Logic Systems</ion-select-option>
+              <ion-select-option value="IMSE2030">IMSE 2030: Fundamentals of Systems Design and Analysis</ion-select-option>
+              <ion-select-option value="IMSE2110">IMSE 2110: Probability and Statistics for Engineers</ion-select-option>
+              <ion-select-option value="IMSE2210">IMSE 2210: Linear Algebra for Engineers</ion-select-option>
+              <ion-select-option value="IMSE2710">IMSE 2710: Engineering Economic Analysis</ion-select-option>
+              <ion-select-option value="MAE2600">MAE 2600: Dynamics</ion-select-option> -->  
+            </ion-select>
+          </ion-item>
+        </form>
+    </div>
+    <div class="formWrapper">
+      <ion-button expand="full" color="success"(click)="clear(); addCourse(); check()">Check Progress</ion-button>
+      <div class="clearWrapper">
+        <ion-button class = 'clearButton' expand="full" color="danger"(click)="clearAll()"> Clear Results</ion-button>
+        <ion-button class = 'clearButton' expand="full" color="danger"(click)="clearInput()"> Clear Input</ion-button>
+      </div>
+    </div>
+    <div class="notoSerif" >
+    <ion-title class="titleClass" *ngIf = 'ran == true'>You have completed {{ percent }}% of the requirements!</ion-title>
+    <ion-title class="titleClass" *ngIf = 'CSCoreLeft == true'> Core Courses Left to Complete</ion-title> 
+    <ion-title class="titleClass" *ngIf = 'CSCompleted == true'>You completed the Web Dev certificate!</ion-title> 
+      <ion-card *ngFor='let course of incompletedArray'>
+        <ion-card-title>
+          {{ course.courseID }} {{course.name}}
+        </ion-card-title>
+      </ion-card>
+    </div>
+  </div>
+
+    <div class="notoSerif" *ngIf = 'showElectives == true'>
+      <ion-title class="titleClass" *ngIf = 'option1 == true'>Complete 3 of the following courses, one must be 3000+</ion-title> 
+      <ion-title class="titleClass" *ngIf = 'option2 == true'>You have compelted the electives requirement</ion-title>
+      <ion-title class="titleClass" *ngIf = 'option3 == true'>Complete 1 of the following courses</ion-title> <!--any level-->
+      <ion-title class="titleClass" *ngIf = 'option4 == true'> Complete 1 of the following courses</ion-title> <!-- shows only 3000+ since that is what they need-->
+      <ion-title class="titleClass" *ngIf = 'option5 == true'> Complete 2 of the following courses</ion-title><!--any level-->
+      <ion-title class="titleClass" *ngIf = 'option6 == true'> Compelte 2 of the following courses, 1 leveled 3000+</ion-title>
+
+        <ion-card *ngFor='let a of incompletedElectiveArray' >
+          <ion-card-title>
+          {{ a.courseID }} {{a.name}}
+          </ion-card-title>
+        </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+

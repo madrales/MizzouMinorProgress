@@ -1,0 +1,32 @@
+//Styling for Header
+.navButton {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    font-size: x-large;
+    margin-top: 0px;
+}
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+}
+#muStacked {
+    display: inline-block;
+    width: 25vw;
+    margin: 0;
+    // border: 2px solid red;
+    text-align: left;
+}
+.navButton:hover {
+    background-color: white;
+    color: black;
+}
+ion-row {
+    background-color: #000000;
+}
+.navbarWrapper {
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
