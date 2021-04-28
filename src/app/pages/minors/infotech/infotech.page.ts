@@ -35,6 +35,8 @@ export class InfotechPage implements OnInit {
   public showPercent = false; 
   public percent = 0; 
   public numSeq = 0; 
+  public ran = false;
+  public none = false; 
 
   public show1610Seqs = false; 
   public show1610Seq1 = false;  
@@ -107,7 +109,8 @@ export class InfotechPage implements OnInit {
 
   check2(){
 
-    this.showPercent = true; 
+    this.ran = true; 
+  
     console.log(this.showPercent); 
 
     var foundSeq1or2or3 = this.completedArray.includes("1040"); 
@@ -255,15 +258,19 @@ export class InfotechPage implements OnInit {
 
     if(this.count == 3){
       console.log("User has compelted the 3 3000+ courses."); 
+      this.none = false; 
       this.completed3000 = true; 
     }
     else if(this.count == 2){
+      this.none = false;
       console.log("User needs to complete 1")
     }
     else if(this.count == 1){
+      this.none = false;
       console.log("User needs to complete 1 3000+ course."); 
     }
     else{
+      this.none = true; 
       console.log("User still needs to complete 3 3000+ courses."); 
     }
 
@@ -274,6 +281,7 @@ export class InfotechPage implements OnInit {
 
     if(this.completedSequence == true && this.count == 3 && this.completedArray.length >= 5){
       this.completedMinor = true; 
+      this.ran = false; 
       console.log("user has completed the IT minor."); 
       // this.showPercent = false; 
       this.completedSequence = false; 
@@ -317,6 +325,8 @@ export class InfotechPage implements OnInit {
     this.left = 0; 
     this.remaining = false; 
     this.percent = 0; 
+    this.none = false;
+    this.ran = false; 
     // this.showPercent = false; 
     
     this.show1610Seqs = false; 

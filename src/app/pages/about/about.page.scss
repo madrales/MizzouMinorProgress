@@ -1,3 +1,166 @@
+// .home {
+//     width: 85%;
+//     padding-left: 15vw;
+//     margin-top: 25px;
+// }
+// h1 {
+//     margin: auto;
+//     text-align: center;
+// }
+
+
+// .spacer {
+//     width: 100%;
+//     display: flex;
+// }
+// .spacerItem {
+//     margin: 1vw;
+//     background-color: white;
+//     color: black;
+//     padding: 15px;
+// }
+// #styledHeader{
+//     font-family: 'IMPACT', sans-serif;
+//     font-size: xx-large;
+// }
+// .notoSerif {
+//     font-family: 'GRAPHIK', serif;
+// }
+// .titleText {
+//     border-bottom: 2px solid #F1B82D;
+// }
+// .subtext {
+//     font-family: 'gotham', sans-serif;
+// }
+// .column {
+//     width: 33%;
+// }
+// ion-img {
+//     margin: auto;
+//     text-align: center;
+//     border: 5px solid black;
+// }
+// ion-content {
+//     margin-top: 500px;
+// }
+
+// //Styling for Header
+// .buttoon {
+//     margin: auto;
+//     text-align: center;
+//     padding: 10px;
+//     background-color: #000000;
+//     color: white;
+//     font-size: x-large;
+//     margin-top: 0px;
+// }
+// .notoSerif {
+//     font-family: 'GRAPHIK', serif;
+// }
+// #muStacked {
+//     display: inline-block;
+//     width: 25vw;
+//     margin: 0;
+//     text-align: left;
+// }
+// .cardWrapper {
+//     background-color: #8F8884;
+//     width: auto;
+//     margin: auto;
+//     padding: 15px;
+// }
+// .buttoon:hover {
+//     background-color: white;
+//     color: black;
+// }
+// ion-row {
+//     background-color: #000000;
+// }
+// .navbarWrapper {
+//     margin: auto;
+//     text-align: center;
+//     padding: 15px;
+// }
+
+// .spacer {
+//     width: 100%;
+//     display: flex;
+// }
+// .spacerItem {
+//     margin: 1vw;
+//     background-color: white;
+//     border: 5px solid black;
+//     color: black;
+//     padding: 15px;
+// }
+
+
+
+
+// .leftRight{
+//     margin-bottom: 25px;
+// }
+// .centerImg {
+//     margin-top: 50px;
+// }
+// .sliderImg {
+//     width: 75%;
+// }
+// ion-slide {
+//     display: inline;
+// }
+// .footer{
+//     color: white;
+//     padding: 15px;
+// }
+// .contactInfo {
+//     margin-bottom: 25px;
+//     margin-top: 25px;
+//     color: black;
+// }
+
+// .footerImg {
+//     margin: auto;
+//     text-align: center;
+//     opacity: 25%;
+// }
+// .developer {
+//     width: 25%;
+//     margin: 15px;
+// }
+// .introCardsWrapper {
+//         display: flex;
+//         padding: 20px;
+//         width: 75%;
+//         margin: auto;
+//         text-align: center;
+//     }
+// // .footer{
+
+// // // Taken from https://codepen.io/thecodercoder/pen/xxGOyPe
+// //     background-color: #8F8884;
+// //     margin: auto;
+// //     text-align: center;
+// //     color: black;
+// //     padding: 15px;
+// //     font-size: x-large;
+// //     position: relative;
+// //     min-height: 700px;
+// //     &::before{
+// //         content: "";
+// //         background-image: url(../../../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png);
+// //         background-size: cover;
+// //         max-height: 150px;
+// //         position: absolute;
+// //         background-position: center;
+// //         top: 0px;
+// //         right: 0px;
+// //         bottom: 0px;
+// //         left: 0px;
+// //         opacity: 0.25;
+// //     }
+// // }
+
 .home {
     width: 85%;
     padding-left: 15vw;
@@ -6,6 +169,12 @@
 h1 {
     margin: auto;
     text-align: center;
+    text-decoration: none;
+    color: black;
+    text-decoration-color: black;
+}
+a {
+    text-decoration: none;
 }
 .spacer {
     width: 100%;
@@ -14,6 +183,7 @@ h1 {
 .spacerItem {
     margin: 1vw;
     background-color: white;
+    border: 5px solid black;
     color: black;
     padding: 15px;
 }
@@ -26,6 +196,10 @@ h1 {
 }
 .titleText {
     border-bottom: 2px solid #F1B82D;
+}
+.titleText:hover{
+    color: #F1B82D;
+    border-bottom: 2px solid black;
 }
 .subtext {
     font-family: 'gotham', sans-serif;
@@ -63,7 +237,7 @@ ion-content {
 }
 .cardWrapper {
     background-color: #8F8884;
-    width: auto;
+    width: 97%;
     margin: auto;
     padding: 15px;
 }
@@ -79,10 +253,6 @@ ion-row {
     text-align: center;
     padding: 15px;
 }
-
-
-
-
 .leftRight{
     margin-bottom: 25px;
 }
@@ -105,22 +275,22 @@ ion-slide {
     color: black;
 }
 
-.footerImg {
-    margin: auto;
-    text-align: center;
-    opacity: 25%;
-}
-.developer {
-    width: 25%;
-    margin: 15px;
-}
-.introCardsWrapper {
-        display: flex;
-        padding: 20px;
-        width: 75%;
-        margin: auto;
-        text-align: center;
-    }
+// .footerImg {
+//     margin: auto;
+//     text-align: center;
+//     opacity: 25%;
+// }
+// .developer {
+//     width: 25%;
+//     margin: 15px;
+// }
+// .introCardsWrapper {
+    //     display: flex;
+    //     padding: 20px;
+    //     width: 75%;
+    //     margin: auto;
+    //     text-align: center;
+    // }
 // .footer{
 
 // // Taken from https://codepen.io/thecodercoder/pen/xxGOyPe

@@ -64,7 +64,7 @@
       <ion-title>
         {{ this.status }}
       </ion-title>
-      <ion-title >You have compeleted {{ percent }}% of the IT minor.</ion-title> 
+      <ion-title *ngIf = "ran == true" >You have compeleted {{ percent }}% of the IT minor.</ion-title> 
       <div class="resultCourseWrapper" fxLayout="row"> 
         <div *ngIf = "show1610Seqs == true">
 
@@ -159,7 +159,7 @@
       <ion-title *ngIf = "completed3000 == true">You have compeleted the 3 3000+ course requirments.</ion-title>
       <ion-title *ngIf = "count == 1">You must also complete 2 more 3000+ courses.</ion-title>
       <ion-title *ngIf = "count == 2">You must also complete 1 more 3000+ courses.</ion-title>
-      <ion-title *ngIf = "count == 0"> You must also complete 3 more 3000+ courses.</ion-title>
+      <ion-title *ngIf = "none == true"> You must also complete 3 more 3000+ courses.</ion-title>
 
       <ion-title *ngIf = "remaining == true">You must complete {{ left }} more course of any level.</ion-title>
       
