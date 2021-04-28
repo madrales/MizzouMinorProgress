@@ -7,7 +7,6 @@
     text-align: center;
 }
 .footer{
-    background-color: #8F8884;
     margin: auto;
     text-align: center;
     color: black;
@@ -21,7 +20,6 @@
     display: inline-block;
 }
 .mainWrapper {
-    background-color: #8F8884;
     padding: 25px;
     width: 50%;
     border-radius: 25px;
@@ -77,16 +75,6 @@ ion-card {
 h1 {
     color: black;
 }
-
-.buttoon {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    background-color: #000000;
-    color: white;
-    font-size: x-large;
-    margin-top: 0px;
-}
 .notoSerif {
     font-family: 'GRAPHIK', serif;
 }
@@ -96,6 +84,23 @@ h1 {
     margin: 0;
     // border: 2px solid red;
     text-align: left;
+}
+.backButton {
+    display: block;
+    background-color: white;
+    color: black;
+    font-family: "GRAPHIK", sans-serif;
+    font-size: xx-large;
+    margin-top: 15px;
+}
+.buttoon {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    font-size: x-large;
+    margin-top: 0px;
 }
 .buttoon:hover {
     background-color: white;
@@ -108,4 +113,53 @@ ion-row {
     margin: auto;
     text-align: center;
     padding: 15px;
+}
+form {
+    border: 2px solid black;
+}
+
+.titleWrapper {
+    margin: auto;
+    text-align: center;
+}
+.titleClass {
+    margin: auto;
+    text-align: center;
+}
+// .formWrapper {
+//     width: 25%;
+//     margin: auto;
+//     text-align: center;
+// }
+.selectWrapper{
+    width: 100%;
+    background-color: #F1B82D;
+}
+ion-select {
+    width: 100%;
+}
+ion-card {
+    width: 40%;
+    padding: 2px;
+    margin: auto;
+}
+ion-card-title {
+    font-family: 'gotham', sans-serif;
+}
+// ion-card:nth-child(2n){
+//     background-color: #F1B82D;
+// }
+h3 {
+    font-family: 'gotham', sans-serif;
+}
+h4 {
+    font-family: 'gotham', sans-serif;
+}
+.clearButton {
+    width: 50%;
+}
+.clearWrapper {
+    display: flex;
+    width: 50%;
+    margin: auto;
 }

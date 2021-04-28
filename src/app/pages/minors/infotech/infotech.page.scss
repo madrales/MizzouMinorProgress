@@ -29,3 +29,56 @@ ion-row {
     text-align: center;
     padding: 15px;
 }
+.titleWrapper {
+    margin: auto;
+    text-align: center;
+}
+.titleClass {
+    margin: auto;
+    text-align: center;
+}
+.formWrapper {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+}
+.selectWrapper{
+    width: 100%;
+    background-color: #F1B82D;
+}
+ion-select {
+    width: 100%;
+}
+ion-card {
+    width: 40%;
+    padding: 2px;
+    margin: auto;
+}
+ion-card-title {
+    font-family: 'gotham', sans-serif;
+}
+// ion-card:nth-child(2n){
+//     background-color: #F1B82D;
+// }
+h3 {
+    font-family: 'gotham', sans-serif;
+}
+h4 {
+    font-family: 'gotham', sans-serif;
+}
+.clearButton {
+    width: 50%;
+}
+.clearWrapper {
+    display: flex;
+    width: 25%;
+    margin: auto;
+}
+ion-title {
+    margin: auto;
+    font-family: 'GRAPHIK', sans-serif;
+    text-align: center;
+}
+form {
+    border: 2px solid black;
+}

@@ -76,6 +76,12 @@ ion-grid{
     padding: 15px;
     font-size: x-large;
 }
+ion-footer {
+    background-color: black;
+}
+ion-row {
+    background-color: #000000;
+}
 .buttoon {
     margin: auto;
     text-align: center;
@@ -102,6 +108,10 @@ ion-grid{
 }
 .notoSerif {
     font-family: 'GRAPHIK', serif;
+}
+.footer{
+    color: white;
+    padding: 15px;
 }
 #muStacked {
     display: inline-block;

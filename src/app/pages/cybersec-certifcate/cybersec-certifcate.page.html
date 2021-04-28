@@ -22,10 +22,12 @@
 <ion-content>
   <div class="navbar">
     <div class="mainWrapper">
-      <h1 class="notoSerif">CYBERSECURITY CERTIFICATE CALCULATOR</h1>
-      <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a>
-    <h3 class="notoSerif">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
-    <div class="formWrapper">
+      <div class="titleWrapper">
+        <h1 class="notoSerif">CYBERSECURITY CERTIFICATE CALCULATOR</h1>
+        <!-- <a routerLink="../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a> -->
+        <h3 class="notoSerif">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
+      </div>
+    <div class="selectWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
           <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
@@ -38,19 +40,13 @@
             <ion-select-option value= "INFOTC3850">INFOTC 3850</ion-select-option>
             <ion-select-option value="INFOTC3910">INFOTC 3910</ion-select-option> 
             <ion-select-option value="INFOTC4910">INFOTC 4910</ion-select-option>
-            <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
           </ion-select>
-      <!-- <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input> -->
-          <!-- <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
-            <ion-icon name="add"></ion-icon>
-          </ion-button> -->
         </ion-item>
       </form>
-      <ion-button expand="full" color="success"(click)="clear(); addCourse(); cyberSecCheck();">Check Progress</ion-button>
     </div>
-    <div class="formWrapper">
-      <!-- <ion-button expand="full" color="success"(click)="cyberSecCheck()">Check Progress</ion-button> -->
-      <ion-button expand="full" color="danger"(click)="clearAll()">Clear All</ion-button>
+    <div class="clearWrapper">
+      <ion-button class="clearButton" expand="full" color="success"(click)="clear(); addCourse(); cyberSecCheck();">Check Progress</ion-button>
+      <ion-button class="clearButton" expand="full" color="danger"(click)="clearAll()">Clear All</ion-button>
     </div>
     <ion-title *ngIf = 'cyberSecRan == true'>You have completed {{ percent }}% of the requirements!</ion-title>
     <ion-title *ngIf = 'cyberSecCore == true'>CYBER SECURITY Core Courses Left to Complete</ion-title> 

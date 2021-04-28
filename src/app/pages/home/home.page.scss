@@ -6,6 +6,12 @@
 h1 {
     margin: auto;
     text-align: center;
+    text-decoration: none;
+    color: black;
+    text-decoration-color: black;
+}
+a {
+    text-decoration: none;
 }
 .spacer {
     width: 100%;
@@ -27,6 +33,10 @@ h1 {
 }
 .titleText {
     border-bottom: 2px solid #F1B82D;
+}
+.titleText:hover{
+    color: #F1B82D;
+    border-bottom: 2px solid black;
 }
 .subtext {
     font-family: 'gotham', sans-serif;
@@ -80,10 +90,6 @@ ion-row {
     text-align: center;
     padding: 15px;
 }
-
-
-
-
 .leftRight{
     margin-bottom: 25px;
 }

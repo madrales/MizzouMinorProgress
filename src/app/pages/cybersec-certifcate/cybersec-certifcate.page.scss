@@ -14,14 +14,7 @@
     padding: 15px;
     font-size: x-large;
 }
-.formButtonWrapper {
-    width: 25%;
-    margin: auto;
-    text-align: center;
-    display: inline-block;
-}
 .mainWrapper {
-    background-color: #8F8884;
     padding: 25px;
     width: 50%;
     border-radius: 25px;
@@ -36,11 +29,6 @@
 }
 .submitButton {
     background-color: green;
-}
-.formWrapper {
-    margin: auto;
-    text-align: center;
-    width: 25%;
 }
 .courseCard {
     width: 50%;
@@ -63,21 +51,9 @@ ion-card {
 .programTitle {
     color: #F1B82D;
 }
-.buttoon {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-  }
-.formWrapper {
-    margin: auto;
-    text-align: center;
-    width: 50%;
-}
 h1 {
     color: black;
 }
-
 .buttoon {
     margin: auto;
     text-align: center;
@@ -94,12 +70,7 @@ h1 {
     display: inline-block;
     width: 25vw;
     margin: 0;
-    // border: 2px solid red;
     text-align: left;
-}
-.buttoon:hover {
-    background-color: white;
-    color: black;
 }
 ion-row {
     background-color: #000000;
@@ -108,4 +79,53 @@ ion-row {
     margin: auto;
     text-align: center;
     padding: 15px;
+}
+form {
+    border: 2px solid black;
+}
+
+.titleWrapper {
+    margin: auto;
+    text-align: center;
+}
+.titleClass {
+    margin: auto;
+    text-align: center;
+}
+.formWrapper {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+}
+.selectWrapper{
+    width: 100%;
+    background-color: #F1B82D;
+}
+ion-select {
+    width: 100%;
+}
+ion-card {
+    width: 40%;
+    padding: 2px;
+    margin: auto;
+}
+ion-card-title {
+    font-family: 'gotham', sans-serif;
+}
+// ion-card:nth-child(2n){
+//     background-color: #F1B82D;
+// }
+h3 {
+    font-family: 'gotham', sans-serif;
+}
+h4 {
+    font-family: 'gotham', sans-serif;
+}
+.clearButton {
+    width: 50%;
+}
+.clearWrapper {
+    display: flex;
+    width: 50%;
+    margin: auto;
 }
