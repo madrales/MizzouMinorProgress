@@ -111,6 +111,7 @@ export class CompsciPage implements OnInit {
     this.incompletedElectiveArray = this.model.clearIncompleteElectives();
     this.showElectives = false;
     this.status = "";
+    this.completedCoursesForm.reset(); 
 
     this.ran = false; 
     this.CSCoreLeft = false; 
