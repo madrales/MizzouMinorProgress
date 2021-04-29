@@ -31,15 +31,15 @@
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
           <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
-            <ion-select-option value="INFOTC1040">INFOTC 1040</ion-select-option>
-            <ion-select-option value="INFOTC2810">INFOTC 2810</ion-select-option>
-            <ion-select-option value="INFOTC2830">INFOTC 2830</ion-select-option>
-            <ion-select-option value="INFOTC2910">INFOTC 2910</ion-select-option>
-            <ion-select-option value="INFOTC3530">INFOTC 3530</ion-select-option>
-            <ion-select-option value ='INFOTC3810'>INFOTC 3810</ion-select-option>
-            <ion-select-option value= "INFOTC3850">INFOTC 3850</ion-select-option>
-            <ion-select-option value="INFOTC3910">INFOTC 3910</ion-select-option> 
-            <ion-select-option value="INFOTC4910">INFOTC 4910</ion-select-option>
+            <ion-select-option value="INFOTC1040">INFOTC 1040: Introduction to Problem Solving and Programming</ion-select-option>
+            <ion-select-option value="INFOTC2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
+            <ion-select-option value="INFOTC2830">INFOTC 2830: Web Application Development I</ion-select-option>
+            <ion-select-option value="INFOTC2910">INFOTC 2910: Cyber Security</ion-select-option>
+            <ion-select-option value="INFOTC3530">INFOTC 3530: UNIX Operating System</ion-select-option>
+            <ion-select-option value ='INFOTC3810'>INFOTC 3810: Computer Network Security</ion-select-option>
+            <ion-select-option value= "INFOTC3850">INFOTC 3850: Computer System Administration</ion-select-option>
+            <ion-select-option value="INFOTC3910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
+            <ion-select-option value="INFOTC4910">INFOTC 4910: Digital Forensics</ion-select-option>
           </ion-select>
         </ion-item>
       </form>
@@ -68,5 +68,12 @@
     </div>
     
   </div>
+  <ion-footer>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12">
+        <h1 class="notoSerif footer">This project was created by Team JustDoIT for the Information Technology Capstone course at the University of Missouri. This application is not intended to be commercialized without the consent of the Mizzou College of Engineering.</h1>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
 </ion-content>
 
