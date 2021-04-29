@@ -88,12 +88,22 @@
       <div class="clearWrapper">
         <ion-button expand="full" color="success"(click)="clear(); addCourse(); check()">Check Progress</ion-button>
         <ion-button class = 'clearButton' expand="full" color="danger"(click)="clearAll(); clear();"> Clear All</ion-button>
-
-
       </div>
     </div>
-    <div class="notoSerif" >
+    <div class="spacer">
+
+    <div class="spacerItem column2 notoSerif" *ngIf = 'ran == true'>
       <ion-title class="titleClass" *ngIf = 'ran == true'>You have completed {{ percent }}% of the requirements!</ion-title>
+      <ion-title class="titleClass"> Your completed courses: </ion-title>
+      <ion-card  color="success" *ngFor='let course of completedArray'>
+        <ion-card-title>
+          {{ course }} 
+        </ion-card-title>
+      </ion-card>
+    </div>
+
+    <div class="spacerItem column notoSerif">
+   
       <ion-title class="titleClass" *ngIf = 'CSCoreLeft == true'> Core Courses Left to Complete</ion-title> 
       <ion-title class="titleClass" *ngIf = 'CSCompleted == true'>You completed the Web Dev certificate!</ion-title> 
       <ion-card *ngFor='let course of incompletedArray'>
@@ -101,8 +111,8 @@
           {{ course.courseID }} {{course.name}}
         </ion-card-title>
       </ion-card>
-    </div>
-  </div>
+   
+  
 
     <div class="notoSerif" *ngIf = 'showElectives == true'>
       <ion-title class="titleClass" *ngIf = 'option1 == true'>Complete 3 of the following courses, one must be 3000+</ion-title> 
@@ -117,8 +127,11 @@
           {{ a.courseID }} {{a.name}}
           </ion-card-title>
         </ion-card>
+      </div>
     </div>
   </div>
+  </div>
+</div>
   <ion-footer>
     <ion-row class="ion-align-items-center">
       <ion-col size="12">
