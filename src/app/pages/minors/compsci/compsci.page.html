@@ -91,45 +91,42 @@
       </div>
     </div>
     <div class="spacer">
-
-    <div class="spacerItem column2 notoSerif" *ngIf = 'ran == true'>
-      <ion-title class="titleClass" *ngIf = 'ran == true'>You have completed {{ percent }}% of the requirements!</ion-title>
-      <ion-title class="titleClass"> Your completed courses: </ion-title>
-      <ion-card  color="success" *ngFor='let course of completedArray'>
-        <ion-card-title>
-          {{ course }} 
-        </ion-card-title>
-      </ion-card>
-    </div>
-
-    <div class="spacerItem column notoSerif">
-   
-      <ion-title class="titleClass" *ngIf = 'CSCoreLeft == true'> Core Courses Left to Complete</ion-title> 
-      <ion-title class="titleClass" *ngIf = 'CSCompleted == true'>You completed the Web Dev certificate!</ion-title> 
-      <ion-card *ngFor='let course of incompletedArray'>
-        <ion-card-title>
-          {{ course.courseID }} {{course.name}}
-        </ion-card-title>
-      </ion-card>
-   
-  
-
-    <div class="notoSerif" *ngIf = 'showElectives == true'>
-      <ion-title class="titleClass" *ngIf = 'option1 == true'>Complete 3 of the following courses, one must be 3000+</ion-title> 
-      <ion-title class="titleClass" *ngIf = 'option2 == true'>You have compelted the electives requirement</ion-title>
-      <ion-title class="titleClass" *ngIf = 'option3 == true'>Complete 1 of the following courses</ion-title> <!--any level-->
-      <ion-title class="titleClass" *ngIf = 'option4 == true'> Complete 1 of the following courses</ion-title> <!-- shows only 3000+ since that is what they need-->
-      <ion-title class="titleClass" *ngIf = 'option5 == true'> Complete 2 of the following courses</ion-title><!--any level-->
-      <ion-title class="titleClass" *ngIf = 'option6 == true'> Complete 2 of the following courses, 1 leveled 3000+</ion-title>
-
-        <ion-card *ngFor='let a of incompletedElectiveArray' >
-          <ion-card-title>
-          {{ a.courseID }} {{a.name}}
-          </ion-card-title>
-        </ion-card>
+      <div class="spacerItem column2 notoSerif" *ngIf = 'ran == true'>
+        <ion-title class="titleClass" *ngIf = 'ran == true'>You have completed {{ percent }}% of the requirements!</ion-title>
+        <ion-title class="titleClass"> Your completed courses: </ion-title>
+        <div class="coreClasses">
+          <ion-card  color="success" *ngFor='let course of completedArray'>
+            <ion-card-title>
+              {{ course }} 
+            </ion-card-title>
+          </ion-card>
+        </div>
+      </div>
+      <div class="spacerItem column notoSerif">
+        <ion-title class="titleClass" *ngIf = 'CSCoreLeft == true'> Core Courses Left to Complete</ion-title> 
+        <ion-title class="titleClass" *ngIf = 'CSCompleted == true'>You completed the Web Dev certificate!</ion-title> 
+        <div class="coreClasses">
+          <ion-card *ngFor='let course of incompletedArray'>
+            <ion-card-title>
+              {{ course.courseID }} {{course.name}}
+            </ion-card-title>
+          </ion-card>
+        </div>
+        <div class="notoSerif" *ngIf = 'showElectives == true'>
+          <ion-title class="titleClass" *ngIf = 'option1 == true'>Complete 3 of the following courses, one must be 3000+</ion-title> 
+          <ion-title class="titleClass" *ngIf = 'option2 == true'>You have compelted the electives requirement</ion-title>
+          <ion-title class="titleClass" *ngIf = 'option3 == true'>Complete 1 of the following courses</ion-title> <!--any level-->
+          <ion-title class="titleClass" *ngIf = 'option4 == true'> Complete 1 of the following courses</ion-title> <!-- shows only 3000+ since that is what they need-->
+          <ion-title class="titleClass" *ngIf = 'option5 == true'> Complete 2 of the following courses</ion-title><!--any level-->
+          <ion-title class="titleClass" *ngIf = 'option6 == true'> Complete 2 of the following courses, 1 leveled 3000+</ion-title>
+            <ion-card *ngFor='let a of incompletedElectiveArray' >
+              <ion-card-title>
+              {{ a.courseID }} {{a.name}}
+              </ion-card-title>
+            </ion-card>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </div>
   <ion-footer>
