@@ -31,6 +31,9 @@ a {
     font-family: 'gotham', sans-serif;
     font-weight: bold;
 }
+a{
+    font-family: 'IMPACT', sans-serif;
+}
 p{
     padding-top: 10px;
     font-family: 'gotham', sans-serif;
@@ -113,6 +116,8 @@ ion-row {
     margin: auto;
     text-align: center;
     padding: 15px;
+    font-family: 'IMPACT', sans-serif;
+
 }
 .leftRight{
     margin-bottom: 25px;
@@ -179,7 +184,7 @@ ion-slide {
 // }
 
 .footer {
-    background-color: black;
+    // background-color: black;
     color: white;
     padding: 45px;
     text-align: center;
