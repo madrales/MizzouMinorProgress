@@ -35,9 +35,6 @@ ion-row {
 ion-card-title {
     font-family: 'gotham', sans-serif;
 }
-// ion-card:nth-child(2n){
-//     background-color: #F1B82D;
-// }
 h3 {
     font-family: 'gotham', sans-serif;
 }
@@ -55,6 +52,7 @@ h4 {
 .titleWrapper {
     margin: auto;
     text-align: center;
+    width: 75%;
 }
 .titleClass {
     margin: auto;
@@ -62,7 +60,7 @@ h4 {
     font-family: 'gotham', sans-serif;
 }
 .formWrapper {
-    width: 25%;
+    width: 50%;
     margin: auto;
     text-align: center;
 }
@@ -75,6 +73,18 @@ ion-select {
 }
 form {
     border: 2px solid black;
+}
+.backButton {
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+.navigationWrapper {
+    width: 100%;
+    // display: flex;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
 }
 ion-card {
     width: 40%;

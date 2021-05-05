@@ -56,9 +56,11 @@ ion-grid{
 }
 .cardWrapper {
     background-color: #8F8884;
-    width: 97%;
+    width: 90%;
     margin: auto;
     padding: 15px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
 }
 .cardFlex {
     display: flexbox;

@@ -35,13 +35,14 @@ ion-row {
 .titleWrapper {
     margin: auto;
     text-align: center;
+    width: 75%;
 }
 .titleClass {
     margin: auto;
     text-align: center;
 }
 .formWrapper {
-    width: 100%;
+    width: 50%;
     margin: auto;
     text-align: center;
 }
@@ -88,4 +89,16 @@ form {
     color: white;
     padding: 45px;
     font-size: x-large;
+}
+.navigationWrapper {
+    width: 100%;
+    // display: flex;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
+.backButton {
+    background-color: white;
+    color: black;
+    width: 100%;
 }

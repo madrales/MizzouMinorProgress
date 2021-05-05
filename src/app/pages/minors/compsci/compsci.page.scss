@@ -35,13 +35,26 @@ ion-row {
 .titleWrapper {
     margin: auto;
     text-align: center;
+    width: 75%;
 }
 .titleClass {
     margin: auto;
     text-align: center;
 }
+.backButton {
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+.navigationWrapper {
+    width: 100%;
+    // display: flex;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
 .formWrapper {
-    width: 25%;
+    width: 50%;
     margin: auto;
     text-align: center;
 }
@@ -104,4 +117,12 @@ ion-card {
     margin: auto;
     padding: 15px;
     margin-bottom: 5px;
+}
+.clearButton {
+    width: 50%;
+}
+.clearWrapper {
+    display: flex;
+    width: 50%;
+    margin: auto;
 }

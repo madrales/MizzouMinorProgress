@@ -23,6 +23,9 @@
   <div class="navbar">
     <div class="mainWrapper">
       <div class="titleWrapper">
+        <div class="navigationWrapper">
+          <a routerLink="../../minors"><button mat-raised-button class="backButton" ><ion-icon name="arrow-back-outline"></ion-icon>Academic Minors</button></a>
+        </div>
         <h1 class="notoSerif">ENGINEERING MINOR CALCULATOR</h1>
         <h3>The minor in engineering is designed for students majoring in disciplines such as physics, math, chemistry and computer science, but it is available to students in all disciplines. It consists of 18 or 19 hours of engineering courses as listed below.</h3>
         <h3>Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
@@ -30,7 +33,7 @@
     <div class="formWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
-          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+          <ion-select placeholder="Select your courses..." formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
             <ion-select-option value="ENGINR1000">ENGINR 1000: Introduction to Engineering</ion-select-option>
             <ion-select-option value="ENGINR1100">ENGINR 1100: Engineering Graphics Fundamentals</ion-select-option>
             <ion-select-option value="ENGINR1200">ENGINR 1200: Statics and Elementary Strength of Materials</ion-select-option>
