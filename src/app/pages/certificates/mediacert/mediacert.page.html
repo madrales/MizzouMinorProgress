@@ -20,17 +20,16 @@
 
 
 <ion-content>
-  <a routerLink="../../certificates"><button mat-raised-button class="backButton">Certificates/MediaCertificate</button></a>
   <div class="navbar">
     <div class="mainWrapper">
       <div class="titleWrapper">
         <h1 class="notoSerif">MEDIA TECHNOLOGY AND DESIGN CERTIFICATE CALCULATOR</h1>
-        <h3 class="notoSerif">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results.  </h3>
+        <h3>Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results.  </h3>
       </div>
     <div class="formWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
-          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+          <ion-select placeholder="Select courses..." formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
             <ion-select-option value="INFOTC1610">INFOTC 1610: Intro to Digital Media Design</ion-select-option>
             <ion-select-option value="INFOTC2610">INFOTC 2610: Digital Media Design I</ion-select-option>
             <ion-select-option value="INFOTC2615">INFOTC 2615: Color Processing and Design I</ion-select-option>

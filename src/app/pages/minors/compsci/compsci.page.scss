@@ -17,6 +17,9 @@
     margin: 0;
     text-align: left;
 }
+.mainWrapper {
+    min-height: 1000px;
+}
 .buttoon:hover {
     background-color: white;
     color: black;
@@ -57,9 +60,6 @@ form {
 ion-card-title {
     font-family: 'Montserrat', sans-serif;
 }
-ion-card:nth-child(2n){
-    background-color: #F1B82D;
-}
 h3 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -78,12 +78,8 @@ h4 {
     padding: 45px;
     text-align: center;
 }
-.column2 {
-    width: 50%;
-}
 .column {
-    width: 50%;
-    // display: flex;
+    width: 100%;
 }
 .completed{
     background-color: green; 
@@ -95,9 +91,7 @@ h4 {
     display: flex;
 }
 .spacerItem {
-    background-color: #8F8884;
     color: black;
-    border: 2px solid black;
 }
 .coreClasses{
     display: inline-block;
@@ -105,7 +99,7 @@ h4 {
     padding: 15px;
 }
 ion-card {
-    width: 33%;
+    width: 25%;
     padding: 2px;
     margin: auto;
     padding: 15px;

@@ -90,6 +90,7 @@
       </div>
     </div>
     <div class="spacer">
+      <!--
       <div class="spacerItem column2 notoSerif" *ngIf = 'ran == true'>
         <ion-title class="titleClass" *ngIf = 'ran == true'>You have completed {{ percent }}% of the requirements!</ion-title>
         <ion-title class="titleClass"> Your completed courses: </ion-title>
@@ -100,10 +101,11 @@
             </ion-card-title>
           </ion-card>
         </div>
-      </div>
+      </div> -->
       <div class="spacerItem column notoSerif">
         <ion-title class="titleClass" *ngIf = 'CSCoreLeft == true'> Core Courses Left to Complete</ion-title> 
         <ion-title class="titleClass" *ngIf = 'CSCompleted == true'>You completed the Web Dev certificate!</ion-title> 
+        <ion-title class="titleClass" *ngIf = 'ran == true'>You have completed {{ percent }}% of the requirements!</ion-title>
         <div class="coreClasses">
           <ion-card *ngFor='let course of incompletedArray'>
             <ion-card-title>

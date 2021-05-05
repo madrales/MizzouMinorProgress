@@ -17,7 +17,7 @@
     box-shadow: 15px;
     margin: auto;
     text-align: center;
-    min-height: 500px;
+    min-height: 1000px;
     margin-top: 50px;
 }
 .clearButton {
@@ -49,6 +49,9 @@ ion-card {
 }
 h1 {
     color: black;
+}
+h3 {
+    font-family: 'gotham', sans-serif;
 }
 .buttoon {
     margin: auto;
@@ -89,7 +92,7 @@ form {
     text-align: center;
 }
 .formWrapper {
-    width: 25%;
+    width: 50%;
     margin: auto;
     text-align: center;
 }
@@ -108,9 +111,6 @@ ion-card {
 ion-card-title {
     font-family: 'gotham', sans-serif;
 }
-// ion-card:nth-child(2n){
-//     background-color: #F1B82D;
-// }
 h3 {
     font-family: 'gotham', sans-serif;
 }

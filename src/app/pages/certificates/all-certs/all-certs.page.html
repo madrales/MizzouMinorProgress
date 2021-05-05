@@ -24,50 +24,52 @@
 <ion-content>
   <div class="cardWrapper">
     <div class="mainWrapper">
-      <h1 class="notoSerif"> ALL CERTIFICATES CALCULATOR</h1>
-      <h3 class="subtext">Select your IT courses to check your status towards all three certificates</h3>
-      <div class="formWrapper">
-        <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
-          <ion-item>
-            <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
-              <ion-select-option value="INFOTC1040">INFOTC 1040: Intro to Problem Solving and Programming</ion-select-option>
-              <ion-select-option value="INFOTC1610">INFOTC 1610: Intro to to Digital Media and Design</ion-select-option>
-              <ion-select-option value="INFOTC2610">INFOTC 2610: Digital Media Design I</ion-select-option>
-              <ion-select-option value="INFOTC2615">INFOTC 2615: Color Processing and Design</ion-select-option>
-              <ion-select-option value="INFOTC2620">INFOTC 2620: Computer Modeling and Animation I</ion-select-option>
-              <ion-select-option value="INFOTC2630">INFOTC 2630: Intro to Game Theory and Design</ion-select-option>
-              <ion-select-option value="INFOTC2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
-              <ion-select-option value="INFOTC2830">INFOTC 2830: Web Application Development I</ion-select-option>
-              <ion-select-option value="INFOTC2910">INFOTC 2910: Cyber Security</ion-select-option>
-              <ion-select-option value="INFOTC3330">INFOTC 3330: Object Oriented Programming</ion-select-option>
-              <ion-select-option value="INFOTC3380">INFOTC 3380: Database Systems and Applications</ion-select-option>
-              <ion-select-option value="INFOTC3530">INFOTC 3530: UNIX Operating System</ion-select-option>
-              <ion-select-option value='INFOTC3610'>INFOTC 3610: Digital Media Design II</ion-select-option>
-              <ion-select-option value="INFOTC3630">INFOTC 3630: Intro to Virtual Reality</ion-select-option>
-              <ion-select-option value="INFOTC3650">INFOTC 3650: Project and Team Management</ion-select-option> 
-              <ion-select-option value="INFOTC3660">INFOTC 3660: Audio Engineering</ion-select-option>
-              <ion-select-option value='INFOTC3810'>INFOTC 3810: Computer Network Security</ion-select-option>
-              <ion-select-option value="INFOTC3850">INFOTC 3850: Computer Systems Administration</ion-select-option>
-              <ion-select-option value="INFOTC3910">INFOTC 3910: Advanced Cyber Security</ion-select-option>
-              <ion-select-option value="INFOTC4320">INFOTC 4320: Software Engineering</ion-select-option>
-              <ion-select-option value="INFOTC4400">INFOTC 4400: C#/.NET Development</ion-select-option>
-              <ion-select-option value="INFOTC4405">INFOTC 4405: IOS App Development I</ion-select-option>
-              <ion-select-option value="INFOTC4410">INFOTC 4410: Android App Development I</ion-select-option>
-              <ion-select-option value="INFOTC4420">INFOTC 4420: Android App Development II</ion-select-option>
-              <ion-select-option value='INFOTC4425'>INFOTC 4425: IOS App Development II</ion-select-option>
-              <ion-select-option value="INFOTC4440">INFOTC 4440: Android App Development III</ion-select-option>
-              <ion-select-option value="INFOTC4445">INFOTC 4445: IOS App Development III</ion-select-option>
-              <ion-select-option value="INFOTC4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
-              <ion-select-option value="INFOTC4640">INFOTC 4640: Motion Graphics and Visual Design II</ion-select-option>
-              <ion-select-option value="INFOTC4830">INFOTC 4830: Web Application Development II</ion-select-option> 
-              <ion-select-option value="INFOTC4910">INFOTC 4910: Digital Forensics</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </form>
-      </div>
-      <div class="formButtonWrapper">
-        <ion-button expand="full" color="success"(click)="clear(); addCourse(); webDevCheck(); mediaCheck(); cyberSecCheck();">Check Progress</ion-button>
-        <ion-button expand="full" color="danger"(click)="clearAll()">Clear All</ion-button>
+      <div class="titleWrapper">
+        <h1 class="notoSerif"> ALL CERTIFICATES CALCULATOR</h1>
+        <h3>Select your IT courses to check your status towards all three certificates</h3>
+        <div class="formWrapper">
+          <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
+            <ion-item>
+              <ion-select  placeholder="Select courses..." formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+                <ion-select-option value="INFOTC1040">INFOTC 1040: Intro to Problem Solving and Programming</ion-select-option>
+                <ion-select-option value="INFOTC1610">INFOTC 1610: Intro to to Digital Media and Design</ion-select-option>
+                <ion-select-option value="INFOTC2610">INFOTC 2610: Digital Media Design I</ion-select-option>
+                <ion-select-option value="INFOTC2615">INFOTC 2615: Color Processing and Design</ion-select-option>
+                <ion-select-option value="INFOTC2620">INFOTC 2620: Computer Modeling and Animation I</ion-select-option>
+                <ion-select-option value="INFOTC2630">INFOTC 2630: Intro to Game Theory and Design</ion-select-option>
+                <ion-select-option value="INFOTC2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
+                <ion-select-option value="INFOTC2830">INFOTC 2830: Web Application Development I</ion-select-option>
+                <ion-select-option value="INFOTC2910">INFOTC 2910: Cyber Security</ion-select-option>
+                <ion-select-option value="INFOTC3330">INFOTC 3330: Object Oriented Programming</ion-select-option>
+                <ion-select-option value="INFOTC3380">INFOTC 3380: Database Systems and Applications</ion-select-option>
+                <ion-select-option value="INFOTC3530">INFOTC 3530: UNIX Operating System</ion-select-option>
+                <ion-select-option value='INFOTC3610'>INFOTC 3610: Digital Media Design II</ion-select-option>
+                <ion-select-option value="INFOTC3630">INFOTC 3630: Intro to Virtual Reality</ion-select-option>
+                <ion-select-option value="INFOTC3650">INFOTC 3650: Project and Team Management</ion-select-option> 
+                <ion-select-option value="INFOTC3660">INFOTC 3660: Audio Engineering</ion-select-option>
+                <ion-select-option value='INFOTC3810'>INFOTC 3810: Computer Network Security</ion-select-option>
+                <ion-select-option value="INFOTC3850">INFOTC 3850: Computer Systems Administration</ion-select-option>
+                <ion-select-option value="INFOTC3910">INFOTC 3910: Advanced Cyber Security</ion-select-option>
+                <ion-select-option value="INFOTC4320">INFOTC 4320: Software Engineering</ion-select-option>
+                <ion-select-option value="INFOTC4400">INFOTC 4400: C#/.NET Development</ion-select-option>
+                <ion-select-option value="INFOTC4405">INFOTC 4405: IOS App Development I</ion-select-option>
+                <ion-select-option value="INFOTC4410">INFOTC 4410: Android App Development I</ion-select-option>
+                <ion-select-option value="INFOTC4420">INFOTC 4420: Android App Development II</ion-select-option>
+                <ion-select-option value='INFOTC4425'>INFOTC 4425: IOS App Development II</ion-select-option>
+                <ion-select-option value="INFOTC4440">INFOTC 4440: Android App Development III</ion-select-option>
+                <ion-select-option value="INFOTC4445">INFOTC 4445: IOS App Development III</ion-select-option>
+                <ion-select-option value="INFOTC4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
+                <ion-select-option value="INFOTC4640">INFOTC 4640: Motion Graphics and Visual Design II</ion-select-option>
+                <ion-select-option value="INFOTC4830">INFOTC 4830: Web Application Development II</ion-select-option> 
+                <ion-select-option value="INFOTC4910">INFOTC 4910: Digital Forensics</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </form>
+        </div>
+        <div class="clearWrapper">
+          <ion-button expand="full" class="clearButton" color="success"(click)="clear(); addCourse(); webDevCheck(); mediaCheck(); cyberSecCheck();">Check Progress</ion-button>
+          <ion-button expand="full" class="clearButton" color="danger"(click)="clearAll()">Clear All</ion-button>
+        </div>
       </div>
       <div class="mainerWrapper">
         <div class="certificateDiv">

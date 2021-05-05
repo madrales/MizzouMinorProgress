@@ -24,12 +24,12 @@
     <div class="mainWrapper">
       <div class="titleWrapper">
         <h1 class="notoSerif">CYBERSECURITY CERTIFICATE CALCULATOR</h1>
-        <h3 class="notoSerif">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
+        <h3>Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
       </div>
     <div class="selectWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
-          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+          <ion-select placeholder="Select courses..." formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
             <ion-select-option value="INFOTC1040">INFOTC 1040: Introduction to Problem Solving and Programming</ion-select-option>
             <ion-select-option value="INFOTC2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
             <ion-select-option value="INFOTC2830">INFOTC 2830: Web Application Development I</ion-select-option>

@@ -13,10 +13,13 @@
     padding: 45px;
 }
 .formButtonWrapper {
-    width: 25%;
+    width: 100%;
     margin: auto;
     text-align: center;
     display: inline-block;
+}
+h3 {
+    font-family: 'gotham', sans-serif;
 }
 .mainWrapper {
     padding: 25px;
@@ -25,7 +28,7 @@
     box-shadow: 15px;
     margin: auto;
     text-align: center;
-    min-height: 500px;
+    min-height: 1000px;
     margin-top: 50px;
 }
 .clearButton {
@@ -33,11 +36,6 @@
 }
 .submitButton {
     background-color: green;
-}
-.formWrapper {
-    margin: auto;
-    text-align: center;
-    width: 25%;
 }
 .courseCard {
     width: 50%;
@@ -69,7 +67,7 @@ ion-card {
 .formWrapper {
     margin: auto;
     text-align: center;
-    width: 50%;
+    width: 100%;
 }
 h1 {
     color: black;

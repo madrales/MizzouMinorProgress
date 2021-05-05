@@ -19,6 +19,9 @@
     text-align: center;
     display: inline-block;
 }
+h3 {
+    font-family: 'gotham', sans-serif;
+}
 .mainWrapper {
     padding: 25px;
     width: 50%;
@@ -26,8 +29,9 @@
     box-shadow: 15px;
     margin: auto;
     text-align: center;
-    min-height: 500px;
+    min-height: 1000px;
     margin-top: 50px;
+    min-height: 1000px;
 }
 .clearButton {
     background-color: red;
@@ -70,7 +74,7 @@ ion-card {
 .formWrapper {
     margin: auto;
     text-align: center;
-    width: 50%;
+    width: 100%;
 }
 h1 {
     color: black;
@@ -82,7 +86,6 @@ h1 {
     display: inline-block;
     width: 25vw;
     margin: 0;
-    // border: 2px solid red;
     text-align: left;
 }
 .backButton {
@@ -117,7 +120,6 @@ ion-row {
 form {
     border: 2px solid black;
 }
-
 .titleWrapper {
     margin: auto;
     text-align: center;
@@ -126,11 +128,6 @@ form {
     margin: auto;
     text-align: center;
 }
-// .formWrapper {
-//     width: 25%;
-//     margin: auto;
-//     text-align: center;
-// }
 .selectWrapper{
     width: 100%;
     background-color: #F1B82D;
@@ -146,9 +143,6 @@ ion-card {
 ion-card-title {
     font-family: 'gotham', sans-serif;
 }
-// ion-card:nth-child(2n){
-//     background-color: #F1B82D;
-// }
 h3 {
     font-family: 'gotham', sans-serif;
 }

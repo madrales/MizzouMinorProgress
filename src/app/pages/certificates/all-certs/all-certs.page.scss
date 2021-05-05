@@ -13,6 +13,11 @@
     padding: 45px;
     font-size: x-large;
 }
+.titleWrapper {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
 .subtext {
     font-family: 'Montserrant', sans-serif;
 }
@@ -27,19 +32,12 @@
 .mainerWrapper{
     display: flex;
 }
-.formButtonWrapper {
-    width: 15%;
-    margin: auto;
-    text-align: center;
-    display: inline-block;
-}
 form {
     border: 2px solid black;
-    min-height: 50px;
 }
 .mainWrapper {
     padding: 25px;
-    width: 98%;
+    width: 100%;
     box-shadow: 15px;
     margin: auto;
     text-align: center;
@@ -48,13 +46,11 @@ form {
 .clearButton {
     background-color: red;
 }
+h3 {
+    font-family: 'gotham', sans-serif;
+}
 .submitButton {
     background-color: green;
-}
-.formWrapper {
-    margin: auto;
-    text-align: center;
-    width: 25%;
 }
 .courseCard {
     width: 50%;
@@ -91,21 +87,12 @@ ion-title {
 .formWrapper {
     margin: auto;
     text-align: center;
-    width: 75%;
+    width: 100%;
 }
 h1 {
     color: black;
 }
 ion-select {
-    max-width: unset !important;
-    width: 100% !important;
-}
-ion-overlay-wrapper{
-    max-width: unset !important;
-    width: 100% !important;
-}
-.alert-wrapper{
-    max-width: unset !important;
     width: 100% !important;
 }
 ion-item {
@@ -127,7 +114,6 @@ ion-item {
     display: inline-block;
     width: 25vw;
     margin: 0;
-    // border: 2px solid red;
     text-align: left;
 }
 .buttoon:hover {
@@ -141,4 +127,12 @@ ion-row {
     margin: auto;
     text-align: center;
     padding: 15px;
+}
+.clearButton {
+    width: 50%;
+}
+.clearWrapper {
+    display: flex;
+    width: 50%;
+    margin: auto;
 }
