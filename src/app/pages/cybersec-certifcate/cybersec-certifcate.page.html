@@ -27,7 +27,7 @@
           <a routerLink="../certificates"><button mat-raised-button class="backButton" ><ion-icon name="arrow-back-outline"></ion-icon>Certificates</button></a>
         </div>
         <h1 class="notoSerif">CYBERSECURITY CERTIFICATE CALCULATOR</h1>
-        <h3>Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
+        <h3 class="subtext">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
       </div>
     <div class="selectWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
@@ -60,7 +60,7 @@
     <ion-card class="notoSerif"  *ngIf = "percent > 39"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
     <br>
 
-    <ion-title *ngIf = 'cyberSecCore == true'>Core Courses Left to Complete</ion-title> 
+    <ion-title  class="notoSerif" *ngIf = 'cyberSecCore == true'>Core Courses Left to Complete</ion-title> 
 
     <ion-card *ngFor='let course of cyberSecIncompletedArray'>
       <ion-card-title>

@@ -29,9 +29,9 @@
           <a routerLink="../../minors"><button mat-raised-button class="backButton" ><ion-icon name="arrow-back-outline"></ion-icon>Academic Minors</button></a>
         </div>
         <h1 class="notoSerif">COMPUTER SCIENCE CALCULATOR</h1>
-        <h3>A minor in computer science is offered through the College of Engineering. To obtain a minor, a student must complete 18 hours of courses approved by the Department of Electrical Engineering and Computer Science. The student must earn a grade of C- or better in each course counting toward the minor and have a 2.0 GPA in all courses counting toward the minor. At least 9 hours must be taken in residence.</h3>
-        <h3>Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
-        <h4>An asterisk (*) indicates you must've earned a C or better in the course</h4>
+        <h3 class= "subtext">A minor in computer science is offered through the College of Engineering. To obtain a minor, a student must complete 18 hours of courses approved by the Department of Electrical Engineering and Computer Science. The student must earn a grade of C- or better in each course counting toward the minor and have a 2.0 GPA in all courses counting toward the minor. At least 9 hours must be taken in residence.</h3>
+        <h3 class= "subtext">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
+        <h4 class= "subtext">An asterisk (*) indicates you must've earned a C or better in the course</h4>
       </div>
       <div class="formWrapper">
         <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">

@@ -29,7 +29,7 @@
           <a routerLink="../../certificates"><button mat-raised-button class="backButton" ><ion-icon name="arrow-back-outline"></ion-icon>Certificates</button></a>
         </div>
         <h1 class="notoSerif"> ALL CERTIFICATES CALCULATOR</h1>
-        <h3>Select your IT courses to check your status towards all three certificates</h3>
+        <h3 class="subtext">Select your IT courses to check your status towards all three certificates</h3>
         <div class="formWrapper">
           <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
             <ion-item>
@@ -77,9 +77,9 @@
       <div class="mainerWrapper">
         <div class="certificateDiv">
           <ion-title class="notoSerif">WEB AND APP DEVELOPMENT CERTIFICATE</ion-title>
-          <ion-title *ngIf = 'webShowPercent == true'>You have completed {{ webDevPercent }}% of the requirements!</ion-title>
-          <ion-title *ngIf = 'webDevCore == true'>Core Courses Left to Complete</ion-title> 
-          <ion-title *ngIf = 'webDevCompleted == true'>You completed the Web Dev certificate!</ion-title> 
+          <ion-title class="notoSerif" *ngIf = 'webShowPercent == true'>You have completed {{ webDevPercent }}% of the requirements!</ion-title>
+          <ion-title class="notoSerif" *ngIf = 'webDevCore == true'>Core Courses Left to Complete</ion-title> 
+          <ion-title  class="notoSerif"*ngIf = 'webDevCompleted == true'>You completed the Web Dev certificate!</ion-title> 
           <div class="mainerWrapper">
             <ion-card *ngFor='let course of webDevIncompletedArray'>
               <ion-card-title class="notoSerif">
@@ -104,9 +104,9 @@
         </div>
         <div class="certificateDiv">
           <ion-title class="notoSerif"> MEDIA TECH CERTIFICATE</ion-title>
-          <ion-title *ngIf = 'showMediaPercent == true'>You have completed {{ mediaPercent }}% of the requirements!</ion-title>
-          <ion-title *ngIf = 'mediaCore == true'>Core Courses Left to Complete</ion-title> 
-          <ion-title *ngIf = 'mediaCompleted == true'> You have completed the Media Tech certificate! </ion-title>
+          <ion-title  class="notoSerif" *ngIf = 'showMediaPercent == true'>You have completed {{ mediaPercent }}% of the requirements!</ion-title>
+          <ion-title  class="notoSerif" *ngIf = 'mediaCore == true'>Core Courses Left to Complete</ion-title> 
+          <ion-title class="notoSerif" *ngIf = 'mediaCompleted == true'> You have completed the Media Tech certificate! </ion-title>
           <ion-card *ngFor='let course of mediaIncompletedArray'>
             <ion-card-title class="notoSerif">
               {{ course.courseID }}
@@ -131,10 +131,9 @@
         
         <div class="certificateDiv">
           <ion-title class="notoSerif"> CYBERSECURITY CERTIFICATE</ion-title>
-          <ion-title class="subtext" *ngIf = 'cyberShowPercent == true'>You have completed {{ cyberPercent }}% of the requirements!</ion-title>
-          <ion-title class="subtext" *ngIf = 'cyberSecCore == true'>Core Courses Left to Complete</ion-title> 
-          <ion-title class="subtext" *ngIf = 'cyberSecCompleted == true'>You have completed the certificate!</ion-title>
-          <ion-title class="notoSerif" *ngIf = 'cyberSecCompleted == true'>Visit http://www.google.com to apply for your certificate!</ion-title>
+          <ion-title class="notoSerif" *ngIf = 'cyberShowPercent == true'>You have completed {{ cyberPercent }}% of the requirements!</ion-title>
+          <ion-title class="notoSerif" *ngIf = 'cyberSecCore == true'>Core Courses Left to Complete</ion-title> 
+          <ion-title class="notoSerif" *ngIf = 'cyberSecCompleted == true'>You have completed the certificate!</ion-title>
           <ion-card *ngFor='let course of cyberSecIncompletedArray'>
             <ion-card-title class="notoSerif">
               {{ course.courseID }}
