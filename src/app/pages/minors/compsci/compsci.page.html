@@ -97,13 +97,14 @@
 
         <br>
         <ion-title class="titleClass" *ngIf = 'percent == 100'>You completed the Computer Science Minor!</ion-title> 
-        <br>
+       
         <ion-title class="titleClass" *ngIf = 'percent >0  && percent <100'>You have completed {{ percent }}% of the requirements!</ion-title>
         <br>
-        <ion-title class="titleClass" *ngIf = "percent > 30">Since you have completed at least 6 credits of the minor, it is advised you declare minor at this point.</ion-title>
-       <ion-card class="titleClass" *ngIf = "percent > 30"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here to Declare Your Minor</a></ion-card> 
-       <ion-card class="titleClass" *ngIf = "percent > 30"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
-       <br>
+        <ion-title class="notoSerif" *ngIf = "percent > 30">Since you have completed at least 6 credits of the minor, it is advised you declare minor at this point.</ion-title>
+        <ion-card class="notoSerif"*ngIf = "percent > 30"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here to Declare Your Minor</a></ion-card> 
+        <ion-card class="notoSerif" *ngIf = "percent > 30"><a *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
+        <br>
+ 
 
         <ion-title class="titleClass" *ngIf = 'CSCoreLeft == true'> Core Courses Left to Complete</ion-title> 
         <div class="coreClasses">
