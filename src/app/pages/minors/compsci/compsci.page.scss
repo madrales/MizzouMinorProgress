@@ -17,9 +17,6 @@
     margin: 0;
     text-align: left;
 }
-.mainWrapper {
-    min-height: 1000px;
-}
 .buttoon:hover {
     background-color: white;
     color: black;
@@ -60,24 +57,27 @@ ion-row {
 }
 .selectWrapper{
     width: 100%;
-    margin: auto;
-    text-align: center;
+    background-color: #F1B82D;
 }
 ion-select {
     width: 100%;
 }
-form {
-    width: 100%;
-    border: 2px solid black;
+ion-card {
+    width: 40%;
+    padding: 2px;
+    margin: auto;
 }
 ion-card-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'gotham', sans-serif;
 }
+// ion-card:nth-child(2n){
+//     background-color: #F1B82D;
+// }
 h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'gotham', sans-serif;
 }
 h4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'gotham', sans-serif;
 }
 .clearButton {
     width: 50%;
@@ -91,38 +91,23 @@ h4 {
     padding: 45px;
     text-align: center;
 }
+
+.column2 {
+    width: 20%;
+}
 .column {
-    width: 100%;
+    width: 80%;
 }
 .completed{
     background-color: green; 
     width: 100%; 
-    color: black;
 }
 .spacer {
     width: 100%;
     display: flex;
 }
 .spacerItem {
+    background-color: white;
     color: black;
-}
-.coreClasses{
-    display: inline-block;
-    display: flex;
-    padding: 15px;
-}
-ion-card {
-    width: 25%;
-    padding: 2px;
-    margin: auto;
-    padding: 15px;
-    margin-bottom: 5px;
-}
-.clearButton {
-    width: 50%;
-}
-.clearWrapper {
-    display: flex;
-    width: 50%;
-    margin: auto;
+    
 }

@@ -59,13 +59,23 @@
       <ion-button class="clearButton" color="danger" expand="full" (click)="clearAll()">Clear All</ion-button>
     </div>
     <div class="resultsWrapper">
-      <ion-card-title class="notoSerif">
+      <!-- <ion-card-title class="notoSerif">
         {{ this.test }}
       </ion-card-title>
       <ion-title>
         {{ this.status }}
-      </ion-title>
+      </ion-title> -->
+      <br>
       <ion-title *ngIf = "ran == true" >You have compeleted {{ percent }}% of the IT minor.</ion-title> 
+
+      <ion-title *ngIf = "completedMinor == true">You have compeleted the IT minor.</ion-title> 
+      <br>
+      <ion-title class="titleClass" *ngIf = "percent > 39">Since you have completed at least 6 credits of the minor, it is advised you declare minor at this point.</ion-title>
+      <ion-card class="titleClass" *ngIf = "percent > 39"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here to Declare Your Minor</a></ion-card> 
+      <ion-card class="titleClass" *ngIf = "percent > 39"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
+      <br>
+
+
       <div class="resultCourseWrapper" fxLayout="row"> 
         <div *ngIf = "show1610Seqs == true">
 
@@ -154,7 +164,8 @@
         </ion-card>
       </div>
       
-      <ion-title *ngIf = "completedMinor == true">You have compeleted the IT minor.</ion-title> 
+      <ion-title *ngIf = "remaining == true">You must complete {{ left }} more course of any level.</ion-title>
+      
       <ion-title *ngIf = "completedSequence == true">You have completed the sequence requirement.</ion-title>
     
       <ion-title *ngIf = "completed3000 == true">You have compeleted the 3 3000+ course requirments.</ion-title>
@@ -162,8 +173,7 @@
       <ion-title *ngIf = "count == 2">You must also complete 1 more 3000+ courses.</ion-title>
       <ion-title *ngIf = "none == true"> You must also complete 3 more 3000+ courses.</ion-title>
 
-      <ion-title *ngIf = "remaining == true">You must complete {{ left }} more course of any level.</ion-title>
-      
+
       </div>
     </div>
   </div>
