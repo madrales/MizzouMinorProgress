@@ -44,10 +44,15 @@ ion-row {
 }
 .selectWrapper{
     width: 100%;
-    background-color: #F1B82D;
+    margin: auto;
+    text-align: center;
 }
 ion-select {
     width: 100%;
+}
+form {
+    width: 100%;
+    border: 2px solid black;
 }
 ion-card-title {
     font-family: 'Montserrat', sans-serif;
@@ -90,13 +95,14 @@ h4 {
     display: flex;
 }
 .spacerItem {
-    background-color: white;
+    background-color: #8F8884;
     color: black;
-    border: 2px solid red;
+    border: 2px solid black;
 }
 .coreClasses{
     display: inline-block;
     display: flex;
+    padding: 15px;
 }
 ion-card {
     width: 33%;

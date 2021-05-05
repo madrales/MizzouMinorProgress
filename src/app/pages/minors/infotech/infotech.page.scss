@@ -38,7 +38,7 @@ ion-row {
     text-align: center;
 }
 .formWrapper {
-    width: 25%;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
@@ -57,9 +57,6 @@ ion-card {
 ion-card-title {
     font-family: 'gotham', sans-serif;
 }
-// ion-card:nth-child(2n){
-//     background-color: #F1B82D;
-// }
 h3 {
     font-family: 'gotham', sans-serif;
 }
