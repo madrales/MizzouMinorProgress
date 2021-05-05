@@ -265,7 +265,10 @@ export class CompsciPage implements OnInit {
           this.showElectives = false; 
 
           if(this.incompletedArray.length == 0){
+            this.ran = false; 
             this.CSCompleted = true; 
+            
+
           }
           break;
         }

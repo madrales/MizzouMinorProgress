@@ -49,9 +49,16 @@
       <ion-button expand="full" class="clearButton" color="success"(click)="clear(); addCourse(); mediaCheck()">Check Progress</ion-button>
       <ion-button expand="full" class="clearButton" color="danger"(click)="clearAll()">Clear All</ion-button>
     </div>
-    <ion-title *ngIf = 'mediaRan == true'>You have completed {{ percent }}% of the requirements!</ion-title>
+    <br>
+    <ion-title class="notoSerif" *ngIf = 'mediaCompleted == true'> You have completed the Media Technology and Design certificate! </ion-title>
+    <ion-title class="notoSerif" *ngIf = 'mediaRan == true'>You have completed {{ percent }}% of the requirements!</ion-title>
+    <br>
+    <ion-title class="notoSerif" *ngIf = "percent > 49">Since you have completed at least 6 credits of the minor, it is advised you declare minor at this point.</ion-title>
+    <ion-card class="notoSerif" *ngIf = "percent > 49"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here to Declare Your Minor</a></ion-card> 
+    <ion-card class="notoSerif"  *ngIf = "percent > 49"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
+    <br>
     <ion-title *ngIf = 'mediaCore == true'>Core Courses Left to Complete</ion-title> 
-    <ion-title *ngIf = 'mediaCompleted == true'> You have completed the Media Tech certificate! </ion-title>
+
     <ion-card *ngFor='let course of mediaIncompletedArray'>
       <ion-card-title>
         {{ course.courseID }} {{course.name}}
