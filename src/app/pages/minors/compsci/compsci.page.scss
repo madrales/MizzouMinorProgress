@@ -88,6 +88,8 @@ h4 {
 }
 .clearWrapper {
     display: flex;
+    width: 50%;
+    margin: auto;
 }
 .footer {
     background-color: black;
@@ -109,9 +111,13 @@ h4 {
 .spacer {
     width: 100%;
     display: flex;
+    min-height: 1000px;
 }
 .spacerItem {
     background-color: white;
     color: black;
-    
+    width: 100%;
+}
+form {
+    border: 2px solid black;
 }
