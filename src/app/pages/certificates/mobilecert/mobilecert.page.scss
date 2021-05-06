@@ -24,16 +24,16 @@
 h3 {
     font-family: 'gotham', sans-serif;
 }
-.mainWrapper {
-    padding: 25px;
-    width: 50%;
-    border-radius: 25px;
-    box-shadow: 15px;
-    margin: auto;
-    text-align: center;
-    min-height: 1000px;
-    margin-top: 50px;
-}
+// .mainWrapper {
+//     padding: 25px;
+//     width: 50%;
+//     border-radius: 25px;
+//     box-shadow: 15px;
+//     margin: auto;
+//     text-align: center;
+//     min-height: 1000px;
+//     margin-top: 50px;
+// }
 .clearButton {
     background-color: red;
 }
@@ -119,11 +119,6 @@ form {
     margin: auto;
     text-align: center;
 }
-// .formWrapper {
-//     width: 25%;
-//     margin: auto;
-//     text-align: center;
-// }
 .selectWrapper{
     width: 100%;
     background-color: #F1B82D;
@@ -139,9 +134,6 @@ ion-card {
 ion-card-title {
     font-family: 'gotham', sans-serif;
 }
-// ion-card:nth-child(2n){
-//     background-color: #F1B82D;
-// }
 h3 {
     font-family: 'gotham', sans-serif;
 }

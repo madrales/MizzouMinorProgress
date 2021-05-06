@@ -27,17 +27,17 @@
 h3 {
     font-family: 'gotham', sans-serif;
 }
-.mainWrapper {
-    padding: 25px;
-    width: 50%;
-    border-radius: 25px;
-    box-shadow: 15px;
-    margin: auto;
-    text-align: center;
-    min-height: 1000px;
-    margin-top: 50px;
-    min-height: 1000px;
-}
+// .mainWrapper {
+//     padding: 25px;
+//     width: 55%;
+//     border-radius: 25px;
+//     box-shadow: 15px;
+//     margin: auto;
+//     text-align: center;
+//     min-height: 1000px;
+//     margin-top: 50px;
+//     min-height: 1000px;
+// }
 .clearButton {
     background-color: red;
 }
@@ -93,14 +93,6 @@ h1 {
     margin: 0;
     text-align: left;
 }
-// .backButton {
-//     display: block;
-//     background-color: white;
-//     color: black;
-//     font-family: "GRAPHIK", sans-serif;
-//     font-size: xx-large;
-//     margin-top: 15px;
-// }
 .buttoon {
     margin: auto;
     text-align: center;
@@ -109,6 +101,9 @@ h1 {
     color: white;
     font-size: x-large;
     margin-top: 0px;
+}
+.widen {
+    width: 100%;
 }
 .buttoon:hover {
     background-color: white;
