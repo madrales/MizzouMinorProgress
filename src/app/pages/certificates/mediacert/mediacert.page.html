@@ -27,7 +27,7 @@
           <a routerLink="../../certificates"><button mat-raised-button class="backButton" ><ion-icon name="arrow-back-outline"></ion-icon>Certificates</button></a>
         </div>
         <h1 class="notoSerif">MEDIA TECHNOLOGY AND DESIGN CERTIFICATE CALCULATOR</h1>
-        <h3>Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results.  </h3>
+        <h3 class="subtext">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results.  </h3>
       </div>
     <div class="formWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
@@ -60,7 +60,7 @@
     <ion-card class="notoSerif" *ngIf = "percent > 49"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here to Declare Your Minor</a></ion-card> 
     <ion-card class="notoSerif"  *ngIf = "percent > 49"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
     <br>
-    <ion-title *ngIf = 'mediaCore == true'>Core Courses Left to Complete</ion-title> 
+    <ion-title class="notoSerif" *ngIf = 'mediaCore == true'>Core Courses Left to Complete</ion-title> 
 
     <ion-card *ngFor='let course of mediaIncompletedArray'>
       <ion-card-title>
