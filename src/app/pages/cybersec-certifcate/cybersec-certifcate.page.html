@@ -55,9 +55,9 @@
     <ion-title class="notoSerif" *ngIf = 'cyberSecRan == true'>You have completed {{ percent }}% of the requirements!</ion-title>
 
     <br>
-    <ion-title class="widen" *ngIf = "percent > 39">Since you have completed at least 6 credits of the minor, it is advised you declare your minor at this point.</ion-title>
-    <ion-card class="widen" *ngIf = "percent > 39"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here To Declare Your Minor</a></ion-card> 
-    <ion-card class="widen" *ngIf = "percent > 39"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
+    <ion-title class="widen subtext2" *ngIf = "percent > 39">Since you have completed at least 6 credits of the minor, it is advised you declare your minor at this point.</ion-title>
+    <ion-card class="widen subtext2" *ngIf = "percent > 39"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here To Declare Your Minor</a></ion-card> 
+    <ion-card class="widen subtext2" *ngIf = "percent > 39"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
     <br>
 
     <ion-title  class="notoSerif" *ngIf = 'cyberSecCore == true'>Core Courses Left to Complete</ion-title> 
