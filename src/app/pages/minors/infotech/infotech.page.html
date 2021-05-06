@@ -32,24 +32,24 @@
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
           <ion-select placeholder="Select your courses..." formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
-            <ion-select-option value="1040">INFOTC 1040: Intro to Problem Solving and Programming</ion-select-option>
-            <ion-select-option value="1610">INFOTC 1610: Introduction to Digital Media Design</ion-select-option>
-            <ion-select-option value="2610">INFOTC 2610:  Digital Media Design I</ion-select-option>
-            <ion-select-option value="2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
-            <ion-select-option value="2830">INFOTC 2830: Web Application Developement I</ion-select-option>
-            <ion-select-option value="2910">INFOTC 2910: Cyber Security</ion-select-option>
-            <ion-select-option value="3530">INFOTC 3530: UNIX Operating Systems</ion-select-option>
-            <ion-select-option value="3610 OR 4610">INFOTC 3610:  Digital Media Design II</ion-select-option>
+            <ion-select-option value="INFTOC 1040">INFOTC 1040: Intro to Problem Solving and Programming</ion-select-option>
+            <ion-select-option value="INFTOC 1610">INFOTC 1610: Introduction to Digital Media Design</ion-select-option>
+            <ion-select-option value="INFTOC 2610">INFOTC 2610:  Digital Media Design I</ion-select-option>
+            <ion-select-option value="INFTOC 2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
+            <ion-select-option value="INFTOC 2830">INFOTC 2830: Web Application Developement I</ion-select-option>
+            <ion-select-option value="INFTOC 2910">INFOTC 2910: Cyber Security</ion-select-option>
+            <ion-select-option value="INFTOC 3530">INFOTC 3530: UNIX Operating Systems</ion-select-option>
+            <ion-select-option value="INFTOC 3610 OR INFTOC 4610">INFOTC 3610:  Digital Media Design II</ion-select-option>
             <ion-select-option value="3640">INFOTC 3640: Motion Graphics and Visual Effects I</ion-select-option>
-            <ion-select-option value ='3810'>INFOTC 3810: Computer Network Security</ion-select-option>
-            <ion-select-option value= "3850">INFOTC 3850: Computer System Administration</ion-select-option>
-            <ion-select-option value="3910 OR 4910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
-            <ion-select-option value="4405">INFOTC 4405: iOS App Development I</ion-select-option>
-            <ion-select-option value="4425">INFOTC 4425: iOS App Development II</ion-select-option>
-            <ion-select-option value="3610 OR 4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
-            <ion-select-option value="4640">INFOTC 4640: Motion Graphics and Visual Effects II</ion-select-option>
-            <ion-select-option value="4830">INFOTC 4830: Web Application Developement II</ion-select-option>
-            <ion-select-option value="3910 OR 4910">INFOTC 4910: Digital Forensics</ion-select-option>
+            <ion-select-option value ='INFTOC 3810'>INFOTC 3810: Computer Network Security</ion-select-option>
+            <ion-select-option value= "INFTOC 3850">INFOTC 3850: Computer System Administration</ion-select-option>
+            <ion-select-option value="INFTOC 3910 OR INFTOC 4910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
+            <ion-select-option value="INFTOC 4405">INFOTC 4405: iOS App Development I</ion-select-option>
+            <ion-select-option value="INFTOC 4425">INFOTC 4425: iOS App Development II</ion-select-option>
+            <ion-select-option value="INFTOC 3610 OR INFTOC 4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
+            <ion-select-option value="INFTOC 4640">INFOTC 4640: Motion Graphics and Visual Effects II</ion-select-option>
+            <ion-select-option value="INFTOC 4830">INFOTC 4830: Web Application Developement II</ion-select-option>
+            <ion-select-option value="INFTOC 3910 OR INFTOC 4910">INFOTC 4910: Digital Forensics</ion-select-option>
           </ion-select>
         </ion-item>
       </form>
@@ -70,9 +70,9 @@
 
       <ion-title *ngIf = "completedMinor == true">You have compeleted the IT minor.</ion-title> 
       <br>
-      <ion-title class="titleClass" *ngIf = "percent > 39">Since you have completed at least 6 credits of the minor, it is advised you declare minor at this point.</ion-title>
-      <ion-card class="titleClass" *ngIf = "percent > 39"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here to Declare Your Minor</a></ion-card> 
-      <ion-card class="titleClass" *ngIf = "percent > 39"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
+      <ion-title class="subtext2" *ngIf = "percent > 39">Since you have completed at least 6 credits of the minor, it is advised you declare your minor at this point.</ion-title>
+      <ion-card class="subtext2" *ngIf = "percent > 39"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here To Declare Your Minor</a></ion-card> 
+      <ion-card class="subtext2" *ngIf = "percent > 39"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
       <br>
 
 
@@ -163,6 +163,7 @@
           </ion-card-title>
         </ion-card>
       </div>
+      <br>
       
       <ion-title *ngIf = "remaining == true">You must complete {{ left }} more course of any level.</ion-title>
       

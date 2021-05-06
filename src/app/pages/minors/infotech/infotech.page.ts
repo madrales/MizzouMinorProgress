@@ -48,22 +48,22 @@ export class InfotechPage implements OnInit {
   ITMinorArray2: Array<Course>;
 
   //1040
-  ITMinorSeq1: Array<String> = [ "2830", "4830"];
-  ITMinorSeq2: Array<String> = ["2910", "3910 OR 4910"]; 
-  ITMinorSeq3: Array<String> = ["4405", "4425"]
+  ITMinorSeq1: Array<String> = [ "INFTOC 2830", "INFTOC 4830"];
+  ITMinorSeq2: Array<String> = ["INFTOC 2910", "INFTOC 3910 OR INFTOC 4910"]; 
+  ITMinorSeq3: Array<String> = ["INFTOC 4405", "INFTOC 4425"]
 
   //1610
-  ITMinorSeq4: Array<String> = ["2610", "3610 OR 4610"]; 
-  ItMinorSeq5: Array<String> = ["3640", "4640"]; 
+  ITMinorSeq4: Array<String> = ["INFTOC 2610", "INFTOC 3610 OR INFTOC 4610"]; 
+  ItMinorSeq5: Array<String> = ["INFTOC 3640", "INFTOC 4640"]; 
 
   //1040 full
-  ITMinorSeq1a: Array<String> = [ "1040", "2830", "4830"];
-  ITMinorSeq2a: Array<String> = [ "1040","2910", "3910 OR 4910"]; 
-  ITMinorSeq3a: Array<String> = ["1040","4405", "4425"]
+  ITMinorSeq1a: Array<String> = [ "INFTOC 1040", "INFTOC 2830", "INFTOC 4830"];
+  ITMinorSeq2a: Array<String> = [ "INFTOC 1040","INFTOC 2910", "INFTOC 3910 OR INFTOC 4910"]; 
+  ITMinorSeq3a: Array<String> = ["INFTOC 1040","INFTOC 4405", "INFTOC 4425"]
 
   //1610 full
-  ITMinorSeq4a: Array<String> = ["1610","2610", "3610 OR 4610"]; 
-  ItMinorSeq5a: Array<String> = ["1610","3640", "4640"]; 
+  ITMinorSeq4a: Array<String> = ["INFTOC 1610","INFTOC 2610", "INFTOC 3610 OR INFTOC 4610"]; 
+  ItMinorSeq5a: Array<String> = ["INFTOC 1610","INFTOC 3640", "INFTOC 4640"]; 
 
 
   constructor(private model: CompletedITService, private formBuilder: FormBuilder) {
@@ -113,24 +113,24 @@ export class InfotechPage implements OnInit {
   
     console.log(this.showPercent); 
 
-    var foundSeq1or2or3 = this.completedArray.includes("1040"); 
-    var foundSeq4or5 = this.completedArray.includes("1610"); 
+    var foundSeq1or2or3 = this.completedArray.includes("INFTOC 1040"); 
+    var foundSeq4or5 = this.completedArray.includes("INFTOC 1610"); 
 
-    var foundSeq1 = this.completedArray.includes("2830"); 
-    var foundSeq2 = this.completedArray.includes("2910"); 
-    var foundSeq3 = this.completedArray.includes("4405"); 
+    var foundSeq1 = this.completedArray.includes("INFTOC 2830"); 
+    var foundSeq2 = this.completedArray.includes("INFTOC 2910"); 
+    var foundSeq3 = this.completedArray.includes("INFTOC 4405"); 
 
-    var foundSeq4 = this.completedArray.includes("2610"); 
-    var foundSeq5 = this.completedArray.includes("3640"); 
+    var foundSeq4 = this.completedArray.includes("INFTOC 2610"); 
+    var foundSeq5 = this.completedArray.includes("INFTOC 3640"); 
     // var foundSeq6 = this.completedArray.includes("4405"); 
 
     if(foundSeq1or2or3 && (foundSeq1 || foundSeq2 || foundSeq3) ){ //if 1040 is found
 
       if(foundSeq1){ //check for 2830
-        var found = this.completedArray.includes("4830"); 
+        var found = this.completedArray.includes("INFTOC 4830"); 
 
         if(!found){ //move on to 4830
-          this.addIncompeltedCourse("INFOTC4830"); 
+          this.addIncompeltedCourse("INFTOC INFOTC4830"); 
           this.show1040Seq1 = true; 
           this.show1040Seqs = false; 
           console.log("hi"); 
@@ -149,10 +149,10 @@ export class InfotechPage implements OnInit {
 
       if(foundSeq2){ //check for 2910
 
-        var found = this.completedArray.includes("3910 OR 4910");
+        var found = this.completedArray.includes("INFTOC 3910 OR INFTOC 4910");
 
         if(!found){ //move on to 3910/4910
-          this.addIncompeltedCourse("INFTOC3910 OR INFOTC4910"); 
+          this.addIncompeltedCourse("INFTOC 3910 OR INFOTC 4910"); 
           this.show1040Seq1 = true; 
           this.numSeq = 2;
         }
@@ -167,10 +167,10 @@ export class InfotechPage implements OnInit {
 
        if(foundSeq3){ //check for 4405
 
-        var found = this.completedArray.includes("4425"); 
+        var found = this.completedArray.includes("INFTOC 4425"); 
 
         if(!found){
-          this.addIncompeltedCourse("INFOTC4425"); 
+          this.addIncompeltedCourse("INFOTC 4425"); 
           this.show1040Seq1 = true; 
           this.numSeq = 2; 
         }
@@ -197,10 +197,10 @@ export class InfotechPage implements OnInit {
   }
     else if (foundSeq4or5  && (foundSeq4 || foundSeq5)){
       if(foundSeq4){ //check for 2610
-        var found = this.completedArray.includes("3610 OR 4610"); 
+        var found = this.completedArray.includes("INFTOC 3610 OR INFTOC 4610"); 
 
         if(!found){ //move on to 3610/4610
-          this.addIncompeltedCourse("INFOTC3610 OR INFOTC4610"); 
+          this.addIncompeltedCourse("INFOTC 3610 OR INFOTC 4610"); 
           this.show1610Seq1 = true; 
           this.numSeq = 2;
         }
@@ -214,10 +214,10 @@ export class InfotechPage implements OnInit {
       }
       else if(foundSeq5){ //check for 3640
 
-        var found = this.completedArray.includes("4640");
+        var found = this.completedArray.includes("INFTOC 4640");
 
         if(!found){ //move on to 4640
-          this.addIncompeltedCourse("INFTOC4640"); 
+          this.addIncompeltedCourse("INFTOC 4640"); 
           this.show1040Seq1 = true; 
           this.numSeq = 2;
         }
@@ -243,7 +243,7 @@ export class InfotechPage implements OnInit {
 
     for( var i = 0; i < this.completedArray.length; i++){
 
-      var x = this.completedArray[i].charAt(0); 
+      var x = this.completedArray[i].charAt(7); 
 
       if(x == '3' || x == '4'){
         console.log("Found a 3000+ course!"); 
