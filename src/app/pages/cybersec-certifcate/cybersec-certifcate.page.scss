@@ -7,40 +7,26 @@
     text-align: center;
 }
 .footer{
-    background-color: #8F8884;
-    margin: auto;
-    text-align: center;
-    color: black;
-    padding: 15px;
-    font-size: x-large;
+    color: white;
+    padding: 45px;
 }
-.formButtonWrapper {
-    width: 25%;
-    margin: auto;
-    text-align: center;
-    display: inline-block;
+.subtext{
+    font-weight: bolder;
 }
-.mainWrapper {
-    background-color: #8F8884;
-    padding: 25px;
-    width: 50%;
-    border-radius: 25px;
-    box-shadow: 15px;
-    margin: auto;
+
+.subtext2{
+    font-weight: bolder;
     text-align: center;
-    min-height: 500px;
-    margin-top: 50px;
+    font-family: 'GRAPHIK', serif;
+}
+a{
+    color:#F1B82D;
 }
 .clearButton {
     background-color: red;
 }
 .submitButton {
     background-color: green;
-}
-.formWrapper {
-    margin: auto;
-    text-align: center;
-    width: 25%;
 }
 .courseCard {
     width: 50%;
@@ -60,24 +46,18 @@ ion-card {
     margin-bottom: 15px;
     padding: 15px;
 }
+.widen{
+    font-size: medium;
+}
 .programTitle {
     color: #F1B82D;
-}
-.buttoon {
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-  }
-.formWrapper {
-    margin: auto;
-    text-align: center;
-    width: 50%;
 }
 h1 {
     color: black;
 }
-
+h3 {
+    font-family: 'gotham', sans-serif;
+}
 .buttoon {
     margin: auto;
     text-align: center;
@@ -94,12 +74,7 @@ h1 {
     display: inline-block;
     width: 25vw;
     margin: 0;
-    // border: 2px solid red;
     text-align: left;
-}
-.buttoon:hover {
-    background-color: white;
-    color: black;
 }
 ion-row {
     background-color: #000000;
@@ -108,4 +83,50 @@ ion-row {
     margin: auto;
     text-align: center;
     padding: 15px;
+}
+form {
+    border: 2px solid black;
+}
+
+.titleWrapper {
+    margin: auto;
+    text-align: center;
+}
+.titleClass {
+    margin: auto;
+    text-align: center;
+}
+.formWrapper {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.selectWrapper{
+    width: 100%;
+    background-color: #F1B82D;
+}
+ion-select {
+    width: 100%;
+}
+ion-card {
+    width: 40%;
+    padding: 2px;
+    margin: auto;
+}
+ion-card-title {
+    font-family: 'gotham', sans-serif;
+}
+h3 {
+    font-family: 'gotham', sans-serif;
+}
+h4 {
+    font-family: 'gotham', sans-serif;
+}
+.clearButton {
+    width: 50%;
+}
+.clearWrapper {
+    display: flex;
+    width: 50%;
+    margin: auto;
 }

@@ -20,6 +20,10 @@ ion-title {
     font-size: xx-large;
     border-bottom: solid 2px #F1B82D;
 }
+
+.subtext{
+    font-weight: bolder;
+}
 ion-card-subtitle {
     color: black;
 }
@@ -56,9 +60,11 @@ ion-grid{
 }
 .cardWrapper {
     background-color: #8F8884;
-    width: 97%;
+    width: 90%;
     margin: auto;
     padding: 15px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
 }
 .cardFlex {
     display: flexbox;
@@ -69,12 +75,18 @@ ion-grid{
     color: #F1B82D;
 }
 .footer{
-    background-color: #8F8884;
+    background-color: black;
     margin: auto;
     text-align: center;
     color: black;
     padding: 15px;
     font-size: x-large;
+}
+ion-footer {
+    background-color: black;
+}
+ion-row {
+    background-color: #000000;
 }
 .buttoon {
     margin: auto;
@@ -102,6 +114,10 @@ ion-grid{
 }
 .notoSerif {
     font-family: 'GRAPHIK', serif;
+}
+.footer{
+    color: white;
+    padding: 15px;
 }
 #muStacked {
     display: inline-block;

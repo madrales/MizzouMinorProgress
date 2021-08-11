@@ -1,3 +1,5 @@
+
+
 .home {
     width: 85%;
     padding-left: 15vw;
@@ -6,29 +8,52 @@
 h1 {
     margin: auto;
     text-align: center;
+    text-decoration: none;
+    color: black;
+    text-decoration-color: black;
+}
+a {
+    text-decoration: none;
 }
 .spacer {
     width: 100%;
     display: flex;
+    font-family: 'gotham', sans-serif;
+    font-weight: bold;
 }
+
 .spacerItem {
     margin: 1vw;
     background-color: white;
+    border: 5px solid black;
     color: black;
     padding: 15px;
+    font-family: 'gotham', sans-serif;
+    font-weight: bold;
+}
+a{
+    font-family: 'IMPACT', sans-serif;
+}
+p{
+    padding-top: 10px;
+    font-family: 'gotham', sans-serif;
+    font-weight: bold;
 }
 #styledHeader{
     font-family: 'IMPACT', sans-serif;
     font-size: xx-large;
 }
 .notoSerif {
-    font-family: 'GRAPHIK', serif;
+    font-family: 'GRAPHIK', sans-serif;
+    font-weight: bold;
 }
 .titleText {
     border-bottom: 2px solid #F1B82D;
+
 }
 .subtext {
     font-family: 'gotham', sans-serif;
+    font-weight: bold;
 }
 .column {
     width: 33%;
@@ -40,6 +65,8 @@ ion-img {
 }
 ion-content {
     margin-top: 500px;
+    font-family: 'gotham', sans-serif;
+    font-weight: bold;
 }
 
 //Styling for Header
@@ -52,9 +79,6 @@ ion-content {
     font-size: x-large;
     margin-top: 0px;
 }
-.notoSerif {
-    font-family: 'GRAPHIK', serif;
-}
 #muStacked {
     display: inline-block;
     width: 25vw;
@@ -63,9 +87,11 @@ ion-content {
 }
 .cardWrapper {
     background-color: #8F8884;
-    width: auto;
+    width: 90%;
     margin: auto;
     padding: 15px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
 }
 .buttoon:hover {
     background-color: white;
@@ -78,11 +104,9 @@ ion-row {
     margin: auto;
     text-align: center;
     padding: 15px;
+    font-family: 'IMPACT', sans-serif;
+
 }
-
-
-
-
 .leftRight{
     margin-bottom: 25px;
 }
@@ -97,52 +121,15 @@ ion-slide {
 }
 .footer{
     color: white;
-    padding: 15px;
+    padding: 100px;
 }
 .contactInfo {
     margin-bottom: 25px;
     margin-top: 25px;
     color: black;
 }
-
-.footerImg {
-    margin: auto;
+.footer {
+    color: white;
+    padding: 45px;
     text-align: center;
-    opacity: 25%;
 }
-.developer {
-    width: 25%;
-    margin: 15px;
-}
-.introCardsWrapper {
-        display: flex;
-        padding: 20px;
-        width: 75%;
-        margin: auto;
-        text-align: center;
-    }
-// .footer{
-
-// // Taken from https://codepen.io/thecodercoder/pen/xxGOyPe
-//     background-color: #8F8884;
-//     margin: auto;
-//     text-align: center;
-//     color: black;
-//     padding: 15px;
-//     font-size: x-large;
-//     position: relative;
-//     min-height: 700px;
-//     &::before{
-//         content: "";
-//         background-image: url(../../../assets/MU_UnitSig_CollegeofEngineering_rgb_std_vert.png);
-//         background-size: cover;
-//         max-height: 150px;
-//         position: absolute;
-//         background-position: center;
-//         top: 0px;
-//         right: 0px;
-//         bottom: 0px;
-//         left: 0px;
-//         opacity: 0.25;
-//     }
-// }

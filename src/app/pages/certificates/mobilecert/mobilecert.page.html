@@ -22,13 +22,17 @@
 <ion-content>
   <div class="navbar">
     <div class="mainWrapper">
-      <h1 class="notoSerif">WEB AND MOBILE APPLICATIONS DEVELOPMENT CERTIFICATE CALCULATOR</h1>
-      <a routerLink="../../certificates"><button mat-raised-button class="btn buttoon btn-success pull-right" >Click here to go back to the certificates page!</button></a>
-    <h3 class="notoSerif">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results.  </h3>
+      <div class="titleWrapper">
+        <div class="navigationWrapper">
+          <a routerLink="../../certificates"><button mat-raised-button class="backButton" ><ion-icon name="arrow-back-outline"></ion-icon>Certificates</button></a>
+        </div>
+        <h1 class="notoSerif">WEB AND MOBILE APPLICATIONS DEVELOPMENT CERTIFICATE CALCULATOR</h1>
+        <h3 class="subtext">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results.  </h3>
+      </div>
     <div class="formWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
-          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+          <ion-select placeholder="Select courses..." formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
             <ion-select-option value="INFOTC2830">INFOTC 2830: Web Application Development I</ion-select-option>
             <ion-select-option value="INFOTC3330">INFOTC 3330: Object Oriented Programming</ion-select-option>
             <ion-select-option value="INFOTC3380">INFOTC 3380: Database Systems and Applications</ion-select-option>
@@ -41,23 +45,25 @@
             <ion-select-option value="INFOTC4440">INFOTC 4440: Android App Development III</ion-select-option>
             <ion-select-option value= "INFOTC4445">INFOTC 4445: IOS App Development III</ion-select-option>
             <ion-select-option value="INFOTC4830">INFOTC 4830: Web Application Development II</ion-select-option>     
-            <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
           </ion-select>
-      <!-- <ion-input type="text" formControlName="completedCourse" placeholder="Add a Course"></ion-input> -->
-          <!-- <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
-            <ion-icon name="add"></ion-icon>
-          </ion-button> -->
         </ion-item>
       </form>
-      <ion-button expand="full" color="success"(click)="clear(); addCourse(); check()">Check Progress</ion-button>
     </div>
-    <div class="formWrapper">
-      <!-- <ion-button expand="full" color="success"(click)="check()">Check Progress</ion-button> -->
-      <ion-button expand="full" color="danger"(click)="clearAll()">Clear All</ion-button>
+    <div class="clearWrapper">
+      <ion-button expand="full" class="clearButton" color="success"(click)="clear(); addCourse(); check()">Check Progress</ion-button>
+      <ion-button expand="full" class="clearButton" color="danger"(click)="clearAll()">Clear All</ion-button>
     </div>
-    <ion-title *ngIf = 'webRan == true'>You have completed {{ percent }}% of the requirements!</ion-title>
-    <ion-title *ngIf = 'webDevCore == true'>WEB DEV Core Courses Left to Complete</ion-title> 
-    <ion-title *ngIf = 'webDevCompleted == true'>You completed the Web Dev certificate!</ion-title> 
+    <br>
+    <ion-title class="notoSerif"  *ngIf = 'webDevCompleted == true'>You completed the Web and Mobile Applications Development Certificate.</ion-title> 
+    <ion-title class="notoSerif"  *ngIf = 'webRan == true'>You have completed {{ percent }}% of the requirements</ion-title>
+    <br>
+    <ion-title class="subtext2" *ngIf = "percent > 49">Since you have completed at least 6 credits of the minor, it is advised you declare your minor at this point.</ion-title>
+    <ion-card class="subtext2" *ngIf = "percent > 49"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here To Declare Your Minor</a></ion-card> 
+    <ion-card class="subtext2"  *ngIf = "percent > 49"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
+    <br>
+
+    <ion-title class="notoSerif"  *ngIf = 'webDevCore == true'>Core Courses Left to Complete</ion-title> 
+
     <ion-card *ngFor='let course of incompletedArray'>
       <ion-card-title>
         {{ course.courseID }} {{course.name}}
@@ -75,5 +81,12 @@
     </div>
     
   </div>
+  <ion-footer>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12">
+        <h1 class="notoSerif footer">This project was created by Team JustDoIT for the Information Technology Capstone course at the University of Missouri. This application is not intended to be commercialized without the consent of the Mizzou College of Engineering.</h1>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
 </ion-content>
 

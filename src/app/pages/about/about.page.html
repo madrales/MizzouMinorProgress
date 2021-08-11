@@ -21,66 +21,51 @@
 </ion-header>
 
 <ion-content>
-  <div class="footer">
-    <ion-title id="styledHeader">
-      Mizzou College of Engineering Minor and Certificate Calculator
-    </ion-title>
     <div class="cardWrapper" fxLayout="row">
-      <ion-card class="developement">
-        <ion-card-title>
-          Our Trials and Troubles
-        </ion-card-title>
-        <ion-card-content>
-          Starting up with our project the website that you're looking at now wasn't our first idea.  Five weeks into the course we were forced to give up on our first project due to some conflicts of interest.  Because of this we were forced to restart and find a new project idea however our mentor came to the rescue and presented to us the idea for a Minor/Certificate Calculator.  From there we met with the instructor of the course and was given the green light to start working on our new project.  We then spent the next five weeks developing and testing a prototype for our site.  At the end of our fifth week of developing we were expected to present what we had so far to the faculty in the IT Department.  That brought a challenge of it's own, we were met with a lot of harsh feedback on the way the students would be entering their courses for the calculator.  The orginal form that we had for testing had the user type in each course number individually.  We had stated in the presentation that it was in no way our final form and that we were going to go back and change it later down the line.  After the harsh feedback Sarina immediatley went in and created a dropdown menu so that the student could select multiple classes at a time without needing to type anything in.  It was thanks to this harsh feedback that we were able to bunker down and get everything done that we needed to by the deadline and in turn made us better developers.
-        </ion-card-content>
-      </ion-card>
-      <ion-card class="developer">
-        <ion-card-title>
-          Mason Adrales
-        </ion-card-title>
-        <ion-card-subtitle>
-          Front End Developer
-        </ion-card-subtitle>
-        <ion-card-content>
-          Mason worked as the primary front end developer for this project. Utilizing his learnings in the Web Development series at Mizzou, Mason was able to implement front-end features that allowed the users to have a small and seamless UX for the project.
-        </ion-card-content>
-      </ion-card>
-      <ion-card class="developer">
-        <ion-card-title>
-          Sarina Gaines
-        </ion-card-title>
-        <ion-card-subtitle>
-          Back End Developer
-        </ion-card-subtitle>
-        <ion-card-content>
-          Sarina worked as the primary back end developer for this project. Sarina had previous expereience working with Ionic and Angular through the Web Development sequence offered at Mizzou. In addition, Sarina predominantly created the logic for how our application can check the courses taken against the course required for each minor.
-        </ion-card-content>
-      </ion-card>
-      <ion-card class="developer">
-        <ion-card-title>
-          Andrew Brown
-        </ion-card-title>
-        <ion-card-subtitle>
-          Back End Developer/AWS Specialist
-        </ion-card-subtitle>
-        <ion-card-content>
-          Andrew lead the AWS portion of this project by deploying an active AWS EC2 instance for our project to be hosted on. Andrew used the skills he learned through Web Development I as well as a variety of security and UNIX-base courses to help setup the instance. Andrew also assisted Sarina with the back end.
-        </ion-card-content>
-      </ion-card>
-      <ion-card class="developer">
-        <ion-card-title>
-          Michael Smith
-        </ion-card-title>
-        <ion-card-subtitle>
-          Full Stack Developer
-        </ion-card-subtitle>
-        <ion-card-content>
-          Michael worked as our only full stack developer for this project. Michael was able to assist in creating pages and views for the application on the front end while pitching in ideas for the backend logic. Michael also worked to setup meetings between the team and mentors to ensure our project was completed to the best of our abilities.
-        </ion-card-content>
-      </ion-card>
+      <div class="spacerItem">
+        <h1 class="notoSerif titleText">Our Website</h1>
+        <h5 class="subtext">
+          This website was created for the Information Technology Capstone course. Our team was tasked by Brian Maurer to create an application that would assist student’s in their pursuit towards certificates and minors within the University of Missouri’s College of Engineering. Our project was created with the intention of future growth, so that additional minors and certificates encompassed by the College of Engineering may be added. We would like to add special thanks to Brian Maurer, Chip Gubera, Fang Wang and Nickolas Wergeles for the support they provided our team in the production of this website.  
+        </h5>
+      </div>
+      <div class="spacer">
+
+        <div class="spacerItem column">
+          <ion-img src="../../assets/mason.jpg" class="leftRight"></ion-img>
+          <ion-title class="notoSerif titleText">Mason Adrales<h6>Front End Developer</h6></ion-title>
+          <p>Mason worked as the primary front end developer for this project. Utilizing his learnings in the Web Development series at Mizzou, Mason was able to implement front-end features that allowed the users to have a small and seamless UX for the project. He is responsible for the consistent design, navigation as well as
+            well as the implementation of Mizzou’s identity onto our website.</p>
+      </div>
+
+      <div class="spacerItem column">
+
+        <ion-img src="../../assets/sarina.jpg" class="leftRight"></ion-img>
+        <ion-title class="notoSerif titleText">Sarina Gaines <h6>Back End Developer</h6></ion-title>
+        <p>Sarina worked as the back end developer for this project. She had previous experience working with Ionic and Angular through the Web Development sequence offered at Mizzou. Sarina coded the backend for each minor/certificate calculator and created the logic for how our application can check the courses taken against the course required for each minor and certificate calculator.</p>
+      </div>
+
+      <div class="spacerItem column">
+        <ion-img src="../../assets/andy.jpg" class="leftRight"></ion-img>
+          <ion-title class="notoSerif titleText">Andrew Brown <h6>AWS Specialist</h6></ion-title>
+          <p>Andrew lead the AWS portion of this project by deploying an active AWS EC2 instance for our project to be hosted on. Andrew used the skills he learned through Web Development I as well as a variety of security and UNIX-base courses to help setup the instance. Andrew also assisted with uploading required course data to JSON files and applying a domain name to our instance.</p>
+      </div>
+
+      <div class="spacerItem column">
+        
+          <ion-img src="../../assets/michael.jpg" class="leftRight"></ion-img>
+          <ion-title class="notoSerif titleText">Michael Smith <h6>Front End Developer</h6></ion-title>
+          <p>
+            Michael worked as a front end developer for this project. He was able to assist in creating pages and views for the application on the front end and ensured that all pages displayed accurate and consistent information. He provided support to each group member where needed and also worked to set up meetings between the team and mentors to ensure our project was completed to the best of our abilities.</p>
+      </div>
+      </div>
     </div>
-    <div class="contactInfo">
-      <h1 class="notoSerif footer">This project was created by Team JustDoIT for the Information Technology Capstone course at the University of Missouri. This application is not intended to be commercialized without the consent of the Mizzou College of Engineering.</h1>
-    </div>
-  </div>
+    <ion-footer>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="12">
+          <h1 class="notoSerif footer">This project was created by Team JustDoIT for the Information Technology Capstone course at the University of Missouri. This application is not intended to be commercialized without the consent of the Mizzou College of Engineering.</h1>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+
+
 </ion-content>

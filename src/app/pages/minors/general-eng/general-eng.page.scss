@@ -8,6 +8,19 @@
     font-size: x-large;
     margin-top: 0px;
 }
+.subtext{
+    font-weight: bolder;
+}
+
+.subtext2{
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'GRAPHIK', serif;
+}
+a{
+    color:#F1B82D;
+}
+
 .notoSerif {
     font-family: 'GRAPHIK', serif;
 }
@@ -24,8 +37,81 @@
 ion-row {
     background-color: #000000;
 }
+.mainWrapper {
+    min-height: 1000px;
+}
 .navbarWrapper {
     margin: auto;
     text-align: center;
     padding: 15px;
+}
+ion-card-title {
+    font-family: 'gotham', sans-serif;
+}
+h3 {
+    font-family: 'gotham', sans-serif;
+}
+h4 {
+    font-family: 'gotham', sans-serif;
+}
+.clearButton {
+    width: 50%;
+}
+.clearWrapper {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+.titleWrapper {
+    margin: auto;
+    text-align: center;
+    width: 75%;
+}
+.titleClass {
+    margin: auto;
+    text-align: center;
+    font-family: 'gotham', sans-serif;
+}
+.formWrapper {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.selectWrapper{
+    width: 100%;
+    background-color: #F1B82D;
+}
+ion-select {
+    width: 100%;
+}
+form {
+    border: 2px solid black;
+}
+.backButton {
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+.navigationWrapper {
+    width: 100%;
+    // display: flex;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
+ion-card {
+    width: 40%;
+    padding: 2px;
+    margin: auto;
+}
+ion-title {
+    margin: auto;
+    text-align: center;
+}
+.footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 45px;
+    font-size: x-large;
 }

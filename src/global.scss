@@ -24,3 +24,31 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+.alert-wrapper{
+    max-width: unset !important;
+    width: 35% !important;
+}
+.backButton {
+    background-color: white;
+    color: black;
+    width: 100%;
+    font-family: 'GRAPHIK', sans-serif;
+    font-size: x-large;
+}
+.navigationWrapper {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
+.mainWrapper {
+    padding: 25px;
+    width: 55%;
+    border-radius: 25px;
+    box-shadow: 15px;
+    margin: auto;
+    text-align: center;
+    min-height: 1000px;
+    margin-top: 50px;
+    min-height: 1000px;
+}

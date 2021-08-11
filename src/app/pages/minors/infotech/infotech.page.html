@@ -20,53 +20,62 @@
 
 <ion-content>
   <div class="mainWrapper">
-    <h1 class="notoSerif">INFORMATION TECHNOLOGY MINOR PROGRESS CALCULATOR</h1>
-    <h3 class="notoSerif">To get started, select the IT courses you have taken at Mizzou and click the plus on the right to add it to your courses. Next, the system will perform a series of checks to compare the course you have taken to the courses required for the IT minor. Lastly, your results will be presented below. </h3>
+    <div class="titleWrapper">
+      <div class="navigationWrapper">
+        <a routerLink="../../minors"><button mat-raised-button class="backButton" ><ion-icon name="arrow-back-outline"></ion-icon>Academic Minors</button></a>
+      </div>
+      <h1 class="notoSerif">INFORMATION TECHNOLOGY MINOR PROGRESS CALCULATOR</h1>
+      <h3 class= "subtext">A minor in Information Technology is offered through the College of Engineering. To obtain a minor, a student must complete courses in a sequence approved by the Department of Computer Science. The student must earn a 2.0 GPA in all courses counting toward the minor. At least 9 hours must be taken in residence at MU. A total of 15 credit hours are required.</h3>
+      <h3 class= "subtext">Select the drop down to input courses you've completed. Click the "Check Progress" button to obtain your results. </h3>
+    </div> 
     <div class="formWrapper">
       <form [formGroup]="completedCoursesForm" (ngSubmit)="addCourse()">
         <ion-item>
-          <ion-select formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
-            <ion-select-option value="1040">INFOTC 1040: Intro to Problem Solving and Programming</ion-select-option>
-            <ion-select-option value="1610">INFOTC 1610: Introduction to Digital Media Design</ion-select-option>
-            <ion-select-option value="2610">INFOTC 2610:  Digital Media Design I</ion-select-option>
-            <ion-select-option value="2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
-            <ion-select-option value="2830">INFOTC 2830: Web Application Developement I</ion-select-option>
-            <ion-select-option value="2910">INFOTC 2910: Cyber Security</ion-select-option>
-            <ion-select-option value="3530">INFOTC 3530: UNIX Operating Systems</ion-select-option>
-            <ion-select-option value="3610 OR 4610">INFOTC 3610:  Digital Media Design II</ion-select-option>
+          <ion-select placeholder="Select your courses..." formControlName="completedCourse" value={options} multiple="true" cancelText="Cancel" okText="Continue">
+            <ion-select-option value="INFTOC 1040">INFOTC 1040: Intro to Problem Solving and Programming</ion-select-option>
+            <ion-select-option value="INFTOC 1610">INFOTC 1610: Introduction to Digital Media Design</ion-select-option>
+            <ion-select-option value="INFTOC 2610">INFOTC 2610:  Digital Media Design I</ion-select-option>
+            <ion-select-option value="INFTOC 2810">INFOTC 2810: Fundamentals of Network Technology</ion-select-option>
+            <ion-select-option value="INFTOC 2830">INFOTC 2830: Web Application Developement I</ion-select-option>
+            <ion-select-option value="INFTOC 2910">INFOTC 2910: Cyber Security</ion-select-option>
+            <ion-select-option value="INFTOC 3530">INFOTC 3530: UNIX Operating Systems</ion-select-option>
+            <ion-select-option value="INFTOC 3610 OR INFTOC 4610">INFOTC 3610:  Digital Media Design II</ion-select-option>
             <ion-select-option value="3640">INFOTC 3640: Motion Graphics and Visual Effects I</ion-select-option>
-            <ion-select-option value ='3810'>INFOTC 3810: Computer Network Security</ion-select-option>
-            <ion-select-option value= "3850">INFOTC 3850: Computer System Administration</ion-select-option>
-            <ion-select-option value="3910 OR 4910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
-            <ion-select-option value="4405">INFOTC 4405: iOS App Development I</ion-select-option>
-            <ion-select-option value="4425">INFOTC 4425: iOS App Development II</ion-select-option>
-            <ion-select-option value="3610 OR 4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
-            <ion-select-option value="4640">INFOTC 4640: Motion Graphics and Visual Effects II</ion-select-option>
-            <ion-select-option value="4830">INFOTC 4830: Web Application Developement II</ion-select-option>
-            <ion-select-option value="3910 OR 4910">INFOTC 4910: Digital Forensics</ion-select-option>
-            
-            <!-- <ion-select-option *ngFor = 'let class of CyberSecCoreArray'>{{class.courseID}}</ion-select-option> -->
+            <ion-select-option value ='INFTOC 3810'>INFOTC 3810: Computer Network Security</ion-select-option>
+            <ion-select-option value= "INFTOC 3850">INFOTC 3850: Computer System Administration</ion-select-option>
+            <ion-select-option value="INFTOC 3910 OR INFTOC 4910">INFOTC 3910: Advanced Cyber Security</ion-select-option> 
+            <ion-select-option value="INFTOC 4405">INFOTC 4405: iOS App Development I</ion-select-option>
+            <ion-select-option value="INFTOC 4425">INFOTC 4425: iOS App Development II</ion-select-option>
+            <ion-select-option value="INFTOC 3610 OR INFTOC 4610">INFOTC 4610: Advanced Multimedia Design and Technology</ion-select-option>
+            <ion-select-option value="INFTOC 4640">INFOTC 4640: Motion Graphics and Visual Effects II</ion-select-option>
+            <ion-select-option value="INFTOC 4830">INFOTC 4830: Web Application Developement II</ion-select-option>
+            <ion-select-option value="INFTOC 3910 OR INFTOC 4910">INFOTC 4910: Digital Forensics</ion-select-option>
           </ion-select>
-          <!-- <ion-button expand="full" (click)="addCourse()" [disabled]="!completedCoursesForm.valid">
-            <ion-icon name="add"></ion-icon>
-          </ion-button> -->
         </ion-item>
       </form>
-      <ion-button expand="full" color="success" (click)="clear(); addCourse(); check2();">Check Progress</ion-button>
     </div>
-    <div class="formButtonWrapper">
-      <ion-button color="danger" expand="full" (click)="clearAll()">Clear All</ion-button>
+    <div class="clearWrapper">
+      <ion-button class="clearButton" expand="full" color="success" (click)="clear(); addCourse(); check2();">Check Progress</ion-button>
+      <ion-button class="clearButton" color="danger" expand="full" (click)="clearAll()">Clear All</ion-button>
     </div>
     <div class="resultsWrapper">
-      <h1 class="notoSerif">Your Results</h1>
-      <ion-card-title class="courseCount notoSerif">{{ completedArray.length }} Courses Completed</ion-card-title>
-      <ion-card-title class="notoSerif">
+      <!-- <ion-card-title class="notoSerif">
         {{ this.test }}
       </ion-card-title>
       <ion-title>
         {{ this.status }}
-      </ion-title>
-      <ion-title >You have compeleted {{ percent }}% of the IT minor.</ion-title> 
+      </ion-title> -->
+      <br>
+      <ion-title *ngIf = "ran == true" >You have compeleted {{ percent }}% of the IT minor.</ion-title> 
+
+      <ion-title *ngIf = "completedMinor == true">You have compeleted the IT minor.</ion-title> 
+      <br>
+      <ion-title class="subtext2" *ngIf = "percent > 39">Since you have completed at least 6 credits of the minor, it is advised you declare your minor at this point.</ion-title>
+      <ion-card class="subtext2" *ngIf = "percent > 39"><a  href= "https://shib-idp.umsystem.edu/idp/profile/SAML2/Redirect/SSO;jsessionid=BD0E0B7B108CE3CE470EDCAEE56D8AA2?execution=e1s1">Click Here To Declare Your Minor</a></ion-card> 
+      <ion-card class="subtext2" *ngIf = "percent > 39"><a class ="titleClass" *ngIf = "percent > 30" href="https://advising.missouri.edu/majors-minors/minors-certificates/">Click Here For More Information On Declaring</a></ion-card>
+      <br>
+
+
       <div class="resultCourseWrapper" fxLayout="row"> 
         <div *ngIf = "show1610Seqs == true">
 
@@ -154,19 +163,27 @@
           </ion-card-title>
         </ion-card>
       </div>
+      <br>
       
-      <ion-title *ngIf = "completedMinor == true">You have compeleted the IT minor.</ion-title> 
+      <ion-title *ngIf = "remaining == true">You must complete {{ left }} more course of any level.</ion-title>
+      
       <ion-title *ngIf = "completedSequence == true">You have completed the sequence requirement.</ion-title>
     
       <ion-title *ngIf = "completed3000 == true">You have compeleted the 3 3000+ course requirments.</ion-title>
       <ion-title *ngIf = "count == 1">You must also complete 2 more 3000+ courses.</ion-title>
       <ion-title *ngIf = "count == 2">You must also complete 1 more 3000+ courses.</ion-title>
-      <ion-title *ngIf = "count == 0"> You must also complete 3 more 3000+ courses.</ion-title>
+      <ion-title *ngIf = "none == true"> You must also complete 3 more 3000+ courses.</ion-title>
 
-      <ion-title *ngIf = "remaining == true">You must complete {{ left }} more course of any level.</ion-title>
-      
+
       </div>
     </div>
   </div>
+  <ion-footer>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12">
+        <h1 class="notoSerif footer">This project was created by Team JustDoIT for the Information Technology Capstone course at the University of Missouri. This application is not intended to be commercialized without the consent of the Mizzou College of Engineering.</h1>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
 </ion-content>
 

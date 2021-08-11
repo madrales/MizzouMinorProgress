@@ -6,16 +6,23 @@
     margin: auto;
     text-align: center;
 }
+.subtext{
+    font-weight: bolder;
+}
 .footer{
-    background-color: #8F8884;
-    margin: auto;
+    background-color:black;
     text-align: center;
-    color: black;
-    padding: 15px;
+    color: white;
+    padding: 45px;
     font-size: x-large;
 }
+.titleWrapper {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
 .subtext {
-    font-family: 'gotham', sans-serif;
+    font-family: 'Montserrant', sans-serif;
 }
 .certificateDiv {
     background-color: #F1B82D;
@@ -28,17 +35,12 @@
 .mainerWrapper{
     display: flex;
 }
-.formButtonWrapper {
-    width: 15%;
-    margin: auto;
-    text-align: center;
-    display: inline-block;
+form {
+    border: 2px solid black;
 }
 .mainWrapper {
-    background-color: #8F8884;
-    // background-color: white;
     padding: 25px;
-    width: 98%;
+    width: 100%;
     box-shadow: 15px;
     margin: auto;
     text-align: center;
@@ -47,13 +49,11 @@
 .clearButton {
     background-color: red;
 }
+h3 {
+    font-family: 'gotham', sans-serif;
+}
 .submitButton {
     background-color: green;
-}
-.formWrapper {
-    margin: auto;
-    text-align: center;
-    width: 25%;
 }
 .courseCard {
     width: 50%;
@@ -72,11 +72,11 @@ ion-card {
     text-align: center;
     margin-bottom: 15px;
     padding: 15px;
-    font-family: 'gotham', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     border: 5px solid black;
 }
 ion-title {
-    font-family: 'gotham', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .programTitle {
     color: #F1B82D;
@@ -90,21 +90,12 @@ ion-title {
 .formWrapper {
     margin: auto;
     text-align: center;
-    width: 75%;
+    width: 100%;
 }
 h1 {
     color: black;
 }
 ion-select {
-    max-width: unset !important;
-    width: 100% !important;
-}
-ion-overlay-wrapper{
-    max-width: unset !important;
-    width: 100% !important;
-}
-.alert-wrapper{
-    max-width: unset !important;
     width: 100% !important;
 }
 ion-item {
@@ -126,7 +117,6 @@ ion-item {
     display: inline-block;
     width: 25vw;
     margin: 0;
-    // border: 2px solid red;
     text-align: left;
 }
 .buttoon:hover {
@@ -140,4 +130,12 @@ ion-row {
     margin: auto;
     text-align: center;
     padding: 15px;
+}
+.clearButton {
+    width: 50%;
+}
+.clearWrapper {
+    display: flex;
+    width: 50%;
+    margin: auto;
 }

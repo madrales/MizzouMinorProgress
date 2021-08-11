@@ -7,29 +7,33 @@
     text-align: center;
 }
 .footer{
-    background-color: #8F8884;
-    margin: auto;
+    background-color: black;
     text-align: center;
-    color: black;
-    padding: 15px;
+    color: white;
+    padding: 45px;
     font-size: x-large;
 }
+.subtext2{
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'GRAPHIK', serif;
+}
+a{
+    color:#F1B82D;
+}
+
+.subtext{
+    font-weight: bolder;
+}
+
 .formButtonWrapper {
     width: 25%;
     margin: auto;
     text-align: center;
     display: inline-block;
 }
-.mainWrapper {
-    background-color: #8F8884;
-    padding: 25px;
-    width: 50%;
-    border-radius: 25px;
-    box-shadow: 15px;
-    margin: auto;
-    text-align: center;
-    min-height: 500px;
-    margin-top: 50px;
+h3 {
+    font-family: 'gotham', sans-serif;
 }
 .clearButton {
     background-color: red;
@@ -72,12 +76,20 @@ ion-card {
 .formWrapper {
     margin: auto;
     text-align: center;
-    width: 50%;
+    width: 100%;
 }
 h1 {
     color: black;
 }
-
+.notoSerif {
+    font-family: 'GRAPHIK', serif;
+}
+#muStacked {
+    display: inline-block;
+    width: 25vw;
+    margin: 0;
+    text-align: left;
+}
 .buttoon {
     margin: auto;
     text-align: center;
@@ -87,15 +99,8 @@ h1 {
     font-size: x-large;
     margin-top: 0px;
 }
-.notoSerif {
-    font-family: 'GRAPHIK', serif;
-}
-#muStacked {
-    display: inline-block;
-    width: 25vw;
-    margin: 0;
-    // border: 2px solid red;
-    text-align: left;
+.widen {
+    width: 100%;
 }
 .buttoon:hover {
     background-color: white;
@@ -108,4 +113,44 @@ ion-row {
     margin: auto;
     text-align: center;
     padding: 15px;
+}
+form {
+    border: 2px solid black;
+}
+.titleWrapper {
+    margin: auto;
+    text-align: center;
+}
+.titleClass {
+    margin: auto;
+    text-align: center;
+}
+.selectWrapper{
+    width: 100%;
+    background-color: #F1B82D;
+}
+ion-select {
+    width: 100%;
+}
+ion-card {
+    width: 40%;
+    padding: 2px;
+    margin: auto;
+}
+ion-card-title {
+    font-family: 'gotham', sans-serif;
+}
+h3 {
+    font-family: 'gotham', sans-serif;
+}
+h4 {
+    font-family: 'gotham', sans-serif;
+}
+.clearButton {
+    width: 50%;
+}
+.clearWrapper {
+    display: flex;
+    width: 50%;
+    margin: auto;
 }
